@@ -5,6 +5,8 @@ There are some Tests in this file that will help you work out if your code is wo
 const path = require("path");
 const { JSDOM } = require("jsdom");
 
+console.log(__dirname)
+
 let page = null;
 
 beforeEach(async () => {
@@ -43,7 +45,7 @@ test("should set heading when button is clicked", () => {
   input.value = "19";
   button.click();
 
-  expect(heading).toHaveTextContent("Time Remaining: 00:19");
+  expect(heading.textContent).toBe("Time Remaining: 00:19");
 });
 
 test("should split values over 60 seconds into minutes and seconds", () => {
@@ -54,7 +56,7 @@ test("should split values over 60 seconds into minutes and seconds", () => {
   input.value = "119";
   button.click();
 
-  expect(heading).toHaveTextContent("Time Remaining: 01:59");
+  expect(heading.textContent).toBe("Time Remaining: 01:59");
 });
 
 test("should update the heading while counting down", () => {
@@ -68,7 +70,7 @@ test("should update the heading while counting down", () => {
   for (let i = 18; i > 0; i--) {
     jest.runOnlyPendingTimers();
     const seconds = `${i}`.padStart(2, "0");
-    expect(heading).toHaveTextContent(`Time Remaining: 00:${seconds}`);
+    expect(heading.textContent).toBe(`Time Remaining: 00:${seconds}`);
   }
 });
 

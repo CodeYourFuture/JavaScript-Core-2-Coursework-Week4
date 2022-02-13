@@ -1,6 +1,6 @@
 const bgControl = () => setInterval(() => {
   document.body.style.backgroundColor = `rgb(${Math.random()*256},${Math.random()*256},${Math.random()*256})`
-}, 500); 
+},  1000); 
 
 let bgState;
 
@@ -12,20 +12,19 @@ const setAlarm = () => {
     const seconds = timeEntry % 60;
     const formatTime = `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`
     document.getElementById('timeRemaining').innerText = `Time Remaining: ${formatTime}`;
-    if (timeEntry === 0 ) {
-      bgState = bgControl();
-    }
   }
-  
+
   handleOutput(timeEntry);
 
   const startCounter = () => {
     timeEntry--;
-    handleOutput(timeEntry);
     if (timeEntry === 0) {
-      playAlarm(); 
-      clearInterval(alarm);
+      handleOutput(timeEntry);
+      clearInterval(alarm); 
+      bgState = bgControl();
+      playAlarm()
     }
+    handleOutput(timeEntry);   
   }
 
   let alarm = setInterval(startCounter, 1000);
