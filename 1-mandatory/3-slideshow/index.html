@@ -8,10 +8,56 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="min-wh-100">
     <!-- Write your HTML in here -->
+    <div class="animatedBackground">
+      <div class="animatedText" id="animatedText">
+
+      </div>
+    </div>
+    <div class="container p-5 d-flex-column justify-content-center align-items-center my-auto">
+      <div class="img-container mw-100" id="img-container">
+        <img id="img" class="mw-100"/>
+      </div>
+      <div id="description" class="text-center">
+
+      </div>
+      <div class="d-flex w-100 justify-content-center" id="btn-container">
+        <a id="darkmode" href="#" class="btn btn-primary m-2">
+          <i class="fas fa-sun" id="darkmodeIcon"></i>
+        </a>
+        <button class="btn btn-primary m-2" id="auto-back">
+          Auto Back
+        </button>
+        <button class="btn btn-primary m-2" id="previous">
+          Previous
+        </button>
+        <button class="btn btn-primary m-2" id="stop">
+          Stop
+        </button>
+        <button class="btn btn-primary m-2" id="next">
+          Next
+        </button>
+        <button class="btn btn-primary m-2" id="auto-forward">
+          Auto Forward
+        </button>
+        <div class="input-group m-2 w-25">
+          <span class="input-group-text" id="slideshow-refresh">Every</span>
+          <select id="timeInterval" class="form-control" placeholder="1 to 60" aria-label="Refresh time interval" aria-describedby="slideshow-refresh">
+          </select>
+          <span class="input-group-text" id="slideshow-refresh">Seconds</span>
+        </div>
+      </div>
+    </div>
     <script src="slideshow.js"></script>
   </body>
 </html>

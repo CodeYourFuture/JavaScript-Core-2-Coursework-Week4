@@ -490,3 +490,49 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const darkcolors= ["#00022e","#112222","#000133","#062e03","#004400"];
+const lightcolors = ["#f0f8ff","#a2cffe"];
+const qText = document.getElementById('text');
+const qAuth = document.getElementById('author');
+let darkMode = false;
+let currColorScheme = darkMode ? darkcolors : lightcolors;
+let buttonIcon = '<i class="fas fa-moon"></i>'
+
+
+const randID = (arr) => Math.round(Math.random() * arr.length);
+
+const displayQuote = () => {
+  const randomQuote = quotes[randID(quotes)]
+  qText.innerText = randomQuote.quote
+  qAuth.innerText = `- ${randomQuote.author}`
+  document.getElementById('tweet-quote').setAttribute('href', `https://twitter.com/intent/tweet?text=${encodeURI(randomQuote.quote)}`)
+  setColors()
+}
+
+setColors = () => {
+  document.body.style.backgroundColor = currColorScheme[randID(currColorScheme)]
+  document.body.style.color = darkMode ? 'white' : 'black'
+}
+
+displayQuote();
+
+document.getElementById('new-quote').addEventListener('click', displayQuote);
+document.getElementById('darkmode').addEventListener('click', () => {
+  document.getElementById('darkmodeIcon').classList.toggle('fa-moon')
+  document.getElementById('darkmodeIcon').classList.toggle('fa-sun')
+  darkMode = !darkMode;
+  currColorScheme = darkMode ? darkcolors : lightcolors;
+  setColors()
+});
+
+let autoQuote = false;
+let autoQuoteState;
+
+document.getElementById('autoQuote').addEventListener('click', () => {
+  autoQuote = !autoQuote;
+  clearInterval(autoQuoteState);
+  if (autoQuote) {
+    autoQuoteState = setInterval(displayQuote, 60000);
+  }
+});
