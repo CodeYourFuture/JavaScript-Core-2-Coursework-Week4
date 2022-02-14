@@ -3,16 +3,21 @@ const bgControl = () => setInterval(() => {
 },  1000); 
 
 let bgState;
+let alarm;
+let timeEntry;
+const pauseButton = document.getElementById("pause")
+
+const handleOutput = (timeEntry) => {
+  const minutes = Math.floor(timeEntry / 60);
+  const seconds = timeEntry % 60;
+  const formatTime = `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`
+  document.getElementById('timeRemaining').innerText = `Time Remaining: ${formatTime}`;
+}
+
 
 const setAlarm = () => {
-  let timeEntry = document.getElementById('alarmSet').value;
-  
-  const handleOutput = (timeEntry) => {
-    const minutes = Math.floor(timeEntry / 60);
-    const seconds = timeEntry % 60;
-    const formatTime = `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`
-    document.getElementById('timeRemaining').innerText = `Time Remaining: ${formatTime}`;
-  }
+  stopAlarm()
+  timeEntry = document.getElementById('alarmSet').value;
 
   handleOutput(timeEntry);
 
@@ -27,16 +32,14 @@ const setAlarm = () => {
     handleOutput(timeEntry);   
   }
 
-  let alarm = setInterval(startCounter, 1000);
-
-  const pauseButton = document.getElementById("pause")
+  alarm = setInterval(startCounter, 1000);  
 
   pauseButton.addEventListener("click", () => {
     const buttonText = pauseButton.innerText
-    if (buttonText === 'Pause Alarm') {
+    if (buttonText === 'Pause Alarm' && alarm) {
       clearInterval(alarm);
       pauseButton.innerText = 'Continue';
-    } else {
+    } else if (timeEntry > 0) {
       pauseButton.innerText = 'Pause Alarm';
       alarm = setInterval(startCounter, 1000)
     }
@@ -64,6 +67,11 @@ function playAlarm() {
 function stopAlarm() {
   audio.pause();
   clearInterval(bgState);
+  clearInterval(alarm);
+  timeEntry = 0;
+  handleOutput(timeEntry)
+  document.body.style.backgroundColor = 'white'
+  pauseButton.innerText = 'Pause Alarm';
 }
 
 window.onload = setup;
