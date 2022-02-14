@@ -1,1 +1,64 @@
 /** Write your CSS in here **/
+body {
+  box-sizing: border-box;
+  background-color: rgba(255, 166, 0, 0.829);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.content {
+  background-color: white;
+  width: 70%;
+  padding: 40px;
+}
+
+.quoteAndSpan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  color: rgba(255, 166, 0, 0.829);
+  font-size: 100px;
+}
+
+.main {
+  margin: 0;
+  font-size: 28px;
+}
+
+.paragraph {
+  color: rgba(255, 166, 0, 0.829);
+  font-weight: 600;
+}
+
+.author {
+  margin: 13px 0;
+  font-size: 14px;
+}
+
+.authorAndButton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+button {
+  background-color: rgba(255, 166, 0, 0.829);
+  color: white;
+  border: none;
+  padding: 4px 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+button:focus {
+  outline: none;
+}
