@@ -1,3 +1,6 @@
+// Try this code on Netfly
+// https://eager-fermi-453d11.netlify.app/
+
 // Write your code here
 (function () {
   const arrayOfPath = [
@@ -12,7 +15,10 @@
         path: arrayOfPath[+actualPhoto],
         numberPhoto: +actualPhoto,
       };
-    } else if (      direction === "forward" &&      actualPhoto > arrayOfPath.length - 1    ) {
+    } else if (
+      direction === "forward" &&
+      actualPhoto > arrayOfPath.length - 1
+    ) {
       return {
         path: arrayOfPath[0],
         numberPhoto: 0,
@@ -83,7 +89,7 @@
     intervalId = setInterval(forwardPhoto, delaySlideShow);
   };
   const getRandomColor = () => "hsl(" + Math.random() * 360 + ", 100%, 75%)";
-  
+
   setInterval(() => {
     document.body.style.backgroundColor = getRandomColor();
   }, 2000);
