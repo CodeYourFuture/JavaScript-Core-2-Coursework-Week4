@@ -490,3 +490,46 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+(function quote() {
+  const root = document.querySelector("#root");
+
+  const pQuote = document.createElement("p");
+  const pAuthor = document.createElement("p");
+  const button = document.createElement("button");
+  const buttonAutoChange = document.createElement("button");
+  const autoQuoteOn = document.createElement("p");
+  let interval;
+
+  pQuote.innerText = '"' + pickFromArray(quotes).quote;
+  pAuthor.innerText = pickFromArray(quotes).author;
+  button.innerText = "New quote";
+  buttonAutoChange.innerText = "Change quote automatically";
+  autoQuoteOn.innerText = "Auto-play:OFF";
+  pAuthor.id = "author";
+
+  const changeQuote = () => {
+    pQuote.innerText = '"' + pickFromArray(quotes).quote;
+    pAuthor.innerText = pickFromArray(quotes).author;
+
+    pQuote.appendChild(pAuthor);
+    pAuthor.append(button, buttonAutoChange, autoQuoteOn);
+  };
+
+  button.addEventListener("click", changeQuote);
+  buttonAutoChange.addEventListener("click", () => {
+    if (interval) {
+      clearInterval(interval);
+      buttonAutoChange.innerText = "Change quote automatically";
+      interval = undefined;
+      autoQuoteOn.innerText = "Auto-play:OFF";
+    } else {
+      interval = setInterval(changeQuote, 2000);
+      buttonAutoChange.innerText = "Stop change automatically";
+      autoQuoteOn.innerText="Auto-play:ON"
+    }
+  });
+
+  root.appendChild(pQuote);
+  pQuote.appendChild(pAuthor);
+  pAuthor.append(button, buttonAutoChange, autoQuoteOn);
+})();
