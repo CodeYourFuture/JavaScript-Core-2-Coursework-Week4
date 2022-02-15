@@ -1,3 +1,6 @@
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +493,31 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const mainEl = document.querySelector('.main');
+
+
+
+function getNewQuote() {
+  let newQuoteObj = pickFromArray(quotes);
+  console.log(newQuoteObj)
+  mainEl.innerHTML = `<h3><i class="fa-solid fa-quote-left"></i>${newQuoteObj.quote}</h3>
+  <p>-${newQuoteObj.author}</p>
+  <button id="new-quote-btn">New Quote</button>`
+
+  const quoteChangeBtn = document.querySelector('#new-quote-btn');
+  
+  quoteChangeBtn.addEventListener('click', () => {
+  
+    getNewQuote();
+  })
+  
+}
+
+getNewQuote();
+
+
+
+
+
+
