@@ -1,1 +1,10 @@
-/** Write your CSS in here **/
+body {
+  margin-top: 10em;
+}
+
+#slide {
+  width: 500px;
+  height: 500px;
+  margin: 0 50rem;
+  display: block;
+}
