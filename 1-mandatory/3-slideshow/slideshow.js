@@ -1,3 +1,4 @@
+// An array of images with links
 let images = [
   {
     source: "img/black.jpg",
@@ -8,40 +9,47 @@ let images = [
   { source: "img/yellow.jpg", alt: "A ginger cat with eyes shut" },
 ];
 
-let image = document.querySelector("#slide");
+let image = document.querySelector("#slide"); // Selects the main image element to be displayed
 
+// Loads the first image when the page is loaded
 image.src = images[0].source;
 image.alt = images[0].alt;
 
-let number = 0;
+let index = 0; // Counter for the image
 
+// Selects the HTML buttons
 let forward = document.querySelector("#forward");
 let back = document.querySelector("#back");
 let autoForward = document.querySelector("#auto-forward");
 let autoBack = document.querySelector("#auto-back");
+
+// Variables for the interval functions
 let forwardInterval;
 let backInterval;
 
+// Displays the next image
 function next() {
-  if (number < images.length - 1) {
-    number++;
+  if (index < images.length - 1) {
+    index++;
   }
-  image.src = images[number].source;
-  image.alt = images[number].alt;
+  image.src = images[index].source;
+  image.alt = images[index].alt;
 }
 
+// Displays the previous image
 function prev() {
-  if (number > 0) {
-    number--;
+  if (index > 0) {
+    index--;
   }
-  image.src = images[number].source;
-  image.alt = images[number].alt;
+  image.src = images[index].source;
+  image.alt = images[index].alt;
 }
 
-forward.addEventListener("click", next);
+forward.addEventListener("click", next); // Executes the function to display the next image when the button is clicked
 
-back.addEventListener("click", prev);
+back.addEventListener("click", prev); // Executes the function to display the previous image when the button is clicked
 
+// The next two function run a slideshow in both directions
 autoForward.addEventListener("click", () => {
   forwardInterval = setInterval(next, 2000);
   clearInterval(backInterval);

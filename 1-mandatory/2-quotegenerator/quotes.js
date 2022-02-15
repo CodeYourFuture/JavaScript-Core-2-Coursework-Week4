@@ -492,23 +492,25 @@ const quotes = [
 ];
 
 let contentEl = document.querySelector("#content");
-let quoteEl = document.createElement("quote");
-let authorEl = document.createElement("p");
+let quoteEl = document.createElement("quote"); // Element for the main quote
+let authorEl = document.createElement("p"); // Element for the author name
 
+// Styling for both the elements
 quoteEl.className = "quote";
 authorEl.className = "author";
 
-contentEl.prepend(quoteEl, authorEl);
+contentEl.prepend(quoteEl, authorEl); // Used this to make sure that the element in pushed at the start
 
+// This function changes the quote on the element
 function displayQuote() {
   quoteEl.innerText = `${pickFromArray(quotes).quote}`;
   authorEl.innerText = `- ${pickFromArray(quotes).author}`;
 }
 
-let randomButton = document.querySelector("#random");
+let randomButton = document.querySelector("#random"); // Button to change the quote
 
 randomButton.addEventListener("click", () => {
   displayQuote();
 });
 
-window.onload = displayQuote;
+window.onload = displayQuote; // Runs the displayQuote function i.e. loads the quote element as soon as the page is opened
