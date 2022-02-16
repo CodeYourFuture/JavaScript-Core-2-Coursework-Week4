@@ -1,1 +1,22 @@
 /** Write your CSS in here **/
+#main {
+  box-sizing: border-box;
+  padding: 2rem;
+  align-items: center;
+}
+.image-wrapper {
+  width: 550px;
+  height: 350px;
+  margin: 2rem;
+}
+.image-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+
+button {
+  margin-left: 1.9rem;
+  padding: 10px 13px;
+  background-color: rgb(228, 222, 197);
+  border: none;
+}
