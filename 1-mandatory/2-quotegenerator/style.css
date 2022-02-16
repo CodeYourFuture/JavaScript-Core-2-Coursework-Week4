@@ -1,1 +1,64 @@
 /** Write your CSS in here **/
+body {
+  background-color: orange;
+  display: grid;
+  grid-template-areas:
+    ". . ."
+    ". quote ."
+    ". . .";
+  grid-template-rows: 1fr 400px 1fr;
+  grid-template-columns: 1fr 700px 1fr;
+  height: 100vh;
+}
+.quoteContainer {
+  background-color: white;
+  grid-area: quote;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "blqp blqp blqp blqp"
+    "blqp blqp blqp blqp"
+    "blqp blqp blqp blqp"
+    ". . . btn";
+  box-shadow: 5px 10px #8d8d8d;
+  border-radius: 5px;
+}
+blockquote::before {
+  content: "“";
+  font-size: 6em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  color: orange;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+}
+blockquote {
+ grid-area: blqp;   
+}
+
+blockquote p {
+  display: inline;
+  color: rgb(179, 117, 2);
+  font-size: 25px;
+  font-family: "Source Serif Pro", serif;
+  
+}
+
+figcaption {
+  color: orange;
+  padding-top: 40px;
+  font-family: "Source Serif Pro", serif;
+  text-align: right;
+}
+
+button {
+  align-self: flex-end;
+  border: none;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  grid-area: btn;
+}

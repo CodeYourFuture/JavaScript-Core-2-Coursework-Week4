@@ -1,3 +1,12 @@
+let para = document.getElementById("quoteText");
+let button = document.getElementById("button");
+let figureCaptionEl = document.querySelector("figcaption");
+button.addEventListener("click", () => {
+  let choice = pickFromArray(quotes);
+  para.innerText = choice.quote;
+  figureCaptionEl.innerText = `- ${choice.author}`;
+});
+button.addEventListener("focus", () =>{button.style.outline = "none"})
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

@@ -8,16 +8,17 @@ const setAlarm = () => {
     m = m < 10 ? "0" + m : m;
     timeRemainingEl.innerText = `Time Remaining: ${m} : ${s}`;
   };
+
   outputFormat(inputTime);
-  document.getElementById("alarmSet").value = null;
   const counter = () => {
-    inputTime--;
     if (inputTime <= 0) {
-      playAlarm();
       clearInterval(countDown);
+      playAlarm();
     }
     outputFormat(inputTime);
+    inputTime--;
   };
+  document.getElementById("alarmSet").value = null;
   let countDown = setInterval(counter, 1000);
 };
 
