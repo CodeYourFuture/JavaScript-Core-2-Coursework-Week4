@@ -1,1 +1,35 @@
 /** Write your CSS in here **/
+body {
+    background-color: orange;
+    padding: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*header*/
+.quote{
+    margin: auto;
+    background-color: white;
+    color: orange;
+    padding: 30px;
+}
+
+/*scrap this*/
+#sentence{
+    text-align: center;
+}
+
+#author{
+    text-align: right;
+}
+
+.container{
+    padding: 10px 0px 45px;
+}
+
+#btn{
+    background-color: orange;
+    color: white;
+    border: none;
+    text-decoration: none;
+    float: right;
+    padding: 10px 15px;
+}

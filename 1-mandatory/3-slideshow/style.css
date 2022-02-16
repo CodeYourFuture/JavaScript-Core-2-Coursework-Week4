@@ -1,1 +1,25 @@
 /** Write your CSS in here **/
+.slider {
+  width: 500px;
+}
+
+.img-box img {
+  width: 100%;
+}
+
+.button-div{
+  min-width: auto;
+}
+
+.btn {
+  border: none;
+  background: lightgray;
+  color: black;
+  margin: 10px auto;
+}
+
+.btn:hover{
+    background: darkgray;
+}
+
+/* object-fit: contain */
