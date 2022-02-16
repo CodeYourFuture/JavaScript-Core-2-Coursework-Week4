@@ -1,1 +1,29 @@
 /** Write your CSS in here **/
+.content {
+    margin: 50px auto;
+    width: 50%;
+}
+
+.img-box, .buttons{
+    text-align: -webkit-center;
+}
+
+.img-box img{
+    width: 50%;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: #888;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #ddd;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.btn:hover {
+    background: #111;
+    color: #ddd;
+}
