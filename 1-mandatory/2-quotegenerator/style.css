@@ -2,7 +2,7 @@
 body {
     background: #FFAD1B;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -17,11 +17,28 @@ body {
     align-items: flex-end;
     color: #FFAD1B;
     padding: 3%;
+    font-size: 20px;
 }
 button {
     background: #FFAD1B;
     border: none;
     color: #fff;
     cursor: pointer;
+}
+#on-off-btn {
+    
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin-top: 10%;
+    border-radius: 25%;
+    padding: 10px;
+}
+.onBackground {
+    background: green;  
+}
+.offBackground {
+    background: orangered;
 }
 

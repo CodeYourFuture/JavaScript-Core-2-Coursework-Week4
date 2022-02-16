@@ -495,26 +495,49 @@ const quotes = [
 ];
 
 const mainEl = document.querySelector('.main');
-
-
+const autoOnBtn = document.querySelector('#on-off-btn')
+autoOnBtn.classList.add('offBackground');
+let intervalId;
 
 function getNewQuote() {
   let newQuoteObj = pickFromArray(quotes);
-  console.log(newQuoteObj)
+  
   mainEl.innerHTML = `<h3><i class="fa-solid fa-quote-left"></i>${newQuoteObj.quote}</h3>
   <p>-${newQuoteObj.author}</p>
   <button id="new-quote-btn">New Quote</button>`
 
   const quoteChangeBtn = document.querySelector('#new-quote-btn');
-  
+
   quoteChangeBtn.addEventListener('click', () => {
   
     getNewQuote();
   })
-  
 }
 
+
+
 getNewQuote();
+
+autoOnBtn.addEventListener('click', () => {
+  autoOnBtn.classList.toggle('offBackground')
+  autoOnBtn.classList.toggle('onBackground')
+    
+  
+
+  if (autoOnBtn.classList.contains('onBackground')) {
+    autoOnBtn.innerText = 'ON';
+    intervalId = setInterval(() => {
+      getNewQuote();
+    }, 60000);
+  }
+  if (autoOnBtn.classList.contains('offBackground')) {
+    autoOnBtn.innerText = 'OFF';
+    clearInterval(intervalId)
+  }
+
+    
+  
+})
 
 
 
