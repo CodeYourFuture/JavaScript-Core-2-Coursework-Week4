@@ -1,3 +1,31 @@
+let setNewColor = () => {
+  var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  return "#" + randomColor;
+};
+
+let content = document.getElementById("content");
+let pEl = document.createElement("p");
+let span = document.createElement("span");
+let button = document.createElement("button");
+button.id = "addBtn";
+pEl.id = "item";
+span.id = "title";
+content.appendChild(pEl);
+content.appendChild(span);
+content.appendChild(button);
+button.innerText = "New Quote";
+
+let newQuotes = (arr) => {
+  let newColor = setNewColor();
+  document.body.style.backgroundColor = newColor;
+  pEl.style.color = newColor;
+  span.style.color = newColor;
+  button.style.color = newColor;
+  let quoteObj = pickFromArray(arr);
+  pEl.innerText = quoteObj.quote;
+  span.innerText = "- " + quoteObj.author;
+};
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +518,10 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+newQuotes(quotes);
+
+var addBtn = document.getElementById("addBtn");
+addBtn.addEventListener("click", () => {
+  newQuotes();
+});
