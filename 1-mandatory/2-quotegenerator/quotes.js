@@ -17,7 +17,7 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-quotes = [
+const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
     author: "Kevin Kruse",
