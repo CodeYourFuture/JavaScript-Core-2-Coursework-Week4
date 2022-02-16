@@ -11,7 +11,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div>
+      <h2>Image Carousel. Level 1 Demo.</h2>
+    </div>
+    <div>
+      <img id="slide" src="img/imag1.jpeg" />
+      <p id="counter">1/4</p>
+      <p id="timer"></p>
+    </div>
+    <div>
+      <nav>
+        <button id="autoBack">Auto Back</button>
+        <button id="back">Back</button>
+        <button id="stop">Stop</button>
+        <button id="forward">Forward</button>
+        <button id="autoForward">Auto Forward</button>
+      </nav>
+      <div id="slideTime">
+        <label for="inputTime">Slide Time : </label>
+        <input type="number" id="inputTime" name="inputTime" value="5" /> Sec.
+      </div>
+    </div>
     <script src="slideshow.js"></script>
   </body>
 </html>

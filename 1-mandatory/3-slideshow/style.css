@@ -1,1 +1,87 @@
-/** Write your CSS in here **/
+div {
+  position: relative;
+}
+#counter {
+  font-size: 32px;
+  color: #fff;
+  position: absolute;
+  top: 4%;
+  left: 10px;
+  padding: 4px;
+  border: solid 1px;
+  border-radius: 50%;
+}
+
+#timer {
+  font-size: 32px;
+  position: absolute;
+  bottom: 4px;
+  left: 10px;
+  color: #fff;
+}
+
+#slideTime {
+  margin-top: 12px;
+}
+
+#inputTime {
+  width: 70px;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  * {
+    margin: 2%;
+  }
+  #slideTime {
+    font-size: 36px;
+  }
+  img {
+    width: 96%;
+  }
+  button {
+    border: none;
+    background-color: rgb(219, 219, 219);
+    padding: 10px;
+    margin-bottom: 8px;
+    font-size: 32px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  * {
+    margin: 2px;
+    font-size: 1.1em;
+  }
+
+  #counter {
+    font-size: 24px;
+    top: 2%;
+  }
+
+  #timer {
+    font-size: 24px;
+    bottom: -12px;
+  }
+
+  img {
+    width: 60%;
+  }
+
+  button {
+    border: none;
+    background-color: rgb(219, 219, 219);
+    padding: 5px 1.3em;
+    margin-top: 4px;
+  }
+
+  nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
