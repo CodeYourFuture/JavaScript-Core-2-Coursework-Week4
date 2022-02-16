@@ -12,7 +12,7 @@ const imageElement = document.querySelector("#image"); //slide_img
 const btnNext = document.querySelector("#next");
 const btnPrev = document.querySelector("#prev");
 // const btnAutomatic = document.querySelector("#auto");
-const btnStop = document.querySelector("#stop");
+// const btnStop = document.querySelector("#stop");
 
 let i = 0; // current image index
 
@@ -20,7 +20,7 @@ function changePicture() {
   function toggle() {
     imageElement.src = images[i];
   }
-  setInterval(toggle, 2000)
+  setInterval(toggle, 2000);
 
   btnPrev.addEventListener("click", function () {
     if (i <= 0) i = images.length;
@@ -33,6 +33,5 @@ function changePicture() {
     i++;
     return toggle();
   });
-
 }
 changePicture();
