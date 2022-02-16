@@ -1,1 +1,26 @@
 /** Write your CSS in here **/
+body {
+    background-color: blanchedalmond;
+  }
+  #container {
+    background-color: green
+    border: 3px dashed red;
+    text-align: center;
+    height: 325px;
+    width: 850px;
+    margin: 150px auto;
+  }
+  #press {
+    background-color: cadetblue;
+    color: rgb(218, 55, 55);
+    margin: 30px auto;
+    height: 50px;
+    width: 250px;
+    border-radius: 7px;
+    font-size: 20px;
+  }
+  #quote {
+    color: rgb(14, 4, 4);
+    margin: 5px auto;
+    font-size: 24px;
+  }

@@ -1,1 +1,24 @@
 /** Write your CSS in here **/
+@import url('https://fonts.googleapis.com/css2?family=poppins&display=swap');
+
+* {
+    box-sizing:border-box;
+}
+
+.container {
+    /*display: flex;*/
+margin-top: 5rem;
+    width: 90vw;
+    border-radius: 3px;
+    background-color: rgb(52, 148, 148);
+}
+
+.h1 {
+align-items: center;
+
+}
+
+.btn {
+    font-size: 24px;
+
+}

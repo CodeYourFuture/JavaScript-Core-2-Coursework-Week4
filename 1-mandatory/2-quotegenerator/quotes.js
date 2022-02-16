@@ -1,3 +1,12 @@
+const press = document.getElementById("press");
+const quote = document.getElementById("quote");
+
+press.addEventListener("click", () => {
+  const randomQuote = pickFromArray(quotes);
+  quote.innerHTML = `${randomQuote.quote} <br> Author: <em>${randomQuote.author}</em>`;
+});
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
