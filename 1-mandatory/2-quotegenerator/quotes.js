@@ -7,18 +7,23 @@ let content = document.getElementById("content");
 let pEl = document.createElement("p");
 let span = document.createElement("span");
 let button = document.createElement("button");
+let autoPlay = document.createElement("button");
+autoPlay.innerText = "auto-play:ON";
+autoPlay.id = "autoPlay";
 button.id = "addBtn";
 pEl.id = "item";
 span.id = "title";
 content.appendChild(pEl);
 content.appendChild(span);
 content.appendChild(button);
+content.appendChild(autoPlay);
 button.innerText = "New Quote";
 
 let newQuotes = (arr) => {
   let newColor = setNewColor();
   document.body.style.backgroundColor = newColor;
   pEl.style.color = newColor;
+  autoPlay.style.color = newColor;
   span.style.color = newColor;
   button.style.color = newColor;
   let quoteObj = pickFromArray(arr);
@@ -521,7 +526,21 @@ const quotes = [
 
 newQuotes(quotes);
 
-var addBtn = document.getElementById("addBtn");
-addBtn.addEventListener("click", () => {
-  newQuotes();
+document.getElementById("addBtn").addEventListener("click", () => {
+  newQuotes(quotes);
+});
+
+let interval;
+document.getElementById("autoPlay").addEventListener("click", () => {
+  console.log("clicked");
+  if (interval) {
+    clearInterval(interval);
+    autoPlay.innerText = "auto-play:ON";
+    interval = undefined;
+  } else {
+    interval = setInterval(() => {
+      newQuotes(quotes);
+      autoPlay.innerText = "auto-play:OFF";
+    }, 1000);
+  }
 });
