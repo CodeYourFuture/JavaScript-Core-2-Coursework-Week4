@@ -1,4 +1,23 @@
-function setAlarm() {}
+function setAlarm() {
+  // When the `Set Alarm` button is clicked, get the value of the input field
+ let setEl = document.querySelector("#alarmSet");
+ let displayEl = setEl.value;
+ let remainingEl = document.querySelector("#timeRemaining");
+ remainingEl.innerText = `Time Remaining: 00:${timer}`;
+
+ let interval = setInterval ( () => {
+   displayEl = displayEl - 1;
+   remainingEl.innerText = `Time Remaining: 00:${timer}`;
+
+   if(displayEl === 0) {
+     clearInterval(interval);
+        playAlarm()
+   }
+
+ },1000)
+
+
+}
 
 // DO NOT EDIT BELOW HERE
 
