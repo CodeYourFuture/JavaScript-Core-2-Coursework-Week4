@@ -1,1 +1,40 @@
 /** Write your CSS in here **/
+#container{
+   position: relative;
+    padding:80px;
+    background-color: rgb(243, 183, 73);
+    font-size: large;
+    text-align: center;
+    
+}
+#quotes{
+    position: relative;
+    padding:50px 15px;
+    color:orange;
+    font-size: large;
+    text-align: center;
+  
+}
+button{
+    position: absolute;
+    background-color: orange;
+   right: 8rem;
+   top:65%;
+    border-style: none;
+    color: white;
+    padding: 15px;
+   
+}
+.quot-btn{
+     background-color: white;
+}
+.authorSpan{
+    font-size: medium;
+    position: absolute;
+    right: 4rem;
+    top:65%;
+    display: block;
+}
+.iconSpan{
+font-size: 40px;
+}
