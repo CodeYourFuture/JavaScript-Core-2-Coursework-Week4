@@ -10,7 +10,7 @@ Make a website which allows the user to navigate a set of images (first manually
 
 Make forward and back buttons to move _manually_ in that direction through a list of at least 4 images.
 
-(e.g. When the user presses forward once, the display should move ONCE to the next image.)
+(e.g. When the  user presses forward once, the display should move ONCE to the next image.)
 
 You can use any images.
 

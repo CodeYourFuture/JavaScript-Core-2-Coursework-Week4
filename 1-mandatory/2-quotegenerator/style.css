@@ -1,1 +1,30 @@
 /** Write your CSS in here **/
+.quote {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(245, 0, 0);
+
+    margin: 200px;
+    padding: 2em;
+    color: white;
+
+
+
+}
+
+#author {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+
+#btn {
+    border: 4px solid yellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 238, 0);
+
+}

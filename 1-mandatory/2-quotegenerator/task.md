@@ -6,7 +6,7 @@ You can change any of the files in this project
 
 ## How the Quote Generator should work
 
-When the page loads it should show a random quote from the `quotes` array on the screen. It should also show who said the quote.
+When the page loads, it should show a random quote from the `quotes` array on the screen. It should also show who said the quote.
 
 When you click a button on the screen it should change the quote on the screen.
 
