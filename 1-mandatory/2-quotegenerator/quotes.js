@@ -490,3 +490,14 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let quotesEl = document.getElementById("quotes");
+let someQuote = pickFromArray(quotes);
+quotesEl.innerText = `${quoteObj.quote}, said by ${quoteObj.author}`;
+
+let myButton = document.querySelector("#button");
+
+myButton.addEventListener("click", () => {
+  someQuote = pickFromArray(quotes);
+  quotesEl.innerText = `${quoteObj.quote}, said by ${quoteObj.author}`;
+});
