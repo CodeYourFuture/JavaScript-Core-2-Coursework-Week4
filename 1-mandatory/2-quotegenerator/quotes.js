@@ -1,3 +1,18 @@
+// const quoteDiv = document.getElementById("quotes");
+// let ourQuote = document.createElement("p");
+
+// const randomQuote = pickFromArray(quotes);
+
+// ourQuote.innerText = `${randomQuote.quote}, said by ${randomQuote.author}`;
+
+// quoteDiv.append(ourQuote);
+
+// const ourButton = document.getElementById("button");
+// ourButton.addEventListener("click", () => {
+//   const typeYourNewThing = pickFromArray(quotes);
+//   ourQuote.innerText = `${typeYourNewThing.quote}, said by ${typeYourNewThing.author}`;
+// });
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +505,12 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+let pEl = document.getElementById("quotes");
+let quoteObj = pickFromArray(quotes);
+pEl.innerText = `${quoteObj.quote}, said by ${quoteObj.author}`;
+
+const newQuoteBtn = document.getElementById("generateQuote");
+newQuoteBtn.addEventListener("click", () => {
+  quoteObj = pickFromArray(quotes);
+  pEl.innerText = `${quoteObj.quote}, said by ${quoteObj.author}`;
+});
