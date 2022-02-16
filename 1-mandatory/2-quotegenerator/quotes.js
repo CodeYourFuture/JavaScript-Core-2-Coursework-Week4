@@ -490,3 +490,27 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+// 1. Access element with Id Quote
+// 2. Add quote to element
+
+// Add event listener to button
+// When button is clicked, show a new random quote
+
+let quoteParagraph = document.getElementById("quote");
+let authorParagraph = document.getElementById("author");
+let newQuoteButton = document.getElementById("new-quote");
+let divEl = document.querySelector('.quoteEl')
+
+function setQuote() {
+  let selectedQuotation = pickFromArray(quotes);
+  quoteParagraph.innerText = selectedQuotation.quote;
+  authorParagraph.innerText = `- ${selectedQuotation.author}`;
+}
+
+newQuoteButton.addEventListener("click", setQuote);
+
+setQuote();
+document.body.style.backgroundColor = 'rgb(207, 71, 93)';
+divEl.style.backgroundColor = "white";
