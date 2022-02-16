@@ -6,10 +6,10 @@ let autoBack = document.getElementById("btnAutoBack");
 let autoForward = document.getElementById("btnAutoForward");
 let img = document.querySelector("img");
 const dogImages = [
-  "images/dog1.jpg",
-  "images/dog2.jpg",
-  "images/dog3.jpg",
-  "images/dog4.jpg",
+  "images/dog1.png",
+  "images/dog2.png",
+  "images/dog3.png",
+  "images/dog4.png",
 ];
 let currentImageIndex = 0;
 

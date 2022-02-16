@@ -1,1 +1,36 @@
 /** Write your CSS in here **/
+
+h1{
+font-style: italic;
+}
+
+.container{
+    text-align: center;
+    margin: 5rem;
+    background-color: rgb(245, 206, 206);
+    padding:
+}
+
+.responsive{
+    max-width: 100%;
+    height: auto;
+}
+
+.btn{
+    background-color: white;
+}
+
+.btnEl{
+    border: none;
+    background-color: rgb(90, 75, 82);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+.btnEl:hover{
+color: black;
+background-color:rgb(245, 206, 206);
+
+}
