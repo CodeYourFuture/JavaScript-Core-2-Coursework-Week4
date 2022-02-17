@@ -1,4 +1,4 @@
-# Make an Alarm Clock
+\'# Make an Alarm Clock
 
 In this folder you will find the basic setup of an alarm clock.
 
@@ -20,7 +20,8 @@ Only read this section if you really need to! It's good to work this out for you
 
 ### Hints
 
-- Have you tried looking at the `setInterval` function?
+- Have you tried looking at the `
+` function?
 
 ### Steps to complete
 

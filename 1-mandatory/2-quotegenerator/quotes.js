@@ -1,3 +1,7 @@
+
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -17,9 +21,9 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+  function pickFromArray(choices) {
+   return choices[Math.floor(Math.random() * choices.length)];
+ }
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
@@ -490,3 +494,31 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+
+let contentDiv = document.getElementById("content")
+let paraEl = document.getElementById("showQoute")
+
+let randomQuote = pickFromArray(quotes)
+
+paraEl.innerText = `${randomQuote.quote}, by ${randomQuote.author}`;
+contentDiv.append(paraEl);
+ 
+
+
+
+let buttonEle = document.getElementById("btn")
+buttonEle.addEventListener("click", () => {
+
+  let newGeneratedQoute = pickFromArray(quotes)
+  paraEl.innerText = `${newGeneratedQoute.quote}, by ${newGeneratedQoute.author}`;
+  
+
+})
+
+// const ourButton = document.getElementById("button");
+// ourButton.addEventListener("click", () => {
+//   const typeYourNewThing = pickFromArray(quotes);
+//   ourQuote.innerText = `${typeYourNewThing.quote}, said by ${typeYourNewThing.author}`;
+// });

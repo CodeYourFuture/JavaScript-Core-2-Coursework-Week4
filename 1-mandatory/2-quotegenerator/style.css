@@ -1,1 +1,9 @@
 /** Write your CSS in here **/
+body {
+  background: #66ff99;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
