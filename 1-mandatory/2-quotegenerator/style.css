@@ -26,38 +26,3 @@
   font-size: 20px;
   background-color: beige;
 }
-/* body {
-  background-color: #ffa500;
-}
-#root {
-  padding: 10%;
-  display: flex;
-  flex-direction: column;
-}
-#root p {
-  padding: 5%;
-  width: 100%;
-  height: 100%;
-  background-color: aliceblue;
-  font-size: 2vw;
-  color: #ffa500;
-}
-
-#author {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-}
-#author button {
-  padding: 1vw;
-  margin: 1vw;
-  align-self: flex-end;
-  background-color: #ffa500;
-  border: none;
-  color: white;
-}
-#author button:hover {
-  background-color: white;
-  color: #ffa500;
-  border: 1px #ffa500 solid;
-} */
