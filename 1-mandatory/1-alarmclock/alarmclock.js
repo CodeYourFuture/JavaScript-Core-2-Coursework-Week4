@@ -18,22 +18,20 @@ function setAlarm() {
   let timer = alarmSet.value;
   let timeRemaining = document.querySelector("#timeRemaining");
 
-  let timerMinutes = Math.floor(timer / 60);
-  let timerSeconds = timer % 60;
-
-  console.log(timerMinutes);
-  console.log(timerSeconds);
-
-  timeRemaining.innerText = `Time Remaining: ${timerMinutes}:${timerSeconds}`;
-
   let myInterval = setInterval(() => {
-    if (timerSeconds < 10) {
-      timerSeconds = `0${timerSeconds}`;
+    timer = timer - 1;
+
+    //convert time into minutes and seconds
+    let timerMinutes = Math.floor(timer / 60);
+    let timerSeconds = timer - timerMinutes * 60;
+
+    if (timerMinutes < 10 && timerSeconds >= 10) {
+      timeRemaining.innerText = `Time Remaining: 0${timerMinutes}:${timerSeconds}`;
+    } else if (timerMinutes < 10 && timerSeconds < 10) {
+      timeRemaining.innerText = `Time Remaining: 0${timerMinutes}:0${timerSeconds}`;
+    } else if (timerMinutes >= 10 && timerSeconds < 10) {
+      timeRemaining.innerText = `Time Remaining: ${timerMinutes}:0${timerSeconds}`;
     }
-
-    timerSeconds = timerSeconds - 1;
-
-    timeRemaining.innerText = `Time Remaining: ${timerMinutes}:${timerSeconds}`;
 
     if (timerMinutes === 0 && timerSeconds === 0) {
       clearInterval(myInterval);
