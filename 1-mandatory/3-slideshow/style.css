@@ -1,1 +1,76 @@
-/** Write your CSS in here **/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    background: rgb(29, 28, 28);
+}
+
+#slideShow {
+    width: 70%;
+    margin: 1em auto;
+    padding: 1em;
+
+}
+
+.slides {
+    width: 100%;
+    position: relative;
+}
+
+.btn_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.current_slide {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.btn {
+    width: inherit;
+    margin: 1em 0.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    border-bottom: 2px solid gray;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+}
+
+.autoback {
+    background: yellow;
+}
+
+.back {
+    background: rgb(250, 250, 60);
+}
+
+.forward {
+    background: rgb(60, 253, 60);
+}
+
+.stop {
+    background: red;
+}
+
+.autoforward {
+    background: rgb(0, 255, 0);
+}
+
+.slide_counter {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: rgb(255, 166, 0);
+    background: rgba(128, 128, 128, 0.493);
+}

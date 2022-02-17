@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Slideshow</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Write your HTML in here -->
-    <script src="slideshow.js"></script>
-  </body>
+
+<head>
+  <title>Slideshow</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <article id="slideShow">
+    <section class="slides">
+      <img class="current_slide" src="https://vistapointe.net/images/carach-angren-3.jpg" alt="Carach Angren" />
+      <h1 class="slide_counter"></h1>
+    </section>
+    <section class="btn_container">
+      <button class="btn autoback" type="button">Auto Back</button>
+      <button class="btn back" type="button">Back</button>
+      <button class="btn stop" type="button">Stop</button>
+      <button class="btn forward" type="button">Forward</button>
+      <button class="btn autoforward" type="button">Auto Forward</button>
+    </section>
+
+  </article>
+  <script src="slideshow.js"></script>
+</body>
+
 </html>
