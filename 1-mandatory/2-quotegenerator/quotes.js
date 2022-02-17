@@ -13,10 +13,11 @@ const author = document.getElementById('author');
 const button = document.getElementById('btn');
 
 function startUp(){
-let startPage = pickFromArray(quotes)
-author.innerText = startPage.author;
-title.innerText = startPage.quote;
+  const startPage = pickFromArray(quotes)
+  author.innerText = startPage.author;
+  title.innerText = startPage.quote;
 }
+
 document.addEventListener("DOMContentLoaded", startUp);
 
 button.addEventListener('click', () => {
@@ -27,16 +28,17 @@ button.addEventListener('click', () => {
 let intervalId = 0;
 
 const auto = document.getElementById('auto');
+
 auto.addEventListener('click', () => {
   const checkedValue = document.querySelector('#auto').checked;
-  if(checkedValue === false) {
-    clearInterval(intervalId)
-  } else {
-  intervalId = setInterval(() => {
-    const text = pickFromArray(quotes)
-  author.innerText = text.author;
-  title.innerText = text.quote;
-  }, 2500);}
+    if(checkedValue === false) {
+      clearInterval(intervalId)
+    } else {
+    intervalId = setInterval(() => {
+      const text = pickFromArray(quotes)
+    author.innerText = text.author;
+    title.innerText = text.quote;
+    }, 2500);}
 });
 
 

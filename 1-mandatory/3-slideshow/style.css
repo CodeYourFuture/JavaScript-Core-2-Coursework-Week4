@@ -1,1 +1,6 @@
 /** Write your CSS in here **/
+
+.item {
+  height: 50%
+  width: 50%;
+}
