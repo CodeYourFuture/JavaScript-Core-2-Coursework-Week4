@@ -1,4 +1,27 @@
-function setAlarm() {}
+function setAlarm() {
+
+  let inputEl = document.getElementById('alarmSet')
+  let inputElValue = inputEl.value
+
+  let clockEl = document.getElementById('timeRemaining')
+  
+  let interval = setInterval(()=> {
+    if (inputElValue<10){
+      clockEl.innerHTML=`Time Remaining: 00:0${inputElValue}`
+    }
+    else if(inputElValue >= 10){
+    clockEl.innerHTML=`Time Remaining: 00:${inputElValue}`
+    }
+  inputElValue -- 
+    if (inputElValue < 0){clearInterval(interval)
+    playAlarm()}
+  }, 1000)
+   
+
+ 
+  
+  
+}
 
 // DO NOT EDIT BELOW HERE
 

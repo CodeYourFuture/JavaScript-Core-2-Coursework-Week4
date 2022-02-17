@@ -1,1 +1,26 @@
 /** Write your CSS in here **/
+
+
+.p {
+    font-size: 40px;
+    text-align: center;
+    background-color: #cb8f2b;
+    padding : 5rem
+}
+.button {
+    padding: 1rem 2rem;
+    background-color: pink;
+    font-size: 15px;
+    border-radius: 5%;
+    border: none;
+    position: absolute;
+    right: 50px
+}
+.author {
+    font-size: 22px;
+    font-style: italic;
+    text-align: right;
+} */
+.span {
+    font-size: 45px;
+}

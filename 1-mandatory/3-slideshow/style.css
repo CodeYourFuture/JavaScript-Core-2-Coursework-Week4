@@ -1,1 +1,25 @@
 /** Write your CSS in here **/
+.slides{
+    width: auto;
+    height: 300px;
+    padding: 0.5rem;
+    object-fit: cover;
+}
+.h1{
+    padding:1rem;
+}
+.container-box {
+    margin: 1rem 0.5rem;
+    background-color: rgb(240, 226, 220);
+}
+
+.button {
+    margin-left: 0.5rem;
+    padding: 0.8rem 1rem;
+    background-color: rgb(168, 81, 10);
+    color: white;
+    font-size: 16px;
+    letter-spacing: 4px;
+    border-radius: 5%;
+    border: none;
+}

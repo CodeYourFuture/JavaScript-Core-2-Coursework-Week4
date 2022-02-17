@@ -490,3 +490,42 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let bodyEl = document.querySelector('body');
+
+// let quotationMark = document.createElement('span')
+// quotationMark.innerHTML = '&#8221';
+
+let quoteParagraphEl = document.createElement('p')
+let randomQuote=pickFromArray(quotes)
+quoteParagraphEl.innerHTML= '&#8221'+randomQuote.quote 
+quoteParagraphEl.className='p'
+
+
+let quoteAuthor = document.createElement('p')
+quoteAuthor.innerHTML= '-' + randomQuote.author
+quoteAuthor.className='author'
+quoteParagraphEl.append(quoteAuthor)
+
+//quoteParagraphEl.append(quotationMark)
+bodyEl.appendChild(quoteParagraphEl)
+
+
+
+
+let button = document.createElement('button')
+button.innerHTML= 'New Quote'
+bodyEl.appendChild(button)
+button.className='button'
+
+button.addEventListener('click', () => {
+  let newQuote = pickFromArray(quotes)
+  quoteParagraphEl.innerHTML= '&#8221'+newQuote.quote
+  quoteAuthor.innerHTML= '-' + newQuote.author
+  quoteParagraphEl.append(quoteAuthor)
+  let r= Math.floor(Math.random()* (200 -255)) +200
+  let b= Math.floor(Math.random()* (150 -255)) +150
+  let g= Math.floor(Math.random()* (200 -255)) +200
+
+  quoteParagraphEl.style.backgroundColor= 'rgb('+r+','+g+','+b+')'
+})
