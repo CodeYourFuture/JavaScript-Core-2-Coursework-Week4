@@ -1,20 +1,15 @@
 
 
 function setAlarm() {
-  let startingTime = document.getElementById("alarmSet").value;
-  let time = startingTime;
+  let startingTime = document.getElementById("alarmSet")
+  let time = startingTime.value;;
 
   let countDown = document.getElementById("timeRemaining");
   countDown.innerText = `Time Remaining: 00:${time}`;
-
-  
-
-
   const myInterval = setInterval(() => {
-    let minutes = Math.floor(time / 60)
-    let seconds = time % 60;
+    
     time--;
-    countDown.innerText = `Time Remaining: ${minutes}:${seconds}`;
+    countDown.innerText = `Time Remaining :${time}`;
 
     if (time === 0) {
       clearInterval(myInterval);
