@@ -22,7 +22,7 @@ function pickFromArray(choices) {
 }
 
 // A list of quotes you can use in your app.
-// Feel free to edit them, and to add your own favourites.
+// Feel free to edit them, and to add your own favorites.
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
@@ -497,14 +497,15 @@ const ourQuote = document.createElement("p");
 
 const randomQuote = pickFromArray(quotes);
 
-console.log(randomQuote.author);
+// console.log(randomQuote.author);
 
-ourQuote.innerText = `${randomQuote.quote}, said by ${randomQuote.author}`;
+ourQuote.innerHTML = `${randomQuote.quote}, said by ${randomQuote.author}`;
 
 quoteDiv.append(ourQuote);
 
 const ourButton = document.getElementById("button");
+
 ourButton.addEventListener("click", () => {
   const newRandomQuote = pickFromArray(quotes);
-  newRandomQuote.innerText = `${newRandomQuote.quote}, said by ${newRandomQuote.author}`;
+  newRandomQuote.innerHTML = `${newRandomQuote.quote}, said by ${newRandomQuote.author}`;
 })
