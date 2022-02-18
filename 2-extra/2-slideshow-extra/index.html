@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* CSS Styles */
+
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .container {
+                width: 1200px;
+                margin: auto;
+            }
+
+            /* Developer Styles */
+            #slides {
+                width: 1200px;
+                height: 400px;
+                margin: auto;
+            }
+
+            .small-slides {
+                width: 300px;
+                height: 169px;
+                margin: auto;
+            }
+
+            .card-row {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .card-row > div {
+                margin: 1em;
+                flex: 1;
+            }
+        </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>MS Slides Demo</h1>
+        
+        
+        <!-- Big Slideshow -->
+        <!-- delay 8 secs transition time 0.4 secs-->
+        <div id="slides" class="ms-slides" data-delay="8000" data-transition="400">
+          <!-- Define the Slide Show Elements -->
+          <div class="ms-slides__inner">
+            <img src="https://www.oscars.co.uk/i/s/48f68978-25a2-4391-8306-74668e1cccd0/1600x640" width="1200" height="400" alt="">
+            <img src="https://www.lollypop.org/wp-content/uploads/2019/08/Cover-Photo-Senior-Cat-v2-1200x400.jpg" width="1200" height="400" alt="">
+            <img src="https://www.oscars.co.uk/i/s/53bc14e6-0b32-4175-9052-0420dcd74dc4/1600x640" width="1200" height="400" alt="">
+            <img src="https://www.lollypop.org/wp-content/uploads/2018/08/Photo-1-1200x400.jpg" width="1200" height="400" alt="">
+          </div>
+
+          <!-- Show Indicators -->
+          <ol class="ms-slides__indicators">
+            <!-- slide indicators -->
+          </ol>
+
+          <!-- Show Next and Previous Buttons -->
+          <a href="#" class="ms-slides__next-button"></a>
+          <a href="#" class="ms-slides__prev-button"></a>
+        </div>
+        <!-- Notes -->
+        <div>
+          <p>This example shows all features in use. Slides are changing every </p>
+          <div class="buttons">
+
+            <button class="btn" id="prev">Prev</button>
+            <button class="btn" id="next">Next</button>
+            <button class="btn" id="stop">Stop</button>
+            <!-- <button class="btn" id="automatic">Auto</button> -->
+          </div>
+        </div>
+        <!-- Big Slideshow -->
+
+        <!-- Row of Small Slideshows -->
+        <div class="card-row">
+
+          <div>
+            <!-- Slides with no options -->
+            <!-- delay 4 secs transition time 2 secs-->
+            <div id="slides-2" class="ms-slides small-slides" data-delay="4000" data-transition="2000">
+              <div class="ms-slides__inner">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=640:*" width="300" height="169" alt="">
+                <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&w=1000&q=80" width="300" height="169" alt="">
+                <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="300" height="169" alt="">
+                <img src="https://shotkit.com/wp-content/uploads/2021/05/shotkit-cat-photos-001.jpg" width="300" height="169" alt="">
+              </div>
+            </div>
+            <!-- Notes -->
+            <div>
+              <p>All you need is love and a cat.
+                Not all angels have wings. Sometimes they have whiskers.Thanks fur the memories.
+                </p>
+            </div>
+          </div>
+
+          <div>
+            <!-- Slides with indicators -->
+            <!-- delay 5 secs transition time 0.8 secs -->
+            <div id="slides-3" class="ms-slides small-slides" data-delay="5000" data-transition="800">
+              <div class="ms-slides__inner">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=640:*" width="200" height="169" alt="">
+                <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&w=1000&q=80" width="200" height="169" alt="">
+                <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="200" height="169" alt="">
+                <img src="https://shotkit.com/wp-content/uploads/2021/05/shotkit-cat-photos-001.jpg" width="200" height="169" alt="">
+              </div>
+              <!-- Show Indicators -->
+              <ol class="ms-slides__indicators">
+                <!-- slide indicators -->
+              </ol>
+            </div>
+            <!-- Notes -->
+            <div>
+              <p>All you need is love and a cat.
+                Not all angels have wings. Sometimes they have whiskers.Thanks fur the memories.
+                </p>
+            </div>
+          </div>
+    
+          <div>
+            <!-- Slides with Buttons -->
+            <!-- Delay time 0 slides only change when the buttons are clickes transition 0.2 secs -->
+            <div id="slides-4" class="ms-slides small-slides" data-delay="0" data-transition="2000">
+                <div class="ms-slides__inner">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=640:*" width="300" height="169" alt="">
+                    <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&w=1000&q=80" width="300" height="169" alt="">
+                    <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="300" height="169" alt="">
+                    <img src="https://shotkit.com/wp-content/uploads/2021/05/shotkit-cat-photos-001.jpg" width="300" height="169" alt="">
+                </div>
+
+                <!-- Show Next and Previous Buttons -->
+                <a href="#" class="ms-slides__next-button"></a>
+                <a href="#" class="ms-slides__prev-button"></a>
+            </div>
+            <div>
+              <p>All you need is love and a cat.
+                Not all angels have wings. Sometimes they have whiskers.Thanks fur the memories.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <script src="slideshow.js"></script>
+        <script>
+            // Other code 
+        </script>
+    </body>
+</html>

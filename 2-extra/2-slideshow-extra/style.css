@@ -1,0 +1,81 @@
+/** Write your CSS in here **/
+/* Slide Show Styles */ 
+.ms-slides__inner {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    transform: translate3d(0, 0, 0);
+    transition: 1000ms;
+}
+
+.ms-slides {
+    overflow: hidden;
+    position: relative;
+}
+
+.ms-slides__next-button, .ms-slides__prev-button {
+    display: block;
+    width: calc(40px - 8px);
+    height: calc(40px - 8px);
+    border-radius: 50%;;
+    background-color:rgba(255,255,255,0.5);
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid transparent;
+}
+
+.ms-slides__next-button:hover, 
+.ms-slides__prev-button:hover {
+    border: 4px solid #fff;
+}
+
+.ms-slides__next-button {
+    right: calc(1em - 4px);
+}
+
+.ms-slides__prev-button {
+    left: calc(1em - 4px);
+}
+
+.ms-slides__next-button::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+    transform: translate(-2px, 0) rotate(45deg);
+}
+
+.ms-slides__prev-button::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 4px solid #fff;
+    border-left: 4px solid #fff;
+    transform: translate(2px, 0) rotate(45deg);
+}
+
+.ms-slides__indicators {
+    list-style: none;
+    position: absolute;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    bottom: 1em;
+    transform: translate(-50%, 0);
+}
+
+.ms-slides__indicators > li {
+    width: 16px;
+    height: 16px;
+    margin: 4px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
