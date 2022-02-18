@@ -1,3 +1,26 @@
+function pickFromArray(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
+let divEl = document.getElementById("divEl");
+let quoteEl = document.createElement("q");
+let authorEl = document.createElement("p");
+
+quoteEl.className = "quote";
+authorEl.className = "author";
+
+divEl.prepend(quoteEl, authorEl);
+
+function displayRandomQuote() {
+  quoteEl.innerText = `${pickFromArray(quotes).quote}`;
+  authorEl.innerText = `${pickFromArray(quotes).author}`;
+}
+
+let buttonEl = document.getElementById("button");
+buttonEl.addEventListener("click", displayRandomQuote);
+
+window.onload = displayRandomQuote;
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
