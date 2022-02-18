@@ -7,14 +7,12 @@ const images = [
   "https://images.unsplash.com/photo-1455264745730-cb3b76250ae8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80",
 ];
 
-//create variable to store references to HTML elements
+//create variables to store references to HTML elements
 const image = document.querySelector("#image");
 const backBtn = document.querySelector("#back");
 const forwardBtn = document.querySelector("#forward");
-
 const autoBackBtn = document.querySelector("#auto-back");
 const autoForwardBtn = document.querySelector("#auto-forward");
-
 const stopBtn = document.querySelector("#stop");
 
 let myTimeout;
@@ -45,14 +43,14 @@ function showNextImage() {
 
 // Make auto-forward and auto-back buttons to _automatically_ move in that direction through the list of images.
 function autoPreviousImage() {
-  myTimeout = setInterval(showPreviousImage, 5000);
+  myTimeout = setInterval(showPreviousImage, 2000);
 }
 
 function autoNextImage() {
-  myTimeout = setInterval(showNextImage, 5000);
+  myTimeout = setInterval(showNextImage, 2000);
 }
 
-function pauseCarousel() {
+function stopCarousel() {
   clearInterval(myTimeout);
 }
 
@@ -62,3 +60,5 @@ forwardBtn.addEventListener("click", showNextImage);
 
 autoBackBtn.addEventListener("click", autoPreviousImage);
 autoForwardBtn.addEventListener("click", autoNextImage);
+
+stopBtn.addEventListener("click", stopCarousel);
