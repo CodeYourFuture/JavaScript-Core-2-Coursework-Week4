@@ -17,7 +17,8 @@
       <h1 id="timeRemaining">Time Remaining: 00:00</h1>
       <div>
         Set Time to:
-        <input id="alarmSet" type="number" />
+        <!-- up to 24 hours -->
+        <input id="alarmSet" type="number" min="1" max="3600" />
       </div>
       <div>
         <button id="set" type="button">Set Alarm</button>

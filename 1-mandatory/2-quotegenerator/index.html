@@ -9,9 +9,35 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- This entry is needed to fix issues regarding the display of utf-8 quotes and apostrophes -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Choose the font: Playfair Display for the quotes -->
+    <!-- Source: https://fonts.google.com/specimen/Playfair+Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div class="main-backgr">
+      <p class="spacing"></p>
+      <div class="quote-backgr">
+         <blockquote></blockquote><p class="quote"></p>
+        <p class="author"></p>
+        <div class="rj-button"></blockquote>
+          <p><button id="newquote" class="button-27" role="button">New Quote</button></p>
+        </div>
+      </div>
+    </div>
+
+    <label class='toggle-label'>
+       <input type='checkbox'/>
+	        <span class='back'>
+		          <span class='toggle'></span>
+ 		          <span class='label on'>ON</span>
+		          <span class='label off'>OFF</span>  
+	        </span>
+    </label>
+     <div class="blink">auto-play:ON</div>
     <script src="quotes.js"></script>
   </body>
 </html>

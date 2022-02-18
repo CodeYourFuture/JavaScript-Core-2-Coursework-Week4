@@ -1,3 +1,62 @@
+  const quoteLoc = document.querySelector(".quote");
+  const authorLoc = document.querySelector(".author");
+  const checkbox = document.querySelector("input[type=checkbox]");
+  const newQuoteButton = document.getElementById("newquote");
+  const blinkAutoPlay = document.querySelector(".blink");
+
+  /*
+  Add a toggle-switch or checkbox input to your existing quote generator.
+  When the switch is ON:
+  - ... the generator should pick and display a new quote every 60 seconds.
+  - ... the generator should display "auto-play:ON" somewhere on the page.
+- When the switch is OFF
+  - ... the generator should NOT change quote automatically
+  */
+
+  let autoQuotes = false;
+  let intervalID;
+    
+  newQuoteButton.addEventListener("click", () => {
+      newQuote(); });
+
+  checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    // Hide 'New Quote Button'
+    newQuoteButton.style.display = "none"
+    // Show auto-play:ON
+    blinkAutoPlay.style.display = "block"
+    autoQuotes = true;
+    newQuote() // show new quote straightaway; after that, show a new one every 60 seconds
+    intervalID = setInterval(newQuote,60000)
+  } 
+  
+  else {
+    // the generator should NOT change quote automatically
+    autoQuotes = false;
+    clearInterval(intervalID)
+   // Remove auto-play:ON
+    blinkAutoPlay.style.display = "none"
+    // Show 'New Quote Button'
+    newQuoteButton.style.display = "block"
+  }
+
+});
+
+  // This default quote is need since 'choices[]' is not defined yet.
+  // And no editing is allowed below!
+  // So I added this quote to begin with
+  quoteLoc.innerText = "The greatest glory in living lies not in never falling, but in rising every time we fall.";
+  authorLoc.innerText = "Nelson Mandela";
+
+  function newQuote() {
+
+       let theChoice = pickFromArray(quotes);
+       quoteLoc.innerText = theChoice.quote;
+       authorLoc.innerText = theChoice.author;
+       
+
+  }
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -38,7 +97,7 @@ const quotes = [
   },
   {
     quote:
-      "Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.",
+      "Two roads diverged in a wood, and I took the one less traveled by, And that has made all the difference.",
     author: "Robert Frost",
   },
   {
@@ -225,7 +284,7 @@ const quotes = [
   },
   {
     quote:
-      "Teach thy tongue to say, “I do not know,” and thous shalt progress.",
+      "Teach thy tongue to say, “I do not know,” and thou shalt progress.",
     author: "Maimonides",
   },
   {
