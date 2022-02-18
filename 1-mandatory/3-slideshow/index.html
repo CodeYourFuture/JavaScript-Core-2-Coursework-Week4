@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Slideshow</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- Write your HTML in here -->
-    <script src="slideshow.js"></script>
+    <section class="heading-wrapper">
+      <h1>Animal Images</h1>
+    </section>
+    <section class="images-wrapper">
+      <h2 class="animal-name"></h2>
+      <img>
+      <p class="photographer"></p>
+    </section>
+    <section class="buttons">
+      <button class="buttons auto-back">Auto Back</button>
+      <button class="buttons back">Back</button>
+      <button class="buttons stop">Stop</button>
+      <button class="buttons forward">Forward</button>
+      <button class="buttons auto-forward">Auto Forward</button>
+    </section>
+    <section>
+      <label for="user-seconds">Choose your slideshow interval in seconds</label>
+      <input type="number" name="user-seconds" id="user-seconds">
+      <button class="buttons user-forwards">Set Forwards</button>
+      <button class="buttons user-backwards">Set Backwards</button>
+    </section>
+    <script type="module" src="slideshow.js"></script>
   </body>
+
 </html>

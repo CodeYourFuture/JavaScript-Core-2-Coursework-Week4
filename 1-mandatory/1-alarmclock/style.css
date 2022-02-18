@@ -9,6 +9,9 @@
 #alarmSet {
   margin: 20px;
 }
+button {
+  margin: 5px;
+}
 
 h1 {
   text-align: center;

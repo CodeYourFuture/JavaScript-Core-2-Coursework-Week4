@@ -490,3 +490,42 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let body = document.querySelector("body");
+let quoteBox = document.querySelector(".quote-wrapper");
+let quoteText = document.querySelector(".quote-text");
+let quoteAuthor = document.querySelector(".quote-author");
+let newQuote = document.querySelector(".new-quote");
+let leftQuote = document.createElement("i");
+leftQuote.classList.add("fas", "fa-quote-left");
+let rightQuote = document.createElement("i");
+rightQuote.classList.add("fas", "fa-quote-right");
+
+function createQuoteLayout() {
+  let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  let randomColorTwo = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  body.style.backgroundColor = randomColor;
+  quoteText.style.color = randomColor;
+  quoteBox.style.backgroundColor = "white";
+  quoteAuthor.style.color = randomColor;
+  newQuote.style.backgroundColor = randomColor;
+  newQuote.style.color = "white";
+  leftQuote.style.color = randomColorTwo;
+  rightQuote.style.color = randomColorTwo;
+}
+
+function populateQuotes() {
+  let randomQuote = Math.floor(Math.random() * quotes.length);
+  
+  quoteText.innerHTML = quotes[randomQuote].quote;
+  quoteText.prepend(leftQuote);
+  quoteText.append(rightQuote);
+  quoteAuthor.innerHTML = `- ${quotes[randomQuote].author}`;
+}
+createQuoteLayout();
+populateQuotes();
+
+newQuote.addEventListener("click", () => {
+  createQuoteLayout();
+  populateQuotes();
+});

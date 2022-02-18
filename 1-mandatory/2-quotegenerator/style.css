@@ -1,1 +1,41 @@
 /** Write your CSS in here **/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.quote-wrapper {
+  width: 80%;
+  padding: 30px;
+}
+
+.quote-text-wrapper {
+  display: flex;
+}
+
+.fas {
+font-size: 25px;
+margin: 5px;
+vertical-align: super;
+}
+
+.quote-author {
+text-align: right;
+margin: 15px;
+font-size: 20px;
+margin: 20px;
+}
+
+.new-quote {
+  border: none;
+  padding: 10px;
+}
+
