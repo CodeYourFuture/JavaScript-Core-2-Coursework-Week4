@@ -1,1 +1,17 @@
 /** Write your CSS in here **/
+.inner-container {
+  margin: 100px auto;
+  width: 55%;
+  border: 5px dashed black;
+}
+
+button {
+  margin:10px;
+   min-width: 134px;
+    max-width: 134px;
+}
+
+img {
+width: -webkit-fill-available;
+height: 27rem;
+}
