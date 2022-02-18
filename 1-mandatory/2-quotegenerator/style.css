@@ -1,1 +1,15 @@
 /** Write your CSS in here **/
+body {
+  margin: 20px;
+  padding: 0;
+  background-color: rgb(192, 204, 255);
+}
+
+section {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #000;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+}
