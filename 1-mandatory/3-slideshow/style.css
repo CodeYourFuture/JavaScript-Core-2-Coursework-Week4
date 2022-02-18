@@ -1,4 +1,16 @@
 /** Write your CSS in here **/
 button {
-padding: 20px;
+padding: 10px;
+margin: 14px;
+width: 100px;
+}
+
+img {
+  height: 500px;
+  width: auto;
+}
+
+.btn-container, #img-container, h1{
+  display: flex;
+  justify-content: center;
 }

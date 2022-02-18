@@ -1,5 +1,5 @@
 // Write your code here
-let photoArray = [
+let images = [
   {
     src: "https://images.unsplash.com/photo-1645032227534-6a04fe50d4ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
     alt: "A red hat girl sitting ",
@@ -18,29 +18,48 @@ let photoArray = [
   },
 ];
 
-let imgDiv = document.getElementById('img-container');
-let imgEl = document.createElement('img');
+let carouselImg = document.querySelector("#carousel-img");
 
+let i = 0; //current image
 
-let backBtn = document.getElementById("back-btn");
-let i = 0;
-
-let photoPicker = (i) =>{
-  imgEl.setAttribute("src", photoArray[i].src);
-  imgDiv.appendChild(imgEl);
+function back() {
+  if (i <= 0) {
+    i = images.length;
+  }
+  i--;
+  carouselImg.setAttribute("src", images[i].src);
 }
 
-backBtn.addEventListener("click", ()=>{
-  photoPicker(i);
-  i--;
-  if( i < 0){
-    i = photoArray.length }
-  });
-
-let fwdBtn = document.getElementById("forward-btn");
-
-fwdBtn.addEventListener("click", () => {
-  photoPicker(i);
+function forward() {
+  if (i >= images.length - 1) {
+    i = -1;
+  }
   i++;
+  carouselImg.setAttribute("src", images[i].src);
+}
+
+let backButton = document.querySelector("#back-btn");
+backButton.addEventListener("click", back);
+
+let fwdButton = document.querySelector("#forward-btn");
+fwdButton.addEventListener("click", forward);
+
+let backMove;
+
+let autoBackButton = document.querySelector("#auto-back-btn");
+autoBackButton.addEventListener("click", function () {
+backMove = setInterval(back, 1000);
 });
 
+let fwdMove; 
+
+let autoFwdButton = document.querySelector("#auto-forward-btn");
+autoFwdButton.addEventListener("click", function () {
+fwdMove = setInterval(forward, 1000);
+});
+
+let stopButton = document.querySelector("#stop-btn");
+stopButton.addEventListener("click", () => {
+  clearInterval(backMove);
+  clearInterval(fwdMove);
+});
