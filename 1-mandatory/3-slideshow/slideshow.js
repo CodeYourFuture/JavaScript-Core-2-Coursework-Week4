@@ -7,13 +7,27 @@ const back = document.getElementById("back");
 const stop = document.getElementById("stop");
 const aBack = document.getElementById("aBack");
 const aForward = document.getElementById("aForward");
+const select = document.querySelector("select");
+const input = document.querySelector("input");
+const text = document.createElement("p");
 
 imageWrapper.appendChild(image);
 main.prepend(imageWrapper);
+main.prepend(text);
+text.className = "textEl";
 imageWrapper.className = "image-wrapper";
-const imgArr = ["fall.jpg", "winter.jpg", "ocean.jpg", "nature.jpg"];
+
+const imgArr = [
+  "fall.jpg",
+  "winter.jpg",
+  "ocean.jpg",
+  "nature.jpg",
+  "seaside.jpg",
+];
 
 let index = 0;
+let interval;
+let timeInterval = 300;
 
 const sliderChange = (direction) => {
   image.setAttribute("src", `./images/${imgArr[index]}`);
@@ -24,7 +38,6 @@ const sliderChange = (direction) => {
   }
 };
 
-let interval;
 const autoSlider = (direction) => {
   interval = setInterval(() => {
     if (direction === "aForward") {
@@ -32,7 +45,7 @@ const autoSlider = (direction) => {
     } else {
       sliderChange("back");
     }
-  }, 1000);
+  }, timeInterval);
 };
 
 forward.addEventListener("click", () => {
@@ -58,3 +71,12 @@ stop.addEventListener("click", () => {
 });
 
 image.setAttribute("src", `./images/${imgArr[index + imgArr.length - 1]}`);
+
+select.addEventListener("change", (e) => {
+  timeInterval = e.target.value;
+});
+
+input.addEventListener("change", (e) => {
+  text.innerText = e.target.value;
+  console.log(e.target.value);
+});

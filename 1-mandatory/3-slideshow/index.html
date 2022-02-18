@@ -11,16 +11,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="main">
+    <main id="main">
       <!-- Write your HTML in here -->
-      <button id="aBack">Auto Back</button>
+      <div class="controllers">
+        <button id="aBack">Auto Back</button>
 
-      <button id="back">Back</button>
-      <button id="stop">Stop</button>
+        <button id="back">Back</button>
+        <button id="stop">Stop</button>
 
-      <button id="forward">Forward</button>
-      <button id="aForward">Auto Forward</button>
-    </div>
+        <button id="forward">Forward</button>
+        <button id="aForward">Auto Forward</button>
+        <div class="input-wrapper">
+          <label for="time"> Select time between slides: </label>
+          <select name="time" class="selectTime" id="time">
+            <option value="300">300</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+            <option value="2000">2000</option>
+            <option value="3000">3000</option>
+            <option value="4000">4000</option>
+            <option value="5000">5000</option>
+          </select>
+          <label for="text">Add some text:</label>
+          <input type="text" placeholder="Enter some text" id="text" />
+        </div>
+      </div>
+    </main>
     <script src="slideshow.js"></script>
   </body>
 </html>

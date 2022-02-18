@@ -2,12 +2,15 @@
 #main {
   box-sizing: border-box;
   padding: 2rem;
-  align-items: center;
+  text-align: center;
+  width: 70%;
+  margin: 2rem auto;
+  background-color: rgb(227, 228, 194);
 }
 .image-wrapper {
-  width: 550px;
-  height: 350px;
-  margin: 2rem;
+  width: 1000px;
+  height: 650px;
+  margin: 2rem auto;
 }
 .image-wrapper img {
   width: 100%;
@@ -15,8 +18,39 @@
 }
 
 button {
-  margin-left: 1.9rem;
-  padding: 10px 13px;
-  background-color: rgb(228, 222, 197);
+  margin-left: 2rem;
+  padding: 15px 20px;
+  background-color: rgb(235, 111, 80);
   border: none;
+  border-radius: 6px;
+}
+
+label {
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: brown;
+}
+
+select {
+  width: 150px;
+  height: 30px;
+  padding: 5px;
+}
+select option {
+  background-color: rgb(225, 231, 197);
+}
+
+.controllers {
+  display: block;
+}
+
+.input-wrapper {
+  padding-top: 2rem;
+}
+
+.textEl {
+  color: rgb(214, 48, 48);
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
