@@ -1,3 +1,6 @@
+// The code is bellow the array "quotes" definition, in the end of the page
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +493,22 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+
+const quoteDiv = document.getElementById("quote1");
+
+let ourQuote = document.createElement("p"); //<p></p>
+
+const randomQuote = pickFromArray(quotes); // it will be object {quote: "text", author: "name"}
+console.log(randomQuote.quote);
+console.log(randomQuote.author);
+ourQuote.innerText = `${randomQuote.quote}, said by ${randomQuote.author}`;
+
+quoteDiv.appendChild(ourQuote);
+
+const ourButton = document.getElementById("button");
+ourButton.addEventListener("click", () => {
+  const typeYourNewThing = pickFromArray(quotes);
+  ourQuote.innerText = `${typeYourNewThing.quote}, said by ${typeYourNewThing.author}`;
+});
