@@ -490,3 +490,28 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+//When the page loads it should show a random quote from the `quotes` array on the screen. It should also show who said the quote.
+const quote = document.querySelector(".quote");
+let randomQuote = pickFromArray(quotes);
+quote.innerText = `${randomQuote.quote} by ${randomQuote.author}`;
+
+//Create body variable to store body object and change colour of background
+let body = document.querySelector("body");
+let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+document.body.style.backgroundColor = `#${randomColor}`;
+
+//Change colour of button
+const newQuoteButton = document.querySelector("#new-quote");
+newQuoteButton.style.backgroundColor = `#${randomColor}`;
+
+//Click 'New Quote' button on the screen and change quote and button colour
+newQuoteButton.addEventListener("click", () => {
+  const newColor = Math.floor(Math.random() * 16777215).toString(16);
+
+  document.body.style.backgroundColor = `#${newColor}`;
+  newQuoteButton.style.backgroundColor = `#${newColor}`;
+
+  const newQuote = pickFromArray(quotes);
+  quote.innerText = `${newQuote.quote} by ${newQuote.author}`;
+});
