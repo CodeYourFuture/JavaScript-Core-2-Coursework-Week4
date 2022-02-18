@@ -13,3 +13,11 @@
 h1 {
   text-align: center;
 }
+body{
+  background-image: url('https://ak.picdn.net/shutterstock/videos/34881436/thumb/1.jpg');
+  background-position-y:-30%;
+  background-size: 70%;
+  background-color: rgb(9, 181, 224);
+  background-repeat: no-repeat;
+  
+}

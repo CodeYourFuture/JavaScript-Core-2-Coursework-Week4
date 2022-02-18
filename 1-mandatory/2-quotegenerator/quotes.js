@@ -490,3 +490,26 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+// Codes that will generate random quotes -- 
+
+// create elements
+let body = document.querySelector("body");
+let div = document.createElement("div");
+let quote = document.createElement("h2");
+let authorQuote = document.createElement("p");
+let button = document.getElementById("button");
+
+// append elements 
+  body.appendChild(div);
+  div.appendChild(quote);
+  div.appendChild(authorQuote);
+// event listener
+button.addEventListener("click", function generateQuote() {
+  let randomQuote = Math.floor(Math.random() * quotes.length);
+  quote.innerHTML = `“ ${quotes[randomQuote]["quote"]}”`;
+  authorQuote.innerHTML = `- ${quotes[randomQuote]["author"]}`;
+});
+
+// function called
+generateQuote(quotes);

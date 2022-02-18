@@ -1,1 +1,22 @@
 /** Write your CSS in here **/
+div{
+    margin: 1em;
+    background-color: rgb(224, 191, 0);
+}
+h2{
+    color: rgb(129, 29, 196);
+    text-align: center;
+}
+p{
+    color: rgb(168, 42, 20);
+    text-align: center;
+    font-weight: bold;
+}
+button{
+    outline: none;
+    border: none;
+    background-color: darkgreen;
+    color: white;
+    padding: 3px 5%;
+    margin: 1em ;
+}
