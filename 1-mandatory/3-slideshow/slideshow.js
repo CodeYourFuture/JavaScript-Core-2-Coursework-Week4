@@ -70,26 +70,46 @@ buttonBack.addEventListener('click', () =>{
     image1.src = imageAddress[i];   
 })
 
+let interval;
+
 let buttonAutoForward= document.createElement('button')
 buttonAutoForward.innerHTML='Auto-forward'
 body.append(buttonAutoForward)
 buttonAutoForward.className='button'
-buttonAutoForward.addEventListener('click', () => {
-        interval = setInterval(function() {
+buttonAutoForward.addEventListener('click', ()=>{
+        interval = setInterval(()=>{
         image1.src=imageAddress[i]
         i++
         if (i===imageAddress.length){
         i=0
     }
     },2000)
+
+})
+
+let buttonAutoBack= document.createElement('button')
+buttonAutoBack.innerHTML='Auto-backwards'
+body.append(buttonAutoBack)
+buttonAutoBack.className='button'
+buttonAutoBack.addEventListener('click', ()=>{
+        interval= setInterval(()=>{
+            image1.src=imageAddress[i]
+            i--
+            if(i<0){
+                i=imageAddress.length-1
+            }
+        },2000)
 })
 
 let buttonStop= document.createElement('button')
 buttonStop.innerHTML='Stop'
 body.append(buttonStop)
 buttonStop.className='button'
-buttonStop.addEventListener('click', () => {
+buttonStop.addEventListener('click', () =>{
+    if(interval){
     clearInterval(interval)
+    }
+   
 })
 
 
