@@ -1,1 +1,11 @@
 /** Write your CSS in here **/
+img {
+    display:block;
+    width:330px;
+    height: 270px;
+}
+
+button{
+    display: inline-block
+
+}

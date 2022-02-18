@@ -490,3 +490,25 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const myDiv = document.createElement("div");
+document.body.appendChild(myDiv)
+const quoteEl = document.createElement("h1");
+const author = document.createElement("h2");
+const button = document.createElement("button");
+const randomQuote = pickFromArray(quotes);
+
+
+
+  quoteEl.innerHTML = `<h1>${randomQuote.quote}</h1><h2>${randomQuote.author}</h2>`;
+  myDiv.appendChild(quoteEl);
+  button.innerHTML = `<p> New quote</p>`;
+  quoteEl.appendChild(button);
+
+button.addEventListener("click", () => {
+  const randomQuote = pickFromArray(quotes);
+  quoteEl.innerHTML = `<h1>${randomQuote.quote}</h1><h2>${randomQuote.author}</h2>`;
+  myDiv.appendChild(quoteEl);
+  button.innerHTML = `<p> New quote</p>`;
+  quoteEl.appendChild(button);
+});
