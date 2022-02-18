@@ -1,4 +1,20 @@
-function setAlarm() {}
+function setAlarm() {
+  let timeRemaining = document.querySelector("#timeRemaining");
+  let alarmSet = document.querySelector("#alarmSet");
+  let alarmDisplay = alarmSet.value;
+
+  setInterval(() => {
+    if (alarmDisplay > 0) {
+      timeRemaining.innerText = `Time Remaining: ${alarmDisplay--}`;
+      if (alarmDisplay === 0) {
+        playAlarm();
+      }
+    }
+  }, 1000);
+
+  alarmSet.value = "";
+}
+
 
 // DO NOT EDIT BELOW HERE
 
