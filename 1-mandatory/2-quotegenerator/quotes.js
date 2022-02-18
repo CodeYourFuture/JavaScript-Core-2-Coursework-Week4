@@ -1,28 +1,19 @@
-// DO NOT EDIT BELOW HERE
+const mainDivEl = document.createElement("div");
+const headerDivEl = document.createElement("div");
+const wrapperDivEl = document.createElement("div");
+const buttonEl = document.createElement("button");
 
-// A function which will return one item, at
-// random, from the given array.
-//
-// Parameters
-// ----------
-// choices: an array of items to pick from.
-//
-// Returns
-// -------
-// One item of the given array.
-//
-// Examples of use
-// ---------------
-// pickFromArray([1,2,3,4])     //maybe returns 2
-// pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
-// You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+mainDivEl.classList.add("card");
+headerDivEl.classList.add("card-header");
+headerDivEl.innerText = `Quote`;
+wrapperDivEl.classList.add("card-body");
+buttonEl.classList.add("btn", "btn-primary");
+buttonEl.innerText = `New Quote`;
 
-// A list of quotes you can use in your app.
-// Feel free to edit them, and to add your own favourites.
+document.body.append(mainDivEl);
+mainDivEl.append(headerDivEl);
+mainDivEl.append(wrapperDivEl);
+
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
@@ -490,3 +481,46 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const getRandomQuotes = (quotesList) => {
+  let { quote, author } = pickFromArray(quotesList);
+  wrapperDivEl.innerHTML = `<blockquote class="blockquote mb-0"><p>${quote}</p>
+  <footer class="blockquote-footer">Said by the famous <cite title="Source Title">${author}</cite></figcaption>
+  </blockquote>`;
+  wrapperDivEl.appendChild(buttonEl);
+  buttonClickEventHandler(quotesList);
+};
+
+const buttonClickEventHandler = (quotesList) => {
+  buttonEl.addEventListener("click", () => {
+    let { quote, author } = pickFromArray(quotesList);
+    wrapperDivEl.innerHTML = `<blockquote class="blockquote mb-0"><p>${quote}</p>
+    <footer class="blockquote-footer">Said by the famous <cite title="Source Title">${author}</cite></figcaption>
+    </blockquote>`;
+    wrapperDivEl.appendChild(buttonEl);
+  });
+};
+
+getRandomQuotes(quotes);
+// DO NOT EDIT BELOW HERE
+
+// A function which will return one item, at
+// random, from the given array.
+//
+// Parameters
+// ----------
+// choices: an array of items to pick from.
+//
+// Returns
+// -------
+// One item of the given array.
+//
+// Examples of use
+// ---------------
+// pickFromArray([1,2,3,4])     //maybe returns 2
+// pickFromArray(coloursArray)  //maybe returns "#F38630"
+//
+// You DO NOT need to understand how this function works.
+function pickFromArray(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}

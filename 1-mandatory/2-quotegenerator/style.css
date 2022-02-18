@@ -1,1 +1,14 @@
 /** Write your CSS in here **/
+.card-header {
+  background-color: aliceblue;
+}
+
+.card-body {
+  text-align: right;
+  margin: 200px;
+  background-color: aliceblue;
+}
+
+blockquote {
+  height: 200px;;
+}
