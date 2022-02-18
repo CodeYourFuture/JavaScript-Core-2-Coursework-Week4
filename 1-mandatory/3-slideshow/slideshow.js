@@ -51,11 +51,11 @@ back.addEventListener("click", prev); // Executes the function to display the pr
 
 // The next two function run a slideshow in both directions
 autoForward.addEventListener("click", () => {
-  forwardInterval = setInterval(next, 2000);
+  forwardInterval = setInterval(next, 5000);
   clearInterval(backInterval);
 });
 
 autoBack.addEventListener("click", () => {
-  backInterval = setInterval(prev, 2000);
+  backInterval = setInterval(prev, 5000);
   clearInterval(forwardInterval);
 });

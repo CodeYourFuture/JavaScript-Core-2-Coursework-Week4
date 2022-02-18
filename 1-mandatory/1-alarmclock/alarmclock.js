@@ -3,10 +3,17 @@ function setAlarm() {
   let alarmSetEl = document.querySelector("#alarmSet"); // Number entered in the input field
   let alarmDisplay = alarmSetEl.value;
 
+  timeEl.innerText = `Time Remaining: 00:${alarmDisplay
+    .toString()
+    .padStart(2, "0")}`;
+
   // Begins a countdown timer per second
   setInterval(() => {
-    if (alarmDisplay > 0) {
-      timeEl.innerText = `Time Remaining: ${alarmDisplay--}`;
+    alarmDisplay--;
+    if (alarmDisplay >= 0) {
+      timeEl.innerText = `Time Remaining: 00:${alarmDisplay
+        .toString()
+        .padStart(2, "0")}`;
       if (alarmDisplay === 0) {
         playAlarm();
       }

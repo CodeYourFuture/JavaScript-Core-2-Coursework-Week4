@@ -513,4 +513,18 @@ randomButton.addEventListener("click", () => {
   displayQuote();
 });
 
+let autoRandom = document.querySelector("#auto-random"); // Button to change the quote automatically after a minute
+
+let autoSwitch; // Boolean variable
+let autoInterval; // Interval variable
+
+autoRandom.addEventListener("click", () => {
+  autoSwitch = !autoSwitch;
+  if (!autoSwitch) {
+    clearInterval(autoInterval);
+  } else {
+    autoInterval = setInterval(displayQuote, 60000);
+  }
+});
+
 window.onload = displayQuote; // Runs the displayQuote function i.e. loads the quote element as soon as the page is opened

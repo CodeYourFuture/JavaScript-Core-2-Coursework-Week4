@@ -35,3 +35,14 @@ body {
   margin-right: 5rem;
   margin-top: 2.5rem;
 }
+
+#auto-random {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  grid-row: 3;
+  grid-column: 1;
+  width: 40%;
+  margin-right: 5rem;
+  margin-top: 2.5rem;
+}
