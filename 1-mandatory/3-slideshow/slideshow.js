@@ -1,4 +1,3 @@
-// Write your code here
 const images = [
   "https://images.unsplash.com/photo-1517699418036-fb5d179fef0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2834&q=80",
   "https://images.unsplash.com/photo-1615169019958-78e317e81166?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
@@ -15,6 +14,7 @@ const autoBackBtn = document.querySelector("#auto-back");
 const autoForwardBtn = document.querySelector("#auto-forward");
 const stopBtn = document.querySelector("#stop");
 
+//variable to store active 'play-mode'
 let myTimeout;
 
 //Initiate slideshow with random image from images array
@@ -50,6 +50,7 @@ function autoNextImage() {
   myTimeout = setInterval(showNextImage, 2000);
 }
 
+//Stop carousel function to stop current play mode
 function stopCarousel() {
   clearInterval(myTimeout);
 }
@@ -60,5 +61,4 @@ forwardBtn.addEventListener("click", showNextImage);
 
 autoBackBtn.addEventListener("click", autoPreviousImage);
 autoForwardBtn.addEventListener("click", autoNextImage);
-
 stopBtn.addEventListener("click", stopCarousel);
