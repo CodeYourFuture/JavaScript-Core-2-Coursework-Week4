@@ -1,9 +1,4 @@
 
-
-//create h1
-//create button
-// when button pressed display pickFromArray.
-
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }

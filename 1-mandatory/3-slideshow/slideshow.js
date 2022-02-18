@@ -39,4 +39,4 @@ document.getElementById('previous').addEventListener('click', previous)
 document.getElementById('next').addEventListener('click', next)
 
 
-setInterval(previous, 4000)
+setInterval(previous, 5000)

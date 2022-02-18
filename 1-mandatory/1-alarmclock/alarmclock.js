@@ -29,18 +29,6 @@ function setAlarm() {
   } 
 }
 
-// function stopAlarm() {
-//   clearInterval(updateH1);
-//   clearInterval(interval); 
-//   sound.pause();
-//   let timerId = document.getElementById('timeRemaining');
-//   timerId.innerHTML = `Time Remaining: 00:00`
-// }
-
-//  let stopButton = document.getElementById("stop");
-//  stopButton.addEventListener("click", stopAlarm);
- 
-
 
 // DO NOT EDIT BELOW HERE
 

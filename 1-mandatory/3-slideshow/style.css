@@ -1,6 +1,18 @@
 /** Write your CSS in here **/
 
-.item {
+.items {
   height: 50%
   width: 50%;
+}
+
+.button{
+color: blue;
+
+}
+
+.btns{
+
+  display:flex;
+  flex-direction: row;
+
 }
