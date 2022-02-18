@@ -1,3 +1,29 @@
+function initialiseQuoteGenerator() {
+  
+  let quoteStatement = document.createElement("p");
+  quoteStatement.classList.add("quote");
+  
+  const quoteEl = document.getElementById('quotes-container');
+  
+
+  //get random quote from array quotes
+  const randomQuote = pickFromArray(quotes);
+
+  //new quote appears every time page is refreshed
+  quoteStatement.innerText = `${randomQuote.quote} __ ${randomQuote.author}`;
+
+  //get button id 
+  //new quote appears every time button is clicked
+  const ourButton = document.getElementById('quote-button');
+  ourButton.addEventListener('click', () => {
+    const typeYourNewThing = pickFromArray(quotes);
+    quoteStatement.innerText = `${typeYourNewThing.quote} __ ${typeYourNewThing.author}`;
+  });
+
+  //append child
+  quoteEl.append(quoteStatement);
+}
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

@@ -1,1 +1,55 @@
-/** Write your CSS in here **/
+:root {
+    --text-color: #535050;
+    --button: #c8c0c029;
+    --btn-hover-color: rgba(158, 154, 154, 0.8);
+    --dark-grey: #434040;
+    --border-btn: #d0cdcd;
+}
+
+body {
+    margin: 2vw 6vw 6vw 6vw;
+}
+
+/* header */
+h1 {
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color:var(--btn-hover-color);
+    color: var(--dark-grey);
+}
+
+/* buttons */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    font-family: monospace;
+    background-color: var(--button);
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    border-radius: 3px;
+    font-size: 0.8em;
+    border-color: var(--border-btn);
+    border-width: 2px;
+    color: var(--text-color);
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-color);
+}
+
+#main-image {
+    width: 100%;
+    height: auto;
+}

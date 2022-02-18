@@ -1,1 +1,38 @@
 /** Write your CSS in here **/
+:root {
+    --blue: #678af2;
+    --light-pink: #d4d1d1;
+    --yellow: #efef66;
+}
+
+#quotes-container {
+    background-color: var(--blue);
+    padding: 20px;
+}
+
+.quote {
+    background-color: var(--light-pink);
+    text-align: center;
+    margin: 10px;
+    padding: 4em;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    line-height: 160%;
+    font-style: italic;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    font-size:12px;
+    font-family:Arial, Helvetica, sans-serif;
+   
+}
+
+#quote-button {
+    border: none;
+    background-color:var(--yellow); 
+    padding: 9px;
+    border-radius: 6px; 
+    cursor: pointer; 
+}
