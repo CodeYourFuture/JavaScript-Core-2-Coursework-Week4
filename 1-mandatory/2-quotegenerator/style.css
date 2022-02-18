@@ -1,1 +1,13 @@
 /** Write your CSS in here **/
+body{
+    margin: 200px;
+    background-color:aquamarine;
+}
+#quote{
+    font-size: larger;
+color: blue;
+}
+#author{
+    font-size: larger;
+color: rgb(255, 0, 0);
+}

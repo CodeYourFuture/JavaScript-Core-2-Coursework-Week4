@@ -17,9 +17,32 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
+
 function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+ return choices[Math.floor(Math.random() * choices.length)];
 }
+
+/*
+    copied code from Sir Alun class.
+
+const quoteDiv = document.getElementById("quotes");
+let ourQuote = document.createElement("p");
+
+const randomQuote = pickFromArray(quotes);
+
+ourQuote.innerText = `${randomQuote.quote}, said by ${randomQuote.author}`;
+
+quoteDiv.append(ourQuote);
+
+const ourButton = document.getElementById("button");
+ourButton.addEventListener("click", () => {
+  const typeYourNewThing = pickFromArray(quotes);
+  ourQuote.innerText = `${typeYourNewThing.quote}, said by ${typeYourNewThing.author}`;
+});
+*/
+
+
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
@@ -490,3 +513,18 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let quotePara = document.getElementById("quote");
+let authorName = document.getElementById("author");
+let newQuoteButton = document.getElementById("quoteGenerator");
+
+
+function setQuote() {
+  let selectedQuote = pickFromArray(quotes);
+  quotePara.innerText = selectedQuote.quote;
+  authorName.innerText = `- ${selectedQuote.author}`;
+}
+
+newQuoteButton.addEventListener("click", setQuote);
+
+setQuote();
