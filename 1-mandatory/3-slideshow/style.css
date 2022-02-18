@@ -1,1 +1,15 @@
 /** Write your CSS in here **/
+body {
+  margin-top: 10em;
+  background-color: cadetblue;
+}
+
+#slides {
+  width: 500px;
+  height: 500px;
+  margin: 0 40rem;
+  display: block;
+}
+#auto-back {
+  margin-left: 43rem;
+}
