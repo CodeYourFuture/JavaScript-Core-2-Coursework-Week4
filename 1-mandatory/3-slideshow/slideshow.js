@@ -1,7 +1,3 @@
-// # Level 2 Challenge
-
-// Make auto-forward and auto-back buttons to _automatically_ move in that direction through the list of images.
-
 // Write your code here
 const images = [
   "https://images.unsplash.com/photo-1517699418036-fb5d179fef0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2834&q=80",
@@ -41,6 +37,11 @@ function showNextImage() {
   }
   image.src = images[imageIndex];
 }
+
+// Make auto-forward and auto-back buttons to _automatically_ move in that direction through the list of images.
+function autoPreviousImage() {}
+
+function autoNextImage() {}
 
 //add event listeners to the buttons
 backBtn.addEventListener("click", showPreviousImage);
