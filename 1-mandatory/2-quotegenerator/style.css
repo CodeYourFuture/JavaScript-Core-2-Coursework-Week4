@@ -1,1 +1,20 @@
 /** Write your CSS in here **/
+body{
+    font-size: 1.5em;
+    color:goldenrod;
+}
+
+.wrapper{
+    background-color: blanchedalmond;
+    padding: 50px;
+    margin: 15vw;
+}
+
+button{
+    background-color:floralwhite;
+    color:goldenrod;
+    padding: 20px;
+    margin: 30px;
+    border-width: 0px ;
+    
+}
