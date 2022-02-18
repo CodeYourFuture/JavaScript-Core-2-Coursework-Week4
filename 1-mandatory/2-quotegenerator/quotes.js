@@ -490,3 +490,18 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const quoteDiv = document.getElementById("quotes");
+let ourQuote = document.createElement("p");
+
+const randomQuote = pickFromArray(quotes);
+
+ourQuote.innerText = `${randomQuote.quote}, said by ${randomQuote.author}`;
+
+quoteDiv.append(ourQuote);
+
+const ourButton = document.getElementById("button");
+ourButton.addEventListener("click", () => {
+  const typeYourNewThing = pickFromArray(quotes);
+  ourQuote.innerText = `${typeYourNewThing.quote}, said by ${typeYourNewThing.author}`;
+});
