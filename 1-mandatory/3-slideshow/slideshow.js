@@ -12,6 +12,11 @@ const image = document.querySelector("#image");
 const backBtn = document.querySelector("#back");
 const forwardBtn = document.querySelector("#forward");
 
+const autoBackBtn = document.querySelector("#auto-back");
+const autoForwardBtn = document.querySelector("#auto-forward");
+
+let myTimeout;
+
 //Initiate slideshow with random image from images array
 let imageIndex = Math.floor(Math.random() * 5);
 image.src = images[imageIndex];
@@ -30,19 +35,28 @@ function showPreviousImage() {
 function showNextImage() {
   if (imageIndex === images.length - 1) {
     imageIndex = 0;
-    console.log(imageIndex);
   } else {
     imageIndex = imageIndex + 1;
-    console.log(imageIndex);
   }
   image.src = images[imageIndex];
 }
 
 // Make auto-forward and auto-back buttons to _automatically_ move in that direction through the list of images.
-function autoPreviousImage() {}
+function autoPreviousImage() {
+  myTimeout = setInterval(showPreviousImage, 5000);
+}
 
-function autoNextImage() {}
+function autoNextImage() {
+  myTimeout = setInterval(showNextImage, 5000);
+}
+
+function pauseCarousel() {
+  clearInterval(myTimeout);
+}
 
 //add event listeners to the buttons
 backBtn.addEventListener("click", showPreviousImage);
 forwardBtn.addEventListener("click", showNextImage);
+
+autoBackBtn.addEventListener("click", autoPreviousImage);
+autoForwardBtn.addEventListener("click", autoNextImage);
