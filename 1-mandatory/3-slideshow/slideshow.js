@@ -15,6 +15,8 @@ const forwardBtn = document.querySelector("#forward");
 const autoBackBtn = document.querySelector("#auto-back");
 const autoForwardBtn = document.querySelector("#auto-forward");
 
+const stopBtn = document.querySelector("#stop");
+
 let myTimeout;
 
 //Initiate slideshow with random image from images array
