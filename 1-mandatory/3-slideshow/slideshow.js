@@ -1,16 +1,6 @@
-// [Try this live demo!](https://cyf-image-carousel.netlify.app/)
-
-// # Level 1 Challenge
-
-// Make forward and back buttons to move _manually_ in that direction through a list of at least 4 images.
-
-// (e.g. When the user presses forward once, the display should move ONCE to the next image.)
-
 // # Level 2 Challenge
 
 // Make auto-forward and auto-back buttons to _automatically_ move in that direction through the list of images.
-
-// Here's a screenshot example from a completed level 2 challenge.
 
 // Write your code here
 const images = [
@@ -29,7 +19,6 @@ const forwardBtn = document.querySelector("#forward");
 //Initiate slideshow with random image from images array
 let imageIndex = Math.floor(Math.random() * 5);
 image.src = images[imageIndex];
-console.log(`Initial index: ${imageIndex}`);
 
 //Check if current image index is 0, if so current image index becomes final image in images array, else minus 1 from current index and show image at new index
 function showPreviousImage() {
