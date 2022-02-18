@@ -1,43 +1,47 @@
-
 // Try this code on Netfly
 // https://amazing-payne-733922.netlify.app/
 
+const timeRemaining = document.querySelector("#timeRemaining");
+let alarmSetvalue = document.querySelector("#alarmSet");
+const setTime = document.querySelector("#setTime");
 
-
-
- const timeRemaining = document.querySelector("#timeRemaining");
- let alarmSetvalue = document.querySelector("#alarmSet");
- const setTime = document.querySelector("#setTime");
-
-let setId =document.getElementById("set");
+let setId = document.getElementById("set");
 let stopId = document.getElementById("stop");
 const date = new Date("July 21, 1983 00:00:00");
 let interval;
 let intervalColor;
 
 function setAlarm() {
-  if (alarmSetvalue.value !=='') date.setSeconds(alarmSetvalue.value);
-
-  let color = true;
-  const changeBackground = (color) => (color ? "white" : "black");
+  if (alarmSetvalue.value !== "") date.setSeconds(alarmSetvalue.value);
 
   const timer = () => {
     const dateToString = date.toString().substring(19, 24);
 
+    function changeColor() {
+      let i = true;
+      let blackWhite = (v) => (v ? "white" : "black");
+      return {
+        value: () => {
+          timeRemaining.style.color =blackWhite(!i);
+          setTime.style.color = blackWhite(!i);
+          document.body.style.backgroundColor = blackWhite(i);
+          i = !i;
+        },
+      };
+    }
+    let changeBackground = changeColor().value;
+
     timeRemaining.innerText = `Time Remaining: ${dateToString}`;
     if (dateToString != "00:00") {
-     setId.innerText='Resume'
-     stopId.innerText='Pause Timer'
+      setId.innerText = "Resume";
+      stopId.innerText = "Pause Timer";
       date.setSeconds(date.getSeconds() - 1);
     }
     if (dateToString === "00:00") {
       setId.innerText = "Set Alarm";
       stopId.innerText = "Stop alarm";
       intervalColor = setInterval(() => {
-        timeRemaining.style.color = changeBackground(!color);
-        setTime.style.color = changeBackground(!color);
-        document.body.style.backgroundColor = changeBackground(color);
-        color ? (color = false) : (color = true);
+        changeBackground();
       }, 100);
       playAlarm();
       clearInterval(interval);
@@ -47,7 +51,6 @@ function setAlarm() {
   interval = setInterval(timer, 1000);
   alarmSetvalue.value = "";
 }
-
 
 // DO NOT EDIT BELOW HERE
 
