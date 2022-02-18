@@ -1,1 +1,18 @@
 /** Write your CSS in here **/
+.dog{
+    object-fit: contain;
+    width:100%;
+    height:30rem;
+}
+.btns{
+    position: relative;
+}
+.backward{
+position:absolute;
+right:44rem;
+
+}
+.forward{
+position:absolute;
+right:50rem;
+}
