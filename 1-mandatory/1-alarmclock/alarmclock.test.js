@@ -16,6 +16,8 @@ beforeEach(async () => {
   jest.useFakeTimers();
 
   // do this so students can use element.innerText which jsdom does not implement
+  //
+
   Object.defineProperty(page.window.HTMLElement.prototype, "innerText", {
     get() {
       return this.textContent;
