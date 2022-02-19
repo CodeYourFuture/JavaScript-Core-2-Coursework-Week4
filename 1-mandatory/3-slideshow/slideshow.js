@@ -4,44 +4,98 @@ const myDiv = document.createElement("div");
 document.body.append(myDiv);
 
 let imageOne = document.createElement("img");
-imageOne.setAttribute("class", "imageOne");
-imageOne.setAttribute(
-  "src",
-  "https://images.unsplash.com/photo-1612830549030-bfb4b58ccd5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-);
+imageOne.setAttribute("id", "imageOne");
+imageOne.setAttribute("src", "https://tinyurl.com/yc42neu5");
 
 let imageTwo = document.createElement("img");
-imageTwo.setAttribute("class", "imageTwo");
-imageTwo.setAttribute(
-  "src",
-  "https://images.unsplash.com/photo-1537151672256-6caf2e9f8c95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-);
+imageTwo.setAttribute("id", "imageTwo");
+imageTwo.setAttribute("src", "https://tinyurl.com/bdhyxfe2");
 
 let imageThree = document.createElement("img");
-imageThree.setAttribute("class", "imageThree");
-imageThree.setAttribute(
-  "src",
-  "https://images.unsplash.com/photo-1608096299210-db7e38487075?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
-);
+imageThree.setAttribute("id", "imageThree");
+imageThree.setAttribute("src", "https://tinyurl.com/3yds2hy3");
 
 // const carousel = [imageOne, imageTwo, imageThree]
 
 //Next I need display the first image and create a button.
 document.body.appendChild(imageTwo);
+
+//Creating and appending buttons
 const backButton = document.createElement("button");
 backButton.innerText = `Back Button`;
 const nextButton = document.createElement("button");
 nextButton.innerText = `Next Button`;
+const autoForward = document.createElement("button");
+autoForward.innerText = `Auto-forward`;
+const autoBackward = document.createElement("button");
+autoBackward.innerText = `Auto-backward`;
+const stopButton = document.createElement("button");
+stopButton.innerText = `Stop`;
 myDiv.appendChild(backButton);
 myDiv.appendChild(nextButton);
+myDiv.appendChild(autoForward);
+myDiv.appendChild(autoBackward);
+myDiv.appendChild(stopButton);
 
+//Back button to cycle through images in reverse order
 backButton.addEventListener("click", () => {
-  imageTwo.src = imageOne.src;
-});
-
-nextButton.addEventListener("click", () => {
-  imageTwo.src = imageThree.src;
-  if (imageTwo.src === imageThree.src) {
-    imageTwo.src === imageTwo.src;
+  let current_image = document.getElementById("imageTwo").src;
+  if (current_image === imageTwo.src) {
+    document.getElementById("imageTwo").src = imageOne.src;
+  }
+  if (current_image === imageOne.src) {
+    document.getElementById("imageTwo").src = imageThree.src;
+  }
+  if (current_image === imageThree.src) {
+    document.getElementById("imageTwo").src = "https://tinyurl.com/bdhyxfe2";
   }
 });
+
+//next button to cycle through images in the opposite direction(forward) of back button
+nextButton.addEventListener("click", () => {
+  let current_image = document.getElementById("imageTwo").src;
+  if (current_image === imageTwo.src) {
+    document.getElementById("imageTwo").src = imageThree.src;
+  }
+  if (current_image === imageThree.src) {
+    document.getElementById("imageTwo").src = imageOne.src;
+  }
+  if (current_image === imageOne.src) {
+    document.getElementById("imageTwo").src = "https://tinyurl.com/bdhyxfe2";
+  }
+});
+
+autoForward.addEventListener("click", () => {
+  setInterval(() => {
+    let current_image = document.getElementById("imageTwo").src;
+    if (current_image === imageTwo.src) {
+      document.getElementById("imageTwo").src = imageThree.src;
+    }
+    if (current_image === imageThree.src) {
+      document.getElementById("imageTwo").src = imageOne.src;
+    }
+    if (current_image === imageOne.src) {
+      document.getElementById("imageTwo").src = "https://tinyurl.com/bdhyxfe2";
+    }
+  }, 5000);
+});
+
+autoBackward.addEventListener("click", () => {
+  setInterval(() => {
+    let current_image = document.getElementById("imageTwo").src;
+    if (current_image === imageTwo.src) {
+      document.getElementById("imageTwo").src = imageOne.src;
+    }
+    if (current_image === imageOne.src) {
+      document.getElementById("imageTwo").src = imageThree.src;
+    }
+    if (current_image === imageThree.src) {
+      document.getElementById("imageTwo").src = "https://tinyurl.com/bdhyxfe2";
+    }
+  }, 5000);
+});
+
+stopButton.addEventListener("click", () => {
+  clearInterval(autoForward);
+});
+
