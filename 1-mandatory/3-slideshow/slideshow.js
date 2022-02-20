@@ -9,7 +9,7 @@ let images = [
     alt: "cat sleeping in the bed under grey blanket",
   },
   {
-    source: "bajari-hytonen-YCPkW_r_6uA-unsplash.jpg",
+    source: "jari-hytonen-YCPkW_r_6uA-unsplash.jpg",
     alt: "Basket with four small cute cats",
   },
   {
