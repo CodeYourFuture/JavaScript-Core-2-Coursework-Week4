@@ -4,6 +4,12 @@ let body = document.querySelector("body");
 let stopBtn = document.querySelector("#stop");
 let pauseBtn = document.createElement("button");
 let timeRemaining = document.querySelector("#timeRemaining");
+
+pauseBtn.innerHTML = "Pause Alarm";
+pauseBtn.id = "pauseBtn";
+pauseBtn.setAttribute("type", "button");
+stopBtn.after(pauseBtn);
+
 function timeToString(minutes, seconds) {
   let paddedMinutes = String(minutes).padStart(2, 0);
   let paddedSeconds = String(seconds).padStart(2, 0);
@@ -11,24 +17,27 @@ function timeToString(minutes, seconds) {
 }
 
 function setAlarm() {
-  clearInterval(myTimer);
+  console.log();
+  let timeInput = document.querySelector("#alarmSet");
+  if (
+    arguments.callee.caller.toString().includes("() =>") &&
+    timeInput.value != "") {
+    clearInterval(myTimer);
+  }
   clearInterval(myColor);
   body.style.backgroundColor = "transparent";
-  let timeInput = document.querySelector("#alarmSet");
+  
 
   let seconds;
   let minutes;
-
   if (
+    arguments.callee.caller.toString().includes("paused") &&
     timeInput.value === "" &&
     timeRemaining.textContent != "Time Remaining: 00:00"
   ) {
-    seconds = timeRemaining.textContent[
-      timeRemaining.textContent.length - 2
-    ].concat(timeRemaining.textContent[timeRemaining.textContent.length - 1]);
-    minutes = timeRemaining.textContent[
-      timeRemaining.textContent.length - 5
-    ].concat(timeRemaining.textContent[timeRemaining.textContent.length - 4]);
+    let values = timeRemaining.textContent.split(":");
+    minutes = values[1].trim();
+    seconds = values[2];
   } else if (timeInput === 0 || timeInput.value === "") {
     return;
   } else {
@@ -60,18 +69,18 @@ function setAlarm() {
   timer();
   timeInput.value = "";
 }
-pauseBtn.innerHTML = "Pause Alarm";
-pauseBtn.setAttribute("type", "button");
-stopBtn.after(pauseBtn);
 
-pauseBtn.addEventListener("click", () => {
+function paused() {
   pauseBtn.classList.toggle("paused");
   if (pauseBtn.classList.contains("paused")) {
     stopAlarm();
+    pauseBtn.innerHTML = "Continue Alarm";
   } else {
+    pauseBtn.innerHTML = "Pause Alarm";
     setAlarm();
   }
-});
+}
+pauseBtn.addEventListener("click", paused);
 
 function stopAlarm() {
   clearInterval(myTimer);
