@@ -19,6 +19,21 @@ function displayRandomQuote() {
 let buttonEl = document.getElementById("button");
 buttonEl.addEventListener("click", displayRandomQuote);
 
+let autoInterval;
+
+let checkBox = document.getElementById("checkbox");
+
+function checkedBoxAutoPlay() {
+  if (checkBox.checked === true) {
+    autoInterval = setInterval(displayRandomQuote, 1000);
+    alert("Auto-Play: ON");
+  } else {
+    clearInterval(autoInterval);
+  }
+}
+
+checkBox.addEventListener("click", checkedBoxAutoPlay);
+
 window.onload = displayRandomQuote;
 
 // DO NOT EDIT BELOW HERE
