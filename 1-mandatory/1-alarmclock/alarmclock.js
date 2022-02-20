@@ -1,4 +1,29 @@
-function setAlarm() {}
+
+const startAlarm = document.getElementById("set");
+function setAlarm() { 
+  startAlarm.addEventListener("click", () => {
+
+    const setTime = document.getElementById("alarmSet");
+    let numberOfSeconds = setTime.value;
+    const timeRemaining = document.getElementById("timeRemaining");
+    timeRemaining.innerText =  `Time Remaining: ${numberOfSeconds}`;
+    let now = setInterval(() => {
+      if(numberOfSeconds <= 0){
+          playAlarm();
+          clearInterval(now);
+          
+      }
+       else {
+         numberOfSeconds--;
+         timeRemaining.innerText =  `Time Remaining: ${numberOfSeconds}`;
+       }
+    },1000)
+  })
+}
+
+
+
+
 
 // DO NOT EDIT BELOW HERE
 

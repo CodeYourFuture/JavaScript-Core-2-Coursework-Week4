@@ -20,7 +20,7 @@ You can store the images within your app or you can use links to images hosted e
 
 Level 1 challenge screenshot example.
 
-![Example Screenshot](./example-screenshots/example-level1.png)
+![Example Screenshot](https://example-screenshots/example-level1.png)
 
 # Level 2 Challenge
 
