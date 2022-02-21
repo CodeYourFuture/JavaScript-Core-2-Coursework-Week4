@@ -500,6 +500,9 @@ let leftQuote = document.createElement("i");
 leftQuote.classList.add("fas", "fa-quote-left");
 let rightQuote = document.createElement("i");
 rightQuote.classList.add("fas", "fa-quote-right");
+let checkbox = document.querySelector("#auto-play");
+let checkboxLabel = document.querySelector("#auto-play-label")
+let quoteTimer;
 
 function createQuoteLayout() {
   let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
@@ -507,7 +510,7 @@ function createQuoteLayout() {
   body.style.backgroundColor = randomColor;
   quoteText.style.color = randomColor;
   quoteBox.style.backgroundColor = "white";
-  quoteAuthor.style.color = randomColor;
+  quoteAuthor.style.color = randomColorTwo;
   newQuote.style.backgroundColor = randomColor;
   newQuote.style.color = "white";
   leftQuote.style.color = randomColorTwo;
@@ -516,16 +519,30 @@ function createQuoteLayout() {
 
 function populateQuotes() {
   let randomQuote = Math.floor(Math.random() * quotes.length);
-  
   quoteText.innerHTML = quotes[randomQuote].quote;
   quoteText.prepend(leftQuote);
   quoteText.append(rightQuote);
   quoteAuthor.innerHTML = `- ${quotes[randomQuote].author}`;
 }
-createQuoteLayout();
-populateQuotes();
 
-newQuote.addEventListener("click", () => {
+
+let playQuotes = function () {
   createQuoteLayout();
   populateQuotes();
+}
+
+playQuotes();
+
+newQuote.addEventListener("click", () => {
+  playQuotes()
 });
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
+    checkboxLabel.innerHTML = "Auto Play On";
+    quoteTimer = setInterval(playQuotes, 60000)
+
+  } else {
+    checkboxLabel.innerHTML = "Auto Play Off"
+    clearInterval(quoteTimer);
+  }
+})
