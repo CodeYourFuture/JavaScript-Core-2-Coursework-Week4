@@ -1,7 +1,7 @@
-let setTimeRemain = (inputValue) => {
+let setTimeRemain = (value) => {
   let timeRemaining = document.getElementById("timeRemaining");
-  var hours = Math.floor(inputValue / 60);
-  var minutes = inputValue % 60;
+  var hours = Math.floor(value / 60);
+  var minutes = value % 60;
   timeRemaining.innerText = `Time Remaining: ${
     (hours < 10 ? "0" + hours : hours) +
     ":" +
@@ -14,20 +14,26 @@ let setBackgroundColor = () => {
   document.body.style.backgroundColor = "#" + randomColor;
 };
 
-function setAlarm() {
-  let inputValue = document.getElementById("alarmSet").value;
-  setTimeRemain(inputValue);
+const interval = (inputValue) => {
   let timer_interval = setInterval(() => {
     inputValue = inputValue - 1;
     setTimeRemain(inputValue);
     setBackgroundColor();
+    document.getElementById("alarmSet").value = "";
+    document.getElementById("alarmSet").disabled = true;
     if (inputValue === 0) {
-      // inputValue = "";
       clearInterval(timer_interval);
       playAlarm();
       document.body.style.backgroundColor = "#1c1c1c";
+      document.getElementById("alarmSet").disabled = false;
     }
   }, 1000);
+};
+
+function setAlarm() {
+  let inputValue = document.getElementById("alarmSet").value;
+  setTimeRemain(inputValue);
+  interval(inputValue);
 }
 
 // DO NOT EDIT BELOW HERE

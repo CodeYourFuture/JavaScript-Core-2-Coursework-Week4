@@ -4,7 +4,7 @@ const image = document.createElement("img");
 const main = document.getElementById("main");
 const forward = document.getElementById("forward");
 const back = document.getElementById("back");
-const stop = document.getElementById("stop");
+const stop_btn = document.getElementById("stop-btn");
 const aBack = document.getElementById("aBack");
 const aForward = document.getElementById("aForward");
 const select = document.querySelector("select");
@@ -64,7 +64,7 @@ aBack.addEventListener("click", () => {
   autoSlider("aBack");
 });
 
-stop.addEventListener("click", () => {
+stop_btn.addEventListener("click", () => {
   if (interval) {
     clearInterval(interval);
   }
