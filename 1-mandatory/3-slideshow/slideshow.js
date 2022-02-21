@@ -52,24 +52,30 @@ back.addEventListener("click", () => {
 
 autoForward.addEventListener("click", () => {
   stopAll();
-  autoForwardInterval = setInterval(forwardFunc, 1000);
+  autoForwardInterval = setInterval(forwardFunc, 15000);
 });
 autoBack.addEventListener("click", () => {
   stopAll();
-  autoBackInterval = setInterval(backFunc, 1000);
+  autoBackInterval = setInterval(backFunc, 15000);
 });
 
 
 userForwards.addEventListener("click", () => {
   stopAll();
-  let seconds = userInput.value * 1000;
-  userForwardsInterval = setInterval(forwardFunc, seconds)
+  if (userInput.value != "" && userInput.value != 0) {
+    let seconds = userInput.value * 1000;
+    userForwardsInterval = setInterval(forwardFunc, seconds);
+    userInput.value = "";
+  }
 });
 
 userBackwards.addEventListener("click", () => {
   stopAll();
-  let seconds = userInput.value * 1000;
-  userBackwardsInterval = setInterval(backFunc, seconds);
+  if (userInput.value != "" && userInput.value != 0) {
+    let seconds = userInput.value * 1000;
+    userBackwardsInterval = setInterval(backFunc, seconds);
+    userInput.value = "";
+  }
 });
 
 function stopAll() {
