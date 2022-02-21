@@ -25,7 +25,7 @@ let checkBox = document.getElementById("checkbox");
 
 function checkedBoxAutoPlay() {
   if (checkBox.checked === true) {
-    autoInterval = setInterval(displayRandomQuote, 1000);
+    autoInterval = setInterval(displayRandomQuote, 600000);
     alert("Auto-Play: ON");
   } else {
     clearInterval(autoInterval);
