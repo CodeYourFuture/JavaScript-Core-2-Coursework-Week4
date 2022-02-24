@@ -11,7 +11,7 @@ function setAlarm() {
   heading.innerText = `Time Remaining: 00:${zero()}`;
   //setInterval 
   const myInterval = setInterval(() => {
-    timer -= 1;
+    timer -= 1; 
     heading.innerText = `Time Remaining: 00:${zero()}`;
     if (timer <= 0) {
       clearInterval(myInterval);
@@ -21,7 +21,7 @@ function setAlarm() {
       heading.innerText =`Time Remaining: 00:00`;
     } 
   }, 1000);
-}
+} 
 
 // DO NOT EDIT BELOW HERE
 
@@ -36,7 +36,7 @@ function setup() {
     pauseAlarm();
   });
 }
-setAlarm()
+
 function playAlarm() {
   audio.play();
 }

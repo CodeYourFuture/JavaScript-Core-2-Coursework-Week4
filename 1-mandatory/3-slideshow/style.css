@@ -1,1 +1,32 @@
 /** Write your CSS in here **/
+body{
+    background-color: rgb(2, 68, 59);
+}
+h1{
+    margin: 1em 0 0 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+.img-div-class{
+    text-align: center;
+    color: aliceblue;
+}
+img{
+    height: 400px;
+    width: 500px;
+    object-fit: contain;
+    margin: 0;
+    
+    /* background-size: contain; */
+}
+p{
+    margin: 0;
+}
+button{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: darkkhaki;
+    margin: 0 3px;
+    padding: 5px 16px;
+}
