@@ -1,6 +1,6 @@
 /** Write your CSS in here **/
 .content {
-  height: 400px;
+  height: auto;
   background-color: rgb(235, 189, 90);
   padding: 20px;
   width: 70%;
@@ -14,7 +14,7 @@
   align-items: flex-end;
   background-color: antiquewhite;
   padding: 20px;
-  margin: 40px;
+  margin: 25px;
   font-family: "Courier New", Courier, monospace;
   font-size: larger;
   font-weight: bold;

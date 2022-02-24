@@ -497,17 +497,49 @@ let ourQuote = document.createElement("p");
 const authorDiv = document.getElementById("author");
 let ourAuthor = document.createElement("p");
 
+function newRandomQuoteDisplay() {
 const randomQuote = pickFromArray(quotes);
 
-ourQuote.innerText = `${randomQuote.quote}`;
-ourAuthor.innerText = `${randomQuote.author}`;
+ourQuote.innerText = randomQuote.quote;
+ourAuthor.innerText = randomQuote.author;
 
 quoteDiv.append(ourQuote);
 authorDiv.append(ourAuthor);
+}
+
+newRandomQuoteDisplay();
 
 const ourButton = document.getElementById("button");
 ourButton.addEventListener("click", () => {
   const getNewQuoteObj = pickFromArray(quotes);
-  ourQuote.innerText = `${getNewQuoteObj.quote}`;
-  authorDiv.innerText =`${getNewQuoteObj.author}`;
+  ourQuote.innerText = getNewQuoteObj.quote;
+  authorDiv.innerText =getNewQuoteObj.author;
 });
+
+// 2.solution
+// let quoteDisplay = document.getElementById("quotes");
+// let authorDisplay = document.getElementById("author");
+// let btnNewQuote = document.getElementById("button");
+
+// function newRandomQuoteDisplay() {
+//   let randomQuote = pickFromArray(quotes);
+
+//   quoteDisplay.innerText = randomQuote.quote;
+//   authorDisplay.innerText = randomQuote.author;
+// }
+
+// newRandomQuoteDisplay();
+
+// btnNewQuote.addEventListener("click", newRandomQuoteDisplay);
+
+let checkBox = document.getElementById("autoPlayQuote");
+
+let timer;
+checkBox.addEventListener("change", () => {
+  if (checkBox.checked) {
+    timer = setInterval(newRandomQuoteDisplay, 3000);
+  } else {
+    clearInterval(timer);
+  }
+});
+

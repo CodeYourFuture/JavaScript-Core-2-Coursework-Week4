@@ -45,14 +45,12 @@ let fwdButton = document.querySelector("#forward-btn");
 fwdButton.addEventListener("click", forward);
 
 let backMove;
-
 let autoBackButton = document.querySelector("#auto-back-btn");
 autoBackButton.addEventListener("click", function () {
 backMove = setInterval(back, 1000);
 });
 
 let fwdMove; 
-
 let autoFwdButton = document.querySelector("#auto-forward-btn");
 autoFwdButton.addEventListener("click", function () {
 fwdMove = setInterval(forward, 1000);
