@@ -1,8 +1,3 @@
-
-
-
-
-
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -496,21 +491,31 @@ const quotes = [
   },
 ];
 
+let quote = document.getElementById("quotes");
+let author = document.getElementById("author");
+let btn = document.getElementById("button");
 
+function newRandomQuote(){
 
+      let randomQuote = pickFromArray(quotes);
 
-const quoteDiv = document.getElementById("quotes");
-let ourQuote = document.createElement("p");
+      quote.innerText = randomQuote.quote;
+      author.innerText = randomQuote.author;
 
-const randomQuote = pickFromArray(quotes);
+}
 
-ourQuote.innerText = `${randomQuote.quote} \n - ${randomQuote.author}`;
+newRandomQuote();
 
-quoteDiv.append(ourQuote);
+ btn.addEventListener("click", newRandomQuote);
 
-const ourButton = document.getElementById("button");
-ourButton.addEventListener("click", () => {
-  const typeYourNewThing = pickFromArray(quotes);
-  ourQuote.innerText = `${typeYourNewThing.quote} \n - ${typeYourNewThing.author}`;
+ let checkBox = document.getElementById("autoPlayQuote");
+
+ let timer;
+checkBox.addEventListener("change", () => {
+      if (checkBox.checked){
+        timer = setInterval(newRandomQuote, 1000);
+      }
+      else{
+        clearInterval(timer);
+      }
 });
-

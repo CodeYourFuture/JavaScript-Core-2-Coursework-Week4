@@ -1,7 +1,7 @@
 /** Write your CSS in here **/
 body{
     font-size: 1.5em;
-    color:goldenrod;
+    color:darkgoldenrod;
 }
 
 .wrapper{
@@ -12,7 +12,7 @@ body{
 
 button{
     background-color:floralwhite;
-    color:goldenrod;
+    color:darkgoldenrod;
     padding: 20px;
     margin: 30px;
     border-width: 0px ;
