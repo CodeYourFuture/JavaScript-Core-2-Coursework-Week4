@@ -1,1 +1,247 @@
-/** Write your CSS in here **/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/* Global reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --primary: #f7b916;
+  --secondary: #373737;
+  --light-1: #ededee;
+  --light: #d4d4d4;
+  --accent: #ffff;
+  --d-accent: #808080;
+
+  /* font */
+  --font-primary: "Roboto", sans-serif;
+}
+
+html,
+body {
+  margin: auto;
+  font-family: var(--font-primary);
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+a:link {
+  text-decoration: none !important;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 10px 10px 10px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: inherit;
+  color: var(--dark);
+}
+
+h3 {
+  text-align: center;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0px;
+  color: var(--dark);
+}
+
+p {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 10px 0px;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+/* QUOTE & AUTHOR ------------------------- */
+#quote {
+  margin: 150px 0px 0px 0px;
+  font-size: 30px;
+  color: var(--primary);
+}
+
+#author {
+  margin: 100px 30px 20px 0px;
+  float: right;
+  font-size: 20px;
+  color: var(--primary);
+}
+
+/* GRID CONTENT -------------------*/
+.sidebar {
+  grid-area: sidebar;
+}
+
+.sidebar2 {
+  grid-area: sidebar2;
+}
+
+/* OUTER IMAGE CONTAINER  ---------*/
+.content {
+  /* background-color: var(--primary); */
+  align-content: center;
+  grid-area: content;
+  height: 300px;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.img-num {
+  display: none;
+}
+/* INNE IMAGE CONTAINER  --------------------*/
+
+.grid-2 {
+  margin-top: 200px;
+  max-width: 100%;
+  background-color: var(--light-1);
+  display: grid;
+  padding: 10px;
+  /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
+  align-items: stretch;
+}
+
+.grid-2 > article {
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  padding: 10px 0px 10px 0px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.wrapper {
+  height: 100vh;
+  background-color: var(--primary);
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 0.3em;
+  grid-template-rows: 1fr 1fr 1fr 2fr;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "content"
+    "sidebar2"
+    "footer";
+}
+
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 2fr auto;
+    grid-template-rows: 1fr 0.5fr 3fr auto;
+    grid-template-areas:
+      "header   header"
+      "sidebar  sidebar"
+      "content  content"
+      "sidebar2 sidebar2"
+      "footer   footer";
+  }
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    grid-gap: 5px;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 3fr 1fr;
+    grid-template-areas:
+      "header  header  header"
+      "sidebar content sidebar2"
+      "sidebar content sidebar2"
+      "footer  footer  footer";
+  }
+}
+
+/* .box {
+    background-color: var(--secondary);
+  color: #fff;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 150%;
+} */
+
+.header,
+.footer {
+  /* placehlder only */
+  background-color: none;
+}
+
+.sidebar2 {
+  /* placehlder only */
+  background-color: none;
+}
+
+input {
+  padding: 5px;
+}
+
+/* BUTTON ------------------------- */
+
+.btn-container {
+  text-align: center;
+}
+
+button {
+  width: 20%;
+  height: 50px;
+  margin: 200px 0px 20px 0px;
+  float: right;
+  background-color: var(--primary);
+  border-radius: 3px;
+  border: none;
+  transition: 0.6s;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent);
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* button hover */
+button:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+  border: none;
+}
+
+/* ICONS ------------------------------- */
+.fa-quote-left {
+  font-size: 30px;
+  color: var(--primary);
+  /* padding: 10px; */
+  bottom: 0px;
+}
+
+.fa-angle-right {
+  font-size: 30px;
+  color: var(--d-accent);
+  /* padding: 10px; */
+  margin-top: 10%;
+  bottom: 0px;
+}
+.fa-angle-right:hover {
+  background-color: var(--d-accent);
+  color: var(--accent);
+  border: none;
+}

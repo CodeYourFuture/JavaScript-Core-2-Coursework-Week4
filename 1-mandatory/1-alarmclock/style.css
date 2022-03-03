@@ -5,7 +5,12 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+.bgColor{
+ box-shadow:inset 0px 0px 47px 5px #FF0A31;
+ position: absolute;
+width:100%;
+height:100%;
+}
 #alarmSet {
   margin: 20px;
 }
