@@ -34,8 +34,8 @@ a:link {
 
 h1 {
   text-align: center;
-  padding: 20px 10px 10px 10px;
-  font-size: 22px;
+  padding: 10px 10px 20px 10px;
+  font-size: 24px;
   font-weight: bold;
   font-family: inherit;
   color: var(--dark);
@@ -47,7 +47,13 @@ h3 {
   font-size: 18px;
   font-weight: bold;
   padding: 10px 0px;
-  color: var(--dark);
+  color: var(--secondary);
+}
+
+h5 {
+  text-align: center;
+  font-family: inherit;
+  font-size: 18px;
 }
 
 p {
@@ -60,15 +66,10 @@ p {
 
 /* QUOTE & AUTHOR ------------------------- */
 #quote {
-  margin: 150px 0px 0px 0px;
-  font-size: 30px;
   color: var(--primary);
 }
 
 #author {
-  margin: 100px 30px 20px 0px;
-  float: right;
-  font-size: 20px;
   color: var(--primary);
 }
 
@@ -83,13 +84,13 @@ p {
 
 /* OUTER IMAGE CONTAINER  ---------*/
 .content {
-  /* background-color: var(--primary); */
   align-content: center;
   grid-area: content;
-  height: 300px;
-  width: 100%;
+  min-width: 0;
+  /* height: 300px;
+  width: 100%; */
 
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .img-num {
@@ -108,8 +109,7 @@ p {
 }
 
 .grid-2 > article {
-  /* border: 1px solid #ccc; */
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
 }
@@ -161,7 +161,7 @@ img {
 @media (min-width: 600px) {
   .wrapper {
     grid-gap: 5px;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 3fr 1fr;
     grid-template-areas:
       "header  header  header"
@@ -171,39 +171,27 @@ img {
   }
 }
 
-/* .box {
-    background-color: var(--secondary);
-  color: #fff;
-  border-radius: 3px;
-  padding: 10px;
-  font-size: 150%;
-} */
+.box {
+  color: var(--accent);
+}
 
 .header,
 .footer {
-  /* placehlder only */
+  /* placeholder */
   background-color: none;
 }
 
 .sidebar2 {
-  /* placehlder only */
+  /* placeholder */
   background-color: none;
-}
-
-input {
-  padding: 5px;
 }
 
 /* BUTTON ------------------------- */
 
-.btn-container {
-  text-align: center;
-}
-
 button {
-  width: 20%;
-  height: 50px;
-  margin: 200px 0px 20px 0px;
+  width: 30%;
+  height: 30px;
+  margin: 20px 0px 20px 0px;
   float: right;
   background-color: var(--primary);
   border-radius: 3px;
@@ -212,10 +200,10 @@ button {
   overflow: hidden;
   cursor: pointer;
   font-family: inherit;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: var(--accent);
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 /* button hover */
@@ -229,19 +217,21 @@ button:hover {
 .fa-quote-left {
   font-size: 30px;
   color: var(--primary);
-  /* padding: 10px; */
+  margin-top: 20%;
   bottom: 0px;
 }
 
-.fa-angle-right {
-  font-size: 30px;
-  color: var(--d-accent);
-  /* padding: 10px; */
-  margin-top: 10%;
-  bottom: 0px;
-}
-.fa-angle-right:hover {
-  background-color: var(--d-accent);
+/* FOOTER  -----------------------*/
+
+/* .footer {
   color: var(--accent);
-  border: none;
+} */
+.footer a:link {
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+/* mouse over link */
+.footer a:hover {
+  color: var(--accent);
 }

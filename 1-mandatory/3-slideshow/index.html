@@ -1,26 +1,63 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title> Gallery | Jude Ricketts</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-<!-- Write your HTML in here -->
-<!-- tbc -->
+  <title> Gallery | Jude Ricketts </title>
+  <link href="style.css" rel="stylesheet" />
 
+  <!-- insert fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
 
+<body>
+      <main class="wrapper">
+        <!--     <div class="box header">Header new</div>
+        <div class="box header">Header new</div> -->
+        <div class="box header">
+          <h1>Gallery<h1>
+        </div>
+        <div class="box sidebar"></div>
+        <div class="box sidebar2"></div>
+        <div class="box content">
 
-    <script src="slideshow.js"></script>
-    <script src="script.js"></script>
-  </body>
+          <!--Innergrid  -->
+          <section class="grid-2">
+            <article>
+              <!--           this need to become the slideshow js -->
+              <img id="display-img" src="https://picsum.photos/600/500" alt="random photo">           
+              
+              <div class="text"><h3 id="author" >author</h3>
+              </div>
+              
+              
+              <section class="btn-container">
+                <button class="button" onclick="scroll_backwards()"><i class="fa fa-angle-left "></i> back</button>
+                <button class="button" onclick="plusSlider(-1) ">back</button>
+                <button class="button" onclick="stop() "><i class="fa fa-circle"></i></button>
+                <button class="button" onclick="plusSlider(1) ">forward</button>
+                <button class="button" onclick="scroll_forward()">auto <i class=" fa fa-angle-right"></i></button>
+              </section>
+
+            </article>
+          </section>
+        </div>
+        <!-- <br/> More content than we had before so this column is now quite tall -->
+
+        </Footer>
+        <div class="box footer">
+          <a href="https://github.com/LovesPictures" target="_blank" class="copyright">
+            <h5>&#169 2022 Loves Pictures</h5>
+        </div>
+        <footer>
+      </main>
+
+      <!-- load javasript image file -->
+      <script src="slideshow.js"></script>
+      <!-- load javasript file -->
+      <script src="script.js"></script>
+</body>
+
 </html>
-
-

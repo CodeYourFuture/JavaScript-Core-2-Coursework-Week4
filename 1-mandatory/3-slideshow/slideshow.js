@@ -1,7 +1,8 @@
 // 20220228205602
 // https://picsum.photos/v2/list?page=2&limit=100
 
-[
+// make this a variable
+const imageList = [
   {
     id: "117",
     author: "Daniel Ebersole",
