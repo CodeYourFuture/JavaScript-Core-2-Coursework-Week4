@@ -16,22 +16,27 @@ const btnPrev = document.querySelector("#prev");
 
 let i = 0; // current image index
 
-function changePicture() {
-  function toggle() {
-    imageElement.src = images[i];
-  }
-  setInterval(toggle, 2000);
-
+function previous() {
   btnPrev.addEventListener("click", function () {
     if (i <= 0) i = images.length;
     i--;
-    return toggle();
+    toggle();
   });
+}
 
+function next() {
   btnNext.addEventListener("click", function () {
     if (i >= images.length - 1) i = -1;
     i++;
-    return toggle();
+    toggle();
   });
 }
-changePicture();
+
+function toggle() {
+  i++;
+  imageElement.src = images[i];
+}
+previous();
+next();
+
+setInterval(toggle, 2000);
