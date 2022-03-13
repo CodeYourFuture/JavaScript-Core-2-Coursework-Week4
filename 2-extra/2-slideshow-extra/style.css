@@ -1,0 +1,44 @@
+/** Write your CSS in here **/
+
+body{
+    font-size: 1.5em;
+    color:rgb(197, 215, 223);
+    background-color:whitesmoke;
+}
+
+.title-wrapper{
+    padding-top: 30px;
+    color:rgb(88, 103, 136);
+    text-align: center;
+}
+
+h1{
+    font-size: 1.8rem;
+}
+
+h3{
+    font-size: 1.2rem;
+}
+
+img {
+    border: 1px solid white;
+}
+
+.wrapper{
+    background-color:whitesmoke;
+    padding: 0px 50px 0px 150px;
+    margin: 3vw 3vw 0vw 3vw;
+}
+
+.button {
+    font-size: 0.8em;
+    color:lightgray;
+    border: 1px solid lightgray;
+    margin: 15px;
+  
+}
+
+.wrapperBtn{
+    background-color:whitesmoke;;
+    text-align: center;
+}
