@@ -3,18 +3,23 @@
 body{
     font-size: 2.5em;
     color:deepskyblue;
+    background-color:azure;
 }
 
 .wrapper{
     background-color:azure;
-    padding: 30px 50px 50px 150px;
-    margin: 3vw;
+    padding: 30px 50px 0px 150px;
+    margin: 3vw 3vw 0vw 3vw;
 }
 
 .button {
     font-size: 0.8em;
     color:lightgray;
     border: 1px solid lightgray;
-    padding: 10px;
     margin: 10px;
+}
+
+.wrapperBtn{
+    background-color:azure;
+    text-align: center;
 }
