@@ -497,18 +497,41 @@ const quotes = [
 
 
 const quoteDiv = document.getElementById("quote1");
-
 let ourQuote = document.createElement("p"); //<p></p>
 
-const randomQuote = pickFromArray(quotes); // it will be object {quote: "text", author: "name"}
-console.log(randomQuote.quote);
-console.log(randomQuote.author);
-ourQuote.innerText = `${randomQuote.quote}, said by ${randomQuote.author}`;
-
-quoteDiv.appendChild(ourQuote);
-
 const ourButton = document.getElementById("button");
-ourButton.addEventListener("click", () => {
-  const typeYourNewThing = pickFromArray(quotes);
-  ourQuote.innerText = `${typeYourNewThing.quote}, said by ${typeYourNewThing.author}`;
-});
+let checkbox = document.getElementById("checkbox");
+
+let checkLabel = document.getElementById("checkLabel");
+
+
+function changeRandomQuote() {
+  quoteDiv.innerHTML = "";
+  const randomQuote = pickFromArray(quotes); 
+  ourQuote.innerText = `${randomQuote.quote}, said by ${randomQuote.author}`;
+  quoteDiv.appendChild(ourQuote);
+}
+
+changeRandomQuote();
+
+ourButton.addEventListener("click", changeRandomQuote);
+
+//let autoChange = setInterval(changeRandomQuote, 3000);
+
+checkbox.checked = false;
+function checkBoxChange() {
+  if (checkbox.checked) {
+    checkLabel.innerHTML = "Switched On";
+    let autoChange = setInterval(changeRandomQuote, 3000);
+  } else {
+    checkLabel.innerHTML = "Switched Off";
+    clearInterval(autoChange);
+  }
+}
+
+checkbox.addEventListener("change", checkBoxChange);
+
+
+
+
+
