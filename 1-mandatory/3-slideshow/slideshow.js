@@ -75,3 +75,16 @@ const stopHandler = () => {
     clearInterval(autoB);
 }
 stopTag.addEventListener("click", stopHandler)
+
+
+///////////////////////////////////////////////////////////
+// rootTag.innerHTML = "<article id='episodes'></article>"
+//   let article = document.querySelector("#episodes");
+
+
+//   all.forEach(obj => {
+
+//     article.innerHTML += `
+// <div class='episode'>
+//   <h1>${obj.name}</h1>
+// </div>
