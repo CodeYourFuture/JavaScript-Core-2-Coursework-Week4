@@ -1,4 +1,21 @@
-function setAlarm() {}
+function setAlarm() {
+  
+let timeRemaining = document.getElementById("timeRemaining");
+let inputAlarm = document.getElementById("alarmSet");
+let seconds = inputAlarm.value;
+
+timeRemaining.innerHTML = "Time Remaining " + seconds;
+let interval = setInterval(()=>{
+  seconds --
+  timeRemaining.innerHTML = "Time Remaining" + seconds
+if (seconds === 0){
+  playAlarm();
+  changeBackgroundColor();
+  clearInterval(interval);
+}
+},1000)
+}
+
 
 // DO NOT EDIT BELOW HERE
 
