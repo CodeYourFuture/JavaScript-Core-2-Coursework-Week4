@@ -1,1 +1,37 @@
-/** Write your CSS in here **/
+button::before,
+button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+button::after {
+  background-color: #292929;
+}
+
+button::before {
+  background-image: linear-gradient(to bottom right, #aeffb9 0%, #a091ff 100%);
+  transition: transform 200ms;
+}
+
+button:hover::before,
+button:focus::before {
+  transform: scale(1.1);
+}
+.inner-container {
+  margin: 100px auto;
+  width: 55%;
+  border: 5px dashed black;
+}
+
+button {
+  margin: 10px;
+  min-width: 134px;
+  max-width: 134px;
+}
+
+img {
+  width: -webkit-fill-available;
+  height: 27rem;
+}
