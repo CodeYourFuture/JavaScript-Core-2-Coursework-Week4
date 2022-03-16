@@ -4,10 +4,10 @@ let timeRemaining = document.getElementById("timeRemaining");
 let inputAlarm = document.getElementById("alarmSet");
 let seconds = inputAlarm.value;
 
-timeRemaining.innerHTML = "Time Remaining " + seconds;
+timeRemaining.innerHTML = `Time Remaining:  00:${seconds}`;
 let interval = setInterval(()=>{
   seconds --
-  timeRemaining.innerHTML = "Time Remaining" + seconds
+  timeRemaining.innerHTML = `Time Remaining:  00:${seconds}`;
 if (seconds === 0){
   playAlarm();
   changeBackgroundColor();
