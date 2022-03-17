@@ -1,21 +1,28 @@
+let inputTag = document.querySelector("#alarmSet");//global
+let timeRemaining = document.querySelector("#timeRemaining");//global
+
 function setAlarm() {
-  // When the `Set Alarm` button is clicked, get the value of the input field
- let setEl = document.querySelector("#alarmSet");
- let displayEl = setEl.value;
- let remainingEl = document.querySelector("#timeRemaining");
- remainingEl.innerText = `Time Remaining: 00:${timer}`;
+let timer = inputTag.value ;
 
- let interval = setInterval ( () => {
-   displayEl = displayEl - 1;
-   remainingEl.innerText = `Time Remaining: 00:${timer}`;
 
-   if(displayEl === 0) {
-     clearInterval(interval);
-        playAlarm()
-   }
+let myInterval = setInterval(()=>{
+timer--;
+let minutes = Math.floor(timer/60);
+let seconds = timer % 60;
+// timeRemaining.innerHTML = `Time Remaining: 00:${minutes}:${seconds}`;
+if(minutes < 10 && seconds >= 10){
+  timeRemaining.innerHTML = `Time Remaining: 0:${minutes}:${seconds}`;
+}else if(minutes < 10 && seconds < 10){
+  timeRemaining.innerHTML = `Time Remaining: 0:${minutes}:${seconds}`;
+}else if(minutes >=10 && seconds < 10){
+  timeRemaining.innerHTML = `Time Remaining: 0:${minutes}:${seconds}`;
+}
 
- },1000)
-
+if(minutes === 0 && seconds === 0){
+  clearInterval(myInterval);
+  playAlarm();
+}
+},1000)
 
 }
 
