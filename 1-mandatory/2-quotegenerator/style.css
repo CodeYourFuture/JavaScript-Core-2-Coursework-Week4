@@ -53,7 +53,8 @@ h3 {
 h5 {
   text-align: center;
   font-family: inherit;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 p {
@@ -96,7 +97,7 @@ p {
 .img-num {
   display: none;
 }
-/* INNE IMAGE CONTAINER  --------------------*/
+/* INNER IMAGE CONTAINER  --------------------*/
 
 .grid-2 {
   margin-top: 200px;
@@ -213,6 +214,12 @@ button:hover {
   border: none;
 }
 
+button:focus {
+  background-color: var(--accent);
+  color: var(--primary);
+  outline: 0;
+}
+
 /* ICONS ------------------------------- */
 .fa-quote-left {
   font-size: 30px;
@@ -221,17 +228,16 @@ button:hover {
   bottom: 0px;
 }
 
-/* FOOTER  -----------------------*/
+/* FOOTER ------------------------------------ */
 
-/* .footer {
-  color: var(--accent);
-} */
-.footer a:link {
+.footer a {
+  color: var(--d-accent);
+  outline: none;
   text-decoration: none;
-  transition: 0.6s;
+  transition: 0.8s;
 }
 
-/* mouse over link */
+/* hover  */
 .footer a:hover {
   color: var(--accent);
 }

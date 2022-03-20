@@ -1,4 +1,4 @@
-//functions without names are anonymouse ?
+//functions without names are anonymous??
 
 //function associated with onclick therefore does not need a name, as onClick is the name!
 document.querySelector(`.button`).onclick = function () {
@@ -10,6 +10,10 @@ document.querySelector(`.button`).onclick = function () {
   // select the text + descendants  = get a quote from an element in the array of objects  - quote + author
   document.querySelector(`#author`).innerText = pickFromArray(quotes).author;
 };
+
+//fix the width and height of the quotes
+
+// ----------------------------------------
 
 // DO NOT EDIT BELOW HERE
 
