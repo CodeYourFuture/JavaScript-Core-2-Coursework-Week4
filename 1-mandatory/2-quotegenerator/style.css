@@ -1,7 +1,7 @@
 /** Write your CSS in here **/
 body{
     margin: 200px;
-    background-color:aquamarine;
+  background-image: url(images/quote-1122421_1920.jpg);
 }
 #quote{
     font-size: larger;
