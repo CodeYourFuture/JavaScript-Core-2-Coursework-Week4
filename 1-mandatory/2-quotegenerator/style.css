@@ -1,1 +1,14 @@
 /** Write your CSS in here **/
+body, html {
+    margin:0;
+    padding:0;
+    border: 0;
+}
+div {
+    margin: auto;
+    /* position: relative; */
+    /* top: 100px; */
+}
+h1 , h2 {
+    margin: 0;
+}

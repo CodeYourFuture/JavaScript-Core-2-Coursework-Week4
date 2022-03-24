@@ -490,3 +490,5 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+export {pickFromArray, quotes};
