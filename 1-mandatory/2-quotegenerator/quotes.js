@@ -1,3 +1,18 @@
+// access array, and pass info to html tags
+function passQuotes() {
+  const quoteSelect = document.querySelector('.quote');
+  const authorSelect = document.querySelector('.author');
+
+  const chosenObject = pickFromArray(quotes);
+
+  quoteSelect.innerText = chosenObject.quote;
+  authorSelect.innerText = chosenObject.author;
+}
+
+buttonSelect = document.querySelector('.quoteGenButton');
+
+buttonSelect.addEventListener('click', passQuotes);
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +505,6 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+window.onload = passQuotes;
