@@ -5,8 +5,7 @@ for (let div of uncenteredDivs) {
 }
 
 // DECLARE RECURRING VARIABLES
-let 
-  input = document.getElementById("alarmSet"),
+let input = document.getElementById("alarmSet"),
   counter = document.getElementById("timeRemaining"),
   hours,
   minutes,
@@ -19,7 +18,7 @@ const CUSTOM_SETUP = () => {
   input.pattern = "[0-9]{2}:[0-9]{2}:[0-9]{2}";
   input.step = "1000";
   counter.innerText = `Time Remaining: 00:00:00`;
-}
+};
 
 CUSTOM_SETUP();
 
@@ -41,8 +40,7 @@ const IS_SINGLE_DIGIT = (num) => num < 10;
 
 // RECURRING CALL TO RERENDER TIMER AND UPDATE VARIABLES
 const UPDATED_TIME = () => {
-  const 
-    CURRENTLY = CHECK_TIME(),
+  const CURRENTLY = CHECK_TIME(),
     RESET = "59";
   if (CURRENTLY === "Some seconds left") {
     seconds -= 1;
@@ -74,8 +72,8 @@ const UPDATED_TIME = () => {
 
 // CACHE INPUT VALUES AND SET INTERVALS
 let setAlarm = () => {
-  hours = input.value.substring(0,2);
-  minutes = input.value.substring(3,5);
+  hours = input.value.substring(0, 2);
+  minutes = input.value.substring(3, 5);
   seconds = input.value.substring(6);
   counter.innerText = `Time Remaining: ${input.value}`;
   updateTitle = setInterval(() => {
@@ -83,6 +81,12 @@ let setAlarm = () => {
     counter.innerText = "Time Remaining: " + time;
   }, 1000);
 };
+
+let stopAlarm = () => {
+  clearInterval(updateTitle);
+  counter.innerText = "Time Remaining: 00:00:00";
+};
+document.getElementById("stop").addEventListener("click", stopAlarm);
 
 // DO NOT EDIT BELOW HERE
 
