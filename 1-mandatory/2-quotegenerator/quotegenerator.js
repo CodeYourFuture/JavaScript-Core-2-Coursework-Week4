@@ -38,6 +38,7 @@ mainDiv.style.padding = "40px 20px 10px";
 mainDiv.style.display = "flex";
 mainDiv.style.flexDirection = "column";
 mainDiv.style.justifyContent = "space-around";
+mainDiv.classList.add("mainDiv");
 
 quote.style.textAlign = "center";
 quote.style.fontStyle = "italic";
@@ -90,7 +91,7 @@ const animate = () => {
   toggleButton.classList.toggle("active");
   if (toggle.classList.contains("active")) {
     toggleText.innerText = "ON";
-    autoPlay = setInterval(renderNewQuote, 2000);
+    autoPlay = setInterval(renderNewQuote, 10000);
   } else {
     toggleText.innerText = "OFF";
     clearInterval(autoPlay);
