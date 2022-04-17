@@ -12,3 +12,56 @@ div {
 h1 , h2 {
     margin: 0;
 }
+
+.container {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+.toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 50px;
+    background-color: rgb(105, 185, 185);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.toggle.active {
+    background-color: teal;
+    /* justify-content: flex-end; */
+}
+
+.toggle-button {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 0.25rem rgb(0, 53, 53));
+    transition: 0.5s;
+}
+
+.toggle-button.active {
+    left: 45px;
+}
+
+.text {
+    position: relative;
+    left: 10px;
+    width: 3rem;
+    font-weight: bold;
+    color: teal;
+}

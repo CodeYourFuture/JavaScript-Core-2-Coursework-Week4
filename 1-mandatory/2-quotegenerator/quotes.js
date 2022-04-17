@@ -332,11 +332,6 @@ const quotes = [
     author: "Benjamin Franklin",
   },
   {
-    quote:
-      "In order to succeed, your desire for success should be greater than your fear of failure.",
-    author: "Bill Cosby",
-  },
-  {
     quote: "A person who never made a mistake never tried anything new.",
     author: " Albert Einstein",
   },
@@ -491,4 +486,4 @@ const quotes = [
   },
 ];
 
-export {pickFromArray, quotes};
+export { pickFromArray, quotes };
