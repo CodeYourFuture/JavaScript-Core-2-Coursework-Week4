@@ -28,8 +28,6 @@ document.body.append(mainDiv);
 
 // STYLE NEWLY CREATED ELEMENTS
 
-document.body.style.backgroundColor = "teal";
-
 mainDiv.style.backgroundColor = "white";
 mainDiv.style.minHeight = "250px";
 mainDiv.style.width = "550px";
