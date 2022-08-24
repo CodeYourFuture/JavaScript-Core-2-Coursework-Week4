@@ -1,4 +1,9 @@
-function setAlarm() {}
+function setAlarm() 
+
+function pauseAlarm() {
+  audio.pause();
+}
+
 
 // DO NOT EDIT BELOW HERE
 

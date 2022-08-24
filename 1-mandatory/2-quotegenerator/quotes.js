@@ -1,3 +1,32 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@M3ntalist 
+AmarachiOkereke
+/
+JavaScript-Core-2-Coursework-Week4-London8
+Public
+forked from CodeYourFuture/JavaScript-Core-2-Coursework-Week4
+Code
+Pull requests
+Actions
+Projects
+Security
+Insights
+JavaScript-Core-2-Coursework-Week4-London8/1-mandatory/2-quotegenerator/quotes.js /
+@AmarachiOkereke
+AmarachiOkereke JavaScript Tasks
+…
+Latest commit 4430ada on 16 Feb
+ History
+ 2 contributors
+@JDysiewicz@AmarachiOkereke
+516 lines (507 sloc)  15.2 KB
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +519,41 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+// 1. Access element with Id Quote
+// 2. Add quote to element
+
+// Add event listener to button
+// When button is clicked, show a new random quote
+
+let quoteParagraph = document.getElementById("quote");
+let authorParagraph = document.getElementById("author");
+let newQuoteButton = document.getElementById("new-quote");
+let divEl = document.querySelector('.quoteEl')
+
+function setQuote() {
+  let selectedQuotation = pickFromArray(quotes);
+  quoteParagraph.innerText = selectedQuotation.quote;
+  authorParagraph.innerText = `- ${selectedQuotation.author}`;
+}
+
+newQuoteButton.addEventListener("click", setQuote);
+
+setQuote();
+document.body.style.backgroundColor = 'rgb(207, 71, 93)';
+divEl.style.backgroundColor = "white";
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
