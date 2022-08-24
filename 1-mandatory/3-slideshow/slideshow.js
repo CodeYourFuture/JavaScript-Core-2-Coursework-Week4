@@ -1,49 +1,73 @@
 // Write your code here
-let stop = document.getElementById("btnStop");
-let back = document.getElementById("btnBack");
-let forward = document.getElementById("btnForward");
-let autoBack = document.getElementById("btnAutoBack");
-let autoForward = document.getElementById("btnAutoForward");
-let img = document.querySelector("img");
-const dogImages = [
-  "images/dog1.png",
-  "images/dog2.png",
-  "images/dog3.png",
-  "images/dog4.png",
+let images = [
+  {
+    source: "jae-park-7GX5aICb5i4-unsplash.jpg",
+    alt: "Screaming cat",
+  },
+  {
+    source: "modcatshop-pdALzg0yN-8-unsplash.jpg",
+    alt: "cat sleeping in the bed under grey blanket",
+  },
+  {
+    source: "jari-hytonen-YCPkW_r_6uA-unsplash.jpg",
+    alt: "Basket with four small cute cats",
+  },
+  {
+    source: "karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg",
+    alt: "cat with butterfly sitting on the nose",
+  },
 ];
-let currentImageIndex = 0;
 
-forward.addEventListener("click", () => {
-  currentImageIndex++; // This is incrementing the index of the dogImages array by 1
-  currentImageIndex = currentImageIndex % dogImages.length;
-  img.src = dogImages[currentImageIndex];
-  console.log(img.src);
-  console.log(currentImageIndex);
-});
+let image = document.querySelector("#slides");
 
-back.addEventListener("click", () => {
-  currentImageIndex =
-    (dogImages.length + currentImageIndex - 1) % dogImages.length;
-  img.src = dogImages[currentImageIndex];
-  console.log(currentImageIndex);
-});
+image.src = images[0].source;
+image.alt = images[0].alt;
 
-let myInterval;
-autoBack.addEventListener('click', () => {
-myInterval = setInterval(() => {
-      currentImageIndex =
-        (dogImages.length + currentImageIndex - 1) % dogImages.length;
-      img.src = dogImages[currentImageIndex];
-    }, 1000);
-})
+let forward = document.querySelector("#forward");
+let back = document.querySelector("#back");
+let autoForward = document.querySelector("#auto-forward");
+let autoBack = document.querySelector("#auto-back");
+let stopButton = document.querySelector("#stop");
+let forwardInterval;
+let backInterval;
 
-autoForward.addEventListener('click', () => {
-  myInterval = setInterval(() => {
-    currentImageIndex = (currentImageIndex + 1) % dogImages.length;
-    img.src = dogImages[currentImageIndex];
-  }, 1000);
-})
+let number = 0;
 
-stop.onclick = function () {
-  clearInterval(myInterval);
+function slidesShow() {
+  if (number < images.length - 1) {
+    number++;
+  }
+  image.src = images[number].source;
+  image.alt = images[number].alt;
 }
+
+function previousSlide() {
+  if (number > 0) {
+    number--;
+  }
+  image.src = images[number].source;
+  image.alt = images[number].alt;
+}
+
+forward.addEventListener("click", slidesShow);
+
+back.addEventListener("click", previousSlide);
+
+autoForward.addEventListener("click", () => {
+  forwardInterval = setInterval(slidesShow, 5000);
+  clearInterval(backInterval);
+});
+
+autoBack.addEventListener("click", () => {
+  backInterval = setInterval(previousSlide, 5000);
+  clearInterval(forwardInterval);
+});
+
+stopButton.addEventListener("click", () => {
+  clearInterval(backInterval);
+});
+
+stopButton.addEventListener("click", () => {
+  clearInterval(forwardInterval);
+});
+Footer

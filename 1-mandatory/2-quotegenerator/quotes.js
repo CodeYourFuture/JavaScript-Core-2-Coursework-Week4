@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@M3ntalist 
-AmarachiOkereke
-/
-JavaScript-Core-2-Coursework-Week4-London8
-Public
-forked from CodeYourFuture/JavaScript-Core-2-Coursework-Week4
-Code
-Pull requests
-Actions
-Projects
-Security
-Insights
-JavaScript-Core-2-Coursework-Week4-London8/1-mandatory/2-quotegenerator/quotes.js /
-@AmarachiOkereke
-AmarachiOkereke JavaScript Tasks
-…
-Latest commit 4430ada on 16 Feb
- History
- 2 contributors
-@JDysiewicz@AmarachiOkereke
-516 lines (507 sloc)  15.2 KB
-
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -520,40 +491,27 @@ const quotes = [
   },
 ];
 
+//When the page loads it should show a random quote from the `quotes` array on the screen. It should also show who said the quote.
+const quote = document.querySelector(".quote");
+let randomQuote = pickFromArray(quotes);
+quote.innerText = `${randomQuote.quote} by ${randomQuote.author}`;
 
-// 1. Access element with Id Quote
-// 2. Add quote to element
+//Create body variable to store body object and change colour of background
+let body = document.querySelector("body");
+let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+document.body.style.backgroundColor = `#${randomColor}`;
 
-// Add event listener to button
-// When button is clicked, show a new random quote
+//Change colour of button
+const newQuoteButton = document.querySelector("#new-quote");
+newQuoteButton.style.backgroundColor = `#${randomColor}`;
 
-let quoteParagraph = document.getElementById("quote");
-let authorParagraph = document.getElementById("author");
-let newQuoteButton = document.getElementById("new-quote");
-let divEl = document.querySelector('.quoteEl')
+//Click 'New Quote' button on the screen and change quote and button colour
+newQuoteButton.addEventListener("click", () => {
+  const newColor = Math.floor(Math.random() * 16777215).toString(16);
 
-function setQuote() {
-  let selectedQuotation = pickFromArray(quotes);
-  quoteParagraph.innerText = selectedQuotation.quote;
-  authorParagraph.innerText = `- ${selectedQuotation.author}`;
-}
+  document.body.style.backgroundColor = `#${newColor}`;
+  newQuoteButton.style.backgroundColor = `#${newColor}`;
 
-newQuoteButton.addEventListener("click", setQuote);
-
-setQuote();
-document.body.style.backgroundColor = 'rgb(207, 71, 93)';
-divEl.style.backgroundColor = "white";
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+  const newQuote = pickFromArray(quotes);
+  quote.innerText = `${newQuote.quote} by ${newQuote.author}`;
+});

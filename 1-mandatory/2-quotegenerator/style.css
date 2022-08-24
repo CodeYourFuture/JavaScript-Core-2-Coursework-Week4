@@ -1,1 +1,21 @@
 /** Write your CSS in here **/
+body {
+    margin: 20%;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  button {
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+  }
