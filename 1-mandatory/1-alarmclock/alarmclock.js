@@ -1,4 +1,12 @@
-function setAlarm() {}
+function setAlarm() {
+  let timeRemainder = document.getElementById("timeRemaining");
+  let alarmCounter = document.getElementById("alarmSet").value;
+  let timerCount = document.getElementById("timer");
+
+  timerCount.innerText = alarmCounter;
+
+  
+}
 
 // DO NOT EDIT BELOW HERE
 
