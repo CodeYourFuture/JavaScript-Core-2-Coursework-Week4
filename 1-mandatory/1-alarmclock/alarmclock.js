@@ -8,7 +8,7 @@ function setAlarm() {
   if (myValue >= 3600) {
     return alert("Put a number less than 3600!")
   }
-  // else
+ 
   let loop = () => {
     if (myValue === -1) { //Time out
       return playAlarm()

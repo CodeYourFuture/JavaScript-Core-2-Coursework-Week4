@@ -1,1 +1,26 @@
-/** Write your CSS in here **/
+body{
+    align-items: center;
+    text-align: center;
+}
+
+.slider{
+    margin: 50px auto;
+}
+
+.image-box img{
+    width: 600px;
+    height: 400px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background: grey;
+    padding: 8px 27px;
+    color: red;
+    cursor:pointer;
+    margin: 8px auto;
+}
+.btn:hover{
+    background: blueviolet;
+}
