@@ -1,29 +1,52 @@
+let alarmInterval;
+
 function setAlarm() {
-
-  let timeRemainEl = document.getElementById("timeRemaining");
-  let newDetails = timeRemainEl.innerText.replace(":00", ":");
-  timeRemainEl.innerText = newDetails;
-  let enteredSpanEl = document.createElement("span");
-  timeRemainEl.appendChild(enteredSpanEl);
-
+  //get input value in seconds
   let timeSetInputEl = document.getElementById("alarmSet");
-  let timeSetCounter = timeSetInputEl.value;
+  let time = timeSetInputEl.value;
 
-  const interval = setInterval(() => {
-    timeSetCounter =
-    timeSetCounter < 10 ? "0" + timeSetCounter : timeSetCounter;
-    enteredSpanEl.textContent = timeSetCounter;
-    timeSetCounter--;
-    if (timeSetCounter< 0 ) {
+  //getting counter display
+  let timeRemainEl = document.getElementById("timeRemaining");
+
+  let interval = setInterval(() => {
+    //work out minutes and seconds from input given
+    let mm = Math.floor(time / 60);
+    let ss = time % 60;
+
+    //adding a zero in front if its less than 10.
+    mm = mm < 10 ? "0" + mm : mm;
+    ss = ss < 10 ? "0" + ss : ss;
+
+    //display time on DOM
+    timeRemainEl.textContent = `Time Remaining: ${mm}:${ss}`;
+
+    time--;
+
+    if (time < 0) {
       clearInterval(interval);
-      console.log('Ding!');
+      playAlarm();
+
+      //changing background during alarm
+      backgroundColors = [
+        "#f94144",
+        "#f3722c",
+        "#f8961e",
+        "#f9844a",
+        "#f9c74f",
+        "#90be6d",
+        "#43aa8b",
+        "#4d908e",
+        "#577590",
+        "#277da1",
+      ];
+
+      alarmInterval = setInterval(() => {
+        let alarmBackground = document.querySelector("body");
+        let randomI = Math.floor(Math.random() * backgroundColors.length);
+        alarmBackground.style.backgroundColor = backgroundColors[randomI];
+      }, 1000);
     }
   }, 1000);
-
-  // const d = new Date();
-  // //d.setSeconds(timeSetVal);
-  // enteredSpanEl.textContent = d.setSeconds(timeSetVal);
-  /* <h1 id="timeRemaining">Time Remaining: 00:00</h1>; */
 }
 
 // DO NOT EDIT BELOW HERE
@@ -37,6 +60,7 @@ function setup() {
 
   document.getElementById("stop").addEventListener("click", () => {
     pauseAlarm();
+    clearInterval(alarmInterval);
   });
 }
 
