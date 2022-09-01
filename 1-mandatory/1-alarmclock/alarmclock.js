@@ -1,42 +1,28 @@
 function setAlarm() {
   let timeDisplay = document.getElementById("timeRemaining");
-  let alarmCounter = document.getElementById("alarmSet").value;
-
-  let mm = "00";
-  let ss = "00";
+  let alarmInput = document.getElementById("alarmSet").value;
 
   const interval = setInterval(() => {
-    mm = Math.floor(alarmCounter / 60);
-    ss = Math.floor(alarmCounter % 60);
+    let mm = Math.floor(alarmInput / 60);
+    let ss = alarmInput % 60;
 
-    if (alarmCounter >= 600) {
-      ss = ss < 10 ? "0" + ss : ss;
-      timeDisplay.innerText = `Time Remaining: ${mm}:${ss}`;
-      mm--;
-      ss--;
-      alarmCounter--;
-    } else if (alarmCounter < 600 && alarmCounter >= 60) {
-      ss = ss < 10 ? "0" + ss : ss;
-      mm = mm < 10 ? "0" + mm : mm;
-      timeDisplay.innerText = `Time Remaining: ${mm}:${ss}`;
-      mm--;
-      ss--;
-      alarmCounter--;
-    } else if (alarmCounter < 60 && alarmCounter >= 10) {
-      ss = ss < 10 ? "0" + ss : ss;
-      timeDisplay.innerText = `Time Remaining: 00:${ss}`;
-      ss--;
-      alarmCounter--;
-    } else {
-      ss = ss < 10 ? "0" + ss : ss;
-      timeDisplay.innerText = `Time Remaining: 00:${ss}`;
-      ss--;
-      alarmCounter--;
-    }
+    mm = mm < 10 ? "0" + mm : mm;
+    ss = ss < 10 ? "0" + ss : ss;
 
-    if (alarmCounter < 0) {
+    timeDisplay.innerText = `Time Remaining: ${mm}:${ss}`;
+
+    alarmInput--;
+
+    if (alarmInput < 0) {
       clearInterval(interval);
       playAlarm();
+      let colours = ["#ffbe0b", "#fb5607", "#ff006e", "#8338ec", "#3a86ff"];
+
+      let colourInterval = setInterval(() => {
+        let colourIndex = Math.floor(Math.random() * colours.length);
+        backgroundSetColour = document.querySelector("body");
+        backgroundSetColour.style.backgroundColor = colours[colourIndex];
+      }, 1000);
     }
   }, 1000);
 }

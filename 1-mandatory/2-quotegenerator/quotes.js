@@ -23,6 +23,10 @@ function pickFromArray(choices) {
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
+document.body.style.backgroundColor = #219ebc;
+function randomQuotes(quote){
+  
+}
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
