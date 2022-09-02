@@ -1,3 +1,35 @@
+colorsArray = [
+  "#ff0000ff",
+  "#ff8700ff",
+  "#ffd300ff",
+  "#deff0aff",
+  "#a1ff0aff",
+  "#0aff99ff",
+  "#0aefffff",
+  "#147df5ff",
+  "#580affff",
+  "#be0affff",
+];
+let quoteCard = document.getElementById("quote__card");
+let quoteButton = document.getElementById("button");
+// let randomQuotes = pickFromArray(quotes);
+// quoteButton.addEventListener("click", () => {
+//   let colorI = Math.floor(Math.random() * colorsArray.length);
+//   let bodySetColor = document.querySelector("body");
+//   bodySetColor.style.backgroundColor = colorsArray[colorI];
+//   quoteButton.style.backgroundColor = colorsArray[colorI];
+
+// });
+
+quoteButton.addEventListener("click", () => {
+  let bodySetColor = document.querySelector("body");
+  let setRandom = pickFromArray(colorsArray);
+  bodySetColor.style.backgroundColor = setRandom;
+  quoteButton.style.backgroundColor = setRandom;
+
+  // quoteCard.appendChild(randomQuotes);
+});
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -17,16 +49,14 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
-document.body.style.backgroundColor = #219ebc;
-function randomQuotes(quote){
-  
-}
+
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
