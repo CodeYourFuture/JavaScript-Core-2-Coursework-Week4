@@ -1,62 +1,3 @@
-colorsArray = [
-  "#ff0000ff",
-  "#ff8700ff",
-  "#ffd300ff",
-  "#deff0aff",
-  "#a1ff0aff",
-  "#0aff99ff",
-  "#0aefffff",
-  "#147df5ff",
-  "#580affff",
-  "#be0affff",
-];
-let quoteCard = document.getElementById("quote__card");
-let quoteButton = document.getElementById("button");
-// let randomQuotes = pickFromArray(quotes);
-// quoteButton.addEventListener("click", () => {
-//   let colorI = Math.floor(Math.random() * colorsArray.length);
-//   let bodySetColor = document.querySelector("body");
-//   bodySetColor.style.backgroundColor = colorsArray[colorI];
-//   quoteButton.style.backgroundColor = colorsArray[colorI];
-
-// });
-
-quoteButton.addEventListener("click", () => {
-  let bodySetColor = document.querySelector("body");
-  let setRandom = pickFromArray(colorsArray);
-  bodySetColor.style.backgroundColor = setRandom;
-  quoteButton.style.backgroundColor = setRandom;
-
-  // quoteCard.appendChild(randomQuotes);
-});
-
-// DO NOT EDIT BELOW HERE
-
-// A function which will return one item, at
-// random, from the given array.
-//
-// Parameters
-// ----------
-// choices: an array of items to pick from.
-//
-// Returns
-// -------
-// One item of the given array.
-//
-// Examples of use
-// ---------------
-// pickFromArray([1,2,3,4])     //maybe returns 2
-// pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
-// You DO NOT need to understand how this function works.
-
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
-
-// A list of quotes you can use in your app.
-// Feel free to edit them, and to add your own favourites.
-
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
@@ -524,3 +465,78 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+// Adding array of random colours:
+
+colorsArray = [
+  "#ff0000ff",
+  "#ff8700ff",
+  "#ffd300ff",
+  "#deff0aff",
+  "#a1ff0aff",
+  "#0aff99ff",
+  "#0aefffff",
+  "#147df5ff",
+  "#580affff",
+  "#be0affff",
+];
+
+// Declaring each variable below:
+
+let quoteCard = document.getElementById("quote__card");
+let quoteButton = document.getElementById("button");
+let quoteParagraphEl = document.getElementById("quote__text");
+let quoteAuthorEl = document.getElementById("author");
+
+// Adding an event listener to the button:
+// Inside the code, we also call the pickFromArray function given
+// to access random colours as well as random quotes from array:
+
+quoteButton.addEventListener("click", () => {
+  let bodySetColor = document.querySelector("body");
+  let setRandom = pickFromArray(colorsArray);
+  bodySetColor.style.backgroundColor = setRandom;
+  quoteButton.style.backgroundColor = setRandom;
+  let setRandomQuote = pickFromArray(quotes);
+  quoteParagraphEl.innerHTML = `"${setRandomQuote.quote}"`;
+  quoteAuthorEl.innerText = setRandomQuote.author;
+  quoteParagraphEl.style.color = setRandom;
+  quoteAuthorEl.style.color = setRandom;
+});
+
+// The code below works without the pickFromArray function:
+// let randomQuotes = pickFromArray(quotes);
+// quoteButton.addEventListener("click", () => {
+//   let colorI = Math.floor(Math.random() * colorsArray.length);
+//   let bodySetColor = document.querySelector("body");
+//   bodySetColor.style.backgroundColor = colorsArray[colorI];
+//   quoteButton.style.backgroundColor = colorsArray[colorI];
+
+// });
+
+// DO NOT EDIT BELOW HERE
+
+// A function which will return one item, at
+// random, from the given array.
+//
+// Parameters
+// ----------
+// choices: an array of items to pick from.
+//
+// Returns
+// -------
+// One item of the given array.
+//
+// Examples of use
+// ---------------
+// pickFromArray([1,2,3,4])     //maybe returns 2
+// pickFromArray(coloursArray)  //maybe returns "#F38630"
+//
+// You DO NOT need to understand how this function works.
+
+function pickFromArray(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
+// A list of quotes you can use in your app.
+// Feel free to edit them, and to add your own favourites.
