@@ -1,1 +1,63 @@
 /** Write your CSS in here **/
+
+@import url("https://fonts.googleapis.com/css2?family=Coustard&family=DM+Sans:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e500a4;
+  color: #e500a4;
+  font-size: 30px;
+  font-family: "DM Sans", sans-serif;
+}
+
+#quoteDisplay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 70vh;
+  background-color: whitesmoke;
+  padding: 50px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#quote {
+  position: relative;
+  font-weight: 500;
+}
+
+.quoteSpan {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  font-family: "Coustard", serif;
+  font-size: 3rem;
+}
+
+#author {
+  font-size: 1rem;
+  text-align: end;
+}
+
+#newQuoteBtn {
+  position: absolute;
+  font-size: 1rem;
+  background-color: #e500a4;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  right: 20px;
+  bottom: 20px;
+}
+button,
+button:active,
+button:focus {
+  outline: none;
+}
