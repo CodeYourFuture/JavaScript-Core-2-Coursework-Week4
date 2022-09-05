@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 3rem;
+  background-color: #263238;
 }
 
 #buttons {
@@ -22,7 +23,7 @@ body {
 #backward__btn {
   width: 5rem;
   height: 2rem;
-  background-color: blue;
+  background-color: #304ffe;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
@@ -33,7 +34,40 @@ body {
 #forward__btn {
   width: 6rem;
   height: 2rem;
-  background-color: blue;
+  background-color: #304ffe;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+#autoback__btn {
+  width: 9rem;
+  height: 2rem;
+  background-color: #304ffe;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+#stop__btn {
+  width: 6rem;
+  height: 2rem;
+  background-color: #304ffe;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+#autoforward__btn {
+  width: 9rem;
+  height: 2rem;
+  background-color: #304ffe;
   border: none;
   border-radius: 4px;
   font-size: 1rem;

@@ -9,6 +9,11 @@ let imageCarouselArr = [
 
 let backwardButton = document.getElementById("backward__btn");
 let forwardButton = document.getElementById("forward__btn");
+let autoBackwardBtn = document.getElementById("autoback__btn");
+let autoForwardBtn = document.getElementById("autoforward__btn");
+let stopBtn = document.getElementById("stop__btn");
+let autoForwardInterval;
+let autoBackInterval;
 let counter = 0;
 
 forwardButton.addEventListener("click", () => {
@@ -35,4 +40,39 @@ backwardButton.addEventListener("click", () => {
     slideShow.src = imageCarouselArr[counter];
     console.log(counter);
   }
+});
+
+autoBackwardBtn.addEventListener("click", () => {
+  autoBackInterval = setInterval(() => {
+    let slideShow = document.getElementById("image__carousel");
+    if (counter > 0) {
+      counter--;
+      slideShow.src = imageCarouselArr[counter];
+      console.log(counter);
+    } else {
+      counter = imageCarouselArr.length - 1;
+      slideShow.src = imageCarouselArr[counter];
+      console.log(counter);
+    }
+  }, 3000);
+});
+
+autoForwardBtn.addEventListener("click", () => {
+  autoForwardInterval = setInterval(() => {
+    let slideShow = document.getElementById("image__carousel");
+    if (counter < imageCarouselArr.length - 1) {
+      counter++;
+      slideShow.src = imageCarouselArr[counter];
+      console.log(counter);
+    } else {
+      counter = 0;
+      slideShow.src = imageCarouselArr[counter];
+      console.log(counter);
+    }
+  }, 3000);
+});
+
+stopBtn.addEventListener("click", () => {
+  clearInterval(autoBackInterval);
+  clearInterval(autoForwardInterval);
 });
