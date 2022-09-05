@@ -15,8 +15,8 @@ body {
 }
 
 #image__carousel {
-  max-width: 40vw;
-  height: auto;
+  max-width: auto;
+  height: 25rem;
 }
 
 #backward__btn {
