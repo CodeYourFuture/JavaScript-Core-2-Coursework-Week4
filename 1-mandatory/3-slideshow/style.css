@@ -1,1 +1,42 @@
 /** Write your CSS in here **/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+}
+
+#buttons {
+  margin-top: 2rem;
+}
+
+#image__carousel {
+  max-width: 40vw;
+  height: auto;
+}
+
+#backward__btn {
+  width: 5rem;
+  height: 2rem;
+  background-color: blue;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+#forward__btn {
+  width: 6rem;
+  height: 2rem;
+  background-color: blue;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
