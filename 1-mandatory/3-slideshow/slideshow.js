@@ -1,5 +1,6 @@
 // Write your code here
-//level1:
+let autoBackwardInterval;
+let autoForwardInterval;
 
 let pictures = [
   "https://images.unsplash.com/photo-1660563828193-c4ea4b73dd08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
@@ -21,7 +22,7 @@ let description = [
 
 let counter = 0;
 
-document.getElementById("forwardBtn").addEventListener("click", () => {
+function goForward() {
   if (counter < pictures.length - 1) {
     counter++;
     document.getElementById("imageShow").src = pictures[counter];
@@ -33,9 +34,9 @@ document.getElementById("forwardBtn").addEventListener("click", () => {
     document.getElementById("description").innerHTML = description[counter];
     console.log(counter);
   }
-});
+}
 
-document.getElementById("backwardBtn").addEventListener("click", () => {
+function goBackward() {
   if (counter > 0) {
     counter--;
     document.getElementById("imageShow").src = pictures[counter];
@@ -45,4 +46,20 @@ document.getElementById("backwardBtn").addEventListener("click", () => {
     document.getElementById("imageShow").src = pictures[counter];
     document.getElementById("description").innerHTML = description[counter];
   }
+}
+
+document.getElementById("forwardBtn").addEventListener("click", goForward);
+document.getElementById("backwardBtn").addEventListener("click", goBackward);
+
+document.getElementById("autoForwardBtn").addEventListener("click", () => {
+  autoForwardInterval = setInterval(goForward, 3000);
+});
+
+document.getElementById("autoBackwardBtn").addEventListener("click", () => {
+  autoBackwardInterval = setInterval(goBackward, 3000);
+});
+
+document.getElementById("stopBtn").addEventListener("click", () => {
+  clearInterval(autoForwardInterval);
+  clearInterval(autoBackwardInterval);
 });
