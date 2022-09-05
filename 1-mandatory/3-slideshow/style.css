@@ -1,1 +1,46 @@
 /** Write your CSS in here **/
+
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.slideshowDisplay {
+  margin-top: 15px;
+}
+
+.imgStyle {
+  display: block;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 25%;
+  height: 500px;
+}
+
+.buttonBar {
+  margin: 15px;
+  text-align: center;
+}
+
+button,
+button:active {
+  outline: none;
+  background-color: black;
+  color: whitesmoke;
+  padding: 5px;
+  width: 6em;
+}
+
+.logo {
+  position: absolute;
+  bottom: 70px;
+  right: 50px;
+  font-family: "Itim", cursive;
+  font-size: 40px;
+}
