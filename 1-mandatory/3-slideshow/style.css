@@ -22,6 +22,11 @@ body {
   width: 25%;
   height: 500px;
 }
+#description {
+  margin: 20px;
+  text-align: center;
+  font-family: "Itim", cursive;
+}
 
 .buttonBar {
   margin: 15px;
@@ -39,7 +44,7 @@ button:active {
 
 .logo {
   position: absolute;
-  bottom: 70px;
+  bottom: 300px;
   right: 50px;
   font-family: "Itim", cursive;
   font-size: 40px;
