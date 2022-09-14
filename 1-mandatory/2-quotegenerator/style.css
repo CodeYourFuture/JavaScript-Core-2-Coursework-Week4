@@ -1,1 +1,56 @@
 /** Write your CSS in here **/
+body {
+    background-color: #0aefffff;
+}
+
+#quote__card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 50vh;
+    margin: 0;
+    padding: 40px;
+    background-color: whitesmoke;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#quote__text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0aefffff;
+}
+
+#author {
+    /* top: 50%;
+left: 80%; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: end;
+    color: #0aefffff;
+}
+
+/* Styling the button */
+#button {
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    width: 9em;
+    height: 4em;
+    border-style: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: #0aefffff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+#button,
+button:active,
+button:focus {
+    outline: none;
+}
