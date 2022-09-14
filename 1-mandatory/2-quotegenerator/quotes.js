@@ -21,6 +21,31 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+//container div
+const content = document.createElement("div");
+content.setAttribute("id", "content");
+document.body.appendChild(content);
+
+//quote display & author display
+const display = document.createElement("p");
+display.setAttribute("id", "display");
+//display.innerHTML = "";
+content.appendChild(display);
+
+const authorDisplay = document.createElement("p");
+authorDisplay.setAttribute("id", "authorDisplay");
+//authorDisplay.innerHTML = "";
+content.appendChild(authorDisplay);
+
+//creating the quote button
+const quoteButton = document.createElement("button");
+quoteButton.setAttribute("id", "quoteBtn");
+quoteButton.innerHTML = "Click Me!";
+content.appendChild(quoteButton);
+quoteButton.style.margin = "50px";
+
+document.getElementById("quoteBtn").addEventListener("click", generateQuote);
+
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [
@@ -490,3 +515,15 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function generateQuote() {
+  let randomQuote = pickFromArray(quotes);
+  let randomAuthor = pickFromArray(quotes);
+
+  document.getElementById("display").innerText = randomQuote.quote;
+  document.getElementById(
+    "authorDisplay"
+  ).innerText = `By ${randomAuthor.author}`;
+}
+
+window.onload = generateQuote;
