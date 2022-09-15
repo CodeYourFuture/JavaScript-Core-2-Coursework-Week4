@@ -1,3 +1,5 @@
+'strict'
+
 function setAlarm() {}
 
 // DO NOT EDIT BELOW HERE
