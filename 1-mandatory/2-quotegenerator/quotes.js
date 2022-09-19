@@ -21,8 +21,18 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+let title = document.querySelector("#title");
+let author = document.querySelector("#author");
+let button = document.querySelector("#btn");
+button.addEventListener("click", () => {
+  let text = pickFromArray(quotes);
+  title.textContent = text.quote;
+  author.textContent = text.author;
+});
+
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
+
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
@@ -490,3 +500,26 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+// 1. Access element with Id Quote
+// 2. Add quote to element
+
+// Add event listener to button
+// When button is clicked, show a new random quote
+
+let quoteParagraph = document.getElementById("quote");
+let authorParagraph = document.getElementById("author");
+let newQuoteButton = document.getElementById("new-quote");
+let divEl = document.querySelector('.quoteEl')
+
+function setQuote() {
+  let selectedQuotation = pickFromArray(quotes);
+  quoteParagraph.innerText = selectedQuotation.quote;
+  authorParagraph.innerText = `- ${selectedQuotation.author}`;
+}
+
+newQuoteButton.addEventListener("click", setQuote);
+
+setQuote();
+document.body.style.backgroundColor = 'rgb(207, 71, 93)';
+divEl.style.backgroundColor = "white";
