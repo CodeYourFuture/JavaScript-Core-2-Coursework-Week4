@@ -490,3 +490,14 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+document.getElementById('generate').addEventListener('click', () => {
+  let authors = Object.keys(quotes);
+  let author = authors[Math.floor(Math.random() * authors.length)];
+  let quoteZ = quotes[author];
+
+document.getElementById('quote').innerHTML = quoteZ;
+document.getElementById('author').innerHTML = author;
+
+});
+
