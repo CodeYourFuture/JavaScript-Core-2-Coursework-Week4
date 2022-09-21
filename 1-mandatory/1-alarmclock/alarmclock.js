@@ -1,29 +1,40 @@
-const display = document.getElementById('timeRemaining');
+function setAlarm() {}
+let minutes = "00";
+let seconds = "00";
+let remainingMinutes = document.getElementById("timeRemaining");
 
 function setAlarm() {
-  var today = new Date();
-  const hour = formatTime(today.getHours());
-  const minutes = formatTime(today.getMinutes());
-  const seconds = formatTime(today.getSeconds());
-  const now = `${hour}:${minutes}:${seconds}`;
-
-  display.innerText=`${hour}:${minutes}:${seconds}`;
-  
-//     check if the alarmList includes the current time , "now"
-//     if yes, ringing() is called
-  // if(alarmList.includes(now) ){
-  //     ringing(now);
-  // } 
-}
-
-// set the correct format of time
-// converts "1:2:3" to "01:02:03"
-function formatTime(time) {
-  if ( time < 10 && time.length != 2) {
-      return '0' + time;
+  let inputEl = document.getElementById("alarmSet");
+  let total = Number(inputEl.value);
+  if (total >= 3600) {
+    return alert("Put a number less than 3600!")
   }
-  return time;
+
+  let loop = () => {
+    if (total === -1) { //Time out
+      return playAlarm()
+    }
+    minutes = total >= 60 ? Math.floor(total / 60) : "00";
+    seconds = total >= 60 ? total % 60 : total;
+    total -= 1;
+    if (String(seconds).length < 2) {
+      seconds = "0" + seconds
+    }
+    if (String(minutes).length < 2) {
+      minutes = "0" + minutes
+    }
+    remainingMinutes.innerHTML = `Time Remaining: ${minutes} : ${seconds} `;
+  };
+  inputEl.value = "";
+  console.log(inputEl);
+  let repeating = setInterval(loop, 1000);
+  let btnStop = document.getElementById("stop");
+  btnStop.addEventListener("click", () => {
+    pauseAlarm();
+    clearInterval(repeating)
+  })
 }
+
 
 
 
