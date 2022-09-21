@@ -1,1 +1,64 @@
-/** Write your CSS in here **/
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(0, 0%, 15%);
+}
+
+.app {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: hsl(0, 0%, 85%);
+    color: hsl(0, 0%, 15%);
+    border-radius: 0.25rem;
+    font-family: "Charm", serif;
+}
+
+#app-quote {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#app-author {
+    align-self: flex-end;
+    font-size: 1.6rem;
+}
+
+#app-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#app-get-new-quote {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    border: 0.1rem solid black;
+    border-radius: 0.25rem;
+    font-family: "Charm", serif;
+    font-size: 1.2rem;
+}
+
+#app-autoplay-button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid black;
+  border-radius: 0.25rem;
+  font-family: "Charm", serif;
+  font-size: 1rem;
+}
+
+.autoplaying {
+  color: green;
+}

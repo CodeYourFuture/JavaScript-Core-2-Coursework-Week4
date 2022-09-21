@@ -1,15 +1,109 @@
-.centre {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-#alarmSet {
-  margin: 20px;
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 85%);
+  font-family: "Lora", serif;
 }
 
-h1 {
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 6rem;
+  border: 0.2rem solid hsl(0, 0%, 85%);
+  border-radius: 0.25rem;
+  background-image: url("background.jpg");
+  background-size: cover;
+}
+
+.timer-remaining-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   text-align: center;
+}
+
+span {
+  background-color: hsl(0, 0%, 15%, 0.85);
+  color: hsl(0, 0%, 85%);
+  border: 0.15rem solid hsl(0, 0%, 85%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#timeRemaining {
+  font-size: 2rem;
+  font-weight: 800;
+  color: yellowgreen;
+}
+
+.timer-set-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#timerInput {
+  background-color: hsl(0, 0%, 15%, 0.85);
+  color: hsl(0, 0%, 85%);
+  border: 0.15rem solid hsl(0, 0%, 85%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Lora", serif;
+}
+
+button {
+  background-color: hsl(0, 0%, 15%, 0.85);
+  color: hsl(0, 0%, 85%);
+  border: 0.15rem solid hsl(0, 0%, 85%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Lora", serif;
+}
+
+.timer-controls-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#setTimer {
+  color: hsl(195, 75%, 40%);
+}
+
+#startTimer {
+  color: hsl(120, 75%, 30%);
+}
+
+#stopTimer {
+  color: hsl(0, 75%, 40%);
+}
+
+#setTimer,
+#startTimer,
+#stopTimer {
+  cursor: pointer;
+}
+
+#setTimer:hover,
+#startTimer:hover,
+#stopTimer:hover {
+  background-color: hsl(0, 0%, 30%, 0.9);
 }

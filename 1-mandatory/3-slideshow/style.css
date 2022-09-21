@@ -1,1 +1,96 @@
-/** Write your CSS in here **/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+  /* 
+  width: 100vw;
+  height: 100vh; 
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  background-color: hsl(0, 0%, 15%);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 85%);
+  color: hsl(0, 0%, 15%);
+  font-family: "Reem Kufi Ink", serif;
+  box-shadow: hsla(0, 0%, 0%, 1) 0px 3px 8px;
+}
+
+#slideshow-image {
+  border-radius: 0.5rem;
+  box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
+}
+
+#slideshow-controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
+  background-color: hsl(0, 0%, 90%);
+  font-family: "Reem Kufi Ink", serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#slideshow-auto-backward:hover,
+#slideshow-backward:hover,
+#slideshow-forward:hover,
+#slideshow-auto-forward:hover {
+  background-color: hsl(0, 0%, 97%);
+}
+
+#slideshow-info {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
+  background-color: hsl(0, 0%, 90%);
+  font-size: 1rem;
+}
+
+.autocycling {
+  color: hsl(120, 100%, 80%);
+  background-color: hsl(120, 25%, 50%);
+}
+
+#slideshow-auto-backward,
+#slideshow-auto-forward {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+#slideshow-interval-input {
+  /* flex-basis: 50px; */
+  /* 
+  flex-grow: 0;
+  flex-shrink: 1; 
+  */
+  /* 
+  try and get this to shrink to the smallest size 
+  */
+  width: 50px;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-family: "Reem Kufi Ink", serif;
+  font-size: 1rem;
+}

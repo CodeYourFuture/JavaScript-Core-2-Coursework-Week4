@@ -1,28 +1,3 @@
-// DO NOT EDIT BELOW HERE
-
-// A function which will return one item, at
-// random, from the given array.
-//
-// Parameters
-// ----------
-// choices: an array of items to pick from.
-//
-// Returns
-// -------
-// One item of the given array.
-//
-// Examples of use
-// ---------------
-// pickFromArray([1,2,3,4])     //maybe returns 2
-// pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
-// You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
-
-// A list of quotes you can use in your app.
-// Feel free to edit them, and to add your own favourites.
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
@@ -490,3 +465,66 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const getRandomQuote = (array) => array[Math.floor(Math.random() * array.length)];
+
+const displayRandomQuote = () => {
+  document.getElementById("app-quote").textContent = `"${getRandomQuote(quotes).quote}"`;
+  document.getElementById("app-author").textContent = `- ${getRandomQuote(quotes).author}`;
+}
+
+const changeQuoteAutomatically = () => {
+  if (autoPlayFlag === false) {
+    intervalId = setInterval(displayRandomQuote, intervalTime);
+    autoPlaySpanTwo.classList.add("autoplaying");
+    autoPlayFlag = true;
+  } else if (autoPlayFlag === true) {
+    clearInterval(intervalId);
+    autoPlaySpanTwo.classList.remove("autoplaying");
+    autoPlayFlag = false;
+  }
+  autoPlaySpanTwo.textContent = autoPlayFlag ? "ON" : "OFF";
+}
+
+let autoPlayFlag = false;
+let intervalId;
+let intervalTime = 2000;
+
+const buttonElement = document.createElement("button");
+buttonElement.id = "app-get-new-quote";
+buttonElement.textContent = "Get New Quote";
+
+const h1Element = document.createElement("h1");
+h1Element.id = "app-quote";
+
+const h2Element = document.createElement("h2");
+h2Element.id = "app-author";
+
+const autoPlaySpanOne = document.createElement("span");
+autoPlaySpanOne.id = "app-autoplay-button-span-one";
+autoPlaySpanOne.textContent = "Auto Play: "
+
+const autoPlaySpanTwo = document.createElement("span");
+autoPlaySpanTwo.id = "app-autoplay-button-span-two";
+autoPlaySpanTwo.textContent = autoPlayFlag ? "ON" : "OFF";
+
+const autoPlayButton = document.createElement("button");
+autoPlayButton.id = "app-autoplay-button";
+autoPlayButton.addEventListener("click", changeQuoteAutomatically);
+
+autoPlayButton.appendChild(autoPlaySpanOne);
+autoPlayButton.appendChild(autoPlaySpanTwo);
+
+const divElement = document.createElement("div");
+divElement.className = "app";
+
+divElement.appendChild(buttonElement);
+divElement.appendChild(h1Element);
+divElement.appendChild(h2Element);
+divElement.appendChild(autoPlayButton);
+
+document.body.appendChild(divElement);
+
+document.getElementById("app-get-new-quote").addEventListener("click", displayRandomQuote);
+
+displayRandomQuote();
