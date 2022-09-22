@@ -10,7 +10,7 @@ function setAlarm() {
         alarmCountdown >= 60 ? Math.floor(alarmCountdown / 60) : "00";
       secondsLeft =
         alarmCountdown >= 60 ? Math.floor(alarmCountdown % 60) : alarmCountdown;
-      alarmCountdown -= 1;
+      alarmCountdown--;
       if (String(secondsLeft).length < 2) {
         secondsLeft = "0" + secondsLeft;
       }
