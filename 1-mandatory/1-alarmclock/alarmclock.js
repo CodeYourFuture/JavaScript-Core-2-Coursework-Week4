@@ -1,4 +1,35 @@
-function setAlarm() {}
+function setAlarm() {
+  let timeRemainingElement = document.querySelector("#timeRemaining");
+  let alarmSetElement = document.querySelector("#alarmSet");
+  let alarmCountdown = alarmSetElement.value;
+
+  setInterval(() => {
+    if (alarmCountdown >= 0) {
+      minutesLeft =
+        alarmCountdown >= 60 ? Math.floor(alarmCountdown / 60) : "00";
+      secondsLeft =
+        alarmCountdown >= 60 ? Math.floor(alarmCountdown % 60) : alarmCountdown;
+      alarmCountdown -= 1;
+      if (String(secondsLeft).length < 2) {
+        secondsLeft = "0" + secondsLeft;
+      }
+      if (String(minutesLeft).length < 2) {
+        minutesLeft = "0" + minutesLeft;
+      }
+
+      timeRemainingElement.innerText = `Time Remaining: ${minutesLeft} : ${secondsLeft}`;
+      if (alarmCountdown < 0) {
+        playAlarm();
+      }
+    }
+  }, 1000);
+
+  alarmSetElement.value = "";
+  let btnStop = document.getElementById("stop");
+  btnStop.addEventListener("click", () => {
+    pauseAlarm();
+  });
+}
 
 // DO NOT EDIT BELOW HERE
 
