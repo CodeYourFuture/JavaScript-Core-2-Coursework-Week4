@@ -1,6 +1,7 @@
 function setAlarm() {
   let timeRemainingElement = document.querySelector("#timeRemaining");
   let alarmSetElement = document.querySelector("#alarmSet");
+  let stopBtn = document.getElementById("stop");
   let alarmCountdown = alarmSetElement.value;
 
   setInterval(() => {
@@ -25,8 +26,7 @@ function setAlarm() {
   }, 1000);
 
   alarmSetElement.value = "";
-  let btnStop = document.getElementById("stop");
-  btnStop.addEventListener("click", () => {
+  stopBtn.addEventListener("click", () => {
     pauseAlarm();
   });
 }
