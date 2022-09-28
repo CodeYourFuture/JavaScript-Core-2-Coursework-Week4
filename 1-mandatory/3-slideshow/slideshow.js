@@ -9,8 +9,12 @@ let images = [
 
 const img = document.querySelector(".img");
 const prev = document.querySelector(".btn-prev");
+const autoPrev = document.querySelector(".auto-prev");
+const stop = document.querySelector(".btn-stop");
 const next = document.querySelector(".btn-next");
+const autoNext = document.querySelector(".auto-next");
 
+let interval;
 
 next.addEventListener("click", () => {
     images.push(images[0]);
@@ -18,11 +22,33 @@ next.addEventListener("click", () => {
     img.setAttribute("src", images[0]);
 })
 
+autoNext.addEventListener("click", () => {
+    interval = setInterval(() => {
+        images.push(images[0]);
+        images.shift();
+        img.setAttribute("src", images[0]);
+    }, 1000)
+})
+
+stop.addEventListener("click", () => {
+    clearInterval(interval)
+})
+
 prev.addEventListener("click", () => {
     images.unshift(images[images.length - 1]);
     images.pop();
     img.setAttribute("src", images[images.length - 1]);
 })
+
+autoPrev.addEventListener("click", () => {
+    interval = setInterval(() => {
+        images.unshift(images[images.length - 1]);
+        images.pop();
+        img.setAttribute("src", images[images.length - 1]);
+    }, 1000)
+})
+
+
 
 
 
