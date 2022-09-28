@@ -24,8 +24,9 @@ function setAlarm() {
   }
   
   
-  if(inputValue === 0) {
+  if(inputValue === -1) {
     clearInterval(interval);
+    playAlarm();
     interval = null;
   };
 }
@@ -33,10 +34,12 @@ function setAlarm() {
 setBtn.addEventListener("click", () => {
   inputValue = alarmSetInput.value;
   setAlarmInterval();
+  alarmSetInput.value = "";
 })
 
 stopBtn.addEventListener("click", () => {
   clearInterval(interval);
+  pauseAlarm();
   interval = null;
 })
 
