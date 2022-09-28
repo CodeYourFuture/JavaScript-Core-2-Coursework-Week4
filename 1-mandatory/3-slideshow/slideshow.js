@@ -16,36 +16,30 @@ const autoNext = document.querySelector(".auto-next");
 
 let interval;
 
-next.addEventListener("click", () => {
+const forward = () => {
     images.push(images[0]);
     images.shift();
     img.setAttribute("src", images[0]);
-})
+}
 
-autoNext.addEventListener("click", () => {
-    interval = setInterval(() => {
-        images.push(images[0]);
-        images.shift();
-        img.setAttribute("src", images[0]);
-    }, 1000)
-})
-
-stop.addEventListener("click", () => {
-    clearInterval(interval)
-})
-
-prev.addEventListener("click", () => {
+const backward = () => {
     images.unshift(images[images.length - 1]);
     images.pop();
     img.setAttribute("src", images[images.length - 1]);
+}
+
+next.addEventListener("click", forward)
+
+autoNext.addEventListener("click", () => {
+    interval = setInterval(forward, 1000)
 })
 
+stop.addEventListener("click", () => clearInterval(interval))
+
+prev.addEventListener("click", backward)
+
 autoPrev.addEventListener("click", () => {
-    interval = setInterval(() => {
-        images.unshift(images[images.length - 1]);
-        images.pop();
-        img.setAttribute("src", images[images.length - 1]);
-    }, 1000)
+    interval = setInterval(backward, 1000)
 })
 
 
