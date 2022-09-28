@@ -1,4 +1,44 @@
-function setAlarm() {}
+
+const timeRemaining = document.querySelector("#timeRemaining");
+const alarmSetInput = document.querySelector("#alarmSet");
+const setBtn = document.querySelector("#set");
+const stopBtn = document.querySelector("#stop");
+
+let inputValue;
+let currentTime;
+
+let interval;
+
+function setAlarmInterval() {
+  if(!interval) interval = setInterval(setAlarm, 1000);
+}
+
+function setAlarm() {
+  if(inputValue >= 0) {
+    let hours = Math.floor(inputValue / 60);
+    let minutes = inputValue % 60;
+    
+    timeRemaining.innerHTML = `<h1 id="timeRemaining">Time Remaining: ${hours}:${minutes}</h1>`;
+    
+    inputValue -= 1;
+  }
+  
+  
+  if(inputValue === 0) {
+    clearInterval(interval);
+    interval = null;
+  };
+}
+
+setBtn.addEventListener("click", () => {
+  inputValue = alarmSetInput.value;
+  setAlarmInterval();
+})
+
+stopBtn.addEventListener("click", () => {
+  clearInterval(interval);
+  interval = null;
+})
 
 // DO NOT EDIT BELOW HERE
 
