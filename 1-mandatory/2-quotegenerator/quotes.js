@@ -490,3 +490,21 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+const btn = document.querySelector(".btn");
+const qouteHtml = document.querySelector(".quote");
+const authorHtml = document.querySelector(".author");
+
+btn.addEventListener("click", () => {
+  let chosenQuote = pickFromArray(quotes);
+  console.log(chosenQuote);
+  qouteHtml.innerHTML = chosenQuote.quote;
+  authorHtml.innerHTML = chosenQuote.author;
+
+  let color = Math.floor(Math.random() * 16777215).toString(16);
+
+  document.querySelector("body").style.backgroundColor = `#${color}`;
+  qouteHtml.style.color = `#${color}`;
+  btn.style.backgroundColor = `#${color}`;
+})
