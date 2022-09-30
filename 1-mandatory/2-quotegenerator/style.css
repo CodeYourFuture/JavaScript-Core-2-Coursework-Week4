@@ -1,1 +1,41 @@
 /** Write your CSS in here **/
+
+/* colors 
+bg - #004643
+paragraph - #abd1c6
+button - #f9bc60
+button text - #001e1d
+border - #e16162
+headline - #fffffe
+*/
+
+body {
+  box-sizing: border-box;
+  background-color: #004643;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #abd1c6;
+  padding: 50px 45px;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #f9bc60;
+  color: #001e1d;
+  border: 1px solid #e16162;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button:focus {
+  outline: none;
+}
+
+p {
+  text-align: right;
+}

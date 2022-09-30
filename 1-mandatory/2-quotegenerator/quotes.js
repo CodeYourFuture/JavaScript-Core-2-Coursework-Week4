@@ -490,3 +490,25 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+// extract random quote from Quotes array
+
+// function to create the content with quote
+function getQuote() {
+  let randomIndex = Math.floor(Math.random() * quotes.length);
+  var result = quotes[randomIndex];
+  let div = document.querySelector(".quote");
+  div.innerHTML = "";
+  let h3 = document.createElement("h3");
+  h3.innerText = `"${result.quote}"`;
+  div.appendChild(h3);
+  p = document.createElement("p");
+  p.innerText = "~ " + result.author;
+  div.appendChild(p);
+}
+
+let button = document.querySelector("button");
+
+button.addEventListener("click", getQuote);
+
+window.onload = getQuote();

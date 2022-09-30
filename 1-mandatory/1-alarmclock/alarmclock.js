@@ -1,4 +1,13 @@
-function setAlarm() {}
+function setAlarm() {
+  const userInput = document.getElementById("alarmSet");
+  const span = document.getElementById("countDownTimer");
+  span.innerText = userInput.value; 
+  
+  
+
+//
+//
+//
 
 // DO NOT EDIT BELOW HERE
 
