@@ -9,26 +9,32 @@ const timeFormatter = (number) => {
   let second = number % 60;
   minutes = minutes < 10 ? "0" + minutes : minutes;
   second = second < 10 ? "0" + second : second;
-  return `${minutes}:${seconds}`;
+  return `${minutes}:${second}`;
 };
 
 function setAlarm() {
   seconds = inputField.value;
-  inputField.value = ""
+  inputField.value = "";
   countdown();
-  countdownInterval = setInterval(countdown,1000);  
+  countdownInterval = setInterval(countdown, 1000);  
 }
 
 const countdown = () => {
   timeRemain.innerText = `Time Remaining: ${timeFormatter(seconds)}`;
   seconds--;
-  if (timeRemain.innerText === `Time Remaining: 00:00`) {
+  if (timeRemain.innerText === "Time Remaining: 00:00") {
     playAlarm();
     clearInterval(countdownInterval);
   }
 };
 
-setAlarm();
+// const stopAlarm = () => {
+//   if(stopAlarmButton) {
+//     return;
+//   }
+// }
+
+// setAlarm();
 // DO NOT EDIT BELOW HERE
 
 var audio = new Audio("alarmsound.mp3");
