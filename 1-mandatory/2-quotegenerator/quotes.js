@@ -1,3 +1,11 @@
+document.getElementById("newQuote").addEventListener("click", () =>
+{
+  let randomQuote = pickFromArray(quotes);
+
+  document.getElementById("quote").textContent = randomQuote.quote;
+  document.getElementById("author").textContent = "- " + randomQuote.author;
+});
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -17,13 +25,15 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
+function pickFromArray(choices)
+{
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
-const quotes = [
+const quotes =
+[
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
     author: "Kevin Kruse",
