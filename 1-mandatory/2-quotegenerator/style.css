@@ -1,1 +1,27 @@
-/** Write your CSS in here **/
+body{
+    background-color: orange;
+}
+#container{
+    background-color: white;
+    color: orange;
+    margin:250px 350px;
+    padding: 50px;
+}
+#quote{
+    text-align: center;
+    margin-right: 50px;
+}
+#name{
+    text-align: end;
+    padding-bottom: 10px;
+}
+#new{
+    margin-left: 600px;
+    text-align: end;
+    background-color: orange;
+    color: white;
+    padding: 10px 15px ;
+    border: none;
+}
+
+

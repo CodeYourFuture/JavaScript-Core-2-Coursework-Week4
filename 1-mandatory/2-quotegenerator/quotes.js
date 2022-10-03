@@ -1,3 +1,26 @@
+let quoteEl=document.getElementById("quote");
+let nameEl=document.getElementById("name");
+let button=document.getElementById("new");
+let bodyEl=document.getElementById("content")
+button.addEventListener("click",()=>{
+  let randonQuote=pickFromArray(quotes);
+  let randomColor=pickFromArray(colorsArray);
+  quoteEl.innerHTML=`" ${randonQuote.quote}`;
+  nameEl.innerHTML=`- ${randonQuote.author}`;
+  bodyEl.style.backgroundColor=randomColor;
+})
+let colorsArray=[
+  "#ff0000ff",
+  "#ff8700ff",
+  "#ffd300ff",
+  "#deff0aff",
+  "#a1ff0aff",
+  "#0aff99ff",
+  "#0aefffff",
+  "#147df5ff",
+  "#580affff",
+  "#be0affff"];
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
