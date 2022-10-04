@@ -64,6 +64,7 @@ function loopForward() {
   counter++;
   if (counter >= images.length) counter = 0;
   img.src = images[counter];
+  imageCount();
 }
 
 function loopBack() {
@@ -72,6 +73,7 @@ function loopBack() {
   }
   counter--;
   img.src = images[counter];
+  imageCount();
 }
 
 // event listener for stop button
@@ -80,3 +82,10 @@ document.querySelector(".stopBtn").addEventListener("click", () => {
   clearInterval(forwardIntervId);
   clearInterval(backIntervId);
 });
+
+function imageCount() {
+  document.querySelector(
+    "h1"
+  ).innerText = `Image: ${counter} / ${images.length}`;
+}
+imageCount();
