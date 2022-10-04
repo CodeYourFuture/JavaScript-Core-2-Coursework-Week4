@@ -1,28 +1,24 @@
-const timeRemaining = document.querySelector("#timeRemaining");
-const alarmSetInput = document.querySelector("#alarm set")
-const setButton = document.querySelector("#set");
-const stopButton = document.querySelector("#stop");
-
-
-let inputValue
-let currentTime;
-
-let interval;
-
-function setAlarmInterval() {
-  if(!interval) interval = setInterval(setAlarm, 1000);
-}
-
 function setAlarm() {
-  if(inputValue >= 0) {
-    let hours = Math.floor(inputValue / 60);
-    let minutes = inputValue % 60;
+  let timeDisplay = document.getElementById("timeRemaining");
+  let alarmInput = document.getElementById("alarmSet").value;
 
-    timeRemaining.innerHTML = `<h1 id="timeRemaining">Time Remaining: ${hours}:${minutes}</h1>`;
+  const interval = setInterval(() => {
+    let mm = Math.floor(alarmInput / 60);
+    let ss = alarmInput % 60;
 
-    inputValue -= 1;
-  }
+    mm = mm < 10 ? "0" + mm : mm;
+    ss = ss < 10 ? "0" + ss : ss;
 
+    timeDisplay.innerText = `Time Remaining: ${mm}:${ss}`;
+
+    alarmInput--;
+
+    if (alarmInput < 0) {
+      clearInterval(interval);
+      playAlarm();
+    } 
+  }, 1250);
+}
 // DO NOT EDIT BELOW HERE
 
 var audio = new Audio("alarmsound.mp3");
