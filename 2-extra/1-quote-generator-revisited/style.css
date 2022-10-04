@@ -1,0 +1,140 @@
+/* Variables */
+:root {
+    --dark-grey: #2B2D42;
+    --dark-red: #D90429;
+    --light-grey: #EDF2F4;
+    --white: #FFF;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--dark-grey);
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 5rem;
+    padding: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--light-grey);
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.card__quote {
+    display: flex;
+    font-size: 1.2em;
+}
+
+.card__quote span {
+    font-size: 3em;
+    line-height: 0.5em;
+    padding: 0 0.5rem;
+}
+
+.card__author {
+    align-self: flex-end;
+}
+
+.generate-quote {
+    align-self: flex-end;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    font-size: 1em;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--dark-grey);
+    border: 1px solid var(--dark-grey);
+}
+
+.generate-quote:hover {
+    color: var(--dark-grey);
+    background-color: var(--white);
+}
+
+/* Toggle switch */
+/* The switch - the box around the slider */
+.toggle-switch {
+    display: flex;
+    align-self: flex-end;
+}
+
+.toggle-msg {
+    display: flex;
+    align-self: center;
+    margin-bottom: 0;
+    font-size: 0.8em;
+    color: var(--dark-red);
+}
+
+.switch {
+    position: relative;
+    margin: 1em;
+    width: 50px;
+    height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
