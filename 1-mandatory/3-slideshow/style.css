@@ -45,3 +45,24 @@ main {
   font-weight: bold;
   border-radius: 1rem;
 }
+#autoNext {
+  border: none;
+  padding: 10px 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+#autoPrevious {
+  border: none;
+  padding: 10px 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+#stop {
+  border: none;
+  padding: 10px 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 1rem;
+}
