@@ -10,8 +10,10 @@ let backwardBtn = document.querySelector(".btn-backward");
 let autoForwardBtn = document.querySelector(".btn-forward-auto");
 let autoBackwardBtn = document.querySelector(".btn-backward-auto");
 let stopBtn = document.querySelector(".btn-stop");
+let timeBtn = document.querySelector(".btn-time");
 let interval;
 let index = 0;
+let timeInterval = 1000;
 
 function getForwardImage() {
   index++;
@@ -32,18 +34,28 @@ function getBackwardImage() {
 function autoForward() {
   interval = setInterval(() => {
     getForwardImage();
-  }, 1000);
+  }, timeInterval);
 }
 
 function autoBackward() {
   interval = setInterval(() => {
     getBackwardImage();
-  }, 1000);
+  }, timeInterval);
 }
 
 function stopSlideshow() {
   clearInterval(interval);
 }
+
+function setTimeInterval() {
+  let timeInput = document.querySelector("#time-input").value;
+  timeInterval = timeInput * 1000;
+}
+
+timeBtn.addEventListener("click", (e) => {
+  e.preventDefault;
+  setTimeInterval();
+});
 
 forwardBtn.addEventListener("click", getForwardImage);
 backwardBtn.addEventListener("click", getBackwardImage);
