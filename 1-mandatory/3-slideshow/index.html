@@ -8,14 +8,32 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/ce0969a756.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="card">
       <div class="card__img"></div>
       <div class="btns">
-        <button class="btn btn-backward">&#60;</button>
-        <button class="btn btn-forward">&#62;</button>
+        <button class="btn btn-backward-auto btn--primary">
+          <i class="fa-sharp fa-solid fa-backward-fast fa-2xs"></i>
+        </button>
+        <button class="btn btn-backward btn--primary">
+          <i class="fa-solid fa-backward fa-2xs"></i>
+        </button>
+        <button class="btn btn-stop btn--secondary">
+          <i class="fa-solid fa-stop fa-2xs"></i>
+        </button>
+        <button class="btn btn-forward btn--primary">
+          <i class="fa-solid fa-forward fa-2xs"></i>
+        </button>
+        <button class="btn btn-forward-auto btn--primary">
+          <i class="fa-sharp fa-solid fa-forward-fast fa-2xs"></i>
+        </button>
       </div>
     </div>
     <script src="slideshow.js"></script>

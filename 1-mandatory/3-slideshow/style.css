@@ -1,6 +1,7 @@
 /* Variables */
 :root {
     --dark-grey: #2B2D42;
+    --dark-red: #D90429;
     --light-grey: #EDF2F4;
     --white: #FFF;
 }
@@ -52,12 +53,20 @@
     text-align: center;
     border: none;
     border-radius: 5px;
+}
+
+.btn--primary {
     color: var(--white);
     background-color: var(--dark-grey);
     border: 1px solid var(--dark-grey);
 }
 
-.btn:hover {
-    color: var(--dark-grey);
-    background-color: var(--white);
+.btn--secondary {
+    color: var(--white);
+    background-color: var(--dark-red);
+    border: 1px solid var(--dark-red);
+}
+
+i {
+    color: var(--white);
 }

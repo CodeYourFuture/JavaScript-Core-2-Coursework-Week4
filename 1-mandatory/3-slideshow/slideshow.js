@@ -7,6 +7,10 @@ let images = [
 let imgDiv = document.querySelector(".card__img");
 let forwardBtn = document.querySelector(".btn-forward");
 let backwardBtn = document.querySelector(".btn-backward");
+let autoForwardBtn = document.querySelector(".btn-forward-auto");
+let autoBackwardBtn = document.querySelector(".btn-backward-auto");
+let stopBtn = document.querySelector(".btn-stop");
+let interval;
 let index = 0;
 
 function getForwardImage() {
@@ -25,5 +29,24 @@ function getBackwardImage() {
   imgDiv.style.backgroundImage = `url(${images[index]})`;
 }
 
+function autoForward() {
+  interval = setInterval(() => {
+    getForwardImage();
+  }, 1000);
+}
+
+function autoBackward() {
+  interval = setInterval(() => {
+    getBackwardImage();
+  }, 1000);
+}
+
+function stopSlideshow() {
+  clearInterval(interval);
+}
+
 forwardBtn.addEventListener("click", getForwardImage);
 backwardBtn.addEventListener("click", getBackwardImage);
+autoForwardBtn.addEventListener("click", autoForward);
+autoBackwardBtn.addEventListener("click", autoBackward);
+stopBtn.addEventListener("click", stopSlideshow);
