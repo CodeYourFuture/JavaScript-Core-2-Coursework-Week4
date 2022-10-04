@@ -1,6 +1,6 @@
 /** Write your CSS in here **/
 body {
-  background-color: aquamarine;
+  background-color: rgb(99, 199, 136);
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -15,9 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 50%;
-  width: 70%;
-  background-color: blueviolet;
+  background-color: rgb(189, 151, 225);
   padding: 4rem;
   border-radius: 1rem;
 }
@@ -32,7 +30,7 @@ body {
 }
 #writer {
   font-size: 1.7rem;
-  color: white;
+  color: rgb(156, 61, 61);
 }
 #changeQouteBtn {
   border: none;
@@ -40,4 +38,7 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 1rem;
+}
+#changeQouteBtn:hover{
+    background-color: rgb(234, 168, 124);
 }

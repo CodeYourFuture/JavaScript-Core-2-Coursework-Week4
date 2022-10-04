@@ -20,6 +20,14 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+let changeQouteBtn = document.querySelector("#changeQouteBtn");
+changeQouteBtn.addEventListener("click", () => {
+  let qoute = document.querySelector(".qoute");
+  let writer = document.querySelector("#writer");
+  let randomQoute = pickFromArray(quotes); //It's a Object
+  qoute.innerHTML = randomQoute.quote;
+  writer.innerHTML = randomQoute.author;
+});
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
