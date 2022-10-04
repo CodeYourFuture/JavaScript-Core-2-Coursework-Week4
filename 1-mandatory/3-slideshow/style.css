@@ -1,1 +1,9 @@
 /** Write your CSS in here **/
+content {
+    padding: 50px;
+}
+
+#image {
+    width: 350px;
+    height: 250px;
+}
