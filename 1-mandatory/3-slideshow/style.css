@@ -1,1 +1,60 @@
-/** Write your CSS in here **/
+/* Variables */
+:root {
+    --dark-grey: #2B2D42;
+    --light-grey: #EDF2F4;
+    --white: #FFF;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--dark-grey);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    width: 500px;
+    margin: auto;
+    margin-top: 5rem;
+    padding: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--light-grey);
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.card__img {
+    height: 400px;
+    background-image: url('https://images.unsplash.com/photo-1615412704911-55d589229864?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=982&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.btns {
+    align-self: center;
+}
+
+.btn {
+    padding: 0 0.5em;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--dark-grey);
+    border: 1px solid var(--dark-grey);
+}
+
+.btn:hover {
+    color: var(--dark-grey);
+    background-color: var(--white);
+}
