@@ -1,1 +1,44 @@
 /** Write your CSS in here **/
+body {
+  background-color: rgb(99, 199, 136);
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#images {
+  height: auto;
+  width: 100%;
+  max-width: 70%;
+  border-radius: 1rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contentHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#next {
+  border: none;
+  padding: 10px 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+#previous {
+  border: none;
+  padding: 10px 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 1rem;
+}
