@@ -1,3 +1,16 @@
+const quoteLine = document.getElementById("quote-line");
+const authorName = document.getElementById("author-name");
+const button = document.getElementById("button");
+
+function generateQuotes() {
+  quoteLine.innerText = `"${pickFromArray(quotes).quote}`
+  authorName.innerText = `- ${pickFromArray(quotes).author}`
+}
+
+button.addEventListener("click", () => {
+  generateQuotes()
+})
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +503,5 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+console.log(pickFromArray(quotes));
