@@ -14,8 +14,8 @@ body {
 #images {
   height: auto;
   width: 100%;
-  max-width: 70%;
-  border-radius: 1rem;
+  max-width: 50%;
+  padding-bottom: 1.5rem;
 }
 main {
   display: flex;
@@ -27,6 +27,9 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#contentHolder div > * {
+  margin-right: 2rem;
 }
 #next {
   border: none;
