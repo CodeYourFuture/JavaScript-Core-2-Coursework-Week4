@@ -1,4 +1,16 @@
-function setAlarm() {}
+
+// const interval = setInterval(setAlarm, 1000);
+const setBtn = document.getElementById("set");
+const seconds = document.getElementById("alarmSet").value;
+let timerDisplay = document.getElementById("timeRemaining");
+
+setBtn.addEventListener("click", setAlarm);
+
+function setAlarm() {
+  setInterval(function () {
+    timerDisplay.innerHTML = seconds;
+  }, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 

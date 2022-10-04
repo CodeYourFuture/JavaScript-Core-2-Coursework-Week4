@@ -1,1 +1,59 @@
-/** Write your CSS in here **/
+body {
+    background-color: #f38918;
+}
+
+p {
+    color: #f38918;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.div-quotes {
+    background-color: #fff;
+    text-align: right;
+    padding: 30px;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.par-quote {
+    font-size: 32px;
+    text-align: center;
+}
+
+.par-author {
+    font-size: 18px;
+}
+
+.btn-new-quote {
+    background-color: #f38918;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn-new-quote:focus {
+    outline: 0;
+}
+
+.par-quote:before{  
+    content: open-quote;
+    font-family: Arial;
+    content: "\201C";
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.par-quote:after{  
+    content: open-quote;
+    font-family: Arial;
+    content: "\201D";
+    font-size: 50px;
+    font-weight: bold;
+}
