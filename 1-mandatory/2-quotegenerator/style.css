@@ -1,1 +1,49 @@
-/** Write your CSS in here **/
+/* Variables */
+:root {
+    --dark-grey: #2B2D42;
+    --light-grey: #EDF2F4;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--black);
+    font-family: var(--body-font);
+}
+
+
+.e__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 5rem;
+    padding: 1em;
+    background-color: var(--light-grey);
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.e__card__author {
+    align-self: flex-end;
+}
+
+.btn--right {
+    align-self: center
+}
+
+.btn--primary {
+    color: var(--white);
+    background-color: var(--dark-grey);
+    border: 1px solid var(--dark-grey);
+}
+
+.btn--primary:hover {
+    color: var(--dark-grey);
+    background-color: var(--white);
+}
