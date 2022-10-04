@@ -4,6 +4,9 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  background: grey;
+  padding: 1em;
+  border-radius: .30em;
 }
 
 #alarmSet {
@@ -12,4 +15,12 @@
 
 h1 {
   text-align: center;
+}
+
+.buttons button{
+  border: none;
+  padding: .5em 1em;
+  border-radius: .25em;
+  background: #222;
+  color: #fff;
 }
