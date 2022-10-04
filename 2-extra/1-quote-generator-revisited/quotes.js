@@ -491,6 +491,11 @@ const quotes = [
   },
 ];
 
+let generateQuoteBtn = document.querySelector(".generate-quote");
+let autoSwitch = document.getElementById("checkbox");
+let message = document.querySelector(".toggle-msg");
+let interval;
+
 function getQuote(quotes) {
   let quoteContent = document.querySelector(".quote-content");
   let quoteAuthor = document.querySelector(".card__author");
@@ -500,8 +505,21 @@ function getQuote(quotes) {
   quoteAuthor.innerHTML = "- " + randomQuote.author;
 }
 
-let generateQuoteBtn = document.querySelector(".generate-quote");
+function autoGetQuote() {
+  interval = setInterval(() => {
+    getQuote(quotes);
+  }, 60000);
+}
 
 generateQuoteBtn.addEventListener("click", () => getQuote(quotes));
+autoSwitch.addEventListener("change", (event) => {
+  if (event.currentTarget.checked) {
+    autoGetQuote();
+    message.innerHTML = "auto-play:ON";
+  } else {
+    clearInterval(interval);
+    message.innerHTML = "";
+  }
+});
 
 getQuote(quotes);
