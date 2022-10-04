@@ -2,6 +2,7 @@
 :root {
     --dark-grey: #2B2D42;
     --light-grey: #EDF2F4;
+    --white: #FFF;
 }
 
 /* Reset */
@@ -9,12 +10,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--black);
-    font-family: var(--body-font);
+    color: var(--dark-grey);
 }
 
 
-.e__card {
+.card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,28 +22,43 @@
     width: 50%;
     margin: auto;
     margin-top: 5rem;
-    padding: 1em;
+    padding: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: var(--light-grey);
     border: 1px solid var(--light-grey);
     border-radius: 10px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
-.e__card__author {
+.card__quote {
+    display: flex;
+    font-size: 1.2em;
+}
+
+.card__quote span {
+    font-size: 3em;
+    line-height: 0.5em;
+    padding:0  0.5rem ;
+}
+
+.card__author {
     align-self: flex-end;
 }
 
-.btn--right {
-    align-self: center
-}
-
-.btn--primary {
+.generate-quote {
+    align-self: flex-end;
+    padding: 0.5em 1em;
+    margin-top: 1.5em;
+    font-size: 1em;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
     color: var(--white);
     background-color: var(--dark-grey);
     border: 1px solid var(--dark-grey);
 }
 
-.btn--primary:hover {
+.generate-quote:hover {
     color: var(--dark-grey);
     background-color: var(--white);
 }
