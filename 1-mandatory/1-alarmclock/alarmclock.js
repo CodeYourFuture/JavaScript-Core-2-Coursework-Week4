@@ -1,20 +1,28 @@
 function setAlarm() {
   let inputValue = document.getElementById("alarmSet").value;
   let timeRemaining = document.getElementById("timeRemaining");
-  let seconds = inputValue % 60;
-  let minutes = Math.floor(inputValue / 60);
 
-  if (seconds < 10 && minutes < 10) {
-    timeRemaining.innerHTML = `Time Remaining: 0${minutes}:0${seconds}`;
-  } else if (seconds < 10 && minutes >= 10) {
-    timeRemaining.innerHTML = `Time Remaining: ${minutes}:0${seconds}`;
-  } else if (seconds >= 10 && minutes < 10) {
-    timeRemaining.innerHTML = `Time Remaining: 0${minutes}:${seconds}`;
-  } else {
-    timeRemaining.innerHTML = `Time Remaining: ${minutes}:${seconds}`;
-  }
+  setInterval(() => {
+    let seconds = inputValue % 60;
+    let minutes = Math.floor(inputValue / 60);
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    timeRemaining.innerText = `Time Remaining: ${minutes}:${seconds}`;
+
+    if (inputValue < 0) {
+      clearInterval(setAlarm);
+      timeRemaining.innerText = "Time Remaining: 00:00";
+    }
+
+    inputValue--;
+  }, 1000);
 }
 
+function pauseAlarm() {}
 // DO NOT EDIT BELOW HERE
 
 var audio = new Audio("alarmsound.mp3");
