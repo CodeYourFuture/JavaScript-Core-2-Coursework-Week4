@@ -1,1 +1,49 @@
 /** Write your CSS in here **/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  margin-top: 100px;
+}
+
+.buttonContainer {
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  border: 1px solid gray;
+  background: lightgrey;
+}
+
+button {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid;
+}
+
+img {
+  border-radius: 5px;
+}
