@@ -2,6 +2,8 @@ let quoteEl=document.getElementById("quote");
 let nameEl=document.getElementById("name");
 let button=document.getElementById("new");
 let bodyEl=document.getElementById("content")
+
+// Generate random quotes
 button.addEventListener("click",()=>{
   let randomQuote=pickFromArray(quotes);
   let randomColor=pickFromArray(colorsArray);
@@ -9,6 +11,7 @@ button.addEventListener("click",()=>{
   nameEl.innerHTML=`- ${randomQuote.author}`;
   bodyEl.style.backgroundColor=randomColor;
 })
+
 let colorsArray=[
   "#ff0000ff",
   "#ff8700ff",
@@ -19,27 +22,32 @@ let colorsArray=[
   "#0aefffff",
   "#147df5ff",
   "#580affff",
-  "#be0affff"];
+  "#be0affff"
+];
 
-// DO NOT EDIT BELOW HERE
+//Auto quote Generator
+let switchEl=document.getElementById("toggleswitch");
+let switchStatus=document.getElementById("switchStatus");
 
-// A function which will return one item, at
-// random, from the given array.
-//
-// Parameters
-// ----------
-// choices: an array of items to pick from.
-//
-// Returns
-// -------
-// One item of the given array.
-//
-// Examples of use
-// ---------------
-// pickFromArray([1,2,3,4])     //maybe returns 2
-// pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
-// You DO NOT need to understand how this function works.
+switchEl.addEventListener("change",()=>{
+    if(switchEl.checked){
+        switchStatus.innerHTML="Auto-play: ON";
+        let interval=setInterval(()=>{
+            randomQuote=pickFromArray(quotes);
+            randomColor=pickFromArray(colorsArray);
+            quoteEl.innerHTML=`" ${randomQuote.quote}`;
+            nameEl.innerHTML=`- ${randomQuote.author}`;
+            bodyEl.style.backgroundColor=randomColor; 
+            if(!switchEl.checked){
+              switchStatus.innerHTML="Auto-play: OFF";
+              bodyEl.style.backgroundColor="orange";
+              clearInterval(interval) 
+            }  
+        },1000)
+    } 
+})
+
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
