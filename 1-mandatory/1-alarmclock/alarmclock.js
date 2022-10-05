@@ -5,6 +5,10 @@ function setAlarm() {
   let timeOnScreen = document.querySelector("#timeRemaining");
   // link to stop button
   let stopAlarm = document.querySelector("#stop");
+  // set stop button to stop alarm sound
+  stopAlarm.addEventListener("click", () => {
+    audio.src = "";
+  });
   // link to 'Set Alarm' button
   let setAlarmBtn = document.querySelector("#set");
   // format input value so = xx:xx
