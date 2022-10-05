@@ -1,1 +1,23 @@
-/** Write your CSS in here **/
+.carousel-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+.btn-img {
+    width: 110px;
+    background-color: #29b8c5;
+    border: none;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn-img:focus {
+    outline: 0;
+}
