@@ -1,3 +1,34 @@
+// function to select random quote
+
+function pickFromArray(quotes) {
+  return quotes[Math.floor(Math.random() * quotes.length)];
+}
+
+function generateRandomColor()
+{
+    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+}
+
+  let quoteContent = document.querySelector(".quote");
+  let quoteAuthor = document.querySelector(".author");
+  let newQuoteButton = document.querySelector(".new-quote");
+  
+
+  newQuoteButton.addEventListener("click", ()=> {
+    let newQuote = pickFromArray(quotes);
+      quoteContent.textContent = `${newQuote.quote}`
+      quoteAuthor.textContent = `${newQuote.author}`
+      document.body.style.backgroundColor = generateRandomColor();
+      
+  });
+
+
+
+
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

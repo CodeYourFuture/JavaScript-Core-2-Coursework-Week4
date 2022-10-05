@@ -1,1 +1,57 @@
 /** Write your CSS in here **/
+p{
+    font-size: 16px;
+    color:black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: palevioletred;
+    font-size: 16px;
+    color:black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.page-content{
+display: flex;
+justify-items: center;
+align-items: center;
+
+}
+
+.quote-container{
+background-color: antiquewhite;
+height: 800px;
+width: 1000px;
+margin: auto;
+background-color: black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-justify: center;
+padding: 60px;
+margin-top: 75px;
+
+}
+
+.quote-container p{
+    color: white;
+    font-size: 40px;
+    margin: auto;
+}
+
+.quote{
+    font-weight: 800;
+}
+
+.author{
+    font-weight: 500;
+}
+
+button{
+    width:200px;
+    height:50px;
+    font-weight: 300;
+    font-size: 24px;
+    margin: auto;
+}
