@@ -7,4 +7,6 @@ body
 {
     height: 30rem;
     padding: 1rem;
+    background-size: cover;
+    background-position: center center;
 }
