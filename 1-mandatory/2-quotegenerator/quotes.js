@@ -1,3 +1,19 @@
+function displayQuote(arr) {
+  let quote = document.querySelector("#quote");
+  let author = document.querySelector("#author");
+  let random = pickFromArray(arr);
+
+  quote.innerText = random.quote;
+  author.innerText = random.author;
+}
+
+function newQuote() {
+  const newBtn = document.querySelector("#new-button");
+  newBtn.addEventListener("click", () => {
+    displayQuote(quotes);
+  });
+}
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +506,6 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+displayQuote(quotes);
+newQuote();
