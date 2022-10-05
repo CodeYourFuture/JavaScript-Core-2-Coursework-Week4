@@ -1,3 +1,13 @@
+const pickFromArray = document.getElementById();
+let selectRandomQuote = document.getElementById();
+let arr = [choices];
+let paragraph = document.createElement("p");
+myElement.appendChild(paragraph);
+paragraph.innerHTML = `Here is an inspirational quote from ${author} who said ${quote}`;
+function selectRandomQuote() {
+arr[Math.floor(Math.random() * arr.length)];
+}
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
