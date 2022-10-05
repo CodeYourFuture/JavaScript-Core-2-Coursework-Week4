@@ -8,10 +8,27 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Write your HTML in here -->
+    <div id="container">
+      <span
+        id="boot-icon"
+        class="bi bi-quote"
+        style="font-size: 5rem; color: rgb(243, 156, 18)"
+      ></span>
+      <span id="myQuote"
+        >Life isn’t about getting and having, it’s about giving and being.</span
+      >
+      <h1 id="author" style="text-align: right">Kevin Kruse</h1>
+      <button class="newQuote" onclick="newQuote()">New Quote</button>
+    </div>
     <script src="quotes.js"></script>
   </body>
 </html>

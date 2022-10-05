@@ -21,6 +21,12 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+function newQuote() {
+  let selectedQuote = pickFromArray(quotes);
+  console.log(selectedQuote);
+  document.getElementById("myQuote").innerHTML = selectedQuote.quote;
+  document.getElementById("author").innerHTML = "- " + selectedQuote.author;
+}
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [
