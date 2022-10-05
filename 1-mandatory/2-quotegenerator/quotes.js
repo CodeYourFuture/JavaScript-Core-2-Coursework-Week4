@@ -1,14 +1,26 @@
 const quoteLine = document.getElementById("quote-line");
 const authorName = document.getElementById("author-name");
-const button = document.getElementById("button");
+const button1 = document.getElementById("button1");
+const button2 = document.getElementById("button2");
+const button3 = document.getElementById("button3");
 
 function generateQuotes() {
   quoteLine.innerText = `"${pickFromArray(quotes).quote}`
   authorName.innerText = `- ${pickFromArray(quotes).author}`
 }
 
-button.addEventListener("click", () => {
+button1.addEventListener("click", () => {
   generateQuotes()
+})
+
+button2.addEventListener("click", () => {
+  countdownInterval = setInterval(()=>{
+    generateQuotes()
+  },1000)
+})
+
+button3.addEventListener("click", ()=>{
+  clearInterval(countdownInterval)
 })
 
 // DO NOT EDIT BELOW HERE

@@ -10,13 +10,15 @@ body {
 #main-field {
     padding: 6rem;
     background-color: white;
+    max-height: 350px;
+    margin: auto;
 }
 
 #quote-line {
     font-size: 1.5rem;
 }
 
-#button {
+.button {
     background-color: olivedrab;
     color: bisque;
     border: none;

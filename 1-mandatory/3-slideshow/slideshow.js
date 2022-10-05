@@ -21,7 +21,7 @@ forwardBtn.addEventListener("click", () => {
         if (typeof imageNumber.innerText === "number") {
           i = imageNumber.innerText;
         }
-
+        console.log(imageNumber.innerText)
         if (i === imagesArray.length ) {
             i = 0
         };        
