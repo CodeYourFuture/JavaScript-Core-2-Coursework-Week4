@@ -490,3 +490,11 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+const genNewQuote = () => {
+  let qut = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById("quote").innerText = qut.quote;
+  document.getElementById("author").innerText = `by '${qut.author}'`;
+};
+genNewQuote();
+document.addEventListener("click", genNewQuote);
+document.getElementById("btnNewQuote").addEventListener("click", genNewQuote);

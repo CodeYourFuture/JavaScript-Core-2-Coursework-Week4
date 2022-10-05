@@ -1,1 +1,57 @@
 /** Write your CSS in here **/
+body {
+    top: 0;
+    height: 100%;
+    background-color: #f49c3c;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#symbol {
+    height: 0;
+    font-size: 200px;
+
+}
+
+#qut {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+
+}
+
+#quote {
+    font-size: 25px;
+    margin: 100px 0 0 10px;
+
+}
+
+#content {
+    width: 700px;
+    height: 420px;
+    background-color: white;
+    color: #f49c3c;
+    margin-top: 20%;
+    padding: 0 40px;
+}
+
+#author {
+    width: 100%;
+    text-align: right;
+    margin-top: 30px;
+}
+
+#btn {
+    width: 100%;
+    margin-top: 30px;
+    text-align: right;
+   
+}
+#btn> button{
+    background-color: #f49c3c;
+        color: white;
+        border-style: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+}
