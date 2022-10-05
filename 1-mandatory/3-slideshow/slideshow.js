@@ -10,7 +10,7 @@ let images =
 
 let currenImg = document.getElementById("imgHolder");
 let i = 0;
-currenImg.src = images[i];
+setImage(i);
 let autoLeftInt;
 let autoRightInt;
 
@@ -22,14 +22,14 @@ function autoLeft()
         if(i == 0)
         {
             i = images.length - 1;
-            currenImg.src = images[i];
         }
     
         else
         {
             i--;
-            currenImg.src = images[i];
         }
+
+        setImage(i);
     }, 1000);
 }
 
@@ -38,14 +38,14 @@ function left()
     if(i == 0)
     {
         i = images.length - 1;
-        currenImg.src = images[i];
     }
 
     else
     {
         i--;
-        currenImg.src = images[i];
     }
+
+    setImage(i);
 }
 
 function stops()
@@ -59,14 +59,14 @@ function right()
     if(i == images.length - 1)
     {
         i = 0;
-        currenImg.src = images[i];
     }
 
     else
     {
         i++;
-        currenImg.src = images[i];
     }
+
+    setImage(i);
 }
 
 function autoRight()
@@ -76,21 +76,30 @@ function autoRight()
         if(i == images.length - 1)
         {
             i = 0;
-            currenImg.src = images[i];
         }
     
         else
         {
             i++;
-            currenImg.src = images[i];
         }
+
+        setImage(i);
     }, 1000);
 }
+
+function setImage(i)
+{
+    //document.body.style.backgroundImage = "url('https://www.tutorialspoint.com/html5/images/html5-mini-logo.jpg')";
+    currenImg.style.backgroundImage = `url(${images[i]})`;
+}
+
+
 
 
 
 document.getElementById("autoLeft").addEventListener("click", () =>
 {
+    stops();
     autoLeft();
 });
 
@@ -111,5 +120,6 @@ document.getElementById("right").addEventListener("click", () =>
 
 document.getElementById("autoRight").addEventListener("click", () =>
 {
+    stops();
     autoRight();
 });
