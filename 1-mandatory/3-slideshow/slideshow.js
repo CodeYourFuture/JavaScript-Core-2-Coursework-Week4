@@ -20,7 +20,7 @@ function display() {
 }
 
 document.getElementById("forwardBtn").addEventListener("click", () => {
-  clearInterval(flippingImages);   
+  clearInterval(flippingImages);
     index++;
     if (index === arrImages.length) index = 0;
     image.src = arrImages[index];

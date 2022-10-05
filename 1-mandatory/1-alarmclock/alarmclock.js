@@ -1,16 +1,27 @@
 
-// const interval = setInterval(setAlarm, 1000);
-const setBtn = document.getElementById("set");
-const seconds = document.getElementById("alarmSet").value;
-let timerDisplay = document.getElementById("timeRemaining");
-
-setBtn.addEventListener("click", setAlarm);
+document.getElementById("set").addEventListener("click", setAlarm);
 
 function setAlarm() {
-  setInterval(function () {
-    timerDisplay.innerHTML = seconds;
-  }, 1000);
+  pauseAlarm();
+  let time = document.getElementById("alarmSet").value;
+  let countdownDisplay = document.getElementById("timeRemaining");
+  let counter = setInterval(updateCountdown, 1000);
+
+  function updateCountdown() {
+    minutes = Math.floor(time / 60);
+    seconds = time % 60;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+
+    countdownDisplay.innerText = `Time Remaining: ${minutes}:${seconds}`;
+    time--;
+    if (time === -1) {
+      clearInterval(counter);
+      playAlarm();
+    }
+  }
 }
+
 
 // DO NOT EDIT BELOW HERE
 
