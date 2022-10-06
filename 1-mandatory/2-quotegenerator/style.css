@@ -1,1 +1,32 @@
 /** Write your CSS in here **/
+#content {
+    border-style: ridge;
+    background-color: rgba(255, 166, 0, 0.888);
+}
+
+#container {
+    padding: 60px;
+    background-color: white;
+    color: rgba(255, 166, 0, 0.888);
+    margin: 60px;
+}
+
+#quote_text {
+    text-align: center;
+    margin-right: 50px;
+}
+
+#writer_name {
+    text-align: end;
+    padding-bottom: 10px;
+    padding-right: 50px;
+}
+
+#new_quote {
+    margin-left: 600px;
+    text-align: end;
+    background-color: rgba(255, 166, 0, 0.888);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
