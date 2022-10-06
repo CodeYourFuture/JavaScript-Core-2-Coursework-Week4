@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.contentuote_area i {
+.content quote_area i {
   font-size: 15px;
 }
 .quote-area i:first-child {
