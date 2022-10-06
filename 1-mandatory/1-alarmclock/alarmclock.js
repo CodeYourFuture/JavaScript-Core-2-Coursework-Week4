@@ -1,11 +1,13 @@
 let interval;
 let bgInterval;
+
 function setAlarm() {
   let input = document.getElementById("alarmSet");
   let heading = document.getElementById("timeRemaining");
   let timeLeft = input.value;
+
   interval = setInterval(() => {
-    let minutes = Math.floor((timeLeft % (60 * 60)) / 60);
+    let minutes = Math.floor(timeLeft / 60);
     let seconds = Math.floor(timeLeft % 60);
 
     if (seconds < 10) {
@@ -14,6 +16,7 @@ function setAlarm() {
     if (minutes < 10) {
       minutes = "0" + minutes;
     }
+
     heading.innerText = `Time Remaining: ${minutes}:${seconds}`;
 
     if (timeLeft <= 0) {
