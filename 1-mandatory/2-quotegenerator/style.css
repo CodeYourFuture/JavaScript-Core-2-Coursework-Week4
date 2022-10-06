@@ -27,12 +27,27 @@ body {
 
 }
 
+span {
+    position: absolute;
+    margin: 30px;
+    color: white;
+}
+
+span>button {
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    margin: 0 10px;
+    border-radius: 3px;
+    color: white;
+}
+
 #content {
     width: 700px;
     height: 420px;
     background-color: white;
     color: #f49c3c;
-    margin-top: 20%;
+    margin-top: 15%;
     padding: 0 40px;
 }
 
@@ -46,12 +61,13 @@ body {
     width: 100%;
     margin-top: 30px;
     text-align: right;
-   
+
 }
-#btn> button{
+
+#btn>button {
     background-color: #f49c3c;
-        color: white;
-        border-style: none;
-        padding: 10px 20px;
-        border-radius: 3px;
+    color: white;
+    border-style: none;
+    padding: 10px 20px;
+    border-radius: 3px;
 }

@@ -1,23 +1,24 @@
 /** Write your CSS in here **/
-#imgViewer{
+
+#imgViewer {
     width: 700px;
     height: 500px;
 }
-#container
-{
+
+#container {
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
 }
 
-img{
+img {
     margin: 30px;
     border-radius: 2px;
     box-shadow: 0 0 10px #9ecaed;
 }
 
-button{
+button {
     padding: 10px 30px;
     background-color: transparent;
     color: blue;
@@ -25,7 +26,8 @@ button{
     border-radius: 5px;
     margin: 5px;
 }
-button:hover{
+
+button:hover {
     background-color: blue;
     color: white;
 }

@@ -498,3 +498,18 @@ const genNewQuote = () => {
 genNewQuote();
 document.addEventListener("click", genNewQuote);
 document.getElementById("btnNewQuote").addEventListener("click", genNewQuote);
+let interval;
+
+document.getElementById("btnAutoPlay").addEventListener("click", () => {
+  let btnText = document.getElementById("btnAutoPlay");
+
+  if (btnText.innerText === "ON") {
+    interval = setInterval(() => {
+      genNewQuote();
+    }, 1000 * 60);
+    btnText.innerText = "OFF";
+  } else {
+    clearInterval(interval);
+    btnText.innerText = "ON";
+  }
+});
