@@ -1,1 +1,31 @@
 /** Write your CSS in here **/
+#imgViewer{
+    width: 700px;
+    height: 500px;
+}
+#container
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+img{
+    margin: 30px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+button{
+    padding: 10px 30px;
+    background-color: transparent;
+    color: blue;
+    border-color: blue;
+    border-radius: 5px;
+    margin: 5px;
+}
+button:hover{
+    background-color: blue;
+    color: white;
+}
