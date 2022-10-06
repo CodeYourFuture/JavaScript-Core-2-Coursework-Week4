@@ -21,6 +21,35 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+document.body.style.backgroundColor = "lightblue";
+
+let divEl = document.getElementById("Quotation-box");
+divEl.style.backgroundColor = "lightgrey";
+divEl.style.textAlign = "center";
+divEl.style.border = "blue outset";
+divEl.style.padding = "120px";
+divEl.style.margin = "100px";
+divEl.style.borderWidth = "50px";
+
+let buttonEl = document.getElementById("new-quote");
+
+function quoteGenerator() {
+  let arrayIndex = Math.floor(Math.random() * quotes.length);
+  
+  let quoteEl = document.getElementById("Quotation").textContent = quotes[arrayIndex].quote;
+  let authorEl = document.getElementById("Author").textContent = "-" +" "+ quotes[arrayIndex].author;
+}
+
+window.onload = function(){
+  quoteGenerator();
+  buttonEl.addEventListener("click", ()=>{
+    quoteGenerator();
+  });
+};
+
+
+
+
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [

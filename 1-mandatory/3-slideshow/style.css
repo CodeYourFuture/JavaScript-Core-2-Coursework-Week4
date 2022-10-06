@@ -1,1 +1,33 @@
-/** Write your CSS in here **/
+ * Write your CSS in here *
+body {
+    display: flex;
+}
+
+.carousal {
+    margin: 50px auto;
+    width: 50%;
+    
+}
+
+.imageBox {
+    width: 100%;
+}
+
+img {
+     width: 500px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: lightgreen;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.btn:hover {
+    background: lightblue;
+}
