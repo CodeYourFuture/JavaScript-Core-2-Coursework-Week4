@@ -88,4 +88,4 @@ function imageCount() {
     "h1"
   ).innerText = `Image: ${counter} / ${images.length}`;
 }
-imageCount();
+imageCount();   
