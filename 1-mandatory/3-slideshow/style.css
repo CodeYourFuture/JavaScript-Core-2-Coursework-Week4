@@ -1,1 +1,20 @@
 /** Write your CSS in here **/
+button {
+  padding: 10px;
+  margin: 14px;
+  width: 100px;
+  background-color: aquamarine;
+  }
+  h1{
+    font-size:xx-large
+  }
+  img {
+    height: 500px;
+    width: 950px;
+  }
+  
+  .btn-container, #img-container, h1{
+    display: flex;
+    justify-content: center;
+  }
+

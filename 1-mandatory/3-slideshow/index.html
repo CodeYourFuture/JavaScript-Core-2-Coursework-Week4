@@ -10,22 +10,20 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <main>
-      <section>
-        <div class="images-container">
-          <img class="our-image" />
-        </div>
-        <div class="buttons-container">
-          <input class="button-auto-previous" type="button" value="Auto Back" />
-          <input class="button-previous" type="button" value="Previous" />
-          <input class="button-stop" type="button" value="Stop" />
-          <input class="button-next" type="button" value="Next" />
-          <input class="button-auto-next" type="button" value="Auto Forward" />
-        </div>
-      </section>
-    </main>
     <!-- Write your HTML in here -->
-    <script src="slideshow.js"></script>
+  <body>
+    <h1>European Capital cities</h1>
+    <div id = "content">
+      <div id="img-container">
+        <img id="carousel-img" src="images/london.png">  
+      </div>
+      <div class="btn-container">
+        <button id="auto-back-btn">auto back</button>
+        <button id="back-btn">back</button>
+        <button id="stop-btn">stop</button>
+        <button id="forward-btn">forward</button>
+        <button id="auto-forward-btn">auto forward</button>
+      </div>
+      <script src="slideshow.js"></script>
   </body>
 </html>
