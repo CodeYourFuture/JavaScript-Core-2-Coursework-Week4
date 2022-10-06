@@ -1,1 +1,110 @@
 /** Write your CSS in here **/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #5372f0;
+}
+.wrapper {
+  width: 605px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px 30px 25px;
+}
+.wrapper header {
+  font-size: 35px;
+  font-weight: 600;
+  color: #5372f0;
+  text-align: center;
+}
+.wrapper .content {
+  margin: 35px 0;
+}
+.content .quote-area {
+  display: flex;
+  justify-content: center;
+}
+.contentuote_area i {
+  font-size: 15px;
+}
+.quote-area i:first-child {
+  margin: 3px 10px 0 0;
+  color: #5372f0;
+}
+.quote-area i:last-child {
+  display: flex;
+  align-items: flex-end;
+  color: #5372f0;
+  margin: 0 0 3px 10px;
+}
+.quote-area .quote {
+  font-size: 22px;
+  text-align: center;
+  color: #5372f0;
+  font-weight: bold;
+  word-break: break-all;
+}
+.content .author {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  color: #5372f0;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+.author span:first-child {
+  margin: -7px 5px 0 0;
+  font-family: monospace;
+}
+.wrapper .buttons {
+  border-top: 1px solid #ccc;
+}
+.buttons .features {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.features ul {
+  display: flex;
+}
+.features ul li {
+  list-style: none;
+  margin: 0 5px;
+  height: 47px;
+  width: 47px;
+  display: flex;
+  cursor: pointer;
+  color: #5372f0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #5372f0;
+  transition: all 0.3s ease;
+}
+.features ul li:hover {
+  color: #fff;
+  background: #5372f0;
+}
+.features button {
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-style: 16px;
+  padding: 13px 22px;
+  border-radius: 30px;
+  background: #5372f0;
+}
+button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
