@@ -1,1 +1,62 @@
 /** Write your CSS in here **/
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.carasoul-container{
+    width:100%;
+    max-width: 800px;
+    height:500px;
+    position: relative;
+    overflow:hidden;
+  
+}
+
+.carasoul{
+    width:100%;
+    max-width: 800px;
+    height:500px; 
+    position: absolute;
+    transition: all 0.5s;
+  
+}
+
+.carasoul img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.btn{
+    position: absolute;
+    width: 40px;
+    height: 40px; 
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:active{
+    transform: scale(1.1)
+}
+
+.btn-previous{
+    top:45%;
+    left:5%;
+}
+
+.btn-forward{
+    top: 45%;
+    right: 5%;
+}
