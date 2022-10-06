@@ -2,6 +2,12 @@
 <html>
   <head>
     <title>Slideshow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -10,8 +16,21 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
     <!-- Write your HTML in here -->
+    <section class="bck-frame">
+      <div class="carousel-img">
+        <img class="img" > 
+      </div>
+
+      <div class="carousel-Btn">
+        <button class="btn auto-bck-btn">A-Back</button>
+        <button class="btn bck-btn">Back</button>
+        <button class="btn stop-btn">Stop</button>
+        <button class="btn forward-btn">Forward</button>
+        <button class="btn auto-forward-btn">A-Forward</button>
+        <input type="number" min="1" max="10" placeholder="Slide Timer" >
+      </div>
+    </section>
     <script src="slideshow.js"></script>
   </body>
 </html>

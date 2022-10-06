@@ -34,5 +34,5 @@ Only read this section if you really need to! It's good to work this out for you
 If you have time and want to do more why not try
 
 - Make the background change color when the alarm clock finishes
-  - Try making the background flash!
+- Try making the background flash!
 - Could you add `pause` functionality so that the count down stops and then you restart it later?

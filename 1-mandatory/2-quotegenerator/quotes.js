@@ -1,3 +1,32 @@
+let sentence = document.getElementById("quote");
+let writer = document.getElementById("author");
+let quoteBackground = document.getElementById("quote-frame");
+const newBtn = document.getElementById("new");
+const generator = document.querySelector(".generator");
+let checkBox = document.querySelector("input");
+
+function newQuote() {
+  let index = Math.floor(Math.random() * quotes.length);
+  sentence.innerHTML = `${quotes[index].quote}`;
+  writer.innerHTML = `-${quotes[index].author}`;
+
+  let colors = Array.from({ length: 256 }, () =>
+    Math.floor(Math.random() * 999999)
+  );
+  quoteBackground.style.background = `#${pickFromArray(colors)}`;
+}
+
+newBtn.addEventListener("click", newQuote);
+
+// Extra challenge.
+checkBox.addEventListener("input", () => {
+  if (checkBox.value) {
+    generator.textContent = "Auto-play:ON";
+    setInterval(newQuote, 10000);
+  }
+});
+
+// ========================================================================================================
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -22,7 +51,7 @@ function pickFromArray(choices) {
 }
 
 // A list of quotes you can use in your app.
-// Feel free to edit them, and to add your own favourites.
+// Feel free to edit them, and to add your own favorites.
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
