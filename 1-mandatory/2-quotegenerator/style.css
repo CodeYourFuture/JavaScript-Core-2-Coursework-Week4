@@ -1,1 +1,39 @@
 /** Write your CSS in here **/
+
+.body {
+    background-color: rgb(252, 166, 60);
+}
+
+.boxify{
+    background-color: #fff;
+    margin: 100px 60px;
+    height: 300px;
+    color: rgb(252, 166, 60);
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.boto {
+    position:absolute;
+    background-color: rgb(252, 166, 60);
+    color: #fff;
+    border: none;
+    top:52%;
+    left: 75%;
+    padding: 9px;
+    font-weight: 700;
+}
+
+.qouteh1 {
+
+    color: rgb(252, 166, 60);
+    margin: 200px;
+    font-size: xx-small;
+}
+
+.pQ {
+    /* position: absolute; */
+    color: rgb(252, 166, 60);
+    /* margin: ;     */
+}

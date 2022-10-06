@@ -1,1 +1,21 @@
 /** Write your CSS in here **/
+
+.h1 {
+    margin: 40px 10px 10px 350px;
+    font-weight: 700;
+}
+
+
+
+/* img */
+
+
+.design {
+    width: 500px;
+    height: 500px;
+    margin: 10px 100px 10px 0px;
+}
+
+.butt {
+    padding: 10px 50px 10px 10px;
+}

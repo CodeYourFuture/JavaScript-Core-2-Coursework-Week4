@@ -1,3 +1,31 @@
+var body = (document.body.className = "body");
+var boxy = document.getElementById("box");
+boxy.className = "boxify";
+
+var newQ = document.getElementById("butQ");
+newQ.className = "boto";
+
+newQ.addEventListener("click", generateQ);
+var lineQ = document.querySelector("h3");
+lineQ.className = "quoteh1";
+lineQ.style.fontSize = "1.5em";
+lineQ.style.top;
+var pQuote = document.querySelector("p");
+pQuote.style.fontSize = "20px";
+pQuote.style.textAlign = "end";
+pQuote.style.top = "44%";
+pQuote.style.right = "8%";
+pQuote.style.marginRight = "40px";
+pQuote.style.position = "absolute";
+
+function generateQ() {
+  i = Math.floor(Math.random() * quotes.length);
+  lineQ.innerHTML = '"' + quotes[i].quote;
+  pQuote.innerHTML = "- " + quotes[i].author;
+}
+
+window.onload = generateQ;
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
