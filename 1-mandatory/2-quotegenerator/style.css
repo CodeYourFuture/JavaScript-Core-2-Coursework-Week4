@@ -1,1 +1,41 @@
 /** Write your CSS in here **/
+body {
+  margin: 0;
+}
+main {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  border: solid 0.2rem rgb(228, 228, 228);
+  border-left: solid 2rem black;
+  padding: 4rem 6rem 6rem;
+  margin: 6rem 6rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+img {
+  max-width: 20%;
+  margin: 0;
+  padding: 0;
+}
+h4 {
+  font-size: 2em;
+  text-align: center;
+}
+p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+button {
+  border-radius: 10%;
+  background-color: black;
+  color: white;
+  margin-bottom: 1rem;
+  align-self: flex-end;
+  font-size: 1.3rem;
+}
