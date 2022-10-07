@@ -54,16 +54,17 @@ let autoEventList = autoForwardBtn.addEventListener("click", () => {
   });
 });
 
-// Autobackbutton
-//  let autoBackBtn = document.getElementById("auto-back");
-//  autoBackBtn.addEventListener ("click",()=> {
-// let autoBackBtn = setInterval(()=> {
-//   imgIndexNum --
-//    if(imgIndexNum < imgAddress.length){
-//     imgIndexNum =0
-
-//   }
-//   img.src = imgAddress[imgIndexNum];
-//   index.innerHTML = imgIndexNum;
-//  }, 2000)
-//  })
+let autoBackBtn = document.getElementById("auto-back");
+autoBackBtn.addEventListener("click", function () {
+  let setAutoBack = setInterval(() => {
+    imgIndexNum--;
+    if (imgIndexNum < 0) {
+      imgIndexNum = [imgAddress.length - 1];
+    }
+    img.src = imgAddress[imgIndexNum];
+    index.innerHTML = imgIndexNum;
+  }, 2000);
+  stopped.addEventListener("click", function () {
+    clearInterval(setAutoBack);
+  });
+});
