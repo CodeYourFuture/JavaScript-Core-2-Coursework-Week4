@@ -1,3 +1,15 @@
+WM4 - Azin Yad -Deployed pages:
+
+
+
+here you can find quote generator webpage:
+https://cyf-quote-generator-azinyad.netlify.app/
+
+and here is image carousel webpage:
+https://image-carousel-cyf-azinyad.netlify.app/
+
+==============================================================
+
 # JavaScript-Core-2-Coursework-Week4-London8
 
 The exercises are split into two folders: `1-mandatory` and `2-extra`.
