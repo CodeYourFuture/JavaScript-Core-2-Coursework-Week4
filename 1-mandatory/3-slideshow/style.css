@@ -1,6 +1,7 @@
  * Write your CSS in here *
 body {
     display: flex;
+    background: lightblue;
 }
 
 .carousal {
