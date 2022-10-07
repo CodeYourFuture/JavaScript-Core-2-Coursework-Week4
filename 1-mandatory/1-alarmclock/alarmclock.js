@@ -1,5 +1,4 @@
 function setAlarm() {
-  const time = document.querySelector("#time");
   let i = Number(document.querySelector("#alarmSet").value);
 
   i === 0 ? (i = 60) : i;
@@ -13,10 +12,10 @@ function setAlarm() {
     let sToShow = s >= 10 ? s : `0${s}`;
     time.innerText = hToShow + mToShow + sToShow;
   };
-
   convertTime(i);
 
   const set = setInterval(() => {
+    document.body.style.backgroundColor = "white";
     i--;
     convertTime(i);
     if (i === 0) {
@@ -26,10 +25,8 @@ function setAlarm() {
   }, 1000);
 
   const stopBtn = document.querySelector("#stop");
-
   stopBtn.addEventListener("click", () => {
     clearInterval(set);
-    time.innerText = `00:00`;
   });
 }
 // DO NOT EDIT BELOW HERE
@@ -47,6 +44,19 @@ function setup() {
 }
 
 function playAlarm() {
+  document.body.style.backgroundColor = "yellow";
+  const changeBG = setInterval(() => {
+    document.body.style.backgroundColor === "yellow"
+      ? (document.body.style.backgroundColor = "red")
+      : (document.body.style.backgroundColor = "yellow");
+  }, 500);
+  const stopBtn = document.querySelector("#stop");
+  const time = document.querySelector("#time");
+  stopBtn.addEventListener("click", () => {
+    clearInterval(changeBG);
+    document.body.style.backgroundColor = "white";
+    time.innerText = `00:00`;
+  });
   audio.play();
 }
 
