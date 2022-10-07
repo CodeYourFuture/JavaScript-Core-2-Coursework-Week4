@@ -20,7 +20,7 @@ function setAlarm() {
     timeOnScreen.innerHTML = `Time Remaining: ${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
     if (seconds > 0) {
       seconds--;
-    } else if (seconds === 0 && minutes > 0) {
+    } else if (seconds === 0 && minutes > 0) { 
       minutes--;
       seconds = 59;
     } else {
