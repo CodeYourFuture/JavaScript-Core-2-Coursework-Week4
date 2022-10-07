@@ -1,1 +1,27 @@
 /** Write your CSS in here **/
+body {
+    margin-top: 10em;
+    background-color: cadetblue;
+    background-image: url("joe-woods-4Zaq5xY5M_c-unsplash.jpg");
+}
+
+#slides {
+    width: 500px;
+    height: 500px;
+    margin: 0 40rem;
+    display: block;
+    border-style: ridge;
+    border-radius: 10% border-width: 20px;
+    border-color: rgba(121, 31, 206, 0.658);
+}
+
+#auto-back {
+    margin-left: 43rem;
+}
+
+button {
+    border: 3px;
+    border-color: rgba(121, 31, 206, 0.658);
+    border-style: groove;
+    background-color: rgba(137, 43, 226, 0.37);
+}
