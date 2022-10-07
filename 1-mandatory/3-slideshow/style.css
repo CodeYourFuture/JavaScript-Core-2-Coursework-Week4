@@ -1,1 +1,36 @@
 /** Write your CSS in here **/
+body {
+  background-color: black;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+main {
+  min-width: 90vw;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img/colorful-graffiti-wall.jpg);
+  background-size: cover;
+  text-align: center;
+  padding: 2rem;
+}
+section {
+  background-color: white;
+  padding: 2rem 2rem 1rem;
+}
+img {
+  max-width: 500px;
+  border: 1px solid black;
+}
+i {
+  font-size: 4rem;
+  color: black;
+  transition: 0.3s;
+}
+i:hover {
+  color: #777777;
+}
