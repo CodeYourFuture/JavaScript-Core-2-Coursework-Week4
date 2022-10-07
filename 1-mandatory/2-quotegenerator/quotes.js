@@ -17,9 +17,21 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+const quoteLine = document.getElementById("quote-line");
+const authorName = document.getElementById("author-name");
+const button = document.getElementById("button");
+
+function generateQuotes() {
+  quoteLine.innerText = `"${pickFromArray(quotes).quote}`
+  authorName.innerText = `- ${pickFromArray(quotes).author}`
 }
+
+button.addEventListener("click", () => {
+  generateQuotes()
+})
+
+console.log(pickFromArray(quotes));
+
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
