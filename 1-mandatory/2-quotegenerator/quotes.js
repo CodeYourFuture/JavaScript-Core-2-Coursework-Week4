@@ -508,7 +508,8 @@ const newQuoteButton = document.querySelector("#new-quote");
 newQuoteButton.style.backgroundColor = `#${randomColor}`;
 
 //Click 'New Quote' button on the screen and change quote and button colour
-newQuoteButton.addEventListener("click", () => {
+
+const displayQuote = () => {
   const newColor = Math.floor(Math.random() * 16777215).toString(16);
 
   document.body.style.backgroundColor = `#${newColor}`;
@@ -516,4 +517,18 @@ newQuoteButton.addEventListener("click", () => {
 
   const newQuote = pickFromArray(quotes);
   quote.innerText = `${newQuote.quote} by ${newQuote.author}`;
+};
+ newQuoteButton.addEventListener("click", displayQuote);
+ 
+//New quote every 60 seconds
+
+let autoQuote = false;
+let autoQuoteState;
+
+document.getElementById('autoQuote').addEventListener('click', () => {
+  autoQuote = !autoQuote;
+  clearInterval(autoQuoteState);
+  if (autoQuote) {
+    autoQuoteState = setInterval(displayQuote, 60000);
+  }
 });

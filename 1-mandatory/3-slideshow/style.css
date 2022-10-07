@@ -1,8 +1,9 @@
 /** Write your CSS in here **/
 body {
-    margin-top: 10em;
-    background-color: cadetblue;
-    background-image: url("joe-woods-4Zaq5xY5M_c-unsplash.jpg");
+    background-color: rgba(255, 255, 255, .15);
+    background-color: rgba(255, 255, 255, .15);
+              backdrop-filter: blur(5px);
+
 }
 
 #slides {
@@ -20,8 +21,9 @@ body {
 }
 
 button {
+    margin-top: 1rem;
     border: 3px;
-    border-color: rgba(121, 31, 206, 0.658);
+    border-color: rgba(98, 107, 107, 0.658);
     border-style: groove;
-    background-color: rgba(137, 43, 226, 0.37);
+    background-color: rgba(52, 99, 95, 0.37);
 }
