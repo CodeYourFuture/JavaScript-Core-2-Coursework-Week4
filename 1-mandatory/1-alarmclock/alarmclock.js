@@ -1,36 +1,36 @@
 function setAlarm() {
-  // link to input field
-  let inputValue = document.querySelector("#alarmSet").value;
-  //link to title
-  let timeOnScreen = document.querySelector("#timeRemaining");
-  // link to stop button
-  let stopAlarm = document.querySelector("#stop");
-  // set stop button to stop alarm sound
-  stopAlarm.addEventListener("click", () => {
-    audio.src = "";
+  let inputValue = document.querySelector("#alarmSet").value;   // link to input field
+  let timeOnScreen = document.querySelector("#timeRemaining");  // link to title
+  let stopAlarm = document.querySelector("#stop");              // link to 'Stop Alarm' button
+  let setAlarmBtn = document.querySelector("#set");             // link to 'Set Alarm' button
+  
+  stopAlarm.addEventListener("click", () => {  // 'Stop Alarm' button stops alarm sound
+    audio.src = ""; 
   });
-  // link to 'Set Alarm' button
-  let setAlarmBtn = document.querySelector("#set");
-  // format input value so = xx:xx
-    let seconds = inputValue;
-    let minutes = 0;
-    if (inputValue > 59) {
-      minutes = Math.floor(inputValue / 60);
-      seconds = inputValue % 60;
-    }
-  // add event listener ('click') to button and create function to display input value on screen
+  
+  let seconds = inputValue; // format input value so = 00:00
+  let minutes = 0;
+  if (inputValue > 59) {
+    minutes = Math.floor(inputValue / 60);
+    seconds = inputValue % 60;
+  };
+
   setAlarmBtn.addEventListener("click", () => {
-  // set interval so displayed value decreases by 1 every second
-    setInterval(function() {
+    setInterval(function() {   // timer counts down
     timeOnScreen.innerHTML = `Time Remaining: ${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
     if (seconds > 0) {
-      seconds--
-  // when input value reaches 0, play alarm
+      seconds--;
     } else if (seconds === 0 && minutes > 0) {
       minutes--;
       seconds = 59;
     } else {
-      playAlarm()
+      playAlarm(); // alarm sound plays when timer reaches 0
+
+      setInterval(function() {  // set background colour to flash when alarm goes off
+        let colourArray = ["red", "white", "yellow", "green", "blue"];
+        document.body.style.backgroundColor = colourArray[Math.floor(Math.random() * colourArray.length)];
+      }, 1000)
+
     }
   }, 1000);
   });
