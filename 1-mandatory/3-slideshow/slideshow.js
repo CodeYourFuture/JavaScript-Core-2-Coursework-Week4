@@ -1,1 +1,2 @@
-// Write your code here
+const slideShow = document.querySelector(".container");
+

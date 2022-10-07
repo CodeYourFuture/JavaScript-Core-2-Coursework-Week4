@@ -1,11 +1,10 @@
-const pickFromArray = document.getElementById();
-let selectRandomQuote = document.getElementById();
+function generateQuote() {
+let randomNumber = math.floor(math.random()* (quote.length));
+document.getElementById("randomQuote").innerHTML = quote[randomNumber]
 let arr = [choices];
 let paragraph = document.createElement("p");
 myElement.appendChild(paragraph);
-paragraph.innerHTML = `Here is an inspirational quote from ${author} who said ${quote}`;
-function selectRandomQuote() {
-arr[Math.floor(Math.random() * arr.length)];
+quote.innerText (`Here is an inspirational quote from ${author} who said ${quote}`;)
 }
 
 // DO NOT EDIT BELOW HERE
@@ -27,9 +26,9 @@ arr[Math.floor(Math.random() * arr.length)];
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+//function pickFromArray(choices) {
+//return choices[Math.floor(Math.random() * choices.length)];
+//}
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
