@@ -490,3 +490,28 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+const btn = document.querySelector(".button");
+const quote = document.querySelector(".quote");
+const author = document.querySelector(".author");
+const auto = document.querySelector(".auto-quote")
+const stop = document.querySelector(".btn-stop")
+
+btn.addEventListener("click", () => {
+  let newQuote = pickFromArray(quotes);
+quote.innerHTML = newQuote.quote; 
+  author.innerHTML = newQuote.author;
+})
+
+
+auto.addEventListener("click", () => {
+  interval = setInterval(() => {
+     let newQuote = pickFromArray(quotes);
+quote.innerHTML = newQuote.quote;
+  author.innerHTML = newQuote.author;
+  
+  } , 5000)
+})
+
+stop.addEventListener("click", () => {
+    clearInterval(interval)
+})
