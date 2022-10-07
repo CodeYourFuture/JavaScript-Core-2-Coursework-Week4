@@ -490,3 +490,44 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+// Random quote from "quotrs"
+let quote = document.querySelector(".quote");
+let btn = document.querySelector("#quotesBtn");
+let author = document.querySelector(".author");
+
+btn.addEventListener("click", function () {
+  let random = Math.floor(Math.random() * quotes.length);
+
+  quote.innerText = quotes[random].quote;
+  author.innerText = quotes[random].author;
+  
+})
+
+//   // changing BackgroundColor
+let body = document.querySelector("body");
+let changeColor = Math.floor(Math.random() * 16777215).toString(16);
+document.body.style.backgroundColor = `#{changeColor}`;
+
+
+// change Button color
+let quotesBtn = document.querySelector("#quotesBtn");
+quotesBtn.style.backgroundColor = `#${changeColor}`;
+
+// New quote "click"
+quotesBtn.addEventListener("click", () => {
+  let newColor = Math.floor(Math.random() * 16777215).toString(16);
+
+  document.body.style.backgroundColor = `#${newColor}`;
+  quotesBtn.style.backgroundColor = `#${newColor}`;
+
+  let newQuote = pickFromArray(quotes);
+   quote.innerText = `${newQuote.quote} by ${newQuote.author}`;
+});
+
+
+  
+
+  
+
+
+     
