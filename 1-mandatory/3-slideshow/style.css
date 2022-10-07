@@ -1,1 +1,19 @@
 /** Write your CSS in here **/
+
+body {
+  border: 10px;
+  background-color: rgb(211, 211, 211);
+  padding-top: 20px;
+  font-size: 2em;
+}
+img {
+  width: 100%;
+}
+
+#container {
+  border: 3px;
+  /* background-color: rgb(92, 13, 157); */
+  width: 50%;
+  height: 90vh;
+  margin: auto;
+}

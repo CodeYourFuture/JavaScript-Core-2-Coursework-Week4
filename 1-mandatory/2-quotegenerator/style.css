@@ -1,32 +1,28 @@
 /** Write your CSS in here **/
 body {
-    background-color: #f49c3c;
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-
-
+  background-color: #f49c3c;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
 }
 
 #container {
-
-    background-color: white;
-    color: #f49c3c;
-    width: 60%;
-    align-self: center;
-    font-size: 3em;
-    margin: 20%;
-    height: 50vh;
-    padding: 10px;
-    /* display: flex;
+  background-color: white;
+  color: #f49c3c;
+  width: 60%;
+  align-self: center;
+  font-size: 3e m;
+  margin: 20%;
+  height: 50vh;
+  padding: 10px;
+  /* display: flex;
     flex-direction: column; */
-
 }
 
 .newQuote {
-    float: right;
-    margin-top: 20px;
-    background-color: #f49c3c;
-    color: white;
-    border: 0;
+  float: right;
+  margin-top: 20 px;
+  background-color: #f49c3c;
+  color: white;
+  border: 0;
 }
