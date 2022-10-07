@@ -1,1 +1,20 @@
 /** Write your CSS in here **/
+div{
+  margin:1em;
+  background-color: rgb(200, 145, 252);
+
+}
+h2 {
+  color: black;
+  font-size: 3rem;
+
+}
+p {
+  color:black;
+  font-size: 4rem;
+
+}
+button{
+  background-color: aqua;
+  margin:2em;
+}

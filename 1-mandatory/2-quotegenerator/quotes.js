@@ -490,3 +490,24 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+//create elements
+let body = document.querySelector("body");
+document.body.style.backgroundColor = "rgb(255,255,153)";
+let div = document.createElement("div");
+let quote = document.createElement("p");
+let authorQuote = document.createElement("h2");
+let button = document.getElementById("button");
+
+//append elements
+body.appendChild(div);
+div.appendChild(quote);
+quote.appendChild(authorQuote);
+//event listener
+button.addEventListener("click", function generateQuote() {
+  let randomQuote = Math.floor(Math.random() * quotes.length);
+  quote.innerHTML = `“ ${quotes[randomQuote]["quote"]}”`;
+  authorQuote.innerHTML = `- ${quotes[randomQuote]["author"]}`;
+});
+
+// function called
+generateQuote(quotes);

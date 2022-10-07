@@ -1,1 +1,25 @@
 /** Write your CSS in here **/
+/* body {
+  background-color: rgb(218, 243, 107);
+} */
+#img {
+  height: 600px;
+  width: 600px;
+ display: flex;
+ margin-left: 15rem;
+ 
+}
+h1 {
+  color:blue;
+  margin-top: 5rem;
+  margin-left: 20rem;
+}
+#buttons {
+  margin-left:20rem;
+}
+
+button {
+  border:none;
+  background-color: rgb(192, 126, 126);
+
+}
