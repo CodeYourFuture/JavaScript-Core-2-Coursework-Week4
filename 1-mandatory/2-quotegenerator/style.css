@@ -1,1 +1,31 @@
 /** Write your CSS in here **/
+html,
+body {
+    height: 100%;
+    background-color: aqua;
+    background-image: "https://3.bp.blogspot.com/-XvSwPSHSKLo/WMu31W7SzEI/AAAAAAAADP8/Gimue8aCHXQ-51yxR-Bs54UFn24o0WBdgCLcB/s1600/s2.jpg";
+}
+
+.container {
+    background-color: white;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    top: 40%;
+}
+
+.quote {
+    padding-top: 30px;
+}
+
+.author {
+    margin-left: 75%;
+}
+
+.newQuote {
+    margin-bottom: 10px;
+    margin-left: 85%;
+    background-color: orange;
+    color: white;
+    border-color: orange;
+}

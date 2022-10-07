@@ -1,3 +1,10 @@
+document.getElementById("newQuote").addEventListener("click", () => {
+  let randomQuote = pickFromArray(quotes);
+
+  document.getElementById("quote").textContent = randomQuote.quote;
+  document.getElementById("author").textContent = "- " + randomQuote.author;
+});
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
