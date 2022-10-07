@@ -1,1 +1,53 @@
 /** Write your CSS in here **/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#container {
+  margin: 2rem auto;
+  width: 50%;
+  /* background-color: rgb(203, 219, 237);; */
+}
+
+#title {
+  text-align: center;
+  padding-top: 2rem;
+  color: rgb(9, 26, 42);
+}
+#image {
+  margin: auto 1rem;
+  width: 100%;
+}
+#pictures {
+  width: 90%;
+  height: 300px;
+  margin: 2rem auto;
+  margin-left: 1.5rem ;
+
+  /* margin: 1.5rem;
+  margin-left: 8.5rem; */
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: rgb(105, 132, 161);
+  background-color: rgb(15, 1, 13);
+  font-weight: 600;
+  font-style: oblique;
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  color: rgb(15, 1, 13);
+  background-color: rgb(105, 132, 161);
+}

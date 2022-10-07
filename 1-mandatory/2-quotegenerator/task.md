@@ -2,7 +2,7 @@
 
 In this folder you will find the basic setup of a quote generator.
 
-You can change any of the files in this project
+You can change any of the files in this project 
 
 ## How the Quote Generator should work
 
