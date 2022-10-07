@@ -1,4 +1,16 @@
-function setAlarm() {}
+function setAlarm() {
+  let alarmButtonSet = document.getElementById("alarmButtonSet").value;
+  let timeShow = document.getElementById("timeRemaining").value;
+  let stopButtonAlarm = document.getElementById("stopButtonAlarm").value;
+  let min = Math.floor(alarmSetValue /60 );
+  let seconds = alarmSetValue % 60;
+  min = minutes >= 10 ? minutes: "0" + minutes;
+  sec = seconds >= 10 ? seconds : "0" + seconds;
+  timeDisplay.innerText = "timeRemaining: ${minutes}:${seconds}";
+  
+
+  
+}
 
 // DO NOT EDIT BELOW HERE
 
