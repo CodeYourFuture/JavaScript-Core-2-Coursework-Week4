@@ -1,4 +1,36 @@
-function setAlarm() {}
+function setAlarm() {
+  let input = document.getElementById("alarmSet").value;
+
+  if (input === "" || input == 0) {
+    return;
+  }
+
+  let time = input;
+
+  document.getElementById("alarmSet").value = "";
+
+  let interval = setInterval(function () {
+    updateCoundown();
+  }, 1000);
+
+  function updateCoundown() {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    document.getElementById("timeRemaining").textContent =
+      "Time Remaining: " + minutes + ":" + seconds;
+
+    time--;
+
+    if (time < 0) {
+      clearInterval(interval);
+      playAlarm();
+    }
+  }
+}
 
 // DO NOT EDIT BELOW HERE
 

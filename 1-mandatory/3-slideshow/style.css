@@ -1,1 +1,11 @@
 /** Write your CSS in here **/
+body {
+    padding: 10rem;
+}
+
+#imgHolder {
+    height: 30rem;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center center;
+}
