@@ -21,6 +21,17 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+var intervalForAutoGenerator;
+function handleChange(checkbox) {
+  if (checkbox.checked == true) {
+    intervalForAutoGenerator = setInterval(function () {
+      newQuote();
+    }, 60000);
+  } else {
+    clearInterval(intervalForAutoGenerator);
+  }
+}
+
 function newQuote() {
   let selectedQuote = pickFromArray(quotes);
   console.log(selectedQuote);

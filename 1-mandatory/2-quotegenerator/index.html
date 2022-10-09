@@ -28,6 +28,13 @@
       >
       <h1 id="author" style="text-align: right">Kevin Kruse</h1>
       <button class="newQuote" onclick="newQuote()">New Quote</button>
+      <div class="autoGenerator">
+        <span style="font-size: 0.5em">Auto Generate</span>
+        <label class="switch">
+          <input type="checkbox" id="autoGeneratorCheckBox"  onchange='handleChange(this);'/>
+          <span class="slider round"></span>
+        </label>
+      </div>
     </div>
     <script src="quotes.js"></script>
   </body>
