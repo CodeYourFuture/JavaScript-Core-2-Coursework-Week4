@@ -1,4 +1,7 @@
-function setAlarm() {}
+function setAlarm() {
+  let time = document.getElementById("alarmSet").value;
+  let timeSet = innerText;
+}
 
 // DO NOT EDIT BELOW HERE
 

@@ -1,1 +1,29 @@
-/** Write your CSS in here **/
+/* * Write your CSS in here **/
+
+body {
+  margin: 0;
+  background-color: #999966;
+}
+
+h1 {
+  text-align: center;
+}
+
+.quote {
+  background-color: #78aadd;
+  height: 30rem;
+  align-content: center;
+  padding-top: 10rem;
+}
+
+.btn {
+  background-color: blu;
+}
+
+p {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}

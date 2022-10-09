@@ -17,8 +17,34 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+// function pickFromArray(choices) {
+//   return choices[Math.floor(Math.random() * choices.length)];
+// }
+
+// let quote = document.querySelector("p")
+
+// let author = document.querySelector("h3").textContent
+// let button = document.querySelector("button");
+
+// button.addEventListener("click", (insert)) {
+//   let result = quotes[Math.floor(Math.random() * quotes.length)];
+//   function insert() {
+//     quote.innerText = result.quote;
+//     author.innerText = result.author;
+//   }
+// };
+
+let quoteParagraph = document.querySelector("p");
+
+let authorParagraph = document.querySelector("h3");
+let button = document.querySelector("button");
+
+button.addEventListener("click", insert);
+
+function insert() {
+  let result = quotes[Math.floor(Math.random() * quotes.length)];
+  quoteParagraph.innerText = `"${result.quote}"`;
+  authorParagraph.innerText = `~ quote by ${result.author}`;
 }
 
 // A list of quotes you can use in your app.
