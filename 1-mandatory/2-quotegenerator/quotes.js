@@ -1,4 +1,31 @@
 // DO NOT EDIT BELOW HERE
+//changing body background color
+const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+let quoteSection = document.getElementsByClassName('wrap');
+// let quoteBtn = document.getElementById("btn");
+let quoteText = document.getElementById("quote");
+let quoteAuthor = document.getElementById("author");
+let btn = document.getElementById("btn");
+btn.addEventListener("click", function () {
+  //changing body background color
+  let hexColor = "#";
+  for (let i = 0; i < 6; i++) {
+    hexColor += hex[getColor()];
+  }
+  document.body.style.backgroundColor = hexColor;
+  //getting random quote
+  let random = getQuote(quotes);
+  quoteText.innerHTML = `'${quotes[random].quote}'`;
+  quoteAuthor.innerHTML = quotes[random].author;
+});
+
+function getColor() {
+  return Math.floor(Math.random() * hex.length);
+}
+
+function getQuote(choices) {
+  return Math.floor(Math.random() * choices.length);
+}
 
 // A function which will return one item, at
 // random, from the given array.
@@ -13,12 +40,57 @@
 //
 // Examples of use
 // ---------------
-// pickFromArray([1,2,3,4])     //maybe returns 2
+// pickFromArray([1,2,3,4])     //maybe returns 2 
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
+}
+let timerId = null;
+let quoteIndex = 0;
+let autoPlayState = 'off';
+
+function pickFromArray(choices) {
+  const randomIndex = getRandomIndex(choices.length);
+  return choices[randomIndex];
+}
+
+function wrapIndexAround(index, length) {
+  return ((index % length) + length) % length;
+}
+
+function getRandomIndex(length) {
+  const randomIndex = Math.floor(Math.random() * length);
+  return wrapIndexAround(randomIndex, length);
+}
+
+function startAutoPlay(callBack) {
+  const FIVE_SECONDS_IN_MILISECONDS = 5000;
+  if (!timerId) {
+    timerId = setInterval(() => {
+      callBack();
+    }, FIVE_SECONDS_IN_MILISECONDS);
+  }
+}
+
+function stopAutoPlay() {
+  if (timerId) {
+    clearInterval(timerId);
+    timerId = null;
+  }
+}
+
+function updateAutoPlayStatus(status) {
+  document.querySelector('#auto-play-status').innerText = `Auto play ${status}`;
+}
+
+function updateQuote({ quote, author }) {
+  const quoteP = document.querySelector('#quote');
+  const authorP = document.querySelector('#author');
+
+  quoteP.innerText = quote;
+  authorP.innerText = author;
 }
 
 // A list of quotes you can use in your app.
