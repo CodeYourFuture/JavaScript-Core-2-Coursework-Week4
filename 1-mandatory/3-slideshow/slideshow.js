@@ -1,5 +1,5 @@
 function cycleImageBackward() {
-    // if the currentIndex within
+    // if the currentIndex is within range
     if (currentIndex > 0 && currentIndex <= images.length - 1) {
         currentIndex--;
         imgElement.src = images[currentIndex].src;
@@ -41,12 +41,10 @@ function autoCycleImageBackward() {
 
 // function to start/stop auto cycle forward
 function autoCycleImageForward() {
-  // if the flag is false, start the cycling, toggle the flag, add a class to visually represent the behaviour
   if (isAutoCyclingFoward === false) {
     intervalIdForward = setInterval(cycleImageForward, slideshowInterval);
     isAutoCyclingFoward = true;
     autoForwardButton.classList.add("autocycling");
-  // if the flag is true, stop the cycle, toggle the flag, remove the class 
   } else if (isAutoCyclingFoward === true) {
     clearInterval(intervalIdForward);
     isAutoCyclingFoward = false;
@@ -72,10 +70,7 @@ function setSlideShowInterval() {
   clearInterval(intervalIdForward);
   isAutoCyclingFoward = false;
   autoForwardButton.classList.remove("autocycling");
-
-  // console.log(`slideShowInterval (before): ${slideshowInterval}`);
   slideshowInterval = Number(intervalInput.value) * 1000;
-  // console.log(`slideShowInterval (after): ${slideshowInterval}`);
 }
 
 // initialise variables: the currentIndex, the images array, two flags and two interval IDs for the auto cycling, and the slide show interval
@@ -89,7 +84,7 @@ let slideshowInterval = 1000;
 
 // populate the array, with individual objects, containing the src property and url value;
 for (let i = 500; i < 530; i++) {
-    images.push({src : `https://picsum.photos/id/${i}/500/300`});
+    images.push({src : `https://picsum.photos/id/${i}/600/300`});
     // images.push({src : `https://picsum.photos/id/${Math.floor(Math.random() * 500)}/500/300`});
 }
 
@@ -103,14 +98,12 @@ const arrowLeftOne = document.createElement("i");
 arrowLeftOne.className = "fa-solid fa-arrow-left";
 const arrowLeftTwo = document.createElement("i");
 arrowLeftTwo.className = "fa-solid fa-arrow-left";
-// ^ why do i have to create two separate elements, why can't i copy/re-use the same one when appending to different elements?
 
 // create the font awesome i elements for arrow right
 const arrowRightOne = document.createElement("i");
 arrowRightOne.className = "fa-solid fa-arrow-right";
 const arrowRightTwo = document.createElement("i");
 arrowRightTwo.className = "fa-solid fa-arrow-right";
-// ^ why do i have to create two separate elements, why can't i copy/re-use the same one when appending to different elements?
 
 const spanElementOne = document.createElement("span");
 spanElementOne.textContent = "Auto";
@@ -123,9 +116,6 @@ const autoBackwardButton = document.createElement("button");
 autoBackwardButton.id = "slideshow-auto-backward";
 autoBackwardButton.appendChild(arrowLeftOne);
 autoBackwardButton.appendChild(spanElementOne);
-// autoBackwardButton.textContent = "Auto";
-// autoBackwardButton.innerText = "Auto";
-// textContent and innerText WIPE ALL Children!!! :(
 autoBackwardButton.addEventListener("click", autoCycleImageBackward);
 
 // create the backward button element
@@ -148,7 +138,6 @@ forwardButton.addEventListener("click", cycleImageForward);
 // create the auto forward button element
 const autoForwardButton = document.createElement("button");
 autoForwardButton.id = "slideshow-auto-forward";
-// autoForwardButton.textContent = "Auto";
 autoForwardButton.appendChild(spanElementTwo);
 autoForwardButton.appendChild(arrowRightTwo);
 autoForwardButton.addEventListener("click", autoCycleImageForward);
