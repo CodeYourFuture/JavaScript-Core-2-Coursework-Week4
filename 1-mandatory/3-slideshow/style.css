@@ -1,1 +1,51 @@
-/** Write your CSS in here **/
+:root {
+    --navy-blue: #06283D;
+    --light-grey: #EDF2F4;
+    --white: #FFF;
+}
+
+body{
+    background-color: #931A25;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    width: 1000px;
+    margin: auto;
+    padding: 2em;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--navy-blue);
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+}
+
+.cardImg {
+    height: 500px;
+    background-image: url('https://images.unsplash.com/photo-1489686995744-f47e995ffe61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.btnsContainer {
+    align-self: center;
+    padding: 2rem;
+}
+
+.btn {
+    padding: 0 1em;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.btn:hover {
+    background-color: var(--white);
+}

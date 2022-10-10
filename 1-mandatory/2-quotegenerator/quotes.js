@@ -17,8 +17,8 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+function pickFromArray(quotes) {
+  return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 // A list of quotes you can use in your app.
@@ -490,3 +490,26 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+
+  function generateRandomColor() {
+    var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    return randomColor;
+  }
+
+  let quoteContent = document.querySelector(".quote");
+  let quoteAuthor = document.querySelector(".author");
+  let newQuoteButton = document.querySelector(".newQuote");
+
+  newQuoteButton.addEventListener("click", () => {
+    let newQuote = pickFromArray(quotes);
+    quoteContent.textContent = `${newQuote.quote}`;
+    quoteAuthor.textContent = `${newQuote.author}`;
+    document.body.style.backgroundColor = generateRandomColor();
+  });
+
+  newQuoteButton.addEventListener('click', function onClick(){
+    newQuoteButton.style.backgroundColor = generateRandomColor(); 
+    
+  })
