@@ -17,10 +17,11 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
+
+/*function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
-
+*/
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [
@@ -488,5 +489,14 @@ const quotes = [
   {
     quote: "If you can dream it, you can achieve it.",
     author: "Zig Ziglar",
-  },
+},
 ];
+
+function newQuote() {
+  const randomNumber = Math.floor(Math.random() * (quotes.length));
+  document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+}
+  
+  
+
+

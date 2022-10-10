@@ -1,1 +1,50 @@
 /** Write your CSS in here **/
+
+body{
+    background-color: rgb(149, 190, 190);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+ h1 {
+    text-align:center ;
+ }
+
+
+
+
+button{
+    border-radius: 0.25em solid white;
+    background-color: bisque;
+    font-size: 21px;
+
+}
+
+#quoteDisplay{
+    padding: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
