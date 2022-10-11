@@ -1,1 +1,10 @@
 /** Write your CSS in here **/
+
+body {
+    font-family: "Calibri", "sans-serif";
+    
+}
+
+* {
+    box-sizing: border-box;
+}

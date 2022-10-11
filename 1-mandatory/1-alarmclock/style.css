@@ -8,6 +8,12 @@
 
 #alarmSet {
   margin: 20px;
+  
+}
+
+.set-alarm {
+  /* margin: 20px; */
+  background-color: rgb(150, 139, 151);
 }
 
 h1 {

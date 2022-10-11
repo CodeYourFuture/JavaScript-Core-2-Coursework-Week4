@@ -1,6 +1,26 @@
 'strict'
 
-function setAlarm() {}
+// const display = document.getElementById("Alarm Clock");
+const beeper = alarmSound(alarmsound.mp3);
+beeper.loop = true;
+
+function setAlarm() {
+  const date = new Date();
+
+  const hour = date.getHours();
+  const minutes = date.getMinutes();
+
+  display.innerText = `${hour} : ${minutes}`
+}
+
+function formatTime(time) {
+  if ( time < 10 ) {
+    return "0" + time;
+  }
+  return time;
+}
+
+setInterval(updateTime, 60);
 
 // DO NOT EDIT BELOW HERE
 
