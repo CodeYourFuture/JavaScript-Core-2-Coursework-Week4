@@ -1,1 +1,24 @@
 /** Write your CSS in here **/
+body {
+    /* background-color: rgb(216, 160, 38); */
+    
+}
+#content {
+    /* background-color: rgb(255, 255, 255); */
+    width: 70%;
+    margin: 2em auto;
+    min-height: 400px;
+    
+    padding: 2em;
+
+}
+#quote {
+    font-size: 2em;
+    color: #d8a026;
+    
+}
+
+button {
+    background-color:  #d8a026;
+    color: aliceblue;
+}

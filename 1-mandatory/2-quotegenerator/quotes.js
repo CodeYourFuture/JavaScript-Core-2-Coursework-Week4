@@ -1,3 +1,19 @@
+document.body.style.backgroundColor = "rgb(216, 160, 38)";
+
+const content = document.getElementById("content")
+content.style.backgroundColor = "rgb(255, 255, 255)";
+
+let quote = document.getElementById("quote")
+let author = document.getElementById("author")
+let quoteButton = document.getElementById("btn");
+quoteButton.addEventListener("click", () => {
+  let generateQuote = pickFromArray(quotes);
+  quote.innerText = `" ${generateQuote.quote} "`;
+  author.innerText = `- ${generateQuote.author}`;
+});
+content.appendChild(quoteButton);
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
