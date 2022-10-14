@@ -1,4 +1,45 @@
 // DO NOT EDIT BELOW HERE
+const btn = document.querySelector(".btn");
+const quote = document.querySelector(".quote");
+const author = document.querySelector(".name");
+
+const soundBtn = document.querySelector(".sound");
+const copyBtn = document.querySelector(".copy");
+
+btn.addEventListener("click", () => {
+  btn.classList.add("loading");
+  btn.innerText = "loading Quote...";
+
+  let newQuote = pickFromArray(quotes);
+  quote.innerHTML = newQuote.quote;
+  author.innerHTML = newQuote.author;
+
+  btn.innerText = "New Quote";
+  btn.classList.remove("loading");
+});
+
+soundBtn.addEventListener("click", () => {
+  let utterance = new SpeechSynthesisUtterance(
+    `${quote.innerHTML} by ${author.innerHTML}`
+  );
+  speechSynthesis.speak(utterance);
+});
+
+copyBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText(quote.innerHTML);
+});
+
+document
+  .querySelector(".switch input")
+  .addEventListener("change", (isChecked) => {
+    isChecked.target.checked
+      ? (interval = setInterval(() => {
+          let newQuote = pickFromArray(quotes);
+          quote.innerHTML = newQuote.quote;
+          author.innerHTML = newQuote.author;
+        }, 6000))
+      : clearInterval(interval);
+  });
 
 // A function which will return one item, at
 // random, from the given array.

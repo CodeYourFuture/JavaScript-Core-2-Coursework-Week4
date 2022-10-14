@@ -1,1 +1,21 @@
 /** Write your CSS in here **/
+body{
+ margin: 0 300px;
+ padding: 40px 0;
+}
+
+.wrapper{
+ background-color: rgb(247, 242, 246);
+ height: 80vh;
+ padding: 20px;
+}
+
+header{
+ position: fixed;
+ font-size: 2rem;
+ font-weight: bold;
+}
+
+.content{
+ padding: 50px;
+}

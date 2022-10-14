@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Quote Generator</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Write your HTML in here -->
-    <script src="quotes.js"></script>
-  </body>
+
+<head>
+  <title>Quote Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Write your HTML in here -->
+  <div class="wrapper">
+    <header>Quote of the Day</header>
+    <div class="content">
+      <div class="quote-area">
+        <i class="fa fa-quote-left" style="font-size: 20px"></i>
+        <p class="quote">Never give up!</p>
+        <i class="fa fa-quote-right" style="font-size: 20px"></i>
+      </div>
+      <div class="author">
+        <span>__</span>
+        <span class="name">Dawit</span>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="features">
+        <ul>
+          <li class="sound">
+            <i class="fa fa-volume-up" style="font-size: 24px"></i>
+          </li>
+          <li class="copy">
+            <i class="fa fa-copy" style="font-size: 24px"></i>
+          </li>
+        </ul>
+        <button class="btn">New Quote</button>
+        <h2>Auto Play</h2>
+        <label class="switch">
+          <input class="check" type="checkbox" //*checked />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <script src="quotes.js"></script>
+</body>
+
 </html>
