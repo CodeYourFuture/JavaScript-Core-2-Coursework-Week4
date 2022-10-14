@@ -1,1 +1,27 @@
 /** Write your CSS in here **/
+body {
+  padding: 5rem;
+  background-image: url("https://img.freepik.com/free-vector/cute-cat-yoga-pose-cartoon-illustration_138676-2791.jpg?w=110");
+}
+
+#imageContainer {
+  height: 30rem;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid black;
+}
+
+#autoBack:hover,
+#Back:hover,
+#stop:hover,
+#Right:hover,
+#right:hover,
+#autoRight:hover {
+  background-color: aqua;
+  color: grey;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
