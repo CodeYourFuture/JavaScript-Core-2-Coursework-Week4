@@ -20,7 +20,28 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+function displayquote() {
+  const currentquote = pickFromArray(quotes)
+  document.getElementById("quote").innerHTML = currentquote.quote
+  document.getElementById("author").innerHTML = currentquote.author
 
+}
+
+ document.getElementById("newquote").addEventListener("click", function(){
+  displayquote()
+})
+var interval
+ document.getElementById("autoplay").addEventListener("change", function(){
+  if (this.checked) {
+     interval = setInterval(() => {
+    displayquote()
+    }, 1000)
+  }else {
+    clearInterval(interval)
+  }
+ 
+}
+)
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [
@@ -490,3 +511,4 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+displayquote()
