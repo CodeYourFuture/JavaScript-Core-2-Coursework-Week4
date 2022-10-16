@@ -1,1 +1,35 @@
 /** Write your CSS in here **/
+
+#img {
+  height: 600px;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+h1 {
+  color: red;
+
+  text-align: center;
+}
+
+#buttons {
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+  border: 9px;
+
+}
+
+.button {
+  border: 2px solid;
+  background-color: red;
+}
+
+.img-div-class {
+  padding: 8rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
