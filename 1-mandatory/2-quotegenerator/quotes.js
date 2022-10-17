@@ -1,3 +1,40 @@
+
+const container = document.createElement("div");
+container.setAttribute("id", "containerDiv");
+document.body.appendChild(container);
+
+const quote = document.createElement("p");
+// quote.setAttribute("id", "quote");
+container.appendChild(quote);
+
+const airQuotes = document.createElement("q");
+airQuotes.setAttribute("id", "quote");
+quote.appendChild(airQuotes);
+
+const author = document.createElement("p");
+author.setAttribute("id", "author");
+container.appendChild(author);
+
+const nextQuote = document.createElement("button");
+nextQuote.setAttribute("id", "nextQuote");
+nextQuote.innerHTML = "New Quote";
+container.appendChild(nextQuote);
+document.getElementById("nextQuote").addEventListener("click", getQuotes);
+
+function getQuotes() {
+  const getAQuote = pickFromArray(quotes);
+  const getTheAuthor = pickFromArray(quotes);
+
+  document.getElementById("quote").innerText = getAQuote.quote;
+  document.getElementById(
+    "author"
+  ).innerText = `By ${getTheAuthor.author}`;
+}
+
+window.onload = getQuotes;
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

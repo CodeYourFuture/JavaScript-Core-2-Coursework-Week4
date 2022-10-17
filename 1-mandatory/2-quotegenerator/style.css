@@ -1,1 +1,33 @@
 /** Write your CSS in here **/
+body {
+    background-image: linear-gradient(to right, rgba(148, 235, 7, 0), rgb(8, 226, 250));
+}
+
+#containerDiv {
+    padding: 50px;
+    margin: 150px 50px 50px 50px;
+    text-align: center;
+    border: 15px solid rgb(18, 72, 250);
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+#quote {
+    padding: 10px 10px auto auto;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+}
+
+#author {
+    text-align: center;
+    font-size: 20px;
+}
+
+#nextQuote {
+    padding: auto;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(179, 211, 237);
+}
