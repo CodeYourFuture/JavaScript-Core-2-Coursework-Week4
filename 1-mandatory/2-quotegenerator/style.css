@@ -1,1 +1,19 @@
 /** Write your CSS in here **/
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1rem;
+}
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.quote-card {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
