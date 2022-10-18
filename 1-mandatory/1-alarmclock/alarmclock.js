@@ -5,12 +5,16 @@ let intervalId, inputValue;
 function setAlarm() {
   inputValue = input.value;
   input.value = "";
-  decrementTime();
+decrementTime();
   intervalId = setInterval(decrementTime, 1000);
 }
+
+
+
 function decrementTime() {
+  
   timeRemaining.innerHTML = `Time Remaining: ${timeFormatter(inputValue)}`;
-  inputValue--;
+inputValue--;
   if (timeRemaining.innerHTML === "Time Remaining: 00:00") {
     playAlarm();
     clearInterval(intervalId);
