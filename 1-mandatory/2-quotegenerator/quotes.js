@@ -17,10 +17,32 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+
+
+
+/* code to generate random quotes*/
+  // get the element where u want to show the quote
+  const quoteElement = document.querySelector(".quote");
+  //  get the element to show author name
+const authorElemnt = document.querySelector(".author");
+// get the btn of New Quote
+const btn = document.getElementById("quote-btn");
+//  add event listener to the btn
+btn.addEventListener("click", genearteQuote)
+//  declare the function generateQuote
+function genearteQuote(){
+  // getting the value of generateRandomQuotes()
+  let randomQuote = generateRandomQuotes ()
+// adding text to the QuoteEklement & authorElement  where the codes will be shown 
+quoteElement.innerHTML =  quotes[randomQuote].quote
+authorElemnt.innerHTML = quotes[randomQuote].author
 }
 
+// generate random quotes
+function generateRandomQuotes() {
+ return random = [Math.floor(Math.random() * quotes.length)];
+ 
+}
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [
