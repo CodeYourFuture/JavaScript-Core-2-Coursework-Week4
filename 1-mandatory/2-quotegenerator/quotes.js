@@ -490,3 +490,20 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const quoteContainer = document.querySelector("#quote");
+const authorContainer = document.querySelector("#author");
+const btn = document.querySelector("button");
+
+function generateQuote() {
+  const quoteObj = pickFromArray(quotes);
+
+  quoteContainer.innerText = quoteObj.quote;
+  authorContainer.innerText = `- ${quoteObj.author}`;
+}
+
+generateQuote();
+
+btn.addEventListener("click", () => {
+  generateQuote();
+});

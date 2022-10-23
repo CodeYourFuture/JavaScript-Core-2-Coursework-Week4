@@ -1,1 +1,27 @@
-/** Write your CSS in here **/
+body {
+  background-color: #e67e22;
+
+}
+
+div {
+  background-color: white;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 50px;
+}
+
+#author {
+  text-align: right;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-top: 30px;
+  background-color: #e67e22;
+  padding: 10px 30px 10px 30px;
+  color: white;
+  border: none;
+  font-size: 20px;
+}
