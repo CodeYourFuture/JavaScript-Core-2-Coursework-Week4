@@ -490,3 +490,15 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+let a = pickFromArray(quotes);
+console.log(a.author);
+
+let button = document.querySelector("button");
+let quote = document.querySelector(".quote");
+let author = document.querySelector(".author");
+
+button.addEventListener("click", function () {
+  let arrquotes = pickFromArray(quotes);
+  quote.innerHTML = arrquotes.quote;
+  author.innerHTML = arrquotes.author;
+});

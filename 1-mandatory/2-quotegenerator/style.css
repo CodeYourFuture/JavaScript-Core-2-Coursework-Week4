@@ -1,1 +1,31 @@
 /** Write your CSS in here **/
+.quote {
+  font-family: "Lobster", cursive;
+  font-size: 1em;
+  color: #000000;
+  text-align: center;
+  margin: 40px auto 0 auto;
+  width: 90%;
+  padding: 1em;
+  background-color: #ffffff;
+}
+.author {
+  font-family: "Lobster", cursive;
+  font-size: 1em;
+  color: #000000;
+  text-align: right;
+  margin: 0 auto;
+  width: 90%;
+  background-color: #ffffff;
+}
+.button {
+  right: 40px;
+  bottom: 20px;
+}
+.whiteDiv {
+  width: 700px;
+  background-color: rgb(250, 250, 248);
+  margin-left: auto;
+  top: 20%;
+  left: 12%;
+}
