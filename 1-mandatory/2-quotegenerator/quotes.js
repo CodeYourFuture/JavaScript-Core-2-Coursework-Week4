@@ -1,3 +1,46 @@
+const text = document.getElementById("text");
+const name = document.getElementById("name");
+const newQuoteBtn = document.getElementById("new-quote-btn");
+const playBtn = document.getElementById("play");
+const pauseBtn = document.getElementById("pause");
+const swKey = document.querySelector(".swKey");
+const autoLoadLable = document.querySelector(".autoload-container h3");
+
+// load intial qoute
+window.addEventListener("DOMContentLoaded", () => {
+  getQoute();
+});
+
+// next qoute
+newQuoteBtn.addEventListener("click", () => {
+  getQoute();
+});
+
+// auto generate qoute every 6 seconds
+let intervalID;
+playBtn.addEventListener("click", () => {
+  swKey.classList.add("slide");
+  autoLoadLable.innerText = "Auto Load ON";
+  intervalID = setInterval(() => {
+    if (swKey.classList.contains("slide")) {
+      getQoute();
+    }
+  }, 6000);
+});
+
+// pause setInterval
+pauseBtn.addEventListener("click", () => {
+  swKey.classList.remove("slide");
+  clearInterval(intervalID);
+  autoLoadLable.innerText = "Auto Load OFF";
+});
+
+// get a qoute
+function getQoute() {
+  text.innerText = pickFromArray(quotes).quote;
+  name.innerText = pickFromArray(quotes).author;
+}
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

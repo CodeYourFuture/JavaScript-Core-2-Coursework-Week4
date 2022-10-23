@@ -1,1 +1,119 @@
-/** Write your CSS in here **/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(229, 243, 243);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+  padding: 10px;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1.4px;
+  font-size: 2.4rem;
+}
+
+.main-tilte div {
+  margin: 10px auto;
+  width: 80px;
+  border-bottom: 8px solid #5398de;
+  border-radius: 6px;
+}
+.card {
+  padding: 40px;
+  background-color: white;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  box-shadow: 0px 0px 12px -3px #bcbcbc;
+  position: relative;
+  border-radius: 4px;
+}
+
+.card h4::before {
+  content: "“";
+  position: absolute;
+  background-color: #5398de;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  top: -20px;
+  left: -20px;
+  font-size: 2rem;
+  color: #ffffff;
+  padding-top: 4px;
+}
+#new-quote-btn {
+  background: none;
+  color: #5398de;
+  font-weight: 600;
+  padding: 6px;
+  border: none;
+  border: 2px solid #5398de;
+  font-size: 0.8rem;
+  background-color: #f4f9ff;
+  border-radius: 14px;
+}
+
+#new-quote-btn:hover {
+  cursor: pointer;
+  color: #2c5277;
+}
+
+#name {
+  font-size: 1.2rem;
+}
+
+#text {
+  font-size: 1.1rem;
+}
+
+/* switch button */
+#auto-load-btn {
+  position: relative;
+  width: 7rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 6px;
+  border: none;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+#auto-load-btn span {
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.swKey {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background-color: #5398de;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.slide {
+  left: 0;
+}
