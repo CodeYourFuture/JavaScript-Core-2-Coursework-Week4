@@ -491,9 +491,12 @@ const quotes = [
   },
 ];
 
+let autoGenerate;
+
 const quoteContainer = document.querySelector("#quote");
 const authorContainer = document.querySelector("#author");
 const btn = document.querySelector("button");
+const checkbox = document.querySelector("#checkbox");
 
 function generateQuote() {
   const quoteObj = pickFromArray(quotes);
@@ -506,4 +509,14 @@ generateQuote();
 
 btn.addEventListener("click", () => {
   generateQuote();
+});
+
+checkbox.addEventListener("change", (e) => {
+  if (e.target.checked) {
+    autoGenerate = setInterval(() => {
+      generateQuote();
+    }, 2000);
+  } else {
+    clearInterval(autoGenerate);
+  }
 });

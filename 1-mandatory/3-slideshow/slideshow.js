@@ -26,15 +26,21 @@ btnBack.addEventListener("click", () => {
 });
 
 btnAutoForward.addEventListener("click", () => {
+  const inputSeconds = document.querySelector("#input-seconds");
+  intervalTime = inputSeconds.value * 1000 || 2000;
+
   interval = setInterval(() => {
     moveForward();
-  }, 2000);
+  }, intervalTime);
 });
 
 btnAutoBackward.addEventListener("click", () => {
+  const inputSeconds = document.querySelector("#input-seconds");
+  intervalTime = inputSeconds.value * 1000 || 2000;
+
   interval = setInterval(() => {
     moveBackward();
-  }, 2000);
+  }, intervalTime);
 });
 
 btnStop.addEventListener("click", () => {
