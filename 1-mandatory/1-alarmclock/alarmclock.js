@@ -2,7 +2,9 @@ const timeRemaining = document.getElementById("timeRemaining");
 const alarmSet = document.getElementById("alarmSet");
 const stop = document.getElementById("stop");
 let isTimerOff = true;
+let intervalId;
 
+// start the timer
 function setAlarm() {
   let timeValue = alarmSet.value;
   if (timeValue && /^[0-9]+$/g.test(timeValue) && timeValue > 1 && isTimerOff) {
@@ -11,23 +13,32 @@ function setAlarm() {
       timeValue
     )}`;
     // interval 1 second to show count down
-    const secondCount = setInterval(() => {
+    intervalId = setInterval(() => {
       timeValue--;
       timeRemaining.innerText = `Time Remaining: ${getCorrectTimeFormat(
         timeValue
       )}`;
       if (timeValue < 1) {
         playAlarm();
-        clearInterval(secondCount);
+        clearInterval(intervalId);
         document.body.style.backgroundColor = "red";
         isTimerOff = true;
       }
     }, 1000);
   }
   alarmSet.value = "";
-  // Stop the alarm clock
-  stop.addEventListener("click", () => window.location.reload());
 }
+
+// Stop the alarm clock
+stop.addEventListener("click", () => {
+  clearInterval(intervalId);
+  document.body.style.backgroundColor = "white";
+  pauseAlarm();
+  isTimerOff = true;
+});
+
+//reset the alarm
+stop.addEventListener("dblclick", () => location.reload());
 
 // This function format the seconds to min and sec
 function getCorrectTimeFormat(timeValue) {
