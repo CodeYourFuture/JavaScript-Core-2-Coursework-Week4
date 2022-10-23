@@ -1,4 +1,28 @@
-function setAlarm() {}
+function setAlarm() {
+  const setAlarmButton = document.querySelector("#set");
+  let displayTime = document.querySelector("#second");
+
+  setAlarmButton.addEventListener("click", function () {
+    const inputValue = document.querySelector("#alarmSet").value;
+    displayTime.innerHTML = inputValue;
+
+    setInterval(() => {
+      if (displayTime.innerHTML > 0) {
+       document.body.style.backgroundColor = "green";
+        displayTime.innerHTML--;
+        
+      } else {
+        displayTime = 0;
+        document.body.style.backgroundColor = "orange";
+      }
+    }, 1000);
+
+
+  });
+
+}
+
+setAlarm();
 
 // DO NOT EDIT BELOW HERE
 
