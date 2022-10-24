@@ -22,11 +22,11 @@ function basicStructure(array) {
   section_Buttons.setAttribute("id", "section_Buttons");
 
   //creating buttons
-  const autoBackBtn = document.createElement("button");
+  let autoBackBtn = document.createElement("button");
   const backBtn = document.createElement("button");
   const stopButton = document.createElement("button");
   const forwardBtn = document.createElement("button");
-  const autoForwardBtn = document.createElement("button");
+ var autoForwardBtn = document.createElement("button");
 
   // setting inside text
   autoBackBtn.innerText = "Auto Back";
@@ -57,8 +57,12 @@ function basicStructure(array) {
   parentDiv.appendChild(ChildDiv);
 
   // Appending parentDive to the body
-  document.body.appendChild(parentDiv);
-
+    document.body.appendChild(parentDiv);
+    
+    // for initialisation 
+    imgEl.src = array[index];
+    
+    
   //Forward button
   forwardBtn.addEventListener("click", function () {
     imgEl.src = array[index];
@@ -68,7 +72,7 @@ function basicStructure(array) {
   // backward button
   backBtn.addEventListener("click", function () {
     imgEl.src = array[index];
-    index <= 0 ? (index = array.length - 1) : index--;
+    index <= 0 ? index = array.length - 1 : index--;
   });
 
 }
