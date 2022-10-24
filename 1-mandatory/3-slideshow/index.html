@@ -2,16 +2,33 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div class="slideshow">
+      <img src="./img/img-1.jpg" />
+      <img src="./img/img-2.jpg" />
+      <img src="./img/img-3.jpg" />
+      <img src="./img/img-4.jpg" />
+      <img src="./img/img-5.jpg" />
+    </div>
+    <div id="btn-container">
+      <button id="auto-backward-btn" class="btn">Auto Backward</button>
+      <button id="back-btn" class="btn">Backward</button>
+      <button id="stop-btn" class="btn">Stop</button>
+      <button id="forward-btn" class="btn">Forward</button>
+      <button id="auto-forward-btn" class="btn">Auto Forward</button>
+    </div>
+    <div class="form">
+      <p class="counter">1</p>
+      <form action="">
+        <label for="time">2</label>
+        <input type="number" name="time" id="time-input" min="1" max="10" />
+        <button type="submit" class="btn" id="submit-btn">
+          Set Your Delay
+        </button>
+      </form>
+    </div>
     <script src="slideshow.js"></script>
   </body>
 </html>
