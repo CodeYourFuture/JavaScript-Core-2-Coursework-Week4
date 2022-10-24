@@ -1,0 +1,31 @@
+/** Write your CSS in here **/
+.container {
+  margin-top: 1rem;
+}
+/* .container::after {
+  content: "--------------------";
+  display: table;
+  clear: both;
+  font-size: 30px;
+} */
+#butt {
+  margin-top: 1rem;
+}
+img {
+  height: 200px;
+  height: 200px;
+}
+
+.myImg {
+  width: 400px;
+  height: 400px;
+  border: solid 2px black;
+}
+.slideImg {
+  width: 400px;
+  height: 400px;
+  border: solid 2px black;
+  /* background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
