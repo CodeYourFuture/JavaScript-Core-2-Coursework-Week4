@@ -1,1 +1,41 @@
 /** Write your CSS in here **/
+body {
+  height: 100%;
+  background-color: orange;
+}
+#div {
+  background-color: white;
+  display: grid;
+  grid-template-areas:
+    "p p p p p p p p p p"
+    ". . . . . . . . span ."
+    ". . . . . . . . button .";
+  width: 80vw;
+  height: 20vw;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#par {
+  grid-area: p;
+  color: orange;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  text-align: center;
+}
+#span {
+  grid-column: 9/-2;
+  font-family:Arial, Helvetica, sans-serif;
+   font-size: large;
+  text-align: center;
+  color: orange;
+}
+
+#button {
+  background-color: orange;
+  grid-area: button;
+  border: none;
+  color: white;
+}

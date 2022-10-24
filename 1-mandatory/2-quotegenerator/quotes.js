@@ -490,3 +490,37 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+// creating elements
+const divEl = document.createElement('div');
+const newQuote = document.createElement('button');
+newQuote.innerText = 'New quote';
+const pEl = document.createElement("p");
+const spanEl = document.createElement("p");
+pEl.innerText = "Click the bellow button to get amazing motivational quotes";
+
+// creating element ids for styling
+divEl.setAttribute("id", "div");
+newQuote.setAttribute("id", "button");
+pEl.setAttribute("id", "par");
+spanEl.setAttribute("id", "span");
+
+
+
+// Getting new quote each time
+
+newQuote.addEventListener('click', function () {
+  const randomQuotes = quotes[Math.floor(Math.random() * quotes.length)];
+  pEl.innerText = `${randomQuotes.quote}`;
+  spanEl.innerText = `${randomQuotes.author}`;
+})
+
+// appending elements togher
+divEl.appendChild(pEl);
+divEl.appendChild(spanEl);
+divEl.appendChild(newQuote);
+document.body.appendChild(divEl)
+
+console.log(pEl.innerText);
+console.log(spanEl.innerText);
