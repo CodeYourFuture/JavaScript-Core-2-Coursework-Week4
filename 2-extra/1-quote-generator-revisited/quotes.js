@@ -490,15 +490,41 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
-let a = pickFromArray(quotes);
-console.log(a.author);
 
 let button = document.querySelector("button");
 let quote = document.querySelector(".quote");
 let author = document.querySelector(".author");
 
-button.addEventListener("click", function () {
+function ahowQuote() {
   let arrquotes = pickFromArray(quotes);
   quote.innerHTML = arrquotes.quote;
   author.innerHTML = arrquotes.author;
+}
+
+button.addEventListener("click", function () {
+  ahowQuote();
+});
+// 💫💫💫💫💫💫💫💫💫💫💫💫💫💫
+
+const whiteDiv = document.querySelector(".whiteDiv");
+const customSwitch1 = document.querySelector("#customSwitch1");
+// let customSwitch2 = document.querySelector("#customSwitch2");
+let show;
+let p;
+customSwitch1.addEventListener("click", function () {
+  if (customSwitch1.checked) {
+    quote.textContent = "";
+    p = document.createElement("p");
+    p.textContent = "auto-play:ON";
+    p.style.color = "green";
+    quote.classList.add("quote-dark");
+    whiteDiv.appendChild(p);
+    show = setInterval(() => {
+      ahowQuote();
+    }, 1000);
+  } else {
+    clearInterval(show);
+    quote.classList.remove("quote-dark");
+    p.textContent = "";
+  }
 });
