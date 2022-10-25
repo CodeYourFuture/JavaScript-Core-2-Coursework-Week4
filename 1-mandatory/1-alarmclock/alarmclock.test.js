@@ -4,7 +4,7 @@ There are some Tests in this file that will help you work out if your code is wo
 
 const path = require("path");
 const { JSDOM } = require("jsdom");
-
+require("@testing-library/jest-dom");
 let page = null;
 
 beforeEach(async () => {
