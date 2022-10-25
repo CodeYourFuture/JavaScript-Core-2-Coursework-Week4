@@ -1,1 +1,44 @@
 /** Write your CSS in here **/
+body, button {
+background-color: #e63946;
+}
+
+section {
+    background-color: white;
+    width: 70%;
+    height: 400px;
+}
+
+h1, div{
+    color: #e63946;
+    font-family: 'Caveat', cursive;
+
+}
+
+#container{
+    display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-around;
+        align-items: flex-end;
+        margin: 300px;
+        padding: 50px;
+    
+}
+
+#title{
+    font-size: 48px;;
+}
+
+#author{
+    font-size: 32px;
+}
+
+#quotebtn{
+color: white;
+    width: 100px;
+    border: none;
+    padding: 10px;
+}
+
+
