@@ -8,10 +8,20 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+      <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Write your HTML in here -->
+    <h1>Cute cats slideshow</h1>
+    <img id="image" src = "cats/cat0.jpg"></img>
+    <button onclick="autoPlay(-1)" id="autoback">Auto Back</button>
+    <button onclick="slideChange(-1)" id="backbtn">Back</button>
+    <button onclick="autoPlay(0)" id="stopbtn">Stop</button>
+    <button onclick="slideChange(1)" id="nextbtn">Forward</button>
+    <button onclick= "autoPlay(1)" id="autonext">Auto Forward</button>
+
     <script src="slideshow.js"></script>
   </body>
 </html>

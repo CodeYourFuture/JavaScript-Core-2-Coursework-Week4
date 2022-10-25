@@ -1,1 +1,25 @@
 /** Write your CSS in here **/
+body {
+  background-color: #e63946;
+}
+
+button {
+  background-color: white;
+  color: #e63946;
+  width: 150px;
+  border: none;
+  padding: 10px;
+}
+
+h1 {
+  color: white;
+  font-family: "Caveat", cursive;
+  font-size: 48px;
+}
+
+img {
+  width: 450px;
+  height: 300px;
+  display: block;
+  margin: 30px 0px;
+}
