@@ -1,5 +1,7 @@
 let isPaused = false;
 let timer;
+let mini;
+let seconds;
 
 function setAlarm() {
   document.querySelector("body").style.backgroundColor = "white";
@@ -21,7 +23,7 @@ function setAlarm() {
         clearInterval(timer);
         timeRemaining.textContent = `Time Remaining: 00:00`;
         document.querySelector("body").style.backgroundColor = "red";
-        timeRemaining.textContent = `Time Remaining: 00:00`;
+        // timeRemaining.textContent = `Time Remaining: 00:00`;
       }
     }, 1000);
   }
@@ -29,8 +31,7 @@ function setAlarm() {
 }
 //💫💫💫💫💫
 
-function pauseTimer(e) {
-  // e.preventDefault();
+function pauseTimer() {
   clearInterval(timer);
   timeRemaining.textContent = `Time Remaining: 00:00`;
 }
@@ -40,10 +41,6 @@ document.getElementById("clear").addEventListener("click", () => {
 document.getElementById("pause").addEventListener("click", () => {
   isPaused = !isPaused;
 });
-
-// document.getElementById("reset").addEventListener("click", () => {
-//   isPaused = false;
-// });
 
 var audio = new Audio("alarmsound.mp3");
 
@@ -67,23 +64,3 @@ function pauseAlarm() {
 }
 
 window.onload = setup;
-
-// function setAlarm() {
-//   const timeRemaining = document.querySelector("#timeRemaining");
-//   const inputAlarmSet = document.querySelector("#alarmSet");
-//   let seconds = inputAlarmSet.value;
-
-//   timeRemaining.innerText = `Time Remaining: 00:${seconds}`;
-
-//   const countDown = setInterval(() => {
-//     seconds--;
-//     timeRemaining.innerText = `Time Remaining: 00:${seconds}`;
-
-//     console.log(seconds);
-
-//     if (seconds === 0) {
-//       playAlarm();
-//       clearInterval(countDown);
-//     }
-//   }, 1000);
-// }

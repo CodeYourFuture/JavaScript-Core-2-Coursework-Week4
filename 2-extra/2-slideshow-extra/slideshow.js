@@ -1,19 +1,3 @@
-{
-  /* <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
-</div> */
-}
-
 // Write your code here
 const imges = [
   "img/johnson-hung-LnkaFuMLr1U-unsplash.jpg",
@@ -28,15 +12,6 @@ const myImges = [
   "myImges/job-savelsberg-un4-mNxMyhw-unsplash.jpg",
   "myImges/yulia-arnaut-ReqYkqKO3Uc-unsplash.jpg",
 ];
-// const carousel = document.querySelector(".carousel-inner");
-// const carouselItem = document.createElement("div");
-// const carouselImg = document.createElement("img");
-// carouselItem.classList.add("carousel-item");
-// carouselImg.classList.add("d-block");
-// carouselImg.classList.add("w-100");
-
-// carousel.appendChild(carouselItem);
-// carouselItem.appendChild(carouselImg);
 function creatEl() {
   return (
     (carousel = document.querySelector(".carousel-inner")),
@@ -70,7 +45,7 @@ const Back = document.querySelector(".Back");
 const Stop = document.querySelector(".Stop");
 const Forward = document.querySelector(".Forward");
 const Autoforward = document.querySelector(".Autoforward");
-
+document.querySelector(".slideImg").src = myImges[0];
 function imgEL(i) {
   return (
     (slideImg = document.querySelector(".slideImg")),
@@ -88,10 +63,10 @@ function autoBack() {
       i = 0;
       imgEL(i);
     }
-    // console.log("1>>>" + i);
   });
 
   //💫💫
+
   Back.addEventListener("click", () => {
     i--;
     imgEL(i);
@@ -102,15 +77,35 @@ function autoBack() {
       i = i;
       imgEL(i);
     }
-    // console.log("2>>>" + i);
   });
 }
 autoBack();
 
-//💫💫
+//💫💫🍉🍉🍉🍉🍉🍉🍉
+let time = 5000;
+let timer;
+let alarmSet;
+function setAlarm() {
+  let timeRemaining = document.querySelector(".count");
+  alarmSet = (time / 100000) * 100;
+  timer = setInterval(() => {
+    if (alarmSet > 0) {
+      timeRemaining.textContent = `${--alarmSet}`;
+      timeRemaining.style.backgroundColor = "rgb(109, 202, 232)";
+    } else if (alarmSet === 0) {
+      alarmSet = ((time - 1000) / 100000) * 100;
+      timeRemaining.textContent = `${alarmSet}`;
+      timeRemaining.style.backgroundColor = "rgb(109, 202, 232)";
+    }
+  }, 1000);
+}
 
+//💫💫🍉🍉🍉🍉🍉🍉🍉
+// let time = 2000;
 let i = 0;
 let clear;
+let wait;
+
 Autoforward.addEventListener("click", () => {
   clear = setInterval(() => {
     if (i < myImges.length - 1) {
@@ -120,8 +115,8 @@ Autoforward.addEventListener("click", () => {
       i = 0;
       imgEL(i);
     }
-    // console.log("2>>>" + i);
-  }, 2000);
+  }, time);
+  setAlarm();
 });
 
 //💫💫
@@ -137,11 +132,14 @@ Autoback.addEventListener("click", () => {
       i = i;
       imgEL(i);
     }
-    // console.log("2>>>" + i);
-  }, 2000);
+  }, time);
+  setAlarm();
 });
 //💫💫
 Stop.addEventListener("click", () => {
   clearInterval(clear);
-  //   imgEL(null);
+  clearInterval(timer);
+  let timerBack = document.querySelector(".count");
+  timerBack.textContent = "";
+  timerBack.style.backgroundColor = " rgb(252, 252, 252)";
 });
