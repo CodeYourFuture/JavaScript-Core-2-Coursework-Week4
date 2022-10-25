@@ -20,6 +20,32 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+document.body.style.backgroundColor = "#FFB40F";
+
+let divEl= document.createElement("div");
+divEl.classList.add="quote-content";
+divEl.style.cssText =
+  "width: 750px;height: 200px;background-color:#FFFD7C; position: absolute; top: 30%;left: 20%;";
+document.body.appendChild(divEl);
+
+let pQuoteEl=document.createElement("p");
+let pAuthorEl=document.createElement("p");
+pQuoteEl.style.cssText ="text-align:center;margin-top:30px;font-weight:bold; font-size:large";
+pAuthorEl.style.cssText="text-align:center; margin-right:15px;font-weight:bold; font-size:small; font-style:italic"
+divEl.appendChild(pQuoteEl);
+divEl.appendChild(pAuthorEl);
+
+let buttonEl=document.createElement("button");
+divEl.appendChild(buttonEl);
+buttonEl.style.cssText =
+  "width :100px;height:45px;position :absolute;top:70%;left:80%;border :none;background-color:rgb(192, 192, 170);";
+buttonEl.innerText="New Quote";
+buttonEl.addEventListener("click",()=>{
+  let result=pickFromArray(quotes);
+  pQuoteEl.textContent=`${result.quote}`;
+  pAuthorEl.textContent = `- ${result.author}-`;
+
+});
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
