@@ -70,6 +70,7 @@ const Back = document.querySelector(".Back");
 const Stop = document.querySelector(".Stop");
 const Forward = document.querySelector(".Forward");
 const Autoforward = document.querySelector(".Autoforward");
+document.querySelector(".slideImg").src = myImges[0];
 
 function imgEL(i) {
   return (
