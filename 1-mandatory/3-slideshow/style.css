@@ -1,1 +1,30 @@
 /** Write your CSS in here **/
+h1{
+    text-align: center;
+}
+.image-container{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left:410px;
+    top:100px;
+    border: 1px solid black;
+}
+.button-container{
+    position: absolute;
+    left : 410px;
+    top : 600px;
+    width: 500px;
+    
+}
+.fwd-btn ,.bkw-btn, .afw-btn{
+    width:70px;
+    height: 30px;
+    border: none;
+    margin-right: 10px;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+}
