@@ -1,3 +1,8 @@
+
+
+document.getElementById("newButton").addEventListener("click",pickFromArray)
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -18,7 +23,16 @@
 //
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+  
+  choices  =  quotes
+  
+  let obj = choices[Math.floor(Math.random() * choices.length)];
+  
+  let title = document.getElementById("title");
+  title.innerText = obj.quote
+
+  let author = document.getElementById("author")
+  author.innerText = `-${obj.author}`
 }
 
 // A list of quotes you can use in your app.

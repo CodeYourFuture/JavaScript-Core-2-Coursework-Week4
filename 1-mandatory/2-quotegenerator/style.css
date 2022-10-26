@@ -1,1 +1,60 @@
-/** Write your CSS in here **/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    
+  }
+
+  h1 {
+    display:flex ;
+    width: 100%;
+    overflow-wrap: break-word;
+    color:rgb(227, 183, 100) 
+  }
+
+ h3 {
+    color: rgb(227, 183, 100) ;
+ }
+.layout {
+    display: flex;
+    justify-content: center;
+   
+    align-items: center;
+    height: 100%;
+    background-color:rgb(227, 183, 100) ;
+}
+
+#box {
+    padding: 100px 80px;
+    width: 70%;
+    height: auto;
+    background-color: rgb(250, 240, 222) ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow-wrap: break-word;
+    border-radius: 20px;
+    
+   
+}
+
+#title {
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+#author {
+    margin: 50px;
+}
+
+#newButton {
+background-color:rgb(227, 183, 100) ;
+border: none;
+width: 10rem;
+height: 3rem;
+color:rgb(250, 240, 222) ;
+}
+
+.iconclr {
+    color:rgb(227, 183, 100)
+}
