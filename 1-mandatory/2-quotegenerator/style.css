@@ -1,1 +1,29 @@
 /** Write your CSS in here **/
+.orange{
+    background-color: orange;
+    height:500px;
+    position:relative;
+    z-index: 1;
+    margin-top: 150px;
+
+    
+
+}
+.whitePart{
+    background-color: white;
+    
+    height:250px;
+    width:80%;
+    position: absolute;
+    z-index: 2;
+    top:250px;
+    margin-left: 150px;
+
+}
+
+.newQuote{
+    background-color:orange;
+color: white;
+padding: 10px;
+
+}

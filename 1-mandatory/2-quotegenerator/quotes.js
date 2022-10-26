@@ -490,3 +490,15 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let theQuote=document.querySelector('.theQuote');
+let authorsName=document.querySelector('.theName');
+let changingButton=document.querySelector('.newQuote');
+function showingThequote(){
+  let comeUp=pickFromArray(quotes);
+  theQuote.innerText=`''${comeUp.quote}`
+  authorsName.innerText=`*${comeUp.author}`
+}
+
+showingThequote()
+changingButton.addEventListener('click',()=>showingThequote())

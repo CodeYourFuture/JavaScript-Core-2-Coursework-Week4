@@ -19,7 +19,7 @@ function setAlarm() {
   },1000)
 
   }
-  setAlarm();
+  
 
 
 // DO NOT EDIT BELOW HERE
