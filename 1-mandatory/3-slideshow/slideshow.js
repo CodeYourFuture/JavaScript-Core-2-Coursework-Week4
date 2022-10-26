@@ -21,7 +21,7 @@ forwardBtn.addEventListener("click", forward);
 function forward() {
   slideShow.src = images[slider];
   slider++;
-  if (slider > images.length -1) {
+  if (slider === images.length) {
     slider = 0;
   }
 }
