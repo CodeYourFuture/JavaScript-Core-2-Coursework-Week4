@@ -1,0 +1,12 @@
+/** Write your CSS in here **/
+
+* {
+text-align: center;
+justify-content: center;
+padding: 0.5rem;
+}
+
+.quote {
+    font-size: 2rem;
+    color: rgb(166, 114, 84);
+}

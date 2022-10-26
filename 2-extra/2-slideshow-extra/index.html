@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Write your HTML in here -->
+    <h1>Travel Image Slideshow</h1>
+    <img id="image">
+    <div class="container">
+        <button class="buttons" id="auto-back">Auto Back</button>
+        <button class="buttons" id="previous">Back</button>
+        <button class="buttons" id="stop">Stop</button>
+        <button class="buttons" id="next">Forward</button>
+        <button class="buttons" id="auto-forward">Auto Forward</button> 
+    </div>
+    <div class="container">
+    <input id="timeInput" placeholder=" Enter Time Interval" type="number" />
+    <button class="buttons" id="setTime">Set Time Interval</button>
+    </div>
+    <script src="slideshow.js"></script>
+  </body>
+</html>
