@@ -20,6 +20,15 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+const prag = document.getElementById("quote"); // select h5 tag by ID
+const author = document.getElementById("author");// select p tag  by ID
+const but=document.getElementById("but")// select button  by ID
+but.addEventListener("click",()=>{ // add event 
+    let result = pickFromArray(quotes); // pass array to pickfromarray function 
+  prag.innerText = `" ${result.quote}`; // display quote 
+  author.innerText = `- ${result.author}` // display aythor 
+})
+
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
