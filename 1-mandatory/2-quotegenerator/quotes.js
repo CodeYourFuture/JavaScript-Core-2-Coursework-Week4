@@ -484,9 +484,10 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
 let div1 = document.querySelector(".divQuotes");
 div1.style.cssText =
-  "background-color:blue; font-size:40px; color:white !important;text-align: center; padding:10%";
+  "background-color:blue; font-size:40px; text-align: center; padding:10%";
 
 let button1 = document.querySelector(".nqButton");
 button1.style.cssText =
@@ -501,7 +502,7 @@ function pickFromArray(choices) {
   let paragraph = document.querySelector(".pQuotes");
   paragraph.style.cssText =
     "padding:10% ; background-color: yellow ; color:blue";
-  paragraph.innerText = `Quote: ${obj.quote}\nAuthor: "${obj.author}"`;
+  paragraph.innerText = `Quote: "${obj.quote}"\nAuthor: ${obj.author}`;
 }
 
 // A list of quotes you can use in your app.

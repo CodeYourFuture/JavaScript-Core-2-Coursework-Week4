@@ -8,11 +8,9 @@ function setAlarm() {
     minutes = minutes < 10 ? "0" + minutes : minutes;
     let second = inputValue % 60;
     second = second < 10 ? "0" + second : second;
-    // minutes = minutes < 10 ? "0" + minutes : minutes;
+
     timeRemaining.innerHTML = "Time Remaining: " + minutes + ":" + second;
-
     inputValue--;
-
     if (inputValue <= 0) {
       playAlarm();
       clearInterval(seconds);
