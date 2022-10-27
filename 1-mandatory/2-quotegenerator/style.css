@@ -1,1 +1,27 @@
 /** Write your CSS in here **/
+#btn {
+    color: white;
+    background-color: rgb(45, 68, 45);
+    border: none;
+    padding: 1rem;
+    font-size: large;
+    font-weight: 500;
+    margin-left: 66rem;
+    margin-bottom: 2rem;
+    outline: none;
+}
+
+p {
+    color: rgb(45, 68, 45);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+#author {
+    text-align: right;
+    padding-top: 0rem;
+    margin-right: 1.5rem;
+    font-size: x-large;
+}

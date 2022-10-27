@@ -1,3 +1,33 @@
+document.body.style.backgroundColor = "rgb(45, 68, 45)";
+
+let containerEl = document.getElementById("container");
+document.body.appendChild(containerEl);
+containerEl.style.margin = "10rem";
+containerEl.style.backgroundColor = "white";
+
+let quote = document.createElement("p");
+quote.setAttribute("id", "quote");
+quote.innerText = `"Life isn’t about getting and having, it’s about giving and being."`;
+containerEl.appendChild(quote);
+
+let author = document.createElement("p");
+author.setAttribute("id", "author");
+author.innerHTML = `<em> - Kevin Kruse</em>`;
+containerEl.appendChild(author);
+
+let quoteButton = document.createElement("button");
+quoteButton.innerText = "New quote";
+quoteButton.setAttribute("id", "btn");
+
+quoteButton.addEventListener("click", () => {
+  quoteButton.style.outline = "none";
+  let generateQuote = pickFromArray(quotes);
+  //document.getElementById('quote').innerText = generateQuote.quote;
+  //document.getElementById('author').innerText = generateQuote.author;
+  quote.innerText = `" ${generateQuote.quote} "`;
+  author.innerText = `- ${generateQuote.author}`;
+});
+containerEl.appendChild(quoteButton);
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
