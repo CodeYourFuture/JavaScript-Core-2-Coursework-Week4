@@ -1,3 +1,17 @@
+
+
+let btn = document.querySelector("#Qbtn");
+let quote = document.querySelector(".quote");
+let  author = document.querySelector(".author");
+
+btn.addEventListener("click", function(){
+ let random = Math.floor(Math.random() * quotes.length);
+
+ quote.innerHTML = quotes[random].quote;
+ author.innerHTML = quotes[random].author;
+})
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +504,5 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
