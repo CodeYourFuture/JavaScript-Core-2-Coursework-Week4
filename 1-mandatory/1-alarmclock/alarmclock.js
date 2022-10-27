@@ -1,4 +1,21 @@
-function setAlarm() {}
+function setAlarm() {
+  let alarmSetValue = document.getElementById("alarmSet").value;
+  let timeDisplay = document.getElementById("timeRemaining");
+ let interval = setInterval(() => {
+ let minutes =Math.floor(alarmSetValue / 60);
+ let seconds = alarmSetValue%60;
+ minutes = minutes >= 10 ? minutes : "0" + minutes;
+ seconds = seconds >= 10 ? seconds : "0" + seconds;
+timeDisplay.innerText=`Time Remaining: ${minutes}:${seconds}`;
+  
+alarmSetValue--;
+if (alarmSetValue < 0) {
+  clearInterval(interval);
+  playAlarm();
+}
+ },1000);
+
+}
 
 // DO NOT EDIT BELOW HERE
 
