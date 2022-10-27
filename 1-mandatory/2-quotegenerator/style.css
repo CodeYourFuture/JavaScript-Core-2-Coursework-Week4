@@ -1,1 +1,15 @@
 /** Write your CSS in here **/
+body{
+    background-color: blueviolet;
+}
+#content{
+    text-align: center;
+    background-color: aqua;
+    margin-top: 5em;
+    padding: 20px;
+}
+
+#quote-btn{
+    float: right;
+    margin: 20px 50px 0 0;
+}
