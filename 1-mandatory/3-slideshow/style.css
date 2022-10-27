@@ -1,1 +1,14 @@
 /** Write your CSS in here **/
+body{
+    margin: 50px;
+    padding: 0;
+}
+
+img{
+    height: 500px;
+    /* width: 426px; */
+}
+button{
+    padding: 10px;
+    margin-top: 40px;
+}
