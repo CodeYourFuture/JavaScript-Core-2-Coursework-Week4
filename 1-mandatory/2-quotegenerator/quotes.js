@@ -17,12 +17,6 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
-
-// A list of quotes you can use in your app.
-// Feel free to edit them, and to add your own favourites.
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
@@ -490,3 +484,32 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function pickFromArray(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+document.body.style.backGround="rgb(188, 142, 110)";
+let divEl=document.createElement("div");
+document.body.appendChild(divEl);
+divEl.style.backGround="white";
+divEl.style.cssText =
+  "width: 800px;height: 200px;background-color:white; position: absolute; top: 30%;left: 20%;";
+let header=document.createElement("h1");
+let paragragh=document.createElement("p");
+let button=document.createElement("button");
+header.innerText=pickFromArray(quotes).quote;
+paragragh.innerText=pickFromArray(quotes).author;
+button.innerText="New Quote"
+divEl.appendChild(header);
+divEl.appendChild(paragragh);
+divEl.appendChild(button);
+header.style.cssText ="text-align:center;margin-top:30px;font-weight:bold; font-size:large";
+paragragh.style.cssText="text-align:center; margin-right:15px;font-weight:bold; font-size:small; font-style:italic"
+button.addEventListener("click",function(){
+  header.innerText=pickFromArray(quotes).quote;
+paragragh.innerText=pickFromArray(quotes).author;
+
+})
+
+// A list of quotes you can use in your app.
+// Feel free to edit them, and to add your own favourites.
