@@ -1,1 +1,21 @@
-/** Write your CSS in here **/
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#images {
+    width: 80%;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
