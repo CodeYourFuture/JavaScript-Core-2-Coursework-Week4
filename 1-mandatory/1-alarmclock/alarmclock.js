@@ -14,12 +14,12 @@ function setAlarm() {
     if (valueOfInput < 0) {
       clearInterval(timmer);
       playAlarm();
+      document.body.style.background = "red" 
     }
   }, 1000);
   input.value = "";
   stopAlarm.addEventListener("click",pauseAlarm)
 }
-
 // DO NOT EDIT BELOW HERE
 
 var audio = new Audio("alarmsound.mp3");
@@ -31,6 +31,7 @@ function setup() {
 
   document.getElementById("stop").addEventListener("click", () => {
     pauseAlarm();
+    document.body.style.background = "white"  
   });
 }
 
