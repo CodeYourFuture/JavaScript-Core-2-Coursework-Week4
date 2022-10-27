@@ -17,12 +17,6 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
-
-// A list of quotes you can use in your app.
-// Feel free to edit them, and to add your own favourites.
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
@@ -490,3 +484,25 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+let div1 = document.querySelector(".divQuotes");
+div1.style.cssText =
+  "background-color:blue; font-size:40px; color:white !important;text-align: center; padding:10%";
+
+let button1 = document.querySelector(".nqButton");
+button1.style.cssText =
+  "background-color: skyblue; text-align:center;font-size:30px;color:blue";
+button1.addEventListener("click", pickFromArray);
+
+function pickFromArray(choices) {
+  choices = quotes;
+
+  let obj = choices[Math.floor(Math.random() * choices.length)];
+
+  let paragraph = document.querySelector(".pQuotes");
+  paragraph.style.cssText =
+    "padding:10% ; background-color: yellow ; color:blue";
+  paragraph.innerText = `Quote: ${obj.quote}\nAuthor: "${obj.author}"`;
+}
+
+// A list of quotes you can use in your app.
+// Feel free to edit them, and to add your own favourites.
