@@ -1,6 +1,21 @@
+let startTheAlarm;
 function setAlarm() {
+  clearTimeout(startTheAlarm)
   let value = document.getElementById("alarmSet").value;
   let title = document.getElementById("timeRemaining");
+  title.innerText = humanReadable(value)
+  startTheAlarm = setInterval(decreaseSec,1000);
+  
+  function decreaseSec(){
+    value -= 1;
+    title.innerText = humanReadable(value)
+    if(value == 0){
+      clearInterval(startTheAlarm);
+       playAlarm()
+    }
+    
+  }
+  
   function humanReadable (value) {
     let hours = Math.floor(value/3600);
     let minute = Math.floor(((value/3600)%1)*60)
@@ -21,17 +36,7 @@ function setAlarm() {
     return `Time remaining ${hours}:${minute}:${second}`
   }
   
-  title.innerText = humanReadable(value)
-  let startTheAlarm = setInterval(decreaseSec,1000);
-
-  function decreaseSec(){
-    value -= 1;
-    title.innerText = humanReadable(value)
-    if(value == 0){
-      clearInterval(startTheAlarm);
-      playAlarm()
-    }
-  }
+  
 }
 
 // DO NOT EDIT BELOW HERE
@@ -49,10 +54,13 @@ function setup() {
 }
 
 function playAlarm() {
+  
   audio.play();
 }
 
 function pauseAlarm() {
+  clearTimeout(startTheAlarm)
+  clearInterval()
   audio.pause();
 }
 
