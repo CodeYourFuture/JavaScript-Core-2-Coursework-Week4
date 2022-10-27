@@ -1,3 +1,31 @@
+const textQuote = document.getElementById("text");
+const authorQuote = document.getElementById("name");
+const newQuoteBtn = document.getElementById("new-quote-btn");
+const checkbox = document.querySelector("#checkbox");
+
+window.addEventListener("DOMContentLoaded", () => {
+  getQoute();
+});
+
+newQuoteBtn.addEventListener("click", () => {
+  getQoute();
+});
+
+function getQoute() {
+  textQuote.innerText = pickFromArray(quotes).quote;
+  authorQuote.innerText = pickFromArray(quotes).author;
+}
+
+checkbox.addEventListener("change", (e) => {
+  if (e.target.checked) {
+    autoGenerate = setInterval(() => {
+      getQoute();
+    }, 7000);
+  } else {
+    clearInterval(autoGenerate);
+  }
+});
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
