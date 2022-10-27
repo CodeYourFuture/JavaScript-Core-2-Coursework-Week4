@@ -82,7 +82,7 @@ describe("Level 1 challenge", () => {
     expect(image).toHaveAttribute("src", images[2]);
   });
 
-  test("move the image backwards to the end", () => {
+  test("can move the image backwards to the end", () => {
     const images = [
       "./assets/cute-cat-a.png",
       "./assets/cute-cat-b.jpg",
@@ -98,7 +98,7 @@ describe("Level 1 challenge", () => {
     expect(image).toHaveAttribute("src", images[2]);
   });
 
-  test("move the image backwards multiple times", () => {
+  test("can move the image backwards multiple times", () => {
     const images = [
       "./assets/cute-cat-a.png",
       "./assets/cute-cat-b.jpg",
