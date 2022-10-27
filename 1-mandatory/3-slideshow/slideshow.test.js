@@ -14,8 +14,6 @@ beforeEach(async () => {
     runScripts: "dangerously",
   });
 
-  jest.useFakeTimers();
-
   // do this so students can use element.innerText which jsdom does not implement
   Object.defineProperty(page.window.HTMLElement.prototype, "innerText", {
     get() {
@@ -32,7 +30,6 @@ beforeEach(async () => {
 });
 
 afterEach(() => {
-  jest.useRealTimers();
   page = null;
 });
 
@@ -136,6 +133,9 @@ describe("Level 1 challenge", () => {
 describe("Level 2 challenge", () => {
   beforeEach(() => {
     jest.useFakeTimers();
+  });
+  afterEach(() => {
+    jest.useRealTimers();
   });
   test("can start moving images forward automatically", () => {
     const images = [
