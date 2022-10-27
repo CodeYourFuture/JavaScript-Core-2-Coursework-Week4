@@ -7,6 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
+    background-color:aliceblue;
 }
 
 #images {
@@ -18,4 +19,17 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+#title {
+    color: #3686ff;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: "Advent Pro";
+}
+
+#numberOfImg {
+    margin-top: 10px;
+    color:#247cff ;
+    font-weight: bolder;
 }

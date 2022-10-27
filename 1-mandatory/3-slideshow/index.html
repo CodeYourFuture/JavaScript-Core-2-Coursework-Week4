@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Slideshow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,15 +15,15 @@
   </head>
   <body>
     <div id="box">
-      <p>Image Carousel ... </p>
+      <p id="title">Image Carousel ... </p>
       <img id="images" src="" alt="">
       <p id="numberOfImg"></p>
       <div>
-        <button id="auto-back">Auto Back</button>
-        <button id="back">Back</button>
-        <button id="stop">Stop</button>
-        <button id="forward">Forward</button>
-        <button id="auto-forward">Auto Forward</button>
+        <button class="btn btn-outline-primary" id="auto-back">Auto Back</button>
+        <button class="btn btn-outline-primary" id="back">Back</button>
+        <button class="btn btn-outline-primary" id="stop">Stop</button>
+        <button class="btn btn-outline-primary" id="forward">Forward</button>
+        <button class="btn btn-outline-primary" id="auto-forward">Auto Forward</button>
       </div>
     </div>
     <script src="slideshow.js"></script>

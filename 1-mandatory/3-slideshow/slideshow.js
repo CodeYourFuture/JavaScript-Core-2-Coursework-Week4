@@ -2,15 +2,15 @@
 
 let images = [
 {
-    img : "https://ceblog.s3.amazonaws.com/wp-content/uploads/2018/04/16181232/image192.png",
+    img : "https://www.planetware.com/wpimages/2021/10/england-top-rated-cities-dover.jpg",
     id : 1
 },
 {
-    img : "https://ceblog.s3.amazonaws.com/wp-content/uploads/2018/04/16181255/image222.png",
+    img : "https://www.planetware.com/wpimages/2020/03/england-top-rated-cities-york.jpg",
     id : 2
 },
 {
-    img : "https://ceblog.s3.amazonaws.com/wp-content/uploads/2018/04/16181045/image44.png",
+    img : "https://www.planetware.com/wpimages/2020/03/england-top-rated-cities-london.jpg",
     id : 3
 }
 ]
@@ -26,7 +26,7 @@ const autoPrev = () => {
     clearInterval(slides)
     slides = setInterval(()=>{
         if(count == 0){
-            count = 3
+            count = images.length
         }
        img.setAttribute("src",images[count-1].img)
        p.innerText = images[count-1].id
