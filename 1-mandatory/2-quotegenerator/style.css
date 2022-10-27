@@ -1,1 +1,26 @@
 /** Write your CSS in here **/
+body {
+    margin: 20px;
+    padding: 0;
+    background-color: rgb(37, 243, 18);
+}
+
+section {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000;
+    width: 50%;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+#author {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#title {
+    font-size: xx-large;
+    font-weight: bold;
+}
