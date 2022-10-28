@@ -10,6 +10,14 @@ body {
 .main-container {
   max-width: 80%;
   margin: 5rem auto;
+  align-items: center;
+  text-align: center;
+}
+
+.buttons-container {
+  margin: auto;
+  align-items: center;
+  text-align: center;
 }
 
 .slide-show {

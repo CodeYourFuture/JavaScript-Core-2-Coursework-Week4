@@ -15,7 +15,6 @@ var sliderInterval;
 const loadImage = (imageIndex) => {
   imageElement.src = fishImages[imageIndex];
   currentIndex = imageIndex;
-  pElement.innerText = currentIndex;
 };
 
 const nextImage = () => {
