@@ -47,6 +47,14 @@ div2.appendChild(pause);
 div2.appendChild(forward);
 div2.appendChild(autoPlay);
 let autoBackFunc = null;
+let paragraph = document.createElement("p");
+let timer = document.createElement("input");
+
+paragraph.style.cssText = "display: block; margin-left:47%";
+timer.style.cssText = "display: block; margin: auto";
+paragraph.innerText = "Set Waiting Time:";
+div1.appendChild(paragraph);
+div1.appendChild(timer);
 
 function autoBackBtn(photo) {
   photo = photos;
@@ -58,7 +66,7 @@ function autoBackBtn(photo) {
     if (count < 0) {
       count = 3;
     }
-  }, 2000);
+  }, timerFunc());
 }
 let count = 3;
 function backBtn() {
@@ -89,7 +97,7 @@ function autoPlayBtn(photo) {
     if (count > 3) {
       count = 0;
     }
-  }, 2000);
+  }, timer.value * 1000);
 }
 function pauseBtn() {
   clearInterval(autoBackFunc);
