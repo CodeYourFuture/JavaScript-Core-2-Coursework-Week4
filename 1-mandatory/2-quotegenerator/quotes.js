@@ -490,3 +490,23 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let containerDiv = document.getElementById("container");
+let quotationMark = document.getElementById("quotationMark");
+let quoteLine = document.getElementById("quoteLine");
+let authorLine = document.getElementById("authorLine");
+let button1 = document.getElementById("newButton");
+
+button1.addEventListener("click", pickFromArray);
+button1.innerText = "New Quote";
+
+function changeQuote() {
+  let quoteText = pickFromArray(quotes);
+  quotationMark = `"`;
+  quoteLine.innerText = quotationMark + quoteText.quote;
+  authorLine.innerText = `-${quoteText.author}`;
+
+}
+
+newButton.addEventListener("click", changeQuote);
+document.addEventListener("DOMContentLoaded", changeQuote);

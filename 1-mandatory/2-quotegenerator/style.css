@@ -1,1 +1,19 @@
-/** Write your CSS in here **/
+
+div {
+    background-color: rgb(118, 239, 112);
+    margin: 10px 20px ;
+}
+
+#quotationMark {
+    font-size: xx-large;
+}
+
+#quoteLine {
+    font-style: italic;
+}
+#newButton {
+    background-color: beige;
+    color: rgb(117, 83, 150);
+    margin: 10px;
+
+}
