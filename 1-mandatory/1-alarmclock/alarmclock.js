@@ -1,4 +1,6 @@
-function setAlarm() {}
+function setAlarm() {
+  const SetAlarm = {}
+}
 
 // DO NOT EDIT BELOW HERE
 
