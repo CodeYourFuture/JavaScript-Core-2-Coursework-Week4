@@ -1,1 +1,34 @@
 /** Write your CSS in here **/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.main-container {
+  max-width: 80%;
+
+  margin: 5rem auto;
+}
+
+blockquote {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: normal;
+  margin-left: 0;
+}
+
+cite {
+  float: right;
+  font-size: 1.5rem;
+}
+
+.quote_mark {
+  color: black;
+  font-size: 10rem;
+  font-weight: 700;
+  margin-right: 0;
+  border: black 1px solid;
+}
