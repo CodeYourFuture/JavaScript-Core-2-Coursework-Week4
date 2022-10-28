@@ -23,12 +23,14 @@ const p = document.createElement("p")
 
 
 // You DO NOT need to understand how this function works.
+function pickFromArray() {
+    const displayQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    p.innerText = `${displayQuote.quote} 
+                    By ${displayQuote.author}`
+ }
 
-//  button.addEventListener('click',function pickFromArray(choices) {
-//     const displayQuote = choices[Math.floor(Math.random() * choices.length)];
-//     p.innerText = `${displayQuote.quote} 
-//                     By ${displayQuote.author}`
-//  })
+
+ button.addEventListener('click',pickFromArray)
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
@@ -500,11 +502,11 @@ const quotes = [
   },
 ];
 
-button.addEventListener('click',function(){
-  const displayQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  p.innerText = `${displayQuote.quote} 
-                    By ${displayQuote.author}`
-})
+// button.addEventListener('click',function(){
+//   const displayQuote = quotes[Math.floor(Math.random() * quotes.length)];
+//   p.innerText = `${displayQuote.quote} 
+//                     By ${displayQuote.author}`
+// })
 
 div.appendChild(p);
 
