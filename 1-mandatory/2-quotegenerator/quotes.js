@@ -496,7 +496,7 @@ const displayRandomQuote = () => {
   // const parentDiv = document.querySelector(".main-container");
   const blockQuote = document.querySelector("blockquote");
   const quoteCite = document.querySelector("cite");
-  blockQuote.innerText = randomQuote.quote;
+  blockQuote.innerText = "“ " + randomQuote.quote;
   quoteCite.innerText = randomQuote.author;
   // console.log(parentDiv);
   console.log(blockQuote);

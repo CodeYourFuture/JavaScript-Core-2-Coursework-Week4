@@ -1,1 +1,18 @@
 /** Write your CSS in here **/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.main-container {
+  max-width: 80%;
+  margin: 5rem auto;
+}
+
+.slide-show {
+  width: 400px;
+  margin-bottom: 10px;
+}

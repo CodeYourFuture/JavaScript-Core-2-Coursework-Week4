@@ -30,5 +30,13 @@ cite {
   font-size: 10rem;
   font-weight: 700;
   margin-right: 0;
-  border: black 1px solid;
+  /* border: black 1px solid; */
+}
+
+.show-quote-btn {
+  margin: auto;
+  padding: 5px 10px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
 }
