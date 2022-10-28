@@ -1,3 +1,28 @@
+// display(pickFromArray(quotes));
+function pickFromArray(quotes) {
+  return quotes[(Math.random() * quotes.length)] ;
+}
+let texes = document.getElementById("textQuote");
+let authors = document.getElementById("nameAuthor");
+let button = document.getElementById("new");
+
+button.addEventListener("click", () => {
+  let getQuotesEl = pickFromArray(quotes);
+  texes.innerText = `${getQuotesEl.quote}`;
+  authors.innerText = `${getQuotesEl.author}`;
+});
+// console.log(a.author);
+
+// let button = document.querySelector("button");
+// let quote = document.querySelector(".quote");
+// let author = document.querySelector(".author");
+
+// button.addEventListener("click", function () {
+//   let arrquotes = pickFromArray(quotes);
+//   quote.innerHTML = arrquotes.quote;
+//   author.innerHTML = arrquotes.author;
+// });
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

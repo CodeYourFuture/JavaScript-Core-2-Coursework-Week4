@@ -1,1 +1,40 @@
 /** Write your CSS in here **/
+body{
+    margin: 0;
+    padding: 0;        
+    background-color: greenyellow;
+    display: flex;
+
+    }
+
+.quote{
+    padding: 20px;
+    margin: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    border: 5px solid red;
+    background-color: beige;
+}
+
+.text{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+.name{
+    text-align: right;
+}
+
+.btn{
+    background-color: greenyellow;
+    width: 150px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+
+
+}
