@@ -29,9 +29,8 @@ function pickFromArray() {
                     By ${displayQuote.author}`
  }
 
-
- button.addEventListener('click',pickFromArray)
-
+button.addEventListener('click',pickFromArray)
+div.appendChild(p);
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [
@@ -502,13 +501,8 @@ const quotes = [
   },
 ];
 
-// button.addEventListener('click',function(){
-//   const displayQuote = quotes[Math.floor(Math.random() * quotes.length)];
-//   p.innerText = `${displayQuote.quote} 
-//                     By ${displayQuote.author}`
-// })
 
-div.appendChild(p);
+
 
  
 
