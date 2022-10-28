@@ -1,1 +1,32 @@
-/** Write your CSS in here **/
+body {
+  background-color: rgb(20, 32, 31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+img {
+  padding: 10px;
+  background-color: white;
+  max-height: 600px;
+  display: flex;
+  margin: 0 auto;
+}
+
+button {
+  background: none;
+  color: #053b57;
+  font-weight: 600;
+  padding: 8px;
+  border: none;
+  border: 2px solid #053b57;
+  font-size: 0.8rem;
+  background-color: #f4f9ff;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
