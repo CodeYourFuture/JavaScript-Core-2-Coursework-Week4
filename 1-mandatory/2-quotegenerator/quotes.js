@@ -487,7 +487,20 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
-
+let autoPlayId = null;
+const toggleAutoPlay = () => {
+  console.log("toggleAutoPlay");
+  //turn off
+  if (autoPlayId) {
+    clearInterval(autoPlayId);
+  }
+  //turn on
+  else {
+    autoPlayId = setInterval(() => {
+      changeText();
+    }, 1000);
+  }
+};
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
@@ -503,3 +516,8 @@ function changeText() {
 }
 
 buttonEl.addEventListener("click", changeText);
+let checkbox = document.querySelector('input[id="cbtoggleAuto"]');
+
+checkbox.addEventListener("change", function () {
+  toggleAutoPlay();
+});
