@@ -1,1 +1,10 @@
 /** Write your CSS in here **/
+
+body{
+ margin: 10rem  5rem;
+ background-color: aquamarine;
+}
+.container{
+ 
+ padding: 10em 15em 10em 15em;
+}

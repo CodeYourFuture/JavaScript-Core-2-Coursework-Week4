@@ -1,3 +1,27 @@
+let quoteEl=document.getElementById("quote_text");
+let nameEl=document.getElementById("writer_name");
+let button=document.getElementById("new_quote");
+let bodyEl=document.querySelector(".content")
+button.addEventListener("click", () => {
+  let randomQuote=pickFromArray(quotes);
+  let randomColor=pickFromArray(colorsArray);
+  quoteEl.innerHTML=`" ${randomQuote.quote}`;
+  nameEl.innerHTML=`- ${randomQuote.author}`;
+  bodyEl.style.backgroundColor=randomColor;
+})
+let colorsArray=[
+  "#ff0000ff",
+  "#ff8700ff",
+  "#ffd300ff",
+  "#deff0aff",
+  "#a1ff0aff",
+  "#0aff99ff",
+  "#0aefffff",
+  "#147df5ff",
+  "#580affff",
+  "#be0affff"];
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

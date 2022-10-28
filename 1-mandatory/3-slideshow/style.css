@@ -1,1 +1,34 @@
 /** Write your CSS in here **/
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ height: 100vh;
+}
+
+.container {
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+img {
+ height: 500px;
+ width: 500px;
+ object-fit: cover;
+ border-radius: .25em;
+}
+
+.buttons {
+ margin-top: 1em;
+}
+
+.btn {
+ background: grey;
+ color: #fff;
+}
