@@ -2,7 +2,7 @@ function setAlarm() {}
 
 // DO NOT EDIT BELOW HERE
 
-var audio = new Audio("alarmsound.mp3");
+let audio = new Audio("alarmsound.mp3");
 
 function setup() {
   document.getElementById("set").addEventListener("click", () => {
@@ -23,3 +23,7 @@ function pauseAlarm() {
 }
 
 window.onload = setup;
+
+
+
+
