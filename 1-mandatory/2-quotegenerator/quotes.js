@@ -16,6 +16,15 @@
 // pickFromArray([1,2,3,4])     //maybe returns 2
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
+let button = document.querySelector("#quote-new");
+let quote = document.querySelector(".quote");
+let author = document.querySelector(".author");
+
+button.addEventListener("click", function () {
+  let newQuote = pickFromArray(quotes);
+  quote.innerHTML = newQuote.quote;
+  author.innerHTML = newQuote.author;
+});
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
