@@ -1,3 +1,20 @@
+
+function renderQoute() {
+  const q = document.querySelector(".quote");
+  const a = document.querySelector(".author");
+  const temp = pickFromArray(quotes);
+  q.innerHTML = temp.quote;
+  a.innerHTML = temp.author;
+}
+
+
+
+
+
+
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
