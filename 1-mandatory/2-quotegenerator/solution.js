@@ -107,10 +107,6 @@ const quotes = [
     author: "Socrates",
   },
   {
-    quote: "Eighty percent of success is showing up.",
-    author: "Woody Allen",
-  },
-  {
     quote:
       "Your time is limited, so don’t waste it living someone else’s life.",
     author: "Steve Jobs",
@@ -131,12 +127,7 @@ const quotes = [
   },
   {
     quote:
-      "You can never cross the ocean until you have the courage to lose sight of the shore.",
-    author: "Christopher Columbus",
-  },
-  {
-    quote:
-      "I’ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
+      "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
     author: "Maya Angelou",
   },
   {
@@ -392,7 +383,7 @@ const quotes = [
   },
   {
     quote:
-      "I have learned over the years that when one’s mind is made up, this diminishes fear.",
+      "I have learned over the years that when one's mind is made up, this diminishes fear.",
     author: "Rosa Parks",
   },
   {
@@ -490,3 +481,22 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const quoteP = document.createElement("p");
+const authorP = document.createElement("p");
+const newQuoteBtn = document.createElement("button");
+quoteP.setAttribute("id", "quote");
+authorP.setAttribute("id", "author");
+newQuoteBtn.setAttribute("id", "new-quote");
+newQuoteBtn.innerText = "New quote";
+newQuoteBtn.addEventListener("click", () => {
+  const { author, quote } = pickFromArray(quotes);
+  quoteP.innerText = quote;
+  authorP.innerText = author;
+});
+const { author, quote } = pickFromArray(quotes);
+quoteP.innerText = quote;
+authorP.innerText = author;
+document.body.appendChild(quoteP);
+document.body.appendChild(authorP);
+document.body.appendChild(newQuoteBtn);
