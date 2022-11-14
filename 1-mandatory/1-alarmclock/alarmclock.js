@@ -1,4 +1,10 @@
-function setAlarm() {}
+const btn = document.getElementById('set');
+const inputVal = document.getElementById('alarmSet');
+const timeRem = document.getElementById('timeRemaining');
+
+function setAlarm() {
+  const inputValue = inputVal.value;
+}
 
 // DO NOT EDIT BELOW HERE
 
