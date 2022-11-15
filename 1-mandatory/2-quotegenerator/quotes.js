@@ -496,9 +496,9 @@ const quotes = [
 // };
 
 let quote = document.querySelector('.quote');
-quote.innerText = "Nishka is amazing";
+quote.innerText = "When you give joy to other people, you get more joy in return. You should give a good thought to happiness that you can give out.";
 let author = document.querySelector('.author');
-author.innerText = "ur mom";
+author.innerText = "— Eleanor Roosevelt";
 
 let button = document.querySelector('.quote-btn');
 button.addEventListener('click', () => {
