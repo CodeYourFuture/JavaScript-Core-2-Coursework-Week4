@@ -490,3 +490,18 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+// const getRandom = (quote) => {
+//   return quote[Math.floor(Math.random() * quote.length)];
+// };
+
+let quote = document.querySelector('.quote');
+quote.innerText = "Nishka is amazing";
+let author = document.querySelector('.author');
+author.innerText = "ur mom";
+
+let button = document.querySelector('.quote-btn');
+button.addEventListener('click', () => {
+  quote.innerText = pickFromArray(quotes).quote;
+  author.innerText =  pickFromArray(quotes).author;
+})
