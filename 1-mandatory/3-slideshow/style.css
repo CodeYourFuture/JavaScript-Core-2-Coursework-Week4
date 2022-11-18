@@ -1,1 +1,27 @@
-/** Write your CSS in here **/
+* Write your CSS in here **/
+body {
+    padding: 5rem;
+    background-image: url("https://img.freepik.com/free-vector/watercolour-background-with-leaves_91008-314.jpg?w=900&t=st=1668806770~exp=1668807370~hmac=a0ae5f69e55f31aa9bd07b5104ade3ebd474699a0cb15022dd6c78be019fcd5f");
+  }
+  
+  #imageContainer {
+    height: 32rem;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid black;
+  }
+  
+  #autoBack:hover,
+  #Back:hover,
+  #stop:hover,
+  #Right:hover,
+  #right:hover,
+  #autoRight:hover {
+    background-color: aqua;
+    color: grey;
+  }
+  
+  h1 {
+    color: black;
+    text-align: center;
+  }

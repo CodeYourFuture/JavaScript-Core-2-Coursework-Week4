@@ -1,3 +1,12 @@
+document.getElementById("Generate_New_Quote").addEventListener("click", () => {
+  let randomQuote = pickFromArray(quotes);
+
+  document.getElementById("quote").textContent = randomQuote.quote;
+  document.getElementById("author").textContent = "- " + randomQuote.author;
+});
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -16,7 +25,7 @@
 // pickFromArray([1,2,3,4])     //maybe returns 2
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
-// You DO NOT need to understand how this function works.
+// You DO NOT need to understand how this function works.  [????]
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
@@ -38,7 +47,7 @@ const quotes = [
   },
   {
     quote:
-      "Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.",
+      "Two roads diverged in a wood, and I took the one less traveled by, And that has made all the difference.",
     author: "Robert Frost",
   },
   {
@@ -46,12 +55,12 @@ const quotes = [
     author: "Florence Nightingale",
   },
   {
-    quote: "You miss 100% of the shots you don’t take.",
+    quote: "You miss 100% of the shots you don't take.",
     author: "Wayne Gretzky",
   },
   {
     quote:
-      "I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
+      "I've missed more than 9000 shots in my career. I've lost almost 300 games. 26 times I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.",
     author: "Michael Jordan",
   },
   {

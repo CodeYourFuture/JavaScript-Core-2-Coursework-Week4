@@ -1,1 +1,41 @@
 /** Write your CSS in here **/
+html, body
+{
+    height: 90%;
+    background-image:url("https://img.freepik.com/free-vector/watercolour-background-with-leaves_91008-314.jpg?w=900&t=st=1668806770~exp=1668807370~hmac=a0ae5f69e55f31aa9bd07b5104ade3ebd474699a0cb15022dd6c78be019fcd5f");;
+}
+
+.Generate_New_Quote
+{
+    margin-bottom: 10px;
+    margin-left: 75%;
+    background-image: url("https://img.freepik.com/free-vector/watercolour-background-with-leaves_91008-314.jpg?w=900&t=st=1668806770~exp=1668807370~hmac=a0ae5f69e55f31aa9bd07b5104ade3ebd474699a0cb15022dd6c78be019fcd5f");
+    color: rgb(224, 75, 75);
+    border-color: rgb(240, 230, 210);
+    font-weight: bold;
+}
+
+.quote
+{
+    padding-top: 30px;
+
+}
+
+.section {
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    text-align: center;
+    background-color: white;
+    top: 35%;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+
+.author
+{
+    margin-left: 75%;
+    color: rgb(48, 35, 10);
+    font-style: italic;
+}
