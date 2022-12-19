@@ -1,1 +1,21 @@
 /** Write your CSS in here **/
+body {
+    background-color: blue;
+}
+
+#new_Quote {
+    background-color: blue;
+    color: white;
+    height: 50px;
+    width: 100px;
+    margin-top: 100px;
+    align-items: flex-end;
+}
+#quote_div {
+    display: flex;
+    background-color: white;
+    width:60%;
+    height: 100px;
+    align-content: center;
+    align
+}
