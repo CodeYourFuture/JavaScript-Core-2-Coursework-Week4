@@ -1,6 +1,6 @@
 /** Write your CSS in here **/
 body {
-    background-color: blue;
+    background-color: lightgreen;
 }
 
 #new_Quote {
@@ -12,10 +12,16 @@ body {
     align-items: flex-end;
 }
 #quote_div {
-    display: flex;
     background-color: white;
     width:60%;
     height: 100px;
     align-content: center;
-    align
+}
+#quote {
+    font-size: large;
+}
+
+#author {
+    margin-right: 25%;
+    font-style: italic;
 }
