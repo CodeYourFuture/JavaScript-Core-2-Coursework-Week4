@@ -8,13 +8,25 @@ img {
     width: 300px;
 }
 .button {
-    margin-top: 1rem;
+    
+}
+
+#autoBackBtn {
+
 }
 
 #forwBtn {
 
 }
 
+#stop {
+
+}
+
 #backBtn {
+
+}
+
+#autoForwBtn {
 
 }
