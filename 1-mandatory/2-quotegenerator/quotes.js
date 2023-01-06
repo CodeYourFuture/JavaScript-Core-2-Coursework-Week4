@@ -1,3 +1,21 @@
+const button = document.getElementById("button");
+const quoteSpan = document.getElementById("quote");
+const authorSpan = document.getElementById("author");
+
+function revealQuote() {
+  let randomQuote = pickFromArray(quotes);
+  quoteSpan.textContent = "Quote: " + randomQuote.quote;
+  authorSpan.textContent = "Author: " + randomQuote.author;
+}
+
+function setup() {
+  button.addEventListener("click", () => {
+    revealQuote();
+  });
+}
+
+setup();
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

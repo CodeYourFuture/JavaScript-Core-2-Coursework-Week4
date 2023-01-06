@@ -1,36 +1,31 @@
-function setAlarm() {
-  const inputTime = document.getElementById("alarmSet").value;
-  const timeRemaining = document.getElementById("timeRemaining");
-  /*function inputConvert(num) { 
-    const hours = Math.floor(num / 60);  
-    const minutes = num % 60;
-    return  hours + ":" + minutes; ;       
-}*/
-//if (inputTime < 60) {
-  // timeRemaining.innerText = `Time Remaining: 00:${inputTime}`;
-//}
-//else {
-  //const result = inputConvert(inputTime);
-  //return timeRemaining.innerText =  `Time Remaining : ${result}`;
-//}
+let timeRemaining = 0;
+let intervalId = null;
 
-//if (result === 0) {
-  //playAlarm();
-//}
+function setDisplay(time) {
+  const timeRemainingDisplay = document.getElementById("timeRemaining");
+  let hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((time % (1000 * 60)) / 1000);
+  return (timeRemainingDisplay.innerText = `Time Remaining: ${hours}:${minutes}:${seconds}`);
+}
 
-setInterval(function() {
-  var hours = Math.floor((inputTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((inputTime % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((inputTime % (1000 * 60)) / 1000);
-  return timRemaining.innerText = `Time Remaining: ${hours}:${minutes}:${seconds}`;
-
-  // If the count down is finished, write some text
-
-  if (inputTime < 0) {
+function decrementTime() {
+  timeRemaining -= 1000;
+  setDisplay(timeRemaining);
+  if (timeRemaining <= 0) {
+    clearInterval(intervalId);
     playAlarm();
   }
-}, 1000);
+}
 
+function setAlarm() {
+  const inputTime = document.getElementById("alarmSet").value;
+  const milliSecondsInputTime = inputTime * 1000;
+
+  setDisplay(milliSecondsInputTime);
+  timeRemaining = milliSecondsInputTime;
+
+  intervalId = setInterval(decrementTime, 1000);
 }
 
 // DO NOT EDIT BELOW HERE
@@ -53,6 +48,7 @@ function playAlarm() {
 
 function pauseAlarm() {
   audio.pause();
+  clearInterval(intervalId);
 }
 
 window.onload = setup;
