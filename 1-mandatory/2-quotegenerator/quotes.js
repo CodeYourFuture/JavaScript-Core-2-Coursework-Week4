@@ -20,6 +20,15 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+let title = document.getElementById("title");
+let newQuoteBtn = document.getElementById("newQuoteBtn");
+
+function changeText() {
+  let quoteObj = pickFromArray(quotes);
+  title.innerText = `${quoteObj.quote} \n ${quoteObj.author}`;
+}
+
+newQuoteBtn.addEventListener("click", changeText);
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
