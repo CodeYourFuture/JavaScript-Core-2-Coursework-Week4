@@ -27,9 +27,22 @@ function changeText() {
   let quoteObj = pickFromArray(quotes);
   title.innerText = `${quoteObj.quote} \n ${quoteObj.author}`;
 }
-
 newQuoteBtn.addEventListener("click", changeText);
 
+let autoPlayInt;
+let autoPlay = () => {
+  if (autoPlayInt) {
+    clearInterval(autoPlayId);
+  } else {
+    autoPlayInt = setInterval(() => {
+      changeText();
+    }, 60000);
+  }
+};
+let checkboxInput = document.getElementById("inputCheckbox");
+checkboxInput.addEventListener("change", function () {
+  autoPlay();
+});
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
 const quotes = [

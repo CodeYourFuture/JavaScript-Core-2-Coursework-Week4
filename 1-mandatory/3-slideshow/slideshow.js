@@ -1,31 +1,32 @@
 // Write your code here
 let imgArr = [
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Socrate_du_Louvre.jpg/440px-Socrate_du_Louvre.jpg",
+    src: "images/img1.jpg",
     alt: "Socrates image",
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Plato_Silanion_Musei_Capitolini_MC1377.jpg/440px-Plato_Silanion_Musei_Capitolini_MC1377.jpg",
+    src: "images/img2.jpg",
     alt: "Plato image",
   },
 
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg",
+    src: "images/img3.jpg",
     alt: "René Descartes image",
   },
 
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Kant_gemaelde_3.jpg/440px-Kant_gemaelde_3.jpg",
+    src: "images/img4.jpg",
     alt: "Immanuel Kant image",
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/440px-Nietzsche187a.jpg",
+    src: "images/img5.jpg",
     alt: "Friedrich Nietzsche",
   },
 ];
-let divEl = document.getElementById("slideShow");
+let divEl = document.getElementById("slideshow");
 let imgEl = document.createElement("img");
 divEl.appendChild(imgEl);
+imgEl.className = "slideImg";
 
 let backBtn = document.getElementById("back");
 let forwardBtn = document.getElementById("forward");
