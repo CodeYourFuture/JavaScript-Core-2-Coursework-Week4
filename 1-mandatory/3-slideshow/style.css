@@ -3,8 +3,15 @@ body {
   background-color: aquamarine;
 }
 #slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 50px;
   margin-left: 20px;
+}
+.buttons {
+  margin-left: 430px;
 }
 .slide-btn {
   margin: 10px 10px;
@@ -19,4 +26,7 @@ body {
 }
 .slideImg {
   width: 400px;
+}
+.delay-set {
+  margin-left: 100px;
 }

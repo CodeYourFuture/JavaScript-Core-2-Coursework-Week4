@@ -33,6 +33,9 @@ let forwardBtn = document.getElementById("forward");
 let stopBtn = document.getElementById("stop");
 let autoBackBtn = document.getElementById("autoBack");
 let autoForwardBtn = document.getElementById("autoForward");
+let input = document.getElementById("input");
+let delaySetBtn = document.getElementById("delaySet");
+let delay = 1000;
 
 forwardBtn.addEventListener("click", () => {
   goForward();
@@ -45,18 +48,22 @@ backBtn.addEventListener("click", () => {
 autoForwardBtn.addEventListener("click", () => {
   autoForwardInt = setInterval(() => {
     goForward();
-  }, 1000);
+  }, delay);
 });
 
 autoBackBtn.addEventListener("click", () => {
   autoBackInt = setInterval(() => {
     goBack();
-  }, 1000);
+  }, delay);
 });
 
 stopBtn.addEventListener("click", () => {
+  delay = 1000;
   clearInterval(autoForwardInt);
   clearInterval(autoBackInt);
+});
+delaySetBtn.addEventListener("click", () => {
+  delay = input.value * 1000;
 });
 
 let count = 0;

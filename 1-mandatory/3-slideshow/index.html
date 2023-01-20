@@ -13,11 +13,17 @@
   <body>
     <!-- Write your HTML in here -->
     <div id="slideshow"></div>
-    <button class="slide-btn" id="back">Back</button>
-    <button class="slide-btn" id="autoBack">Autoback</button>
-    <button class="slide-btn" id="stop">Stop</button>
-    <button class="slide-btn" id="forward">Forward</button>
-    <button class="slide-btn" id="autoForward">Auto Forward</button>
+    <div class="buttons">
+      <button class="slide-btn" id="back">Back</button>
+      <button class="slide-btn" id="autoBack">Auto back</button>
+      <button class="slide-btn" id="stop">Stop</button>
+      <button class="slide-btn" id="forward">Forward</button>
+      <button class="slide-btn" id="autoForward">Auto Forward</button>
+      <div class="delay-set">
+      <input id="input" placeholder="Enter the delay (in sec)">
+      <button class="slide-btn" id="delaySet">Delay Set</button></div>
+  
+
     <script src="slideshow.js"></script>
   </body>
 </html>
