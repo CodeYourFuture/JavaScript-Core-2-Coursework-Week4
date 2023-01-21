@@ -8,6 +8,7 @@ const forwardBtn = document.querySelector("#forward-btn");
 const backwardBtn = document.querySelector("#backward-btn");
 const autoForwardBtn = document.querySelector("#auto-forward");
 const autoBackwardBtn = document.querySelector("#auto-backward");
+const secondInput = document.querySelector("#second-input");
 
 const stopBtn = document.querySelector("#stop");
 let imageIndex = 0;
@@ -37,11 +38,11 @@ const stop = () => {
   backwardBtn.disabled = false;
 };
 const autoForwardImg = () => {
-  interval = setInterval(forwardImg, 500);
+  interval = setInterval(forwardImg, secondInput.value * 100);
   disabledBtn();
 };
 const autoBackwordImg = () => {
-  interval = setInterval(backwordImg, 500);
+  interval = setInterval(backwordImg, secondInput.value * 100);
   disabledBtn();
 };
 forwardBtn.addEventListener("click", forwardImg);
@@ -49,3 +50,13 @@ backwardBtn.addEventListener("click", backwordImg);
 autoForwardBtn.addEventListener("click", autoForwardImg);
 autoBackwardBtn.addEventListener("click", autoBackwordImg);
 stopBtn.addEventListener("click", stop);
+
+secondInput.addEventListener("change", (e) => {
+  if (!+e.target.value) {
+    autoForwardBtn.disabled = true;
+    autoBackwardBtn.disabled = true;
+  } else {
+    autoForwardBtn.disabled = false;
+    autoBackwardBtn.disabled = false;
+  }
+});

@@ -493,6 +493,7 @@ const quotes = [
 const quoteP = document.querySelector("#quote");
 const authorP = document.querySelector("#author");
 const quoteBtn = document.querySelector("#new-quote");
+const autoPlayBtn = document.querySelector("#auto-play");
 let autoPlayInterval;
 function random() {
   let num = Math.floor(Math.random() * quotes.length);
@@ -500,6 +501,16 @@ function random() {
   quoteP.textContent = quote;
   authorP.textContent = author;
 }
+function autoPlay(e) {
+  if (e.target.textContent === "auto-play:OFF") {
+    e.target.textContent = "auto-play:ON";
+    autoPlayInterval = setInterval(random, 1000);
+  } else if (e.target.textContent === "auto-play:ON") {
+    e.target.textContent = "auto-play:OFF";
+    clearInterval(autoPlayInterval);
+  }
+}
 random();
 
 quoteBtn.addEventListener("click", random);
+autoPlayBtn.addEventListener("click", autoPlay);
