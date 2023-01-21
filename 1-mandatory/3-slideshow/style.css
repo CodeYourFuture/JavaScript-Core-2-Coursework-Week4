@@ -60,6 +60,7 @@ button {
 
 button:focus, button:hover {
     background: rgba(255, 255, 255, 0.6);
+    outline: none;
 }
 
 input {
@@ -71,6 +72,10 @@ input {
     border: 1px solid rgba(255, 255, 255, 0.24);
     color: white;
     padding: .5rem;
+}
+
+input:focus{
+    outline: none;
 }
 
 label{

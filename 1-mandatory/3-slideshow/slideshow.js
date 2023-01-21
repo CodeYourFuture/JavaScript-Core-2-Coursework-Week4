@@ -62,9 +62,9 @@ let intervalId;
 let isPlaying = false;
 
 function forwardSlideshow() {
-    if ((intervalInput.value === "")){
-        alert("Please enter a valid value");
-        return;
+    if ((intervalInput.value === "") || (intervalInput.value <= 0)) {
+      alert("Please enter a valid value and above 0");
+      return;
     }
       intervalId = setInterval(
         changePicturesForward,
@@ -77,8 +77,8 @@ function forwardSlideshow() {
 }
 
 function backwardSlideshow() {
-    if (intervalInput.value === "") {
-      alert("Please enter a valid value");
+    if ((intervalInput.value === "") || (intervalInput.value <= 0)) {
+      alert("Please enter a valid value and above 0");
       return;
     }
     intervalId = setInterval(changePicturesBack, intervalInput.value * 1000);
