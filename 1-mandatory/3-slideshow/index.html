@@ -8,10 +8,31 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Write your HTML in here -->
+    <header>
+      <h1>Marvel</h1>
+      <h3>Marvel's Movies Posters</h3>
+    </header>
+    <main>
+      <div class="container">
+        <img id="images" src="/1-mandatory/3-slideshow/posters/1.jpeg" alt="">
+      </div>
+      <div class="btns">
+        <button id="auto-back">Auto Back</button>
+        <button id="back">Back</button>
+        <button id="stop">Stop</button>
+        <button id="forward">Forward</button>
+        <button id="auto-forward">Auto Forward</button>
+      </div>
+      <label for="interval-input">Set your time for Auto Slideshow</label>
+      <input type="number" name="interval-input" id="interval-input">
+    </main>
     <script src="slideshow.js"></script>
   </body>
 </html>
