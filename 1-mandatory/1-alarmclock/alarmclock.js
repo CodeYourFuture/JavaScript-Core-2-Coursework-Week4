@@ -11,7 +11,7 @@ let flash;
 
 setAlarmButton.addEventListener("click", function () {
   // Check if input field is empty
-  if (inputField.value === "") {
+  if (inputField.value === "" || inputField.value < 0) {
     // Display message or return
     alert("Please enter a valid value");
     return;

@@ -502,7 +502,7 @@ let newQuoteButton = document.getElementById("change-quote");
 function getQuote () {
  let quoteSign = document.createElement("i");
  quoteSign.classList.add("fa-solid", "fa-quote-right");
-
+// quoteSign.classList.add("fa-solid", "fa-quote-left");
 
  let newPick = pickFromArray(quotes)
   
