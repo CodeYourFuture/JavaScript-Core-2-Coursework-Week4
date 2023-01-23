@@ -1,1 +1,25 @@
 /** Write your CSS in here **/
+body{
+    background-color: blueviolet;
+}
+#random-item-container{
+    background-color: aliceblue;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+#quoate-value{
+    
+}
+p{
+    color: blueviolet;
+}
+#new-quote{
+    background-color: blueviolet;
+    color:aliceblue;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+}
+
