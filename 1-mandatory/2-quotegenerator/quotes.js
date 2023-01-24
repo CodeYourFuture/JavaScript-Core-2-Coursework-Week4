@@ -490,7 +490,7 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
-
+let interval;
 function changeQuote() {
   let randomQuote = pickFromArray(quotes);
   const quoteValue = document.getElementById("quote-value");
@@ -499,6 +499,18 @@ function changeQuote() {
   authorValue.innerHTML = randomQuote.author;
 }
 
-changeQuote()
-const newQuoteBtn = document.getElementById("new-quote");
+changeQuote();
+const newQuoteBtn = document.getElementById("new-quote-Btn");
 newQuoteBtn.addEventListener("click", changeQuote);
+
+document.addEventListener("DOMContentLoaded", function () {
+  let checkbox = document.querySelector("#auto-generate-check");
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      interval = setInterval(changeQuote, 1000);
+    } else {
+      clearInterval(interval);
+    }
+  });
+});
