@@ -10,6 +10,12 @@ pauseBtnParentNode.append(pauseBtn);
 pauseBtn.addEventListener('click', () => {
   clearInterval(countDown);
 });
+let stopBtn = document.querySelector('#stop')
+stopBtn.addEventListener('click', () => {
+  console.log('Hello');
+  clearInterval(countDown);
+   document.querySelector('#timeRemaining').textContent = '00:00';
+});
 
 function flashedbg() {
   const bodyStyle = document.body.style;
@@ -26,7 +32,7 @@ function flashedbg() {
 
 function setAlarm() {
   const countDownOnPage = () => {
-    document.querySelector('#timeRemaining').textContent = `Time Remaining: &{min.toString().padStart(2, '0')} : &{sec.toString().padStart(2, '0')}`;
+    document.querySelector('#timeRemaining').textContent = `Time Remaining: ${min.toString().padStart(2, '0')} : ${sec.toString().padStart(2, '0')}`;
 
     sec--;
     if(min === 0 && sec <= 0){
@@ -46,7 +52,7 @@ function setAlarm() {
   }else if(!document.querySelector('#alarmSet').value && min * 60 + sec > 0){
     countDown = setInterval(countDownOnPage(), 1000);
   }else if(document.querySelector('#alarmSet').value){
-    const getSecondFromInput = document.querySelector('#alarmset').value;
+    const getSecondFromInput = document.querySelector('#alarmSet').value;
     [min, sec] = [~~(getSecondFromInput / 60), getSecondFromInput % 60];
     document.querySelector('#alarmSet').value = null;
     countDown = setInterval(countDownOnPage(), 1000);

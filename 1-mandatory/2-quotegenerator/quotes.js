@@ -503,3 +503,9 @@ function random() {
 random();
 
 quoteBtn.addEventListener("click", random);
+let autoPlayBtn = document.querySelector('#auto-play');
+autoPlayBtn.addEventListener('click', () => {
+  setInterval(() =>{
+    random()
+  }, 1000)
+});

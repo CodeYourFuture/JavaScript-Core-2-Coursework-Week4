@@ -3,8 +3,9 @@ const images =[
     "./assets/cute-cat-a.png",
   "./assets/cute-cat-b.jpg",
   "./assets/cute-cat-c.jpg",
+  "./assets/cute-cat-d.jpg"
 ];
-const image = document.querySelector('#caousel-img');
+const image = document.querySelector('#carousel-img');
 const forwardBtn = document.querySelector('#forward-btn');
 const backwardBtn = document.querySelector('#backward-btn');
 const autoForwardBtn = document.querySelector('#auto-forward');
@@ -13,6 +14,8 @@ const stopBtn = document.querySelector('#stop');
 
 let imageIndex = 0;
 let interval;
+console.log(image);
+
 image.src = images[imageIndex];
 
 const forwardImg = () => {
