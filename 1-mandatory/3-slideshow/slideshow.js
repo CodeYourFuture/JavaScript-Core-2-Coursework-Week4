@@ -10,12 +10,14 @@ const backwardBtn = document.getElementById("backward-btn");
 const autoForwardBtn = document.getElementById("auto-forward-btn");
 const autoBackwardBtn = document.getElementById("auto-backward-btn");
 const stopBtn = document.getElementById("stop-btn");
+const intervalInput = document.getElementById("interval-input");
+let i = 0;
+let interval;
 
 image.src = images[0];
-let i = 0;
-let interval
+
 function forward() {
-  if (i < 3) {
+  if (i < images.length - 1) {
     i++;
     image.src = images[i];
   } else {
@@ -28,17 +30,17 @@ function backward() {
     i--;
     image.src = images[i];
   } else {
-    i = 3;
+    i = images.length - 1;
     image.src = images[i];
   }
 }
 forwardBtn.addEventListener("click", forward);
 backwardBtn.addEventListener("click", backward);
 autoForwardBtn.addEventListener("click", () => {
-  interval =setInterval(forward, 1000);
+  interval = setInterval(forward, intervalInput.value * 1000);
 });
 autoBackwardBtn.addEventListener("click", () => {
-  interval =setInterval(backward, 1000);
+  interval = setInterval(backward, intervalInput.value * 1000);
 });
 stopBtn.addEventListener("click", () => {
   clearInterval(interval);

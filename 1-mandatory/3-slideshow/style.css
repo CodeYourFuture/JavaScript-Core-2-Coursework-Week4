@@ -1,1 +1,62 @@
 /** Write your CSS in here **/
+* {
+  box-sizing: border-box;
+}
+#carosel-images {
+  border: 5px solid;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  margin-top: 100px;
+  border-radius: 15px;
+}
+
+#carousel-img {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #8d7791;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  font-style: italic;
+}
+
+button:hover {
+  background-color: #4f74a7;
+}
+
+button:active {
+  background-color: #054180;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#buttons {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+input[type="number"] {
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(241, 241, 241);
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+#input-number {
+  width: 50%;
+  margin: auto;
+}

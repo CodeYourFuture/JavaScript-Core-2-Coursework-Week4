@@ -12,12 +12,23 @@
   </head>
   <body>
     <!-- Write your HTML in here -->
-    <img id="carousel-img" src="" alt="flowers" /><br />
-    <button id="auto-forward-btn">auto forward</button>
-    <button id="forward-btn">Forward</button>
-    <button id="stop-btn">stop</button>
-    <button id="backward-btn">Backward</button>
-    <button id="auto-backward-btn">auto backward</button>
+    <div id="carosel-images">
+      <img id="carousel-img" src="" alt="flowers" /><br />
+      <div id="buttons">
+        <button id="auto-forward-btn">auto forward</button>
+        <button id="forward-btn">Forward</button>
+        <button id="stop-btn">stop</button>
+        <button id="backward-btn">Backward</button>
+        <button id="auto-backward-btn">auto backward</button>
+      </div>
+      <div id="input-number">
+        <input
+          id="interval-input"
+          type="number"
+          placeholder="How many seconds to wait between images"
+        />
+      </div>
+    </div>
     <script src="slideshow.js"></script>
   </body>
 </html>
