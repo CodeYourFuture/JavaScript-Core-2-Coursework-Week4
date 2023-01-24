@@ -1,13 +1,15 @@
-const changeTime = document.getElementById("timeRemaining");
-let innerTextOfTimer = changeTime.innerText.substr(16, 5);
-let minutes = +innerTextOfTimer.substr(0, 2);
-let seconds = +innerTextOfTimer.substr(3, 2);
-
 let timer = setInterval(function countDown() {
-  seconds = +seconds - 1;
-  changeTime.innerText = `Time Remaining: ${minutes}:${seconds}`;
-  // console.log(typeof minutes);
-  console.log(seconds);
+  let changeTime = document.getElementById("timeRemaining");
+  let innerTextOfTimer = changeTime.innerText.substr(16, 5);
+  let minutes = +innerTextOfTimer.substr(0, 2);
+  let seconds = +innerTextOfTimer.substr(3, 2);
+  // console.log(`Time Remaining: ${minutes}:${seconds}`);
+ 
+  if (seconds > 0 || minutes === 0) {
+    seconds = seconds - 1;
+    changeTime.innerText = `Time Remaining: 00:${seconds}`;
+    console.log(seconds);
+  }
 }, 1000);
 
 function setAlarm() {
@@ -23,7 +25,7 @@ function setAlarm() {
   }
   changeTime.innerText = `Time Remaining: ${minutes}:${seconds}`;
 
-  countDown();
+  timer;
 }
 
 // 1234
