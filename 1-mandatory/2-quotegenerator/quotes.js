@@ -1,3 +1,5 @@
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +492,25 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let list = document.getElementById('quotes-unordered-list')
+
+  const para = document.createElement('p')
+  para.classList.add('para')
+
+  const nextButton = document.createElement('button')
+  nextButton.innerHTML = 'Next'
+  nextButton.classList.add('nextButton')
+
+  let randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+  para.innerText = `${randomQuote.quote} by ${randomQuote.author}`
+
+  list.appendChild(para)
+  list.appendChild(nextButton)
+
+nextButton.addEventListener('click', nextQuote)
+
+function nextQuote (){
+  let randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+  para.innerText = `${randomQuote.quote} by ${randomQuote.author}`
+}
