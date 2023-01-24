@@ -117,7 +117,7 @@ pauseAlarmButton.addEventListener("click", function() {
 
 // Event listener for resume alarm button
 resumeAlarmButton.addEventListener("click", function() {
-    if (paused) {
+    if (paused && timeRemaining > 0) {
         intervalId = setInterval(countdown, 1000);
         paused = false;
     }
