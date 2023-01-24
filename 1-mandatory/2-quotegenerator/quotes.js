@@ -1,3 +1,29 @@
+const textArea = document.createElement("section");
+textArea.setAttribute("id", "text-area");
+
+document.querySelector("body").appendChild(textArea);
+
+const showButton = document.createElement("button");
+showButton.innerText = "New quote";
+showButton.setAttribute("id", "new-quote");
+
+let quoteEl = document.createElement("p");
+quoteEl.setAttribute("id", "quote");
+let authorEl = document.createElement("p");
+authorEl.setAttribute("id", "author");
+
+textArea.appendChild(quoteEl);
+textArea.appendChild(authorEl);
+textArea.appendChild(showButton);
+
+showButton.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+
+  let objectIndex = quotes[randomIndex];
+  quoteEl.innerText = objectIndex.quote;
+  authorEl.innerText = `- ${objectIndex.author}`;
+});
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +516,12 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+// quoteEl.innerText = quotes[2].quote;
+// authorEl.innerText = `- ${quotes[2].author}`;
+
+const randomIndex = Math.floor(Math.random() * quotes.length);
+
+let objectIndex = quotes[randomIndex];
+quoteEl.innerText = objectIndex.quote;
+authorEl.innerText = `- ${objectIndex.author}`;
