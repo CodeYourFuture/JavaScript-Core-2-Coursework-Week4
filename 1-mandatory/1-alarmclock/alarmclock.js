@@ -22,7 +22,6 @@ function setAlarm() {
   }
   function countdown() {
     titleUpdate();
-    
 
     if (alarmSet.value == 0) {
       pauseAlarm();
