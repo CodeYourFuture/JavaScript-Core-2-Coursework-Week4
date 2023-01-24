@@ -1,39 +1,28 @@
-let timer = setInterval(function countDown() {
-  let changeTime = document.getElementById("timeRemaining");
-  let innerTextOfTimer = changeTime.innerText.substr(16, 5);
-  let minutes = +innerTextOfTimer.substr(0, 2);
-  let seconds = +innerTextOfTimer.substr(3, 2);
-  // console.log(`Time Remaining: ${minutes}:${seconds}`);
- 
-  if (seconds > 0 || minutes === 0) {
-    seconds = seconds - 1;
-    changeTime.innerText = `Time Remaining: 00:${seconds}`;
-    console.log(seconds);
-  }
-}, 1000);
+let timeRemaining;
+let timer;
 
 function setAlarm() {
+  document.getElementById("stop").addEventListener("click", () => {
+    clearInterval(timer);
+  });
   const input = document.getElementById("alarmSet").value;
-  const changeTime = document.getElementById("timeRemaining");
-  let minutes = "00";
-  let seconds = "00";
-  if (input.toString().length <= 2) {
-    seconds = input.toString().padStart(2, "0");
-  } else if (input.toString().length > 2) {
-    minutes = input.toString().substr(0, 2);
-    seconds = input.toString().substr(2, 2).padEnd(2, "0");
-  }
-  changeTime.innerText = `Time Remaining: ${minutes}:${seconds}`;
+  clearInterval(timer);
+  timeRemaining = input;
 
-  timer;
+  timer = setInterval(function countDown() {
+    if (timeRemaining === 0) {
+      playAlarm();
+      clearInterval(timer);
+    }
+
+    const changeTime = document.getElementById("timeRemaining");
+    let minutes = (timeRemaining / 60).toFixed(0).padStart(2, "0");
+    let seconds = (timeRemaining % 60).toString().padStart(2, "0");
+
+    timeRemaining = timeRemaining - 1;
+    changeTime.innerText = `Time Remaining: ${minutes}:${seconds}`;
+  }, 1000);
 }
-
-// 1234
-// When you click the `Set Alarm` button the counter at the top of the screen should
-// change to the number you entered in the `input` field. For example, if the `input`
-// field says `10` then the title should say `Time Remaining: 00:10`.
-
-// Every one second the title should count down by one.
 
 // DO NOT EDIT BELOW HERE
 
