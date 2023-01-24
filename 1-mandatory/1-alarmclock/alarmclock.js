@@ -1,5 +1,6 @@
 let remainingTime;
 let intervalId;
+let isPaused = false;
 
 function setAlarm() {
   const alarmSetValue = document.getElementById("alarmSet").value;
@@ -23,6 +24,17 @@ function countdown() {
   } else {
     clearInterval(intervalId);
     playAlarm();
+    let body = document.getElementsByTagName("body")[0];
+    let originalColour = body.style.backgroundColor;
+    body.style.backgroundColor = "red";
+    let flashIntervalId = setInterval(() => {
+      body.style.backgroundColor =
+        body.style.backgroundColor === "red" ? "white" : "red";
+    }, 500);
+    setTimeout(() => {
+      clearInterval(flashIntervalId);
+      body.style.backgroundColor = originalColour;
+    }, 5000);
   }
 }
 
