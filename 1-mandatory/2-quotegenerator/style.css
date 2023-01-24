@@ -1,1 +1,27 @@
 /** Write your CSS in here **/
+/* Set the background color of the body */
+ body {
+  background-color: #F38630
+}
+
+/* Set the background color of the div to white */
+.quote-container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+
+  /* Add additional styles for padding, margins and alignment as needed */
+}
+
+/* Style for the button */
+.new-quote-btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
