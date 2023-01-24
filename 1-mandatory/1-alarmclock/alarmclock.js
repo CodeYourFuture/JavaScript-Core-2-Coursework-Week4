@@ -1,4 +1,34 @@
-function setAlarm() {}
+// 1. When the `Set Alarm` button is clicked, get the value of the input field
+// 2. When you have the input field value, set the title to the correct value
+// 3. Work out how to update the `Time Remaining` title every second
+// 4. When the remaining time left is 0, play the alarm sound
+let remainingTime;
+let intervalId;
+function setAlarm() {
+  let setTimeValue = document.getElementById("alarmSet").value;
+
+  remainingTime = setTimeValue;
+  let minutes = Math.floor(remainingTime / 60);
+  let seconds = remainingTime % 60;
+
+  document.getElementById("timeRemaining").innerText = `Time Remaining: ${
+    minutes < 10 ? "0" : ""
+  } : ${seconds < 10 ? "0" : ""}${seconds}`;
+
+  intervalId = setInterval(() => {
+    if (remainingTime > 0) {
+      remainingTime--;
+      let minutes = Math.floor(remainingTime / 60);
+      let seconds = remainingTime % 60;
+      document.getElementById("timeRemaining").innerText = `Time Remaining: ${
+        minutes < 10 ? "0" : ""
+      } : ${seconds < 10 ? "0" : ""}${seconds}`;
+    } else {
+      clearInterval(intervalId);
+      playAlarm();
+    }
+  }, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 
