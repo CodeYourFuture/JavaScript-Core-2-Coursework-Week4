@@ -23,20 +23,22 @@ pictures.setAttribute("src", images[0]);
 
 document.querySelector("#slide-show").appendChild(pictures);
 
-// const autoBackButton = document.createElement("button");
-// autoBackButton.setAttribute("id", "auto-backward");
-// autoBackButton.innerText = "AUTO BACK";
-// autoBackButton.style.fontSize = "3em";
+const autoBackButton = document.createElement("button");
+autoBackButton.setAttribute("id", "auto-backward");
+autoBackButton.innerText = "AUTO BACK";
+autoBackButton.style.fontSize = "3em";
 
-// document.querySelector("#move-buttons").appendChild(autoBackButton);
+document.querySelector("#move-buttons").appendChild(autoBackButton);
 
-// // autoBackButton.addEventListener("click", () => {
-// //   let counter = 0;
+autoBackButton.addEventListener("click", () => {
+  autoBackButton.disabled = true;
+  autoForwardButton.disabled = true;
 
-// //   setInterval(() => {
-// //     pictures.setAttribute("src", images[counter-- % images.length]);
-// //   }, 2000);
-// // });
+  setInterval(() => {
+    images.unshift(images.slice(-1)[0]);
+    pictures.setAttribute("src", images.pop());
+  }, 2000);
+});
 
 const backButton = document.createElement("button");
 backButton.setAttribute("id", "backward-btn");
@@ -65,17 +67,29 @@ forwardButton.addEventListener("click", () => {
   pictures.setAttribute("src", images[0]);
 });
 
-// const autoForwardButton = document.createElement("button");
-// autoForwardButton.setAttribute("id", "auto-forward");
-// autoForwardButton.innerText = "AUTO FORWARD";
-// autoForwardButton.style.fontSize = "3em";
+const autoForwardButton = document.createElement("button");
+autoForwardButton.setAttribute("id", "auto-forward");
+autoForwardButton.innerText = "AUTO FORWARD";
+autoForwardButton.style.fontSize = "3em";
 
-// document.querySelector("#move-buttons").appendChild(autoForwardButton);
+document.querySelector("#move-buttons").appendChild(autoForwardButton);
 
-// autoBackButton.addEventListener("click", () => {
-//   let counter = 0;
+autoForwardButton.addEventListener("click", () => {
+  autoForwardButton.disabled = true;
+  autoBackButton.disabled = true;
+  rs5;
+  setInterval(() => {
+    images.push(images[0]);
+    images.shift();
+    pictures.setAttribute("src", images[0]);
+  }, 2000);
+});
 
-//   setInterval(() => {
-//     pictures.setAttribute("src", images[counter++ % images.length]);
-//   }, 2000);
-// });
+const stopButton = document.createElement("button");
+stopButton.setAttribute("id", "stop");
+stopButton.innerText = "STOP";
+stopButton.style.fontSize = "3em";
+
+document.querySelector("#move-buttons").appendChild(stopButton);
+
+stopButton.addEventListener("click", () => {});
