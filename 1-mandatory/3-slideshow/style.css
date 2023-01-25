@@ -2,6 +2,7 @@
 body {
   background-color: rgb(203, 249, 244);
   display: grid;
+  grid-auto-columns: max-content;
   justify-content: center;
   margin-top: 2%;
 }
@@ -20,11 +21,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  width: 640px;
+  width: 660px;
   height: 450px;
 }
+
 img {
-  width: 600px;
+  width: 620px;
   height: 400px;
   object-fit: cover;
 }
@@ -32,10 +34,18 @@ img {
 button {
   margin: 20px;
   width: 100px;
+  height: 80px;
 }
-/* 
-<button id="autoback-btn">Auto Back</button>
-        <button id="back-btn">Back</button>
-        <button id="stop-btn">Stop</button>
-        <button id="forward-btn">Forward</button>
-        <button id="autoforward-btn">Auto Forward</button> */
+
+.btn-dark {
+  padding: 15px;
+}
+
+.img-box img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.img-box img.visible {
+  opacity: 1;
+}

@@ -26,25 +26,68 @@ const slides = {
     "https://images.unsplash.com/photo-1664687689617-50a2df1c79e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
 };
 
+// window.onload = function () {
+//   autoForwardClick();
+// };
+
+window.addEventListener("load", updateImage);
+
+const imgBox = document.querySelector(".img-box");
+
 const imgTag = document.getElementById("img-link");
 const backBtn = document.getElementById("back-btn");
 const forwardBtn = document.getElementById("forward-btn");
 
 let currentImage = 0;
 
-imgTag.src = slides[Object.keys(slides)[currentImage]];
+function updateImage() {
+  imgTag.src = slides[Object.keys(slides)[currentImage]];
+  imgTag.classList.add("visible");
+}
+console.log(imgTag.src);
 
 backBtn.addEventListener("click", backBtnClick);
 forwardBtn.addEventListener("click", forwardBtnClick);
 
 function backBtnClick() {
+  clearInterval(int);
   currentImage =
     currentImage > 0 ? currentImage - 1 : Object.keys(slides).length - 1;
-  imgTag.src = slides[Object.keys(slides)[currentImage]];
-  console.log(imgTag.src);
+  updateImage();
 }
+
 function forwardBtnClick() {
+  clearInterval(int);
   currentImage =
     currentImage < Object.keys(slides).length - 1 ? currentImage + 1 : 0;
-  imgTag.src = slides[Object.keys(slides)[currentImage]];
+  updateImage();
+}
+
+const autoBackBtn = document.getElementById("autoback-btn");
+const autoForwardBtn = document.getElementById("autoforward-btn");
+const stopBtn = document.getElementById("stop-btn");
+
+let int;
+
+autoBackBtn.addEventListener("click", autoBackClick);
+autoForwardBtn.addEventListener("click", autoForwardClick);
+stopBtn.addEventListener("click", stopBtnClick);
+
+function autoBackClick() {
+  clearInterval(int);
+  int = setInterval("backBtnClick()", 2000);
+}
+
+function autoForwardClick() {
+  clearInterval(int);
+  int = setInterval(() => {
+    forwardBtnClick();
+    // setTimeout(() => {
+    //   imgTag.classList.remove("visible");
+    // }, 4000);
+  }, 2000);
+}
+
+function stopBtnClick() {
+  clearInterval(int);
 }
