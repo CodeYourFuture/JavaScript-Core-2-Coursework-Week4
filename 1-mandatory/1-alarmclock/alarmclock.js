@@ -28,6 +28,7 @@ function setAlarm() {
       playAlarm();
       clearInterval(interval);
       setBtn.disabled = false;
+      alarmSet.disabled = false;
     } else {
       alarmSet.value--;
     }
@@ -35,6 +36,7 @@ function setAlarm() {
   countdown();
   interval = setInterval(countdown, 1000);
   setBtn.disabled = true;
+  alarmSet.disabled = true;
 }
 
 // DO NOT EDIT BELOW HERE
