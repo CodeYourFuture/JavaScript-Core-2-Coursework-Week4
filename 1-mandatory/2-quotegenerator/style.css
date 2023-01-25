@@ -1,1 +1,112 @@
 /** Write your CSS in here **/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: sandybrown;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.container {
+    width: 900px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.btns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+p {
+    margin-top: 15px;
+}
+
+button {
+    padding: .5rem;
+    background-color: sandybrown;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: darkgoldenrod;
+}
+
+span {
+    background-color: white;
+    border-radius: 5px;
+    color: sandybrown;
+    padding: .1rem;
+}
+
+h6 {
+    color: sandybrown;
+    align-self: flex-end;
+}
+
+h1 {
+    color: sandybrown;
+}
+
+
+/* switch */
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 80px;
+    height: 40px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    margin-top: 10px;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 30px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked+label {
+    background: sandybrown;
+}
+
+input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 130px;
+}
