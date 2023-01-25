@@ -38,10 +38,23 @@ forwardBtn.addEventListener("click", forward);
 backwardBtn.addEventListener("click", backward);
 autoForwardBtn.addEventListener("click", () => {
   interval = setInterval(forward, intervalInput.value * 1000);
+  //inputField.disabled = true;
+  autoForwardBtn.disabled = true;
+  autoBackwardBtn.disabled = true;
+  forwardBtn.disabled = true;
+  backwardBtn.disabled = true;
 });
 autoBackwardBtn.addEventListener("click", () => {
   interval = setInterval(backward, intervalInput.value * 1000);
+  autoForwardBtn.disabled = true;
+  autoBackwardBtn.disabled = true;
+  forwardBtn.disabled = true;
+  backwardBtn.disabled = true;
 });
 stopBtn.addEventListener("click", () => {
   clearInterval(interval);
+  autoForwardBtn.disabled = false;
+  autoBackwardBtn.disabled = false;
+  forwardBtn.disabled = false;
+  backwardBtn.disabled = false;
 });

@@ -509,8 +509,10 @@ document.addEventListener("DOMContentLoaded", function () {
   checkbox.addEventListener("change", function () {
     if (checkbox.checked) {
       interval = setInterval(changeQuote, 1000);
+      newQuoteBtn.disabled = true;
     } else {
       clearInterval(interval);
+      newQuoteBtn.disabled = false;
     }
   });
 });

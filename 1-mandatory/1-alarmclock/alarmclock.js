@@ -3,6 +3,7 @@ function setAlarm() {
   let minute = "";
   const alarmSet = document.getElementById("alarmSet");
   const changeTitle = document.getElementById("timeRemaining");
+  const setBtn = document.getElementById("set");
   let interval;
   function titleUpdate() {
     let sec = alarmSet.value % 60;
@@ -24,15 +25,16 @@ function setAlarm() {
     titleUpdate();
 
     if (alarmSet.value == 0) {
-      pauseAlarm();
+      playAlarm();
       clearInterval(interval);
+      setBtn.disabled = false;
     } else {
       alarmSet.value--;
-      playAlarm();
     }
   }
   countdown();
   interval = setInterval(countdown, 1000);
+  setBtn.disabled = true;
 }
 
 // DO NOT EDIT BELOW HERE
