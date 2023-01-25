@@ -67,6 +67,7 @@ input.hidden {
   content: "😊";
   font-size: 45px;
 }
+
 #auto-play:checked ~ .emoji::after {
   content: "🤔";
 }
