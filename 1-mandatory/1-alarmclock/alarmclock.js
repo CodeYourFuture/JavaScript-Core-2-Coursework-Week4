@@ -1,4 +1,16 @@
-function setAlarm() {}
+function setAlarm() {
+    const input = document.getElementById("alarmSet").value;
+    document.getElementById("timeRemaining").innerHTML = "Time Remaining: " + input;
+    let timeLeft = input;
+    const interval = setInterval(() => {
+    timeLeft--;
+    document.getElementById("timeRemaining").innerHTML = "Time Remaining: " + timeLeft;
+    if (timeLeft === 0) {
+      playAlarm();
+      clearInterval(interval);
+    }
+  }, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 
