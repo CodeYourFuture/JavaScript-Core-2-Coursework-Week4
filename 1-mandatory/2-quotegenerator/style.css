@@ -44,11 +44,35 @@ blockquote footer {
   text-align: right;
 }
 .quote-btn {
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
   padding-right: 40px;
 }
-.btn {
+.btn,
+.auto-box {
   background-color: rgb(119, 177, 169);
   color: #fff;
   border: none;
+}
+
+label {
+  margin: 0;
+}
+
+input.hidden {
+  display: none;
+}
+
+.emoji::after {
+  content: "😊";
+  font-size: 45px;
+}
+#auto-play:checked ~ .emoji::after {
+  content: "🤔";
+}
+
+.emoji {
+  position: absolute;
+  bottom: 5px;
+  left: 175px;
 }

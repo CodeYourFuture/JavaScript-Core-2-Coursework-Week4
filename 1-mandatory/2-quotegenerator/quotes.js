@@ -504,3 +504,22 @@ button.addEventListener("click", function () {
   quoteText.innerText = quote.quote;
   quoteAuthor.innerText = `- ${quote.author}`;
 });
+
+const autoPlay = document.getElementById("auto-play");
+const autoBtn = document.getElementById("auto-btn");
+let intAutoPlay;
+autoPlay.addEventListener("change", function () {
+  autoBtn.innerText = "Auto play: On";
+
+  // if (intAutoPlay) clearInterval(intAutoPlay);
+  if (this.checked) {
+    intAutoPlay = setInterval(function () {
+      const quote = pickFromArray(quotes);
+      quoteText.innerText = quote.quote;
+      quoteAuthor.innerText = `- ${quote.author}`;
+    }, 1000);
+  } else {
+    clearInterval(intAutoPlay);
+    autoBtn.innerText = "Auto play: Off";
+  }
+});

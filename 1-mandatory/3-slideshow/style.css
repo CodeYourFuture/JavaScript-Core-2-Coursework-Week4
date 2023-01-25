@@ -1,1 +1,41 @@
 /** Write your CSS in here **/
+body {
+  background-color: rgb(203, 249, 244);
+  display: grid;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.img-container {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  background-color: rgb(152, 209, 202);
+  border: 1px solid #222;
+  border-radius: 5px;
+  padding: 20px;
+}
+.img-box {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 640px;
+  height: 450px;
+}
+img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
+button {
+  margin: 20px;
+  width: 100px;
+}
+/* 
+<button id="autoback-btn">Auto Back</button>
+        <button id="back-btn">Back</button>
+        <button id="stop-btn">Stop</button>
+        <button id="forward-btn">Forward</button>
+        <button id="autoforward-btn">Auto Forward</button> */
