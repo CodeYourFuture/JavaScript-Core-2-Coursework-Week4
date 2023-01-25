@@ -1,10 +1,10 @@
 function setAlarm() {
-    const input = document.getElementById("alarmSet").value;
-    document.getElementById("timeRemaining").innerHTML = "Time Remaining: " + input;
+    const input = document.querySelector("#alarmSet").value;
+    document.querySelector("#timeRemaining").innerHTML = "Time Remaining: " + input;
     let timeLeft = input;
     const interval = setInterval(() => {
     timeLeft--;
-    document.getElementById("timeRemaining").innerHTML = "Time Remaining: " + timeLeft;
+    document.querySelector("#timeRemaining").innerHTML = "Time Remaining: " + timeLeft;
     if (timeLeft === 0) {
       playAlarm();
       clearInterval(interval);
