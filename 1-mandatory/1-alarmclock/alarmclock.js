@@ -8,9 +8,14 @@ function setAlarm() {
   else if (inputTime.value.length >= 2 && Number(inputTime.value) >= 60) {
     let remaining = Number(inputTime.value) % 60;
     let quotient = Math.floor(Number(inputTime.value / 60));
-    if (remaining <= 9)
+    if (Number(inputTime.value) >= 600 && remaining > 9)
+      timeRemain.innerHTML = `Time Remaining: ${quotient}:${remaining}`;
+    else if (Number(inputTime.value) >= 600 && remaining <= 9)
+      timeRemain.innerHTML = `Time Remaining: ${quotient}:0${remaining}`;
+    else if (Number(inputTime.value) < 600 && remaining > 9)
+      timeRemain.innerHTML = `Time Remaining: 0${quotient}:${remaining}`;
+    else if (Number(inputTime.value) < 600 && remaining <= 9)
       timeRemain.innerHTML = `Time Remaining: 0${quotient}:0${remaining}`;
-    else timeRemain.innerHTML = `Time Remaining: 0${quotient}:${remaining}`;
   }
   inputTime.value = "";
 }
