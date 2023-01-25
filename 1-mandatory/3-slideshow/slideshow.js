@@ -1,90 +1,60 @@
-// Write your code here
-// level 1 challenge
-
-// assign my src codes
-const picturesSources = [
-"/1-mandatory/3-slideshow/images/1.jpg",
-"/1-mandatory/3-slideshow/images/2.jpg",
-"/1-mandatory/3-slideshow/images/3.jpg",
-"/1-mandatory/3-slideshow/images/4.jpg",
-"/1-mandatory/3-slideshow/images/5.jpg",
-
+const images = [
+  "image/img-1.jpeg",
+  "image/img-2.jpeg",
+  "image/img-3.jpeg",
+  "image/img-4.jpeg",
 ];
-
-// get elements
-let images = document.getElementById("images")
-
-
-const forwardButton = document.getElementById("forward")
-const backButton = document.getElementById("back");
-
-let currentIndex = 0;
-
-
-function changePicturesForward() {
-currentIndex++;
-images.src = picturesSources[currentIndex % picturesSources.length];
-}
-
-function changePicturesBack() {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = picturesSources.length - 1;
-  }
-  images.src = picturesSources[currentIndex % picturesSources.length];
-}
-
-forwardButton.addEventListener("click", changePicturesForward);
-
-backButton.addEventListener("click", changePicturesBack);
-
-
-// level 2 challenge 
+const image = document.getElementById("carousel-img");
+const forwardBtn = document.getElementById("forward-btn");
+const backwardBtn = document.getElementById("backward-btn");
+const autoForwardBtn = document.getElementById("auto-forward-btn");
+const autoBackwardBtn = document.getElementById("auto-backward-btn");
+const stopBtn = document.getElementById("stop-btn");
 const intervalInput = document.getElementById("interval-input");
-let intervalId;
-let isPlaying = false;
+let i = 0;
+let interval;
 
-function forwardSlideshow() {
-  if ((intervalInput.value === "") || (intervalInput.value <= 0)) {
-    alert("Please enter a valid value and above 0");
-    return;
+image.src = images[0];
+
+function forward() {
+  if (i < images.length - 1) {
+    i++;
+    image.src = images[i];
+  } else {
+    i = 0;
+    image.src = images[i];
   }
-    intervalId = setInterval(
-      changePicturesForward,
-      intervalInput.value * 1000
-    );
-isPlaying = true;
-autoForwardButton.disabled = true
-autoBackButton.disabled = true;
-intervalInput.value = ''
 }
-
-function backwardSlideshow() {
-  if ((intervalInput.value === "") || (intervalInput.value <= 0)) {
-    alert("Please enter a valid value and above 0");
-    return;
+function backward() {
+  if (i > 0) {
+    i--;
+    image.src = images[i];
+  } else {
+    i = images.length - 1;
+    image.src = images[i];
   }
-  intervalId = setInterval(changePicturesBack, intervalInput.value * 1000);
-  isPlaying = true;
-  autoBackButton.disabled = true;
-  autoForwardButton.disabled = true;
-  intervalInput.value = "";
 }
-
-function stopSlideshow() {
-clearInterval(intervalId);
-isPlaying = false;
-autoForwardButton.disabled = false;
-autoBackButton.disabled = false;
-}
-
-
-const autoForwardButton = document.getElementById("auto-forward");
-const autoBackButton = document.getElementById("auto-back");
-const stopButton = document.getElementById("stop");
-
-autoForwardButton.addEventListener("click", forwardSlideshow);
-stopButton.addEventListener("click",stopSlideshow)
-autoBackButton.addEventListener("click", backwardSlideshow);
-
-
+forwardBtn.addEventListener("click", forward);
+backwardBtn.addEventListener("click", backward);
+autoForwardBtn.addEventListener("click", () => {
+  interval = setInterval(forward, intervalInput.value * 1000);
+  //inputField.disabled = true;
+  autoForwardBtn.disabled = true;
+  autoBackwardBtn.disabled = true;
+  forwardBtn.disabled = true;
+  backwardBtn.disabled = true;
+});
+autoBackwardBtn.addEventListener("click", () => {
+  interval = setInterval(backward, intervalInput.value * 1000);
+  autoForwardBtn.disabled = true;
+  autoBackwardBtn.disabled = true;
+  forwardBtn.disabled = true;
+  backwardBtn.disabled = true;
+});
+stopBtn.addEventListener("click", () => {
+  clearInterval(interval);
+  autoForwardBtn.disabled = false;
+  autoBackwardBtn.disabled = false;
+  forwardBtn.disabled = false;
+  backwardBtn.disabled = false;
+});

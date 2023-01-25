@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: sandybrown;
+    background-color: rgb(120, 91, 113);
 }
 
 main{
@@ -38,30 +38,30 @@ p {
 
 button {
     padding: .5rem;
-    background-color: sandybrown;
+    background-color: rgb(244, 96, 217);
     color: white;
     border: 0;
     border-radius: 10px;
 }
 
 button:hover {
-    background-color: darkgoldenrod;
+    background-color: rgb(238, 127, 223);
 }
 
 span{
     background-color: white;
     border-radius: 5px;
-    color: sandybrown;
+    color: rgb(213, 140, 218);
     padding: .1rem;
 }
 
 h6{
-    color: sandybrown;
+    color: rgb(227, 96, 244);
     align-self: flex-end;
 }
 
 h1{
-    color: sandybrown;
+    color: rgb(224, 96, 244);
 }
 
 
@@ -79,7 +79,7 @@ label {
 	text-indent: -9999px;
 	width: 80px;
 	height: 40px;
-	background: grey;
+	background: rgb(160, 63, 167);
 	display: block;
 	border-radius: 100px;
 	position: relative;
@@ -99,7 +99,7 @@ label:after {
 }
 
 input:checked + label {
-	background: sandybrown;
+	background: rgb(243, 145, 230);
 }
 
 input:checked + label:after {
