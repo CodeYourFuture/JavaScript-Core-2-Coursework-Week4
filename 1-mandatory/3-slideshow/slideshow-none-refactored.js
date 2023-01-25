@@ -26,25 +26,19 @@ const slides = {
     "https://images.unsplash.com/photo-1664687689617-50a2df1c79e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
 };
 
-let currentImage = 0;
-let int;
-let time = 2200;
-
-const imgBox = document.querySelector(".img-box");
-const imgTag = document.getElementById("carousel-img");
-const backBtn = document.getElementById("backward-btn");
-const forwardBtn = document.getElementById("forward-btn");
-const autoBackBtn = document.getElementById("auto-backward");
-const autoForwardBtn = document.getElementById("auto-forward");
-const stopBtn = document.getElementById("stop");
-const timeInput = document.getElementById("time-input");
-const updateTimeBtn = document.getElementById("time-btn");
-
 // window.onload = function () {
 //   autoForwardClick();
 // };
 
 window.addEventListener("load", updateImage);
+
+const imgBox = document.querySelector(".img-box");
+
+const imgTag = document.getElementById("img-link");
+const backBtn = document.getElementById("back-btn");
+const forwardBtn = document.getElementById("forward-btn");
+
+let currentImage = 0;
 
 function updateImage() {
   imgTag.src = slides[Object.keys(slides)[currentImage]];
@@ -53,6 +47,8 @@ function updateImage() {
 console.log(imgTag.src);
 
 backBtn.addEventListener("click", backBtnClick);
+forwardBtn.addEventListener("click", forwardBtnClick);
+
 function backBtnClick() {
   clearInterval(int);
   currentImage =
@@ -60,7 +56,6 @@ function backBtnClick() {
   updateImage();
 }
 
-forwardBtn.addEventListener("click", forwardBtnClick);
 function forwardBtnClick() {
   clearInterval(int);
   currentImage =
@@ -68,7 +63,16 @@ function forwardBtnClick() {
   updateImage();
 }
 
+const autoBackBtn = document.getElementById("autoback-btn");
+const autoForwardBtn = document.getElementById("autoforward-btn");
+const stopBtn = document.getElementById("stop-btn");
+
+let int;
+
 autoBackBtn.addEventListener("click", autoBackClick);
+autoForwardBtn.addEventListener("click", autoForwardClick);
+stopBtn.addEventListener("click", stopBtnClick);
+
 function autoBackClick() {
   clearInterval(int);
   int = setInterval(() => {
@@ -81,7 +85,6 @@ function autoBackClick() {
   }, 2200);
 }
 
-autoForwardBtn.addEventListener("click", autoForwardClick);
 function autoForwardClick() {
   clearInterval(int);
   int = setInterval(() => {
@@ -95,13 +98,18 @@ function autoForwardClick() {
   // console.log(time);
 }
 
-stopBtn.addEventListener("click", stopBtnClick);
 function stopBtnClick() {
   updateImage();
   clearInterval(int);
 }
 
+const timeInput = document.getElementById("time-input");
+const updateTimeBtn = document.getElementById("time-btn");
+
 updateTimeBtn.addEventListener("click", updateTimeBtnClick);
+
+let time = 2200;
+
 function updateTimeBtnClick() {
   clearInterval(int);
   time = Number(timeInput.value);

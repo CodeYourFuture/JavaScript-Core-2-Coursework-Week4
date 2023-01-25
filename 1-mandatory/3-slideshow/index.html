@@ -15,14 +15,19 @@
     <div class="img-container">
       <h2>Image Carousel Demo</h2>
       <div class="img-box">
-        <img id="img-link" src="" alt="Iran protest" />
+        <img id="carousel-img" src="" alt="Iran protest" />
       </div>
       <div class="btn-container">
-        <button class="btn btn-dark" id="autoback-btn">Auto Back</button>
-        <button class="btn btn-info" id="back-btn">Back</button>
-        <button class="btn btn-secondary" id="stop-btn">Stop</button>
+        <button class="btn btn-dark" id="auto-backward">Auto Back</button>
+        <button class="btn btn-info" id="backward-btn">Back</button>
+        <button class="btn btn-secondary" id="stop">Stop</button>
         <button class="btn btn-info" id="forward-btn">Forward</button>
-        <button class="btn btn-dark" id="autoforward-btn">Auto Forward</button>
+        <button class="btn btn-dark" id="auto-forward">Auto Forward</button>
+      </div>
+      <div>
+        <label for="time-input">Slide time (ms):</label>
+        <input type="number" id="time-input" min="1000" value="3000" />
+        <button class="btn btn-success" id="time-btn">Update</button>
       </div>
     </div>
     <script src="slideshow.js"></script>
