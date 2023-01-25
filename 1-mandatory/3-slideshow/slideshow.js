@@ -1,10 +1,11 @@
 const images = [
-  "image/img-1.jpeg",
-  "image/img-2.jpeg",
-  "image/img-3.jpeg",
-  "image/img-4.jpeg",
+  "/1-mandatory/3-slideshow/example-screenshots/image/img-1.jpg",
+  "/1-mandatory/3-slideshow/example-screenshots/image/img-2.jpg",
+  "/1-mandatory/3-slideshow/example-screenshots/image/img-3.jpg",
+  "/1-mandatory/3-slideshow/example-screenshots/image/img-4.jpg",
+  "/1-mandatory/3-slideshow/example-screenshots/image/img-5.jpg"
 ];
-const image = document.getElementById("carousel-img");
+const image = document.getElementById("Dog-img");
 const forwardBtn = document.getElementById("forward-btn");
 const backwardBtn = document.getElementById("backward-btn");
 const autoForwardBtn = document.getElementById("auto-forward-btn");
@@ -14,26 +15,21 @@ const intervalInput = document.getElementById("interval-input");
 let i = 0;
 let interval;
 
-image.src = images[0];
+let currentIndex = 0;
 
 function forward() {
-  if (i < images.length - 1) {
-    i++;
-    image.src = images[i];
-  } else {
-    i = 0;
-    image.src = images[i];
-  }
+  currentIndex++;
+  image.src = images[currentIndex % images.length];
 }
+
 function backward() {
-  if (i > 0) {
-    i--;
-    image.src = images[i];
-  } else {
-    i = images.length - 1;
-    image.src = images[i];
+  currentIndex--;
+  if(currentIndex < 0){
+      currentIndex = images.length -1
+    }
+  image.src = images[currentIndex % images.length];
   }
-}
+
 forwardBtn.addEventListener("click", forward);
 backwardBtn.addEventListener("click", backward);
 autoForwardBtn.addEventListener("click", () => {
