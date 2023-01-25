@@ -1,1 +1,26 @@
 /** Write your CSS in here **/
+h1 {
+    text-align: center;
+    color: palevioletred
+}
+
+.slider-wrapper {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+    background: rgb(213, 209, 209);
+    padding: 10px 30px;
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+.btn:hover {
+    background-color: rgb(193, 232, 193);
+}

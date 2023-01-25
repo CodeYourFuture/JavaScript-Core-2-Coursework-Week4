@@ -25,7 +25,6 @@ function setAlarm() {
   if (inputValue.value == 0){ 
     clearInterval(interval)
     playAlarm() 
-    document.body.style.backgroundColor = 'lightblue'
   }
  },1000);
 }
