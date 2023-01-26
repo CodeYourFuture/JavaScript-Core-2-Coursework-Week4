@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: sandybrown;
+    background-color: rgb(191, 236, 122);
 }
 
 main {
@@ -21,6 +21,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    border-radius: 20px;
 }
 
 .btns {
