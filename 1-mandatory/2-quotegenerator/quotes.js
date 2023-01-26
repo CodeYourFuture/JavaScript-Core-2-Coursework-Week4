@@ -490,3 +490,14 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+var people = [
+  { username: jon, count: 5 },
+  { username: sally, count: 7 },
+  { username: mark, count: 9 },
+];
+let random_index = Math.floor(Math.random() * people.length);
+let obj = people[random_index];
+
+let par = document.querySelector("p");
+par.innerText = obj;
