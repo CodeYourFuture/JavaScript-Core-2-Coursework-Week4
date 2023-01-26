@@ -490,3 +490,26 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const quoteT = document.getElementById('qu');
+const author = document.getElementById('author')
+
+const button = document.getElementById('new-qu')
+
+const  newQuote = pickFromArray(quotes)
+
+console.log(newQuote)
+
+quoteT.innerText = newQuote.quote
+author.innerText = `~ ${newQuote.author}`
+
+
+button.addEventListener('click', function () {
+  
+const  newQuote = pickFromArray(quotes)
+quoteT.innerText = newQuote.quote
+author.innerText = `~ ${newQuote.author}`
+
+})
+
+

@@ -1,1 +1,52 @@
 /** Write your CSS in here **/
+body {
+    background-color: aquamarine;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 40 px;
+    margin: 20px;
+    padding: 20px;
+}
+
+h6 {
+    font-size: 15 px;
+}
+
+.container {
+    margin: 2 px 20 px;
+    padding: 120px 140px;
+    justify-content: center;
+}
+
+blockquote {
+   background-color: white;
+}
+
+#quote {
+    background-color: white;
+    margin: 30 px 15 px;
+    padding: 15 px 30 px;
+}
+
+#qu {
+justify-content: center;
+margin: 25px 25px;
+}
+
+#author {
+    padding-left: 250px;
+}
+.q-btn {
+    
+    border: none;
+    text-align: right;
+    margin: 10px 10px 10px 10px;
+    padding: 20px 20px 20px 20px;
+    background-color: white;
+}
+
+#new-qu {
+    background-color: aquamarine;
+}
