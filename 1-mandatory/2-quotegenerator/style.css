@@ -1,1 +1,23 @@
 /** Write your CSS in here **/
+body {
+  background-color: #aaf0c1;
+}
+
+#container {
+  background-color: white;
+  margin: 15% 20%;
+  padding: 3%;
+  font-size: 1.5em;
+}
+
+#buttonQuoteGenerator {
+  border: none;
+  background-color: #aaf0c1;
+  color: white;
+}
+
+#author {
+  text-align: right;
+  font-size: 0.9em;
+  font-weight: bold;
+}

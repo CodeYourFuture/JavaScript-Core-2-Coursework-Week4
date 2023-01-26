@@ -491,13 +491,20 @@ const quotes = [
   },
 ];
 
-var people = [
-  { username: jon, count: 5 },
-  { username: sally, count: 7 },
-  { username: mark, count: 9 },
-];
-let random_index = Math.floor(Math.random() * people.length);
-let obj = people[random_index];
+let randomIndex = Math.floor(Math.random() * quotes.length);
+let saying = quotes[randomIndex];
 
-let par = document.querySelector("p");
-par.innerText = obj;
+let words = document.getElementById("quote");
+let authorName = document.getElementById("author");
+words.innerHTML = "&#8220;" + saying.quote;
+authorName.innerHTML = "-" + saying.author;
+
+function generateRandomQuote() {
+  let randomIndex = Math.floor(Math.random() * quotes.length);
+  let saying = quotes[randomIndex];
+
+  let words = document.getElementById("quote");
+  let authorName = document.getElementById("author");
+  words.innerHTML = "&#8220;" + saying.quote;
+  authorName.innerHTML = "-" + saying.author;
+}
