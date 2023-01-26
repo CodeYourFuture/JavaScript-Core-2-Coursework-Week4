@@ -1,1 +1,5 @@
 /** Write your CSS in here **/
+#images img {
+  height: 300px;
+  width: auto;
+}
