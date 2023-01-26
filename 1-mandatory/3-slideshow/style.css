@@ -1,1 +1,37 @@
 /** Write your CSS in here **/
+body {
+  min-width: auto;
+}
+#slide-show {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#carousel-img {
+  width: 80%;
+  margin: 5em 2em 5em 2em;
+  object-fit: contain;
+}
+
+#auto-backward,
+#backward-btn,
+#stop,
+#forward-btn,
+#auto-forward {
+  border-radius: 25px;
+  padding: 0.5em;
+  border: 10px cornflowerblue solid;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+
+#auto-forward {
+  margin-top: 0.2em;
+  margin-left: 6em;
+}
+
+/* #move-buttons {
+  display: flex;
+  justify-content: space-around;
+} */

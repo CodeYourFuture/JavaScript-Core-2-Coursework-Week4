@@ -39,7 +39,7 @@ describe("Level 1 challenge", () => {
       "https://images.unsplash.com/photo-1552450970-88b9d409fe18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1620383074552-6938c412faf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1501510691679-728450bdcb40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
-      "https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1602731465531-14015e83a6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const forwardBtn = page.window.document.querySelector("#forward-btn");
@@ -54,7 +54,7 @@ describe("Level 1 challenge", () => {
       "https://images.unsplash.com/photo-1552450970-88b9d409fe18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1620383074552-6938c412faf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1501510691679-728450bdcb40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
-      "https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1602731465531-14015e83a6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const forwardBtn = page.window.document.querySelector("#forward-btn");
@@ -71,7 +71,7 @@ describe("Level 1 challenge", () => {
       "https://images.unsplash.com/photo-1552450970-88b9d409fe18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1620383074552-6938c412faf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1501510691679-728450bdcb40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
-      "https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1602731465531-14015e83a6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const forwardBtn = page.window.document.querySelector("#forward-btn");
@@ -87,7 +87,7 @@ describe("Level 1 challenge", () => {
       "https://images.unsplash.com/photo-1552450970-88b9d409fe18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1620383074552-6938c412faf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1501510691679-728450bdcb40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
-      "https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1602731465531-14015e83a6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const backwardBtn = page.window.document.querySelector("#backward-btn");
@@ -96,7 +96,7 @@ describe("Level 1 challenge", () => {
 
     userEvent.click(backwardBtn);
 
-    expect(image).toHaveAttribute("src", images[2]);
+    expect(image).toHaveAttribute("src", images[3]);
   });
 
   test("can move the image backwards multiple times", () => {
@@ -104,7 +104,7 @@ describe("Level 1 challenge", () => {
       "https://images.unsplash.com/photo-1552450970-88b9d409fe18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1620383074552-6938c412faf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1501510691679-728450bdcb40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
-      "https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1602731465531-14015e83a6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const backwardBtn = page.window.document.querySelector("#backward-btn");
@@ -113,7 +113,7 @@ describe("Level 1 challenge", () => {
     userEvent.click(backwardBtn);
     userEvent.click(backwardBtn);
 
-    expect(image).toHaveAttribute("src", images[1]);
+    expect(image).toHaveAttribute("src", images[2]);
   });
 
   test("moving forwards will eventually wrap around to the start", () => {
@@ -121,13 +121,14 @@ describe("Level 1 challenge", () => {
       "https://images.unsplash.com/photo-1552450970-88b9d409fe18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1620383074552-6938c412faf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1501510691679-728450bdcb40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
-      "https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1602731465531-14015e83a6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const forwardBtn = page.window.document.querySelector("#forward-btn");
 
     expect(image).toHaveAttribute("src", images[0]);
 
+    userEvent.click(forwardBtn);
     userEvent.click(forwardBtn);
     userEvent.click(forwardBtn);
     userEvent.click(forwardBtn);
@@ -148,7 +149,7 @@ describe("Level 2 challenge", () => {
       "https://images.unsplash.com/photo-1552450970-88b9d409fe18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1620383074552-6938c412faf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1501510691679-728450bdcb40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
-      "https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1602731465531-14015e83a6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const autoForwardBtn = page.window.document.querySelector("#auto-forward");
@@ -169,6 +170,9 @@ describe("Level 2 challenge", () => {
     expect(image).toHaveAttribute("src", images[2]);
 
     jest.advanceTimersByTime(interval);
+    expect(image).toHaveAttribute("src", images[3]);
+
+    jest.advanceTimersByTime(interval);
     expect(image).toHaveAttribute("src", images[0]);
   });
   test("can start moving images backward automatically", () => {
@@ -176,7 +180,7 @@ describe("Level 2 challenge", () => {
       "https://images.unsplash.com/photo-1552450970-88b9d409fe18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1620383074552-6938c412faf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1501510691679-728450bdcb40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
-      "https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1602731465531-14015e83a6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const autoForwardBtn = page.window.document.querySelector("#auto-forward");
@@ -189,6 +193,9 @@ describe("Level 2 challenge", () => {
 
     expect(autoForwardBtn).toBeDisabled();
     expect(autoBackBtn).toBeDisabled();
+
+    jest.advanceTimersByTime(interval);
+    expect(image).toHaveAttribute("src", images[3]);
 
     jest.advanceTimersByTime(interval);
     expect(image).toHaveAttribute("src", images[2]);
@@ -204,7 +211,7 @@ describe("Level 2 challenge", () => {
       "https://images.unsplash.com/photo-1552450970-88b9d409fe18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1620383074552-6938c412faf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       "https://images.unsplash.com/photo-1501510691679-728450bdcb40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
-      "https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1602731465531-14015e83a6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80https://images.unsplash.com/photo-1618143309908-3ab8b930c55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const autoForwardBtn = page.window.document.querySelector("#auto-forward");
