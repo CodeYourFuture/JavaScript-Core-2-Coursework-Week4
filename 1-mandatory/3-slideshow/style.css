@@ -1,1 +1,10 @@
 /** Write your CSS in here **/
+#content{
+    margin: 10px 10px 10px 10px;
+}
+
+
+img {
+    width: 600px;
+    height: 500px;
+}

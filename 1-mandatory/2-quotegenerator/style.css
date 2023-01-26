@@ -1,1 +1,58 @@
 /** Write your CSS in here **/
+body{
+    background-color: orange;
+    display: flex;
+    justify-content: center
+}
+
+
+#content {
+    margin-top: 5%;
+    background-color: white;
+    width: 55%;
+    height:300px;
+    display: grid;
+    grid-template-rows: 80% 50px 50px;
+    position: relative;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+#quotes {
+    padding:2rem;
+    line-height:  50px;
+    background-color:white;  
+    justify-content: center;
+}
+#quote {
+    color: orangered;
+    font-weight: 300;
+
+}
+
+.btn{   
+    display: flex;
+    justify-content: right;
+}
+.btn button {
+    color: white;
+        background-color: orange;
+        padding: 2px 2px 2px 2px;
+        position: absolute;
+        bottom:  10%;
+        right: 5%;
+        border-radius: 5px;
+        padding: 10px;
+         
+}
+
+#author {
+    display: flex;
+    justify-content:right;
+     margin: 2px 2px 2px 2px;
+     color: orangered;
+     position: absolute;
+     bottom: 40%;
+     right: 8%;
+}
+

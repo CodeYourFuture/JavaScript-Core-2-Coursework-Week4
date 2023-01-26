@@ -9,7 +9,7 @@
 //
 // Returns
 // -------
-// One item of the given array.
+// One item of the given array.array
 //
 // Examples of use
 // ---------------
@@ -490,3 +490,16 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function showQuote(){
+let myQuote = document.getElementById("quote") // <p>
+let authors = document.querySelector("#author") // span
+
+let pickQuote = pickFromArray(quotes) ; // argumant is the name of arr
+ myQuote.textContent = pickQuote.quote ;
+ authors.textContent = pickQuote.author;
+}
+showQuote();
+
+let newQuate = document.querySelector("button");
+ newQuate.addEventListener("click",showQuote)
