@@ -20,6 +20,23 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+const quoteText = document.querySelector(".quote-text");
+ const quoteAuthor = document.querySelector(".quote-author");
+ const newQuoteBtn = document.querySelector(".new-quote-btn");
+
+ // On page load, display a random quote
+ window.onload = function() {
+   let randomQuote = pickFromArray(quotes);
+   quoteText.innerHTML = randomQuote.quote;
+   quoteAuthor.innerHTML = randomQuote.author;
+ };
+
+ // On button click, change the quote on the screen
+ newQuoteBtn.addEventListener("click", function() {
+   let randomQuote = pickFromArray(quotes);
+   quoteText.innerHTML = randomQuote.quote;
+   quoteAuthor.innerHTML = randomQuote.author;
+ });
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
