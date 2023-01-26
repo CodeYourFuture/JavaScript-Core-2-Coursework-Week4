@@ -38,8 +38,10 @@ function manuallyBackward() {
   }
   imageSection.appendChild(imagesArray[count]);
 }
+
 let autoBackInt;
 let autoForwardInt;
+
 function autoBack() {
   autoBackInt = setInterval(manuallyBackward, 1000);
 }
