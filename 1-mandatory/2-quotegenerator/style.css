@@ -1,1 +1,39 @@
 /** Write your CSS in here **/
+body {
+    background-color: rgb(226, 187, 17);
+}
+
+#btn_Quote {
+    background-color: rgb(226, 187, 17);
+    margin-left: 82%;
+    width: 150px;
+    height: 90px;
+    border: 0px;
+    color: white;
+}
+#quote_div {
+    width: 70%;
+    height: 450px;
+    margin: 200px auto;
+    background-color: white;
+}
+#quote{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    font-weight: 800;
+    color: rgb(226, 187, 17);
+}
+#larg-quotation{
+    font-size: 100px;
+    color: rgb(226, 187, 17);
+}
+
+
+#author {
+    margin-left: 82%;
+    color: rgb(226, 187, 17);
+    font-size: 30px;
+    font-style: italic;
+}
