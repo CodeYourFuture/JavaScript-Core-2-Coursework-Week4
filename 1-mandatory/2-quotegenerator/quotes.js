@@ -1,20 +1,29 @@
-// DO NOT EDIT BELOW HERE
+const textArea = document.createElement("section");
+textArea.setAttribute("id", "text-area");
+document.querySelector("body").appendChild(textArea);
 
-// A function which will return one item, at
-// random, from the given array.
-//
-// Parameters
-// ----------
-// choices: an array of items to pick from.
-//
-// Returns
-// -------
-// One item of the given array.
-//
-// Examples of use
-// ---------------
-// pickFromArray([1,2,3,4])     //maybe returns 2
-// pickFromArray(coloursArray)  //maybe returns "#F38630"
+const quoteButton = document.createElement("button");
+quoteButton.innerText = "New Quote";
+quoteButton.setAttribute("id", "new-quote");
+
+let quoteElement = document.createElement("p");
+quoteElement.setAttribute("id", "quote");
+
+let authorElement = document.createElement("p");
+authorElement.setAttribute("id", "author");
+
+textArea.appendChild(quoteElement);
+textArea.appendChild(authorElement);
+textArea.appendChild(quoteButton);
+
+quoteButton.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  let objectIndex = quotes[randomIndex];
+  quoteElement.innerText = objectIndex.quote;
+  authorElement.innerText = objectIndex.author;
+});
+
+// DO NOT EDIT BELOW HERE
 //
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
