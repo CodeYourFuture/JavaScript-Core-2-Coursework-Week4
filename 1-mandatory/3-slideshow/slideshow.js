@@ -1,31 +1,37 @@
 // Write your code here
 const pictureSources = [
-  "./assets/cute-cat-a.png",
+  "./assets/cute-cat-a.jpg",
   "./assets/cute-cat-b.jpg",
   "./assets/cute-cat-c.jpg",
 ];
 
-let currentIndex = 0;
+const pictures = document.createElement("img");
+pictures.setAttribute("id", "carousel-img");
+pictures.setAttribute("src", pictureSources[0]);
 
-const img = document.getElementById("img");
-img.src = pictureSources[currentIndex];
+document.querySelector("#slide-show").appendChild(pictures);
 
-const forwardButton = document.getElementById("forward");
-forwardButton.addEventListener("click", () => {
-  if (currentIndex === pictureSources.length - 1) {
-    return;
-  } else {
-    currentIndex = currentIndex + 1;
-    img.src = pictureSources[currentIndex %];
-  }
+const backButton = document.createElement("button");
+backButton.setAttribute("id", "backward-btn");
+backButton.innerText = "BACK";
+backButton.style.fontSize = "3em";
+
+document.querySelector("#move-buttons").appendChild(backButton);
+
+backButton.addEventListener("click", () => {
+  pictureSources.unshift(pictureSources.slice(-1)[0]);
+  pictures.setAttribute("src", pictureSources.pop());
 });
 
-const backButton = document.getElementById("back");
+const forwardButton = document.createElement("button");
+forwardButton.setAttribute("id", "forward-btn");
+forwardButton.innerText = "NEXT";
+forwardButton.style.fontSize = "3em";
+
+document.querySelector("#move-buttons").appendChild(forwardButton);
+
 forwardButton.addEventListener("click", () => {
-  if (currentIndex === 0) {
-    return;
-  } else {
-    currentIndex = currentIndex - 1;
-    img.src = pictureSources[currentIndex];
-  }
+  pictureSources.push(pictureSources[0]);
+  pictureSources.shift();
+  pictures.setAttribute("src", pictureSources[0]);
 });
