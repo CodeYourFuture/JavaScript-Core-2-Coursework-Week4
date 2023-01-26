@@ -17,6 +17,30 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
+const textArea = document.createElement("section");
+textArea.setAttribute("id", "text-area");
+document.querySelector("body").appendChild(textArea);
+const quoteButton = document.createElement("button");
+quoteButton.innerText = "New Quote";
+quoteButton.setAttribute("id", "New-quote");
+
+let quoteElement = document.createElement("p");
+quoteElement.setAttribute("id", "quote");
+let authorElement = document.createElement("p");
+authorElement.setAttribute("id", "author");
+
+textArea.appendChild(quoteElement);
+textArea.appendChild(authorElement);
+textArea.appendChild(quoteButton);
+
+quoteButton.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  let objectIndex = quotes[randomIndex];
+  quoteElement.innerText = objectIndex.quote;
+  authorElement.innerText = objectIndex.author;
+});
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
