@@ -21,6 +21,38 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+
+let btn = document.querySelector('#new-quote');
+
+
+
+let quote = document.querySelector('.quote');
+
+
+let author = document.querySelector('.author');
+
+
+btn.addEventListener('click', function() {
+
+  let random = Math.floor(Math.random() * quotes.length);
+
+  quote.innerText = quotes[random].quote;
+  author.innerText = quotes[random].author;
+
+})
+
+const setBg = () => {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.backgroundColor = "#" + randomColor;
+  color.innerHTML = "#" + randomColor;
+}
+
+genNew.addEventListener("click", setBg);
+setBg();
+
+ 
+
+    
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
 const quotes = [
