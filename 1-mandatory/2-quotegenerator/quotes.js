@@ -498,7 +498,7 @@ const quotes = [
 const author = document.getElementById("author");
 const quoteT = document.getElementById("q");
 const button = document.getElementById("newquote");
-
+const button1 = document.getElementById("newquote1");
 const newQuote = pickFromArray(quotes);
 console.log(newQuote);
 
