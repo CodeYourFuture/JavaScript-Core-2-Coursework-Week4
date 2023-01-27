@@ -1,1 +1,41 @@
 /** Write your CSS in here **/
+body {
+  background-color: beige;
+  /* text-align: center;  */
+}
+#quoteArea {
+  width: 70%;
+  margin: auto;
+  padding: 3rem;
+  margin-top: 100px;
+}
+
+
+span {
+    font-size:larger;
+    color: rebeccapurple;
+}
+
+p {
+  font-size: xx-large;
+  font-weight: 900;
+  text-align: center;
+  color: beige;
+}
+
+#author {
+  text-align: end;
+  font-size: large;
+  color: rebeccapurple;
+  font-weight: 700;
+}
+
+button {
+  margin-left: auto;
+  background-color: beige;
+  border: 0;
+  color: rebeccapurple;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-weight: 700;
+}

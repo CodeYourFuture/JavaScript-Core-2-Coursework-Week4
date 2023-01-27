@@ -1,1 +1,22 @@
 /** Write your CSS in here **/
+body{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+scroll-behavior: smooth;
+}
+.buttons {
+    width: 800px;
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+    justify-content: center;
+}
+button {
+    background-color: goldenrod;
+    color: brown;
+    padding: 1rem;
+    font-size: large;
+    border-radius: 10px;
+}

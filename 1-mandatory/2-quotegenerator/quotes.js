@@ -1,3 +1,19 @@
+function randomQuote(quotes) {
+  let quoteElement = document.querySelector("#quoteSay");
+  let authorElement = document.querySelector("#author");
+  let randomIndex = [Math.floor(Math.random() * quotes.length)];
+  quoteElement.innerHTML = `<span id="s">“</span>${quotes[randomIndex].quote}<span id="s">”</span>`;
+  authorElement.innerText = quotes[randomIndex].author;
+}
+let newQuoteBtn = document.querySelector("button");
+newQuoteBtn.addEventListener("click", () => {
+  let quoteElement = document.querySelector("#quoteSay");
+  let authorElement = document.querySelector("#author");
+  let randomIndex = [Math.floor(Math.random() * quotes.length)];
+  quoteElement.innerHTML = `<span id="s">“</span>${quotes[randomIndex].quote}<span id="s">”</span>`;
+  authorElement.innerText = quotes[randomIndex].author;
+});
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +506,4 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+randomQuote(quotes);
