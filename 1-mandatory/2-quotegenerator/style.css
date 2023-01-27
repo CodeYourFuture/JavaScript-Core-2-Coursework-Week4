@@ -10,7 +10,7 @@ h3 {
 blockquote {
    background-color: rgb(144, 140, 140);
 }
-.button {
+.button, .button1 {
     text-align: right;
     margin: 30px;
     padding: 20px;
