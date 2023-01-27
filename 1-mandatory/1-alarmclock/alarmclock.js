@@ -1,4 +1,25 @@
-function setAlarm() {}
+function setAlarm() {
+  let setAlarmBtn = document.getElementById("set");
+  let setAlarmInput = document.getElementById("alarmSet").innerText;
+  let AlarmCounter = document.getElementById("timeRemaining");
+
+  AlarmCounter.innerText = `Time remaining: 00:${setAlarmInput}`;
+
+  let timeLeft = setAlarmInput;
+  let countdown = setInterval(() => {
+    timeLeft--;
+    AlarmCounter.innerText = `Time remaining: 00:${timeLeft}`;
+    if (timeLeft === 0) {
+      clearInterval(countdown);
+      playAlarm();
+    }
+  }, 1000);
+  let stopAlarm = document.getElementById("stop");
+  stopAlarm.addEventListener("click", () => {
+    clearInterval(countdown);
+    pauseAlarm();
+  });
+}
 
 // DO NOT EDIT BELOW HERE
 
