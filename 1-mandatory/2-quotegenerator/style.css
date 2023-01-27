@@ -1,1 +1,20 @@
 /** Write your CSS in here **/
+#affirmations{
+    color: rgb(14, 10, 10);
+    font-weight: bold;
+    text-align: center;
+}
+#button{
+    text-align: center;
+    align-items: center;;
+    margin-top: 25px;
+    margin-left: 45%;
+    border: 2px solid blueviolet ;
+    border-radius: 10px;
+}
+h1{
+    text-align: center;
+    margin: 55px;
+    text-emphasis-color: blue;
+
+}

@@ -16,14 +16,14 @@ Please complete the details below this message
 
 # Your Details
 
-- Your Name:
-- Your City:
-- Your Slack Name:
+- Your Name:Ebrahim Beiati-Asl
+- Your City:Londom
+- Your Slack Name:ebrahim beiati-asl
 
 # Homework Details
 
 - Module:
-- Week:
+- Week:4
 
 # Notes
 
