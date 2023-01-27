@@ -1,1 +1,56 @@
 /** Write your CSS in here **/
+body {
+  background-color: #e5dcdd;
+  color: #503b3e;
+}
+main {
+  margin: 20% 20%;
+}
+
+.card {
+  padding: 8% 8%;
+  background-color: #d9dfe9;
+  border: 15px solid white;
+  border-radius: 10px;
+}
+
+main h1 {
+  font-family: "Cardo", serif;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.quote {
+  padding-top: 20px;
+  font-size: 28px;
+  font-style: italic;
+}
+
+.author {
+  text-align: end;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+  color: #503b3e;
+  background-color: white;
+  font-size: 26px;
+  font-family: "Cardo", serif;
+  padding: 6px 10px;
+  border: 1px solid #503b3e;
+  border-radius: 5px;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  background: transparent;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
