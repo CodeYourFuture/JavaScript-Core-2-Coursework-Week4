@@ -1,70 +1,27 @@
-//setInterval(setAlarm(), 1000);
+let secondRemaining = 0;
+let interval;
+let timeTitle = document.getElementById("timeRemaining");
 
 function setAlarm() {
-  let inputTime = document.getElementById("alarmSet");
-  let timeRemain = document.getElementById("timeRemaining");
-  setInputToTitle();
-  if (timeRemain.innerText.includes("00:01")) playAudio();
+  secondRemaining = document.getElementById("alarmSet").value;
+
+  interval = setInterval(() => {
+    if (secondRemaining > 0) {
+      secondRemaining--;
+      setAlarmTitle();
+    } else {
+      clearInterval(interval);
+      playAlarm();
+    }
+  }, 1000);
 }
 
-function setInputToTitle() {
-  let inputTime = document.getElementById("alarmSet");
-  let timeRemain = document.getElementById("timeRemaining");
-  let remaining = Number(inputTime.value) % 60;
-  let quotient = Math.floor(Number(inputTime.value / 60));
-  if (quotient > 9 && remaining > 9) {
-    let interval = setInterval(function () {
-      timeRemain.innerHTML = `Time Remaining: ${quotient}:${remaining--}`;
-      if (remaining === 0) {
-        quotient--;
-        remaining = 59;
-      }
-    }, 1000);
-  } else if (quotient > 9 && remaining <= 9) {
-    interval = setInterval(function () {
-      timeRemain.innerHTML = `Time Remaining: ${quotient}:0${remaining--}`;
-      if (remaining === 0) {
-        quotient--;
-        remaining = 59;
-      }
-    }, 1000);
-  } else if (quotient <= 9 && remaining > 9) {
-    interval = setInterval(function () {
-      timeRemain.innerHTML = `Time Remaining: 0${quotient}:${remaining--}`;
-      if (remaining === 0) {
-        quotient--;
-        remaining = 59;
-      }
-    }, 1000);
-  } else if (quotient <= 9 && remaining <= 9) {
-    interval = setInterval(function () {
-      timeRemain.innerHTML = `Time Remaining: 0${quotient}:0${remaining--}`;
-      if (remaining === 0) {
-        quotient--;
-        remaining = 59;
-      }
-    }, 1000);
-  }
-
-  inputTime.value = "";
-}
-
-function timeRemainingTitle(remaining, quotient) {
-  if (remaining < 10 && quotient < 10)
-    return (timeRemain.innerHTML = `Time Remaining: 0${quotient}:0${remaining--}`);
-  else if (remaining < 10 && quotient >= 10)
-    return (timeRemain.innerHTML = `Time Remaining: ${quotient}:0${remaining--}`);
-  else if (remaining > 10 && quotient < 10)
-    return (timeRemain.innerHTML = `Time Remaining: 0${quotient}:${remaining--}`);
-  else
-    return (timeRemain.innerHTML = `Time Remaining: ${quotient}:${remaining--}`);
-}
-
-function playAudio() {
-  audio.play();
-}
-function stopAudio() {
-  audio.pause();
+function setAlarmTitle() {
+  minutes = Math.floor(secondRemaining / 60);
+  seconds = secondRemaining % 60;
+  timeTitle.innerHTML = `Time Remaining: ${minutes < 10 ? "0" : ""}${minutes}:${
+    seconds < 10 ? "0" : ""
+  }${seconds}`;
 }
 
 // DO NOT EDIT BELOW HERE
