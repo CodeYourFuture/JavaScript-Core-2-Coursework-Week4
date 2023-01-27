@@ -529,7 +529,6 @@ function changeQuote() {
   author = randomQuote.author;
   quotation.innerHTML = quote;
   newP.innerHTML = author;
-  // div.appendChild(newDiv); //why is so
 }
 
 buttonNewQuote.addEventListener("click", changeQuote);
