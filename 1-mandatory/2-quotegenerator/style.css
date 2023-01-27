@@ -1,1 +1,57 @@
 /** Write your CSS in here **/
+body {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
+    monospace;
+  background-color: #f57c00;
+}
+/* $blue: #29b6f6;
+$green: #9ccc65;
+$purple: #ba68c8;
+$orange: #f57c00;
+$red: #ef5350;
+$cyan: #4dd0e1;
+$background-light: #ffa726;
+$background-dark: #ff9800; */
+
+.input {
+  margin: 10% auto;
+  padding: 5% 5%;
+  background-color: black;
+  color: #29b6f6;
+
+  height: 40rem;
+  width: 60rem;
+  text-align: center;
+  display: flex;
+
+  align-items: center;
+  font-size: 2rem;
+  display: flow-root;
+}
+
+.input p {
+  color: #9ccc65;
+  padding: 10%;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: right; */
+}
+
+.new-button {
+  background-color: #f57c00;
+  border-radius: 2%;
+  color: white;
+  border: 2px solid white;
+  justify-content: right;
+  width: 25%;
+  font-size: 25px;
+  margin: 0 10%;
+}
+
+.div-to-style {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

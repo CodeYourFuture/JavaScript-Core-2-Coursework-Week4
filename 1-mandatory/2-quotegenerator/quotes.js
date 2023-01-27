@@ -491,11 +491,37 @@ const quotes = [
 
 function pickFromArray(choices) {
   const number = Math.floor(Math.random() * choices.length);
-  const quote = choices[number].quote;
-  const author = choices[number].author;
+  // const quote = choices[number].quote;
+  // const author = choices[number].author;
 
-  return quote + " " + author;
+  return choices[number];
+}
+let div = document.querySelector(".input");
+let randomQuote = pickFromArray(quotes);
+let quote = randomQuote.quote;
+let author = randomQuote.author;
+div.innerHTML = quote;
+
+let newDiv = document.createElement("div");
+newDiv.classList.add("div-to-style");
+div.appendChild(newDiv);
+
+let newP = document.createElement("p");
+newP.innerHTML = author;
+newDiv.appendChild(newP);
+
+const buttonNewQuote = document.createElement("button");
+buttonNewQuote.innerHTML = "New quote";
+newDiv.appendChild(buttonNewQuote);
+buttonNewQuote.classList.add("new-button");
+
+function changeQuote() {
+  randomQuote = pickFromArray(quotes);
+  quote = randomQuote.quote;
+  author = randomQuote.author;
+  div.innerHTML = quote;
+  newP.innerHTML = author;
+  div.appendChild(newDiv); //why is so???
 }
 
-const div = document.querySelector(".input");
-div.innerHTML = pickFromArray(quotes);
+buttonNewQuote.addEventListener("click", changeQuote);
