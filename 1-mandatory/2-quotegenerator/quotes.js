@@ -497,10 +497,15 @@ function pickFromArray(choices) {
   return choices[number];
 }
 let div = document.querySelector(".input");
+
 let randomQuote = pickFromArray(quotes);
 let quote = randomQuote.quote;
 let author = randomQuote.author;
-div.innerHTML = quote;
+
+let quoteP = document.createElement("p");
+quoteP.innerHTML = quote;
+quoteP.classList.add("quote");
+div.appendChild(quoteP);
 
 let newDiv = document.createElement("div");
 newDiv.classList.add("div-to-style");
@@ -508,6 +513,7 @@ div.appendChild(newDiv);
 
 let newP = document.createElement("p");
 newP.innerHTML = author;
+newP.classList.add("author");
 newDiv.appendChild(newP);
 
 const buttonNewQuote = document.createElement("button");
@@ -519,9 +525,9 @@ function changeQuote() {
   randomQuote = pickFromArray(quotes);
   quote = randomQuote.quote;
   author = randomQuote.author;
-  div.innerHTML = quote;
+  quoteP.innerHTML = quote;
   newP.innerHTML = author;
-  div.appendChild(newDiv); //why is so???
+  div.appendChild(newDiv); //why is so
 }
 
 buttonNewQuote.addEventListener("click", changeQuote);

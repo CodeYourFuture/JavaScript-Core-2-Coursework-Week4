@@ -22,7 +22,7 @@ $background-dark: #ff9800; */
   color: #29b6f6;
 
   height: 40rem;
-  width: 60rem;
+  width: 80rem;
   text-align: center;
   display: flex;
 
@@ -30,28 +30,25 @@ $background-dark: #ff9800; */
   font-size: 2rem;
   display: flow-root;
 }
-
-.input p {
+.quote {
+  height: 17rem;
+}
+.author {
+  height: 5rem;
   color: #9ccc65;
-  padding: 10%;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: right; */
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
 }
 
 .new-button {
+  height: 5rem;
   background-color: #f57c00;
   border-radius: 2%;
   color: white;
   border: 2px solid white;
-  justify-content: right;
+  font-size: 1.5rem;
+  font-weight: bold;
   width: 25%;
   font-size: 25px;
-  margin: 0 10%;
-}
-
-.div-to-style {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 }
