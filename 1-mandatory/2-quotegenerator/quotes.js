@@ -503,10 +503,14 @@ function random() {
 }
 random();
 buttonEl.addEventListener('click', random);
-
-
-
-
+let autoQuote;
+document.getElementById('switch').addEventListener('click', function() {
+  if (this.checked) {
+ autoQuote = setInterval(random, 1000);
+  } else{
+    clearInterval(autoQuote);
+  }
+})
 
 
 

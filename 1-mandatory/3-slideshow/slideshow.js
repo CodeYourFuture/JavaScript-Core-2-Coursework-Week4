@@ -45,14 +45,15 @@ function stop () {
     autoFwdEl.disabled = false;
     autoBackEl.disabled = false;
 }
+const clientInput = document.querySelector('#clientInput');
 
 function fastForward (){
-    carousel = setInterval(moveForward, 3000);
+    carousel = setInterval(moveForward, clientInput.value * 1000);
     disableBtn();
 }
 
 function autoBack () {
-    carousel = setInterval(moveBack, 3000);
+    carousel = setInterval(moveBack, clientInput.value * 1000);
     disableBtn();
 }
 forwardEl.addEventListener('click', moveForward);
@@ -60,3 +61,14 @@ backEl.addEventListener('click', moveBack);
 autoBackEl.addEventListener('click', autoBack );
 autoFwdEl.addEventListener('click', fastForward );
 stopEl.addEventListener('click', stop);
+
+clientInput.addEventListener('change', (e) => {
+    if (!+ e.target.value) {
+        forwardEl.disabled = true;
+        backEl.disabled = true;
+    } else {
+        forwardEl.disabled = false;
+        backEl.disabled = false;
+    }
+
+})
