@@ -499,5 +499,25 @@ function generateQuote() {
   author.innerHTML = randomQuote.author;
 }
 
+var generatedQuote;
+
+function autoGenerateQuote() {
+  document.getElementById("autoplay-text").innerHTML = "Auto-play: On";
+
+  generatedQuote = setInterval(function () {
+    generateQuote();
+  }, 1000);
+}
+
+function stopAutoGenerateQuote() {
+  document.getElementById("autoplay-text").innerHTML = "Auto-play: Off";
+  clearInterval(generatedQuote);
+}
+
 let button = document.querySelector("#button");
 button.addEventListener("click", generateQuote);
+let toggle = document.getElementById("switch");
+toggle.addEventListener("change", () => {
+  if (toggle.checked) autoGenerateQuote();
+  if (!toggle.checked) stopAutoGenerateQuote();
+});
