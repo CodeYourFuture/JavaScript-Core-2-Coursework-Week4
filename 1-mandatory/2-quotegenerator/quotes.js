@@ -490,3 +490,38 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+// Initial variables
+let quoteTitle = document.getElementById("quote");
+let authorTitle = document.getElementById("author");
+let onOrOff;
+
+let newQuoteButton = document.getElementById("change-quote");
+
+function getQuote() {
+  let quoteSign = document.createElement("i");
+  quoteSign.classList.add("fa-solid", "fa-quote-right");
+
+  let newPick = pickFromArray(quotes);
+
+  quoteTitle.innerText = `${newPick["quote"]}`;
+  authorTitle.innerText = `-${newPick["author"]}`;
+  //  please help me here how can I bring quote sign at the beginning
+  quoteTitle.append(quoteSign);
+}
+
+// first call
+getQuote();
+
+// add event
+newQuoteButton.addEventListener("click", getQuote);
+
+// auto button
+document.getElementById("switch").addEventListener("click", function () {
+  // Test the state of the checkbox and act accordingly
+  if (this.checked) {
+    onOrOff = setInterval(getQuote, 60000);
+  } else {
+    clearInterval(onOrOff);
+  }
+});
