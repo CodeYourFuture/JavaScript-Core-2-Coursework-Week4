@@ -1,3 +1,5 @@
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +492,21 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+// new code
+const author = document.getElementById("author");
+const quoteT = document.getElementById("q");
+const button = document.getElementById("newquote");
+
+const newQuote = pickFromArray(quotes);
+console.log(newQuote);
+
+quoteT.innerText = newQuote.quote;
+author.innerText = `~ ${newQuote.author}`;
+
+button.addEventListener("click", function () {
+  const newQuote = pickFromArray(quotes);
+  quoteT.innerText = newQuote.quote;
+  author.innerText = `~ ${newQuote.author}`;
+});
