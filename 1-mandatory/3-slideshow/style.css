@@ -1,1 +1,8 @@
 /** Write your CSS in here **/
+body {
+   max-width: 80%;
+   margin: 10rem auto;
+   text-align: center;
+background-color: bisque;
+}
+   

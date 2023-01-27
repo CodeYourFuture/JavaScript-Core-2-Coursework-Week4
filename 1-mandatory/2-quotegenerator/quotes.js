@@ -503,9 +503,11 @@ let quote = randomQuote.quote;
 let author = randomQuote.author;
 
 let quoteP = document.createElement("p");
-quoteP.innerHTML = quote;
+let quotation = document.createElement("q");
+quotation.innerHTML = quote;
 quoteP.classList.add("quote");
 div.appendChild(quoteP);
+quoteP.appendChild(quotation);
 
 let newDiv = document.createElement("div");
 newDiv.classList.add("div-to-style");
@@ -525,9 +527,9 @@ function changeQuote() {
   randomQuote = pickFromArray(quotes);
   quote = randomQuote.quote;
   author = randomQuote.author;
-  quoteP.innerHTML = quote;
+  quotation.innerHTML = quote;
   newP.innerHTML = author;
-  div.appendChild(newDiv); //why is so
+  // div.appendChild(newDiv); //why is so
 }
 
 buttonNewQuote.addEventListener("click", changeQuote);
