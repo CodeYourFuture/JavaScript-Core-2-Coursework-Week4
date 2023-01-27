@@ -4,17 +4,19 @@ function setAlarm() {
 
   let minutes = ''
   let seconds = ''
+  
+  let value = inputValue.value--
 
- let interval = setInterval(()=>{
-  inputValue.value--
+  let interval = setInterval(()=>{
+  value--
 
-  let sec = inputValue.value % 60 
+  let sec = value % 60 
   if (sec<10) {
     seconds = `0${sec}`
   }
   else {seconds=sec}
 
-  let min = parseInt(inputValue.value / 60 )
+  let min = parseInt(value / 60 )
   if (min<10) {
     minutes = `0${min}`
   }
@@ -22,7 +24,7 @@ function setAlarm() {
 
   remainingTime.innerText = `Time Remaining: ${minutes}:${seconds}`
 
-  if (inputValue.value == 0){ 
+  if (value == 0){ 
     clearInterval(interval)
     playAlarm() 
   }
