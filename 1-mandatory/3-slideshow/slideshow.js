@@ -34,7 +34,6 @@ var photos = [
   "https://pixel77.com/wp-content/uploads/2015/01/5-Futuristic-Technologies-You-May-See-In-Your-Lifetime-1.jpg",
 ];
 
-
 var imgTag = document.querySelector("img");
 var count = 0;
 
@@ -57,29 +56,28 @@ function prev() {
     imgTag.src = photos[count];
   }
 }
-
-
-function startAutoForward() {
-  clearInterval(intervalId);
-  document.getElementById("#auto-forward").addEventListener("click", startAutoForward);
-  intervalId = setInterval(photos, 3000);
-
+function getRandomPhoto(max) {
+  return Math.floor(Math.random() * max);
 }
 
-function startAutoBack() {
-  clearInterval(intervalId);
-  
-  document.getElementById("#auto-back").addEventListener("click", startAutoBack);
-intervalId = setInterval("#auto-back", 3000);
-}
+let interval;
 
-function stopSlideshow() {
-  clearInterval(intervalId);
-  document.getElementById("#stop").addEventListener("click", stopSlideshow);
+const changePhotos = () => {
+  randomPhoto = photos[getRandomPhoto(photos.length - 1)];
+  imgTag.src = randomPhoto;
+};
+const el = document.getElementById("auto-forward");
+el.addEventListener("click", () => {
+  interval = setInterval(changePhotos, 2000);
+});
 
-}
+const stopSlideshow = document.getElementById("stop");
+stopSlideshow.addEventListener("click", () => {
+  clearInterval(interval);
+});
 
-// document.getElementById("#prev").addEventListener("click", prev);
-// document
-//   .getElementById("#auto-forward")
-//   .addEventListener("click", startAutoForward);
+const el1 = document.getElementById("auto-back");
+el1.addEventListener("click", () => {
+  interval = setInterval(changePhotos, 2000);
+});
+
