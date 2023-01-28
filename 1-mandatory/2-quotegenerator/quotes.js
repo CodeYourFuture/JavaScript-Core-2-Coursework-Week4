@@ -16,6 +16,19 @@
 // pickFromArray([1,2,3,4])     //maybe returns 2
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
+const quoteBox = document.getElementById("quote-box");
+const quote = document.getElementById("quote");
+const author = document.getElementById("author");
+const newQuote = document.getElementById("new-quote");
+
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  quote.innerHTML = quotes[randomIndex].quote;
+  author.innerHTML = quotes[randomIndex].author;
+}
+
+newQuote.addEventListener("click", getRandomQuote);
+
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
