@@ -1,4 +1,27 @@
-function setAlarm() {}
+let timeRemaining = 0;
+
+function renderTimeRemaining() {
+  let minutes = Math.floor(timeRemaining / 60);
+  let seconds = timeRemaining % 60;
+  const timeRemainingElement = document.querySelector("#timeRemaining");
+  timeRemainingElement.innerText = `Time Remaining: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
+}
+
+renderTimeRemaining();
+
+function setAlarm() {
+  const newTime = document.querySelector("#alarmSet").value;
+  timeRemaining = newTime;
+  renderTimeRemaining();
+  const interval = setInterval(() => {
+    timeRemaining--;
+    renderTimeRemaining();
+    if (timeRemaining <= 0) {
+      clearInterval(interval);
+      playAlarm();
+    }
+  }, 1000)
+}
 
 // DO NOT EDIT BELOW HERE
 
