@@ -490,3 +490,7 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+let qu = document.getElementById("quotes");
+document.getElementById("btn").addEventListener("click", () => {
+  qu.innerHTML = pickFromArray(quotes);
+});
