@@ -490,3 +490,26 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+const div = document.createElement("div");
+const pQuote = document.createElement("p");
+const pAuthor = document.createElement("p");
+const button = document.createElement("button");
+document.body.appendChild(div);
+div.appendChild(pQuote);
+div.appendChild(pAuthor);
+div.appendChild(button);
+pQuote.innerText = pickFromArray(quotes).quote;
+pAuthor.innerText = pickFromArray(quotes).author;
+button.innerText = "New quote";
+div.classList = "container";
+pQuote.classList = "quote";
+pAuthor.classList = "author";
+button.classList = "button";
+button.addEventListener("click", () => {
+  pQuote.innerText = pickFromArray(quotes).quote;
+  pAuthor.innerText = pickFromArray(quotes).author;
+})
+
+

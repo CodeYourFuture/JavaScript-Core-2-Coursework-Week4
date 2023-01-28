@@ -1,1 +1,32 @@
 /** Write your CSS in here **/
+:root {
+  --orange: rgb(229, 158, 65);
+  --white: rgb(255, 255, 255);
+}
+body {
+  background-color: var(--orange);
+}
+.container {
+  margin: 10rem 20rem;
+  padding: 10rem;
+  background-color: var(--white);
+  color: var(--orange);
+  text-align: right;
+}
+
+.quote {
+  font-size: 35px;
+  text-align: left;
+}
+
+.author {
+  font-size: 24px;
+}
+
+.button {
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+}
