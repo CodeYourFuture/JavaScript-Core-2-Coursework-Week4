@@ -1,1 +1,48 @@
 /** Write your CSS in here **/
+
+ body {
+    font-family: "Poppins";
+}
+
+img {
+    
+}
+/*
+.main-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        ". img-slideshow ."
+        ". btn-div .";
+}
+
+.btn-div {
+    grid-area: btn-div;
+    display: flex;
+    flex-direction: row;
+} */
+
+/* #img-slideshow {
+grid-area: img-slideshow;
+}
+
+#auto-backward-btn {
+    grid-area: auto-backward-btn;
+}
+
+#backward-btn {
+    grid-area: backward-btn;
+
+} 
+
+#stop-btn {
+    grid-area: stop-btn;
+} 
+
+#forward-btn {
+    grid-area: forward-btn;
+}
+
+#auto-forward-btn {
+grid-area: auto-forward-btn;
+}  */

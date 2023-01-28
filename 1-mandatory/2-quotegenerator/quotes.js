@@ -1,3 +1,56 @@
+let body = document.querySelector("body");
+body.style.backgroundImage =
+  "url('https://www.cornishcottageholidays.co.uk/blog/wp-content/uploads/sites/5/2022/01/St-Nectans-Kieve-1.jpg')";
+body.style.backgroundRepeat = "no-repeat";
+body.style.backgroundSize = "cover";
+body.style.display = "flex";
+body.style.flexDirection = "row";
+body.style.justifyContent = "center";
+body.style.alignContent = "center";
+
+//div styles
+
+let mainDiv = document.querySelector(".main-div");
+
+mainDiv.style.width = "900px";
+
+mainDiv.style.display = "flex";
+mainDiv.style.flexDirection = "column";
+mainDiv.style.alignItems = "flex-end";
+mainDiv.style.textAlign = "right";
+mainDiv.style.padding = "50px";
+mainDiv.style.margin = "125px";
+mainDiv.style.background =
+  "135 deg, rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0)";
+mainDiv.style.backdropFilter = "blur(10px)";
+mainDiv.style.borderRadius = "30px";
+// mainDiv.style.opacity = ".8";
+
+// mainDiv.style.backgroundColor = "white";
+let mainBtn = document.querySelector(".main-btn");
+mainBtn.style.backgroundColor = "#d97507";
+mainBtn.style.width = "150px";
+// mainBtn.style.zIndex = "500";
+// mainBtn.style.textAlign = "right";
+mainBtn.style.border = "none";
+mainBtn.style.padding = "18px 30px";
+mainBtn.style.borderRadius = "10px";
+
+let mainQuote = document.querySelector(".main-quote");
+let mainAuthor = document.querySelector(".main-author");
+mainAuthor.style.fontWeight = "bold";
+window.addEventListener("load", addQuoteToDiv);
+
+mainBtn.addEventListener("click", addQuoteToDiv);
+
+function addQuoteToDiv() {
+  let choice = pickFromArray(quotes);
+  let quote = choice.quote;
+  let author = choice.author;
+  mainQuote.innerText = quote;
+  mainAuthor.innerText = `-${author}`;
+}
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
