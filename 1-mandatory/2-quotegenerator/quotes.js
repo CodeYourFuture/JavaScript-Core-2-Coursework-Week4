@@ -16,10 +16,7 @@
 // pickFromArray([1,2,3,4])     //maybe returns 2
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
-const quoteDiv = document.querySelector("#quoteDiv");
-const quoteH1 = document.querySelector("#quoteH1");
-const quoteAuthor = document.querySelector("#quoteAuthor");
-const quoteButton = document.querySelector("#quoteButton");
+
 
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
@@ -496,10 +493,19 @@ const quotes = [
   },
 ];
 
-quoteH1.innerHTML = quotes[1].quote;
+// My addition to the fileF
+
+const quoteDiv = document.querySelector("#quoteDiv");
+const quoteH1 = document.querySelector("#quoteH1");
+const quoteAuthor = document.querySelector("#quoteAuthor");
+const quoteButton = document.querySelector("#quoteButton");
+document.body.style.backgroundColor = "orange";
+
+
+quoteH1.innerHTML =  quotes[1].quote;
 quoteAuthor.innerHTML = quotes[1].author;
+
 quoteButton.addEventListener("click", () => {
-  console.log("clicked");
   quoteH1.innerHTML = pickFromArray(quotes).quote;
   quoteAuthor.innerHTML = pickFromArray(quotes).author;
 });
