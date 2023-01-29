@@ -500,16 +500,12 @@ let newQuoteButton = document.getElementById("change-quote");
 
 
 function getQuote () {
- let quoteSign = document.createElement("i");
- quoteSign.classList.add("fa-solid", "fa-quote-right");
 
-
- let newPick = pickFromArray(quotes)
+let newPick = pickFromArray(quotes)
   
- quoteTitle.innerText = `${newPick["quote"]}`
- authorTitle.innerText = `-${newPick["author"]}`;
-//  please help me here how can I bring quote sign at the beginning without hardcode
-  quoteTitle.append(quoteSign)
+quoteTitle.innerText = `${newPick["quote"]}`
+authorTitle.innerText = `-${newPick["author"]}`;
+
 } 
 
 
