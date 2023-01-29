@@ -491,25 +491,60 @@ const quotes = [
   },
 ];
 
-
 const div = document.createElement("div");
 const pQuote = document.createElement("p");
 const pAuthor = document.createElement("p");
 const button = document.createElement("button");
+const labelToggle = document.createElement("label");
+const spanStatus = document.createElement("span");
+const check = document.createElement("input");
+const spanSlider = document.createElement("span");
+
+check.setAttribute("type", "checkbox");
+
 document.body.appendChild(div);
+div.appendChild(labelToggle);
+labelToggle.appendChild(spanStatus);
+labelToggle.appendChild(check);
+labelToggle.appendChild(spanSlider);
 div.appendChild(pQuote);
 div.appendChild(pAuthor);
 div.appendChild(button);
-pQuote.innerText = pickFromArray(quotes).quote;
-pAuthor.innerText = pickFromArray(quotes).author;
+
 button.innerText = "New quote";
+spanStatus.innerText = "OFF";
+
+
 div.classList = "container";
 pQuote.classList = "quote";
 pAuthor.classList = "author";
+labelToggle.classList = "toggle";
+spanStatus.classList = "status";
+spanSlider.classList = "slider";
 button.classList = "button";
+
+quoteGenerator();
+
 button.addEventListener("click", () => {
+  quoteGenerator();
+});
+
+check.addEventListener("change", () => {
+  spanStatus.innerText = check.checked ? "ON" : "OFF";
+  const intervalId = setInterval(() => {
+    if (check.checked === true)
+      quoteGenerator();
+    else
+      clearInterval(intervalId);
+  }, 6000)
+});
+
+function quoteGenerator() {
   pQuote.innerText = pickFromArray(quotes).quote;
   pAuthor.innerText = pickFromArray(quotes).author;
-})
+}
+
+
+
 
 

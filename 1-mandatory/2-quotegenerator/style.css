@@ -2,13 +2,27 @@
 :root {
   --orange: rgb(229, 158, 65);
   --white: rgb(255, 255, 255);
+  --black: #000;
+  --gray: #808080;
+  --green: #008000;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: var(--orange);
 }
+
 .container {
-  margin: 10rem 20rem;
-  padding: 10rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 5rem;
   background-color: var(--white);
   color: var(--orange);
   text-align: right;
@@ -27,6 +41,55 @@ body {
   background-color: var(--orange);
   color: var(--white);
   padding: 10px;
+  margin-top: 20px;
   font-size: 24px;
   border: none;
+}
+
+.status {
+  color: var(--gray);
+  font-size: 40px;
+  padding: 0px 20px;
+}
+
+.toggle {
+  position: relative;
+}
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  background-color: var(--gray);
+  transition: all 0.4s ease;
+  width: 80px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  top: 5px;
+  left: 5px;
+  background-color: var(--orange);
+  transition: all 0.4s ease;
+  border-radius: 30px;
+}
+
+input:checked + .slider {
+  background-color: var(--green);
+}
+
+input:checked + .slider:before {
+  transform: translate(40px);
 }
