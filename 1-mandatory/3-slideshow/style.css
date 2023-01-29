@@ -1,1 +1,21 @@
 /** Write your CSS in here **/
+:root {
+  --pink: rgb(247, 206, 213);
+}
+
+body {
+  background-color: var(--pink);
+  margin: 100px 400px;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10ch;
+}
