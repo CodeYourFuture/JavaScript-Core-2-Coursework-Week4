@@ -11,15 +11,21 @@ prevButton.addEventListener("click", prevSlide);
 nextButton.addEventListener("click", nextSlide);
 
 autoForwardButton.addEventListener("click", () => {
+  var time = Number(document.getElementById("time").value);
+  if (time === 0) time = 2;
+
   forwardCarousel = setInterval(function () {
     nextSlide();
-  }, 2000);
+  }, time * 1000);
 });
 
 autoBackButton.addEventListener("click", () => {
+  var time = Number(document.getElementById("time").value);
+  if (time === 0) time = 2;
+
   backwardCarousel = setInterval(function () {
     prevSlide();
-  }, 2000);
+  }, time * 1000);
 });
 
 autoStopButton.addEventListener("click", () => {
@@ -31,6 +37,7 @@ function nextSlide() {
   const activeSlide = slideList.querySelector("[data-active]");
   let newIndex = [...slideList.children].indexOf(activeSlide) + 1;
   if (newIndex >= slideList.children.length) newIndex = 0;
+  console.log(newIndex);
   slideList.children[newIndex].dataset.active = true;
   delete activeSlide.dataset.active;
 }
@@ -40,6 +47,7 @@ function prevSlide() {
   let newIndex = [...slideList.children].indexOf(activeSlide) - 1;
   if (newIndex < 0) newIndex = slideList.children.length - 1;
   if (newIndex >= slideList.children.length) newIndex = 0;
+  console.log(newIndex);
   slideList.children[newIndex].dataset.active = true;
   delete activeSlide.dataset.active;
 }

@@ -52,13 +52,13 @@ body {
   color: rgba(255, 255, 255, 0.769);
   border-radius: 0.25rem;
   padding: 0 1rem 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .carousel-button:hover,
 .carousel-button:focus {
   color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .carousel-button.prev {
@@ -69,14 +69,18 @@ body {
   right: 1rem;
 }
 
-.carousel .auto-buttons-group {
+.carousel .bottom-buttons-group {
   position: relative;
   z-index: 2;
-  top: 90%;
+  top: 85%;
+}
+
+.carousel .auto-buttons-group {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .carousel .auto-button {
@@ -88,11 +92,34 @@ body {
   border-radius: 0.25rem;
   padding: 0 1rem 0.5rem 1rem;
   margin-right: 10px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .auto-button:hover,
 .auto-button:focus {
   color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.time-form {
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.769);
+  font-size: 1.2rem;
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.time-form input {
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.time-form p {
+  margin-left: 10px;
 }
