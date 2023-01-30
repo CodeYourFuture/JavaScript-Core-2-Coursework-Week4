@@ -17,7 +17,6 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 
-
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
@@ -499,13 +498,29 @@ const quoteDiv = document.querySelector("#quoteDiv");
 const quoteH1 = document.querySelector("#quoteH1");
 const quoteAuthor = document.querySelector("#quoteAuthor");
 const quoteButton = document.querySelector("#quoteButton");
+const autoGenerateButton = document.querySelector("#autoGenerateButton");
+let clickCounter = 0;
+let intervalId;
 document.body.style.backgroundColor = "orange";
 
-
-quoteH1.innerHTML =  quotes[1].quote;
+quoteH1.innerHTML = quotes[1].quote;
 quoteAuthor.innerHTML = quotes[1].author;
 
 quoteButton.addEventListener("click", () => {
   quoteH1.innerHTML = pickFromArray(quotes).quote;
   quoteAuthor.innerHTML = pickFromArray(quotes).author;
+});
+
+autoGenerateButton.addEventListener("click", () => {
+  clickCounter++;
+  if (clickCounter % 2 != 0) {
+    autoGenerateButton.innerHTML = "auto-play:ON";
+    intervalId = setInterval(() => {
+      quoteH1.innerHTML = pickFromArray(quotes).quote;
+      quoteAuthor.innerHTML = pickFromArray(quotes).author;
+    }, 2000);
+  } else {
+    autoGenerateButton.innerHTML = "auto-play:OFF";
+    clearInterval(intervalId);
+  }
 });
