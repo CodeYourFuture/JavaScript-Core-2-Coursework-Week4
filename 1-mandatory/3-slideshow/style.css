@@ -3,19 +3,35 @@
   --pink: rgb(247, 206, 213);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--pink);
-  margin: 100px 400px;
+  position: fixed;
+  top: 35%;
+  left: 35%;
+  -webkit-transform: translate(-35%, -35%);
+  transform: translate(-35%, -35%);
 }
 
 img {
   width: 500px;
   height: 500px;
-  margin: 10px;
 }
 
 button {
   padding: 10px 20px;
   margin: 10px;
   border-radius: 10ch;
+  background-color: rgb(117, 195, 195);
+  border: none;
+}
+
+label {
+  font-size: 24px;
+  margin: 20px 20px 20px 220px;
 }

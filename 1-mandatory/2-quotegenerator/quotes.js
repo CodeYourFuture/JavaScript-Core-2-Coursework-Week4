@@ -512,7 +512,7 @@ div.appendChild(pAuthor);
 div.appendChild(button);
 
 button.innerText = "New quote";
-spanStatus.innerText = "OFF";
+spanStatus.innerText = "Auto-Play: OFF";
 
 
 div.classList = "container";
@@ -530,7 +530,7 @@ button.addEventListener("click", () => {
 });
 
 check.addEventListener("change", () => {
-  spanStatus.innerText = check.checked ? "ON" : "OFF";
+  spanStatus.innerText = check.checked ? "Auto-Play: ON" : "Auto-Play: OFF";
   const intervalId = setInterval(() => {
     if (check.checked === true)
       quoteGenerator();
