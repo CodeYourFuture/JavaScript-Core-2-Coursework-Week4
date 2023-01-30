@@ -30,7 +30,7 @@ body {
 .slide img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 98%;
   object-fit: cover;
   object-position: center;
 }
@@ -38,7 +38,7 @@ body {
 .slide[data-active] {
   opacity: 1;
   z-index: 1;
-  transition-delay: 0;
+  transition-delay: 0ms;
 }
 
 .carousel-button {
@@ -61,14 +61,38 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.carousel-button:focus {
-  outline: 1px solid black;
-}
-
 .carousel-button.prev {
   left: 1rem;
 }
 
 .carousel-button.next {
   right: 1rem;
+}
+
+.carousel .auto-buttons-group {
+  position: relative;
+  z-index: 2;
+  top: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel .auto-button {
+  font-size: 1.6rem;
+  z-index: 2;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.769);
+  border-radius: 0.25rem;
+  padding: 0 1rem 0.5rem 1rem;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.auto-button:hover,
+.auto-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
 }
