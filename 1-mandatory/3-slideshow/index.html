@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Slideshow</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Write your HTML in here -->
-    <script src="slideshow.js"></script>
-  </body>
+
+<head>
+  <title>Slideshow</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section aria-label="Newest Photos">
+    <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev">&#8678</button>
+      <button class="carousel-button next" data-carousel-button="next">&#8680</button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="./media/Cat-image_ (1).jpg" alt="Cat image #1">;
+        </li>
+        <li class="slide">
+          <img src="./media/Cat-image_ (2).jpg" alt="Cat image #2">;
+        </li>
+        <li class="slide">
+          <img src="./media/Cat-image_ (3).jpg" alt="Cat image #3">;
+        </li>
+        <li class="slide">
+          <img src="./media/Cat-image_ (4).jpg" alt="Cat image #4">;
+        </li>
+        <li class="slide">
+          <img src="./media/Cat-image_ (5).jpg" alt="Cat image #5">;
+        </li>
+        <li class="slide">
+          <img src="./media/Cat-image_ (6).jpg" alt="Cat image #6">;
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="slideshow.js"></script>
+</body>
+
 </html>
