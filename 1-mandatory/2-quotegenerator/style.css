@@ -4,6 +4,8 @@ body {
 }
 
 #container {
+  width: 60%;
+  height: 60%;
   background-color: white;
   margin: 15% 20%;
   padding: 3%;
@@ -20,4 +22,13 @@ body {
   text-align: right;
   font-size: 0.9em;
   font-weight: bold;
+}
+
+#checkboxID {
+  font-size: 0.5em;
+  color: red;
+}
+label {
+  color: #aaf0c1;
+  font-size: 0.6em;
 }

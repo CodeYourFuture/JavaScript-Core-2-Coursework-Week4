@@ -498,6 +498,7 @@ let words = document.getElementById("quote");
 let authorName = document.getElementById("author");
 words.innerHTML = "&#8220;" + saying.quote;
 authorName.innerHTML = "-" + saying.author;
+let autoplay = document.getElementById("checkboxID");
 
 function generateRandomQuote() {
   let randomIndex = Math.floor(Math.random() * quotes.length);
@@ -507,4 +508,11 @@ function generateRandomQuote() {
   let authorName = document.getElementById("author");
   words.innerHTML = "&#8220;" + saying.quote;
   authorName.innerHTML = "-" + saying.author;
+}
+
+let play;
+
+function autoPlay() {
+  if (autoplay.checked) play = setInterval(generateRandomQuote, 1000);
+  else clearInterval(play);
 }
