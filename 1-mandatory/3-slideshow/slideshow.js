@@ -41,13 +41,26 @@ function manuallyBackward() {
 
 let autoBackInt;
 let autoForwardInt;
+let inputSecondSlideshow = document.getElementById("inputSeconds");
 
 function autoBack() {
-  autoBackInt = setInterval(manuallyBackward, 1000);
+  if (inputSecondSlideshow.value.length === 0)
+    autoBackInt = setInterval(manuallyBackward, 1000);
+  else
+    autoBackInt = setInterval(
+      manuallyBackward,
+      Number(inputSecondSlideshow.value) * 1000
+    );
 }
 
 function autoForward() {
-  autoForwardInt = setInterval(manuallyForward, 1000);
+  if (inputSecondSlideshow.value.length === 0)
+    autoBackInt = setInterval(manuallyBackward, 1000);
+  else
+    autoForwardInt = setInterval(
+      manuallyForward,
+      Number(inputSecondSlideshow.value) * 1000
+    );
 }
 
 function stop() {
