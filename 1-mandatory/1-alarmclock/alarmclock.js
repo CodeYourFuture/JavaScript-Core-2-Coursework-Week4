@@ -10,7 +10,7 @@ function renderTimeRemaining() {
 }
 renderTimeRemaining();
 
-function setAlarm() {
+function setAlarm(sound) {
   const newTime = document.querySelector("#alarmSet").value;
   timeRemaining = newTime;
   renderTimeRemaining();
