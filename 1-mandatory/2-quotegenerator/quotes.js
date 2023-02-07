@@ -1,5 +1,16 @@
 // DO NOT EDIT BELOW HERE
 
+const quoteSelector = document.querySelector("#new-quote");
+quoteSelector.addEventListener("click", () => {
+  const quotesRandomiser = Math.floor(Math.random() * quotes.length);
+  const actualWordsOfQuotes = quotes[quotesRandomiser];
+  document.querySelector(
+    "#quote"
+  ).innerText = `${actualWordsOfQuotes.quote}`;
+
+   document.querySelector("#author").innerText = ` -${actualWordsOfQuotes.author}`;
+});
+
 // A function which will return one item, at
 // random, from the given array.
 //
@@ -490,3 +501,11 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+const quotesRandomiser = Math.floor(Math.random() * quotes.length);
+const actualWordsOfQuotes = quotes[quotesRandomiser];
+document.querySelector(
+  "#quote"
+).innerText = `${actualWordsOfQuotes.quote}`;
+document.querySelector(
+  "#author"
+).innerText = `-${actualWordsOfQuotes.author}`;
