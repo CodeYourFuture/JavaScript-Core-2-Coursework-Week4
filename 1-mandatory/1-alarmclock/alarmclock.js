@@ -1,24 +1,29 @@
+
+
+let timeRemaining = 0;
+
+function renderTimeRemaining(){
+ let minutes = Math.floor(timeRemaining / 60);
+ let seconds = timeRemaining % 60 ;
+ const timeRemainingElement = document.getElementById("timeRemaining");
+ timeRemainingElement.innerText = `Time remaining: ${String(minutes).padStart(2, "0")} : ${String(seconds).padStart(2,"0")}`
+}
+
+
+
 function setAlarm() {
-  let setAlarmBtn = document.getElementById("set");
-  let setAlarmInput = document.getElementById("alarmSet").innerText;
-  let AlarmCounter = document.getElementById("timeRemaining");
-
-  AlarmCounter.innerText = `Time remaining: 00:${setAlarmInput}`;
-
-  let timeLeft = setAlarmInput;
-  let countdown = setInterval(() => {
-    timeLeft--;
-    AlarmCounter.innerText = `Time remaining: 00:${timeLeft}`;
-    if (timeLeft === 0) {
-      clearInterval(countdown);
-      playAlarm();
-    }
-  }, 1000);
-  let stopAlarm = document.getElementById("stop");
-  stopAlarm.addEventListener("click", () => {
-    clearInterval(countdown);
-    pauseAlarm();
-  });
+  const newTime = document.querySelector("#alarmSet").value;
+  timeRemaining = newTime;
+  renderTimeRemaining();
+  const interval = setInterval(() => {
+timeRemaining --;
+renderTimeRemaining();
+if(timeRemaining <= 0){
+  clearInterval(interval);
+  playAlarm();
+}
+  }, 1000)
+ 
 }
 
 // DO NOT EDIT BELOW HERE
