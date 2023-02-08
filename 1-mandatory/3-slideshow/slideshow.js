@@ -23,3 +23,22 @@ backwardButton.addEventListener("click", () => {
   console.log(images);
   pictures.src = images.pop();
 });
+
+
+const AutoBackwardButton = document.querySelector("#auto-back-btn");
+// backwardButton.addEventListener("click", ()=> {
+AutoBackwardButton.addEventListener("click", () => {
+  images.unshift(images.slice(-1)[0]);
+  console.log(images);
+  pictures.src = images.pop();
+});
+
+
+
+const autoForwardButton = document.querySelector("#auto-forward-btn");
+// backwardButton.addEventListener("click", ()=> {
+backwardButton.addEventListener("click", () => {
+  images.unshift(images.slice(-1)[0]);
+  console.log(images);
+  pictures.src = images.pop();
+});

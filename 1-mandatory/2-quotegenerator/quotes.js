@@ -3,12 +3,12 @@
 const quoteSelector = document.querySelector("#new-quote");
 quoteSelector.addEventListener("click", () => {
   const quotesRandomiser = Math.floor(Math.random() * quotes.length);
-  const actualWordsOfQuotes = quotes[quotesRandomiser];
+  const quotesText = quotes[quotesRandomiser];
   document.querySelector(
     "#quote"
-  ).innerText = `${actualWordsOfQuotes.quote}`;
+  ).innerText = `${quotesText.quote}`;
 
-   document.querySelector("#author").innerText = ` -${actualWordsOfQuotes.author}`;
+   document.querySelector("#author").innerText = ` - ${quotesText.author}`;
 });
 
 // A function which will return one item, at
