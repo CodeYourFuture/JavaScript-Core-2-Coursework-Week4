@@ -1,3 +1,14 @@
+let title=document.getElementById("quote");
+let button=document.getElementById("button");
+let author=document.getElementById("author");
+
+button.addEventListener("click",()=>{
+  object=pickFromArray(quotes)
+  title.innerText=object.quote
+  author.innerText=object.author
+})
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

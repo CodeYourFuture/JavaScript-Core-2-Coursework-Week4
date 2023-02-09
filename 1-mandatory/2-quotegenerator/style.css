@@ -1,1 +1,17 @@
 /** Write your CSS in here **/
+
+.card {
+  width: 400px;
+  height: auto;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#author{
+  color: white;
+}
