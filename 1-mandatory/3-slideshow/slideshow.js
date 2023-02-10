@@ -42,3 +42,8 @@ backwardButton.addEventListener("click", () => {
   console.log(images);
   pictures.src = images.pop();
 });
+
+window.scrollBy("backward-btn", "forward-btn");
+function autoScroll(){
+window.scrollBy(0, 500);
+}
