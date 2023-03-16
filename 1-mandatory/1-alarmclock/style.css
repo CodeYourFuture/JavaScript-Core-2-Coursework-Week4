@@ -13,3 +13,11 @@
 h1 {
   text-align: center;
 }
+
+.go {
+  background-color: #fff;
+}
+
+.stop {
+  background-color: red;
+}
