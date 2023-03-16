@@ -1,3 +1,16 @@
+const quoteText = document.querySelector("#quote");
+const authorText = document.querySelector("#author");
+const buttonNext = document.querySelector("#next");
+
+function setNextQuote () {
+const quotation = pickFromArray(quotes);
+quoteText.textContent = quotation.quote;
+authorText.textContent = quotation.author;
+
+}
+buttonNext.addEventListener('click', () => {
+  setNextQuote();
+})
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
