@@ -24,6 +24,20 @@
   "jest": {
     "setupFilesAfterEnv": [
       "./jest.setup.js"
+    ],
+    "projects": [
+      {
+        "displayName": "mandatory",
+        "testMatch": [
+          "<rootDir>/1-mandatory/*/*.js"
+        ]
+      },
+      {
+        "displayName": "extra",
+        "testMatch": [
+          "<rootDir>/2-extra/*/*.js"
+        ]
+      }
     ]
   }
 }
