@@ -1,1 +1,7 @@
 /** Write your CSS in here **/
+img {
+    height: 62vh;
+}
+h1 {
+    padding-left: 4rem;
+}
