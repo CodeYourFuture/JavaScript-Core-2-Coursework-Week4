@@ -15,10 +15,13 @@ const pics = [
 const buttons = document.querySelector("#buttons");
 const index = document.querySelector("#counter");
 const container = document.querySelector("#container");
+const delay = document.querySelector("#delaySet");
+const delayBtn = document.querySelector("#delaySetBtn");
 
 // Initialize state variables
 let indexOfImg = 0;
 let idInterval = null;
+let interval = 2000;
 
 // Initialize current image and index
 index.textContent = indexOfImg;
@@ -42,7 +45,7 @@ function changeSlide(button) {
             // Update the index and container elements to reflect the new image
             index.textContent = indexOfImg;
             container.innerHTML = pics[indexOfImg].img;
-        }, 2000);
+        }, interval);
     } else if (button.textContent === "Auto Back") {
         // If the "Auto Back" button was clicked, clear any existing interval and set a new one to automatically change the image every 2 seconds
         clearInterval(idInterval);
@@ -52,7 +55,7 @@ function changeSlide(button) {
             // Update the index and container elements to reflect the new image
             index.textContent = indexOfImg;
             container.innerHTML = pics[indexOfImg].img;
-        }, 2000);
+        }, interval);
     } else if (button.textContent === "Stop") {
         // If the "Stop" button was clicked, clear any existing interval
         clearInterval(idInterval);
@@ -60,9 +63,16 @@ function changeSlide(button) {
     // Update the index and container elements to reflect the new image
     index.textContent = indexOfImg;
     container.innerHTML = pics[indexOfImg].img;
-    
 }
 
 buttons.addEventListener("click", (event) => {
     changeSlide(event.target);
+});
+
+// Update interval and check if delay time is greater than zero
+delayBtn.addEventListener('click' , (event) => {
+    const delayValue = parseInt(delay.value);
+    if (delayValue > 0) {
+        interval = delayValue * 1000;
+    }
 });
