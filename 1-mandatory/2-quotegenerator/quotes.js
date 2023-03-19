@@ -1,16 +1,43 @@
+// Get DOM elements
 const quoteText = document.querySelector("#quote");
 const authorText = document.querySelector("#author");
 const buttonNext = document.querySelector("#next");
+const autoSwitch = document.querySelector("#toggle");
+const autoPlayText = document.querySelector("#autoPlay");
+
+// Initialize state variables
+let autoSwitchMode = false;
+let idInterval = null;
 
 function setNextQuote () {
 const quotation = pickFromArray(quotes);
 quoteText.textContent = quotation.quote;
 authorText.textContent = quotation.author;
-
 }
+
+function setAutoSwitchMode () {
+ idInterval = setInterval(() => {
+  setNextQuote();
+}, 2000);
+}
+
 buttonNext.addEventListener('click', () => {
   setNextQuote();
 })
+
+// Check if toggle on calls function, if not clears interval
+autoSwitch.addEventListener('click', (event) => {
+  if (event.target.checked) {
+    autoSwitchMode = true;
+    autoPlayText.textContent = "Auto-play: ON";
+    setAutoSwitchMode();
+  } else {
+    autoSwitchMode = false
+    autoPlayText.textContent = "Auto-play: OFF";
+    clearInterval(idInterval)
+  }
+});
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
