@@ -30,12 +30,18 @@
         "displayName": "mandatory",
         "testMatch": [
           "<rootDir>/1-mandatory/*/*.js"
+        ],
+        "setupFilesAfterEnv": [
+          "./jest.setup.js"
         ]
       },
       {
         "displayName": "extra",
         "testMatch": [
           "<rootDir>/2-extra/*/*.js"
+        ],
+        "setupFilesAfterEnv": [
+          "./jest.setup.js"
         ]
       }
     ]
