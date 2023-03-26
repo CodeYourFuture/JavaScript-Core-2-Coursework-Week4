@@ -1,14 +1,8 @@
 // Define an array of image URLs
 const pics = [
-    { 
-        img: '<img src="/1-mandatory/3-slideshow/assets/cute-cat-a.png" alt=""></img>'
-    }, 
-    {
-        img: '<img src="/1-mandatory/3-slideshow/assets/cute-cat-b.jpg" alt=""></img>'
-    },
-    {
-        img: '<img src="/1-mandatory/3-slideshow/assets/cute-cat-c.jpg" alt=""></img>'
-    } 
+    {img: '<img src="/1-mandatory/3-slideshow/assets/cute-cat-a.png" alt=""></img>'}, 
+    {img: '<img src="/1-mandatory/3-slideshow/assets/cute-cat-b.jpg" alt=""></img>'},
+    {img: '<img src="/1-mandatory/3-slideshow/assets/cute-cat-c.jpg" alt=""></img>'} 
 ];
 
 // Get DOM elements

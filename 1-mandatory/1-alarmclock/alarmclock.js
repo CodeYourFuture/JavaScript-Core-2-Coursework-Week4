@@ -1,8 +1,11 @@
+// Get DOM elements
 const timeLeft = document.querySelector("#timeRemaining");
 const input = document.querySelector("#alarmSet");
 
+// Assign global variables
 let countdownInterval;
 let remainingTime;
+let intervalId;
 
 function setAlarm() {
   const inputValue = parseInt(input.value, 10);
@@ -24,13 +27,12 @@ function setAlarm() {
     }, 1000)
   }
 }
-let intervalId;
 
 function changeColor () {
   if (!intervalId) {
     intervalId = setInterval(() => {
       document.body.className = document.body.className === "go"? "stop" : "go";
-    }, 1000)
+    }, 1000);
   }
 }
 

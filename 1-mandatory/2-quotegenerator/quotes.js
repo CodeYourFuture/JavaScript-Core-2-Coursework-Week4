@@ -5,14 +5,14 @@ const buttonNext = document.querySelector("#next");
 const autoSwitch = document.querySelector("#toggle");
 const autoPlayText = document.querySelector("#autoPlay");
 
-// Initialize state variables
+// Assign global variables
 let autoSwitchMode = false;
 let idInterval = null;
 
 function setNextQuote () {
-const quotation = pickFromArray(quotes);
-quoteText.textContent = quotation.quote;
-authorText.textContent = quotation.author;
+  const quotation = pickFromArray(quotes);
+  quoteText.textContent = quotation.quote;
+  authorText.textContent = quotation.author;
 }
 
 function setAutoSwitchMode () {
@@ -23,7 +23,7 @@ function setAutoSwitchMode () {
 
 buttonNext.addEventListener('click', () => {
   setNextQuote();
-})
+});
 
 // Check if toggle on calls function, if not clears interval
 autoSwitch.addEventListener('click', (event) => {
