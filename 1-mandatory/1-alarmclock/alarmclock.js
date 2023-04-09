@@ -3,7 +3,7 @@ function setAlarm() {
   let input=document.getElementById("alarmSet");
    inputTime=input.value
   
-    myInterval = setInterval(myTimer, 1000);
+   myInterval = setInterval(myTimer, 1000);
    
   function myTimer() {
     inputTime= inputTime-1
@@ -14,7 +14,7 @@ function setAlarm() {
     if (inputTime === 0) {
       playAlarm();
       clearInterval(myInterval);
-
+      timeRemaining=0
     } 
     }
  ;
