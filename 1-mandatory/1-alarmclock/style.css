@@ -13,3 +13,12 @@
 h1 {
   text-align: center;
 }
+
+/* @keyframes redflash {
+  to {
+    background-color: #FFCDD2;
+  }
+}
+.red {
+  animation: redflash 0.06s 2 alternate ease-out;
+} */
