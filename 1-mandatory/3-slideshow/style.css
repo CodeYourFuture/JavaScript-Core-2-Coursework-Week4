@@ -1,1 +1,16 @@
-/** Write your CSS in here **/
+.image-container {
+  display: flex;
+
+}
+
+.slideshowImage {
+    margin: auto;
+    width: 800px;
+}
+
+.navigation {
+    display: flex;
+    justify-content:space-around;
+    width: 30%;
+    margin: 20px auto;
+}
