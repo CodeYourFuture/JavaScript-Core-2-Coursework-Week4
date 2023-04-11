@@ -8,15 +8,19 @@ body {
     width: 80%;
     margin: 100px auto;
     background-color: blue;
-    display: flex;
 }
 
 .inner {
-    justify-content: center;
     text-align: center;
     height: 80%;
     width: 80%;
     margin: 20px auto;
+}
+.buttons-container {
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
 #theQuote {

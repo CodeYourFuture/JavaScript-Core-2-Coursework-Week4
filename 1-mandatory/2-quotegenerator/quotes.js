@@ -491,13 +491,35 @@ const quotes = [
   },
 ];
 
-let aPairing = pickFromArray(quotes);
-document.getElementById("theQuote").textContent = aPairing.quote;
-document.getElementById("theAuthor").textContent = aPairing.author;
-
-let newQuoteBtn = document.getElementById("nextQuoteBtn");
-newQuoteBtn.addEventListener("click", () => {
+function showAQuote() {
   aPairing = pickFromArray(quotes);
   document.getElementById("theQuote").textContent = aPairing.quote;
   document.getElementById("theAuthor").textContent = aPairing.author;
-});
+}
+
+showAQuote();
+let autoQuotes = "";
+let started = false;
+let newQuoteBtn = document.getElementById("nextQuoteBtn");
+let autoQuoteBtn = document.getElementById("autoQuoteBtn");
+
+function startAuto() {
+  started = true;
+  showAQuote();
+}
+
+function playQuotes() {
+  if (started) {
+    started = false;
+    autoQuoteBtn.classList = "btn btn-success";
+    autoQuoteBtn.textContent = "Auto Quote";
+    clearInterval(autoQuotes);
+  } else {
+    autoQuoteBtn.classList = "btn btn-danger";
+    autoQuoteBtn.textContent = "stop me";
+    autoQuotes = setInterval(startAuto, 60000);
+  }
+}
+
+newQuoteBtn.addEventListener("click", showAQuote);
+autoQuoteBtn.addEventListener("click", playQuotes);
