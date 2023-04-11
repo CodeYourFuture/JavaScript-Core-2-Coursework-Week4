@@ -21,6 +21,7 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
 const quotes = [
@@ -490,3 +491,27 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+const quoteElement = document.getElementById("quote");
+  const authorElement = document.getElementById("author");
+  const newQuoteButton = document.getElementById("new-quote");
+
+  function getRandomQuote() {
+    return quotes[Math.floor(Math.random() * quotes.length)];
+  }
+
+  function displayQuote() {
+    const { quote, author } = getRandomQuote();
+    quoteElement.textContent = quote;
+    authorElement.textContent = `- ${author}`;
+  }
+
+  newQuoteButton.addEventListener("click", displayQuote);
+  displayQuote();
+
+
+  
+
+
+
