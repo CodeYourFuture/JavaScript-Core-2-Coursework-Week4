@@ -1,1 +1,54 @@
 /** Write your CSS in here **/
+
+.carousel{
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #0077cc;
+}
+.container {
+    /* border: 5px solid red; */
+    position: relative;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    /* margin: 0 auto; */
+    margin-top: 2rem;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+.controls{
+    /* border: 5px solid red; */
+    width: 30rem;
+    margin-left: 32rem;
+    /* margin-top: 1rem; */
+    
+
+}
+
+.btn {
+    /* display: inline-block; */
+    /* padding: 10px 20px; */
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin: 10px; */
+    /* margin-left: 8rem; */
+    margin-top: 0.5rem;
+}
+
+.btn:hover {
+    background-color: #005fa3;
+}

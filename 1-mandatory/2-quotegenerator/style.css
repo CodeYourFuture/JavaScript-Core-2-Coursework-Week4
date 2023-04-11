@@ -12,13 +12,15 @@
        margin-top: 2rem;
        color:blue;
    }
-   /* #quote::before{
-    content:"";
-   } */
+   #quote::before{
+    content: "“";
+    color: #E0633A;
+     padding: 0.25rem;
+   }
    #quote-container {
     /* border: 5px solid blue; */
        background-color: lightsalmon;
-       padding: 2rem;
+       padding: 8rem;
        border-radius: 10px;
        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
        display: inline-block;
