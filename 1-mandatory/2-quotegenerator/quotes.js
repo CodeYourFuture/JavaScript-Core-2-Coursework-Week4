@@ -490,3 +490,31 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+//variables
+const quoteP = document.querySelector("#quote"),
+  authorP = document.querySelector("#author"),
+  newQuoteBtn = document.querySelector("#new-quote");
+
+// eventListeners
+eventlisteners();
+function eventlisteners() {
+  // Get a quote on load
+  document.addEventListener("DOMContentLoaded", showQuoteOnLoad);
+  // Get a quote on click
+  newQuoteBtn.addEventListener("click", showQuoteOnClick);
+}
+
+//functions
+// show quote on load
+function showQuoteOnLoad() {
+  const quoteOnLoad = pickFromArray(quotes);
+  quoteP.textContent = quoteOnLoad.quote;
+  authorP.textContent = `- ${quoteOnLoad.author}`;
+}
+// show quote on click
+function showQuoteOnClick() {
+  const quoteOnLoad = pickFromArray(quotes);
+  quoteP.textContent = quoteOnLoad.quote;
+  authorP.textContent = `- ${quoteOnLoad.author}`;
+}
