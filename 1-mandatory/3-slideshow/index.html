@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header><h1>The Gallery</h1></header>
     <div class="image-container">
       <img class="slideshowImage" src="https://images.unsplash.com/photo-1655635131711-f52f3fd15328?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" alt="ai art">
     </div>
@@ -21,7 +22,10 @@
       <button class="btn btn-success forward-button">Forward</button>
       <button class="btn btn-primary auto-forward-button">Auto Forward</button>
     </div>
-    
+    <div class="duration-container">
+      <p>Slideshow Duration (seconds): </p>
+      <input id="slideDuration" type="number" />
+    </div>
     <script src="slideshow.js"></script>
   </body>
 </html>

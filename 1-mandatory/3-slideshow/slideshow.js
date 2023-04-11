@@ -46,12 +46,26 @@ function goBack() {
 
 function goAutoForward() {
   stopIt();
-  autoForward = setInterval(goForward, 1000);
+  let durationSeconds = document.getElementById("slideDuration").value;
+  let durationMilliseconds = 0;
+  if (durationSeconds < 1) {
+    durationMilliseconds = 1000;
+  } else {
+    durationMilliseconds = durationSeconds * 1000;
+  }
+  autoForward = setInterval(goForward, durationMilliseconds);
 }
 
 function goAutoBack() {
   stopIt();
-  autoBack = setInterval(goBack, 1000);
+  let durationSeconds = document.getElementById("slideDuration").value;
+  let durationMilliseconds = 0;
+  if (durationSeconds < 1) {
+    durationMilliseconds = 1000;
+  } else {
+    durationMilliseconds = durationSeconds * 1000;
+  }
+  autoBack = setInterval(goBack, durationMilliseconds);
 }
 
 let autoBackBtn = document.querySelector(".auto-back-button");
