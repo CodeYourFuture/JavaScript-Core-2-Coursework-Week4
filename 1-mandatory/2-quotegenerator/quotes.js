@@ -490,3 +490,33 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+//console.log(pickFromArray(quotes));
+
+function quoteOne() {
+  const bodyElement = document.querySelector("body");
+  //let divElement = document.querySelector("div");
+
+  let pickOneQuote = pickFromArray(quotes);
+  //
+  let hElement = document.querySelector("h1");
+  hElement.innerText = pickOneQuote.quote
+  
+  let pElement = document.querySelector("p");
+  pElement.innerText = pickOneQuote.author
+  //
+  let buttonElement = document.querySelector("button");
+  buttonElement.addEventListener("click", () => {
+      let pickOneQuote = pickFromArray(quotes);
+      //
+      let hElement = document.querySelector("h1");
+      hElement.innerText = pickOneQuote.quote;
+
+      let pElement = document.querySelector("p");
+      pElement.innerText = pickOneQuote.author;
+  })
+    
+}
+
+
+quoteOne();
