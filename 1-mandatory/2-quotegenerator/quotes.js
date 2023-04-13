@@ -494,7 +494,9 @@ const quotes = [
 //variables
 const quoteP = document.querySelector("#quote"),
   authorP = document.querySelector("#author"),
-  newQuoteBtn = document.querySelector("#new-quote");
+  newQuoteBtn = document.querySelector("#new-quote"),
+  autoGenerate = document.querySelector(".checkbox");
+let intervalID;
 
 // eventListeners
 eventlisteners();
@@ -503,6 +505,7 @@ function eventlisteners() {
   document.addEventListener("DOMContentLoaded", showQuoteOnLoad);
   // Get a quote on click
   newQuoteBtn.addEventListener("click", showQuoteOnClick);
+  autoGenerate.addEventListener("click", showAuto);
 }
 
 //functions
@@ -517,4 +520,14 @@ function showQuoteOnClick() {
   const quoteOnLoad = pickFromArray(quotes);
   quoteP.textContent = quoteOnLoad.quote;
   authorP.textContent = `- ${quoteOnLoad.author}`;
+}
+// show quote automaticlly
+function showAuto() {
+  if (autoGenerate.checked) {
+    intervalID = setInterval(() => {
+      showQuoteOnClick();
+    }, 5000);
+  } else {
+    clearInterval(intervalID);
+  }
 }

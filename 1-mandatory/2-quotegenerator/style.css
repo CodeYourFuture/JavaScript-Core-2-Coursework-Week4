@@ -32,3 +32,14 @@ body {
   border: none;
   margin-top: -1.5rem;
 }
+
+.show-quote {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch {
+  font-size: 1rem;
+}
