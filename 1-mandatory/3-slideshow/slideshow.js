@@ -20,11 +20,13 @@ const backwardBtn = document.querySelector("#backward-btn"),
   image = document.querySelector("#carousel-img"),
   autoBackBtn = document.querySelector("#auto-backward"),
   autoForwardBtn = document.querySelector("#auto-forward"),
-  stopBtn = document.querySelector("#stop");
+  stopBtn = document.querySelector("#stop"),
+  showTime = document.querySelector(".show-time");
 
 let ids = 0,
   interval = 2000,
-  intervalID;
+  intervalID,
+  intervalTimer;
 
 //eventlisteners
 eventlisteners();
@@ -66,6 +68,7 @@ function getPreviousPic() {
 function showAutoForward() {
   autoForwardBtn.disabled = true;
   autoBackBtn.disabled = true;
+  showTimer();
   intervalID = setInterval(() => {
     getNextPic();
   }, interval);
@@ -75,6 +78,7 @@ function showAutoForward() {
 function showAutoBack() {
   autoForwardBtn.disabled = true;
   autoBackBtn.disabled = true;
+  showTimer();
   intervalID = setInterval(() => {
     getPreviousPic();
   }, interval);
@@ -85,4 +89,18 @@ function stopAutopInterval() {
   autoForwardBtn.disabled = false;
   autoBackBtn.disabled = false;
   clearInterval(intervalID);
+  clearInterval(intervalTimer);
+  showTime.textContent = "";
+}
+
+// show timer during showing images automatically
+function showTimer() {
+  let counter = 0;
+  showTime.textContent = counter + 1;
+  intervalTimer = setInterval(() => {
+    showTime.textContent = counter--;
+    if (counter == -1) {
+      counter = 1;
+    }
+  }, 1000);
 }

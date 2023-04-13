@@ -7,17 +7,21 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #e6993b;
+  background-color: #f7dc6f;
   margin-top: 5rem;
   font-size: 1.2rem;
   text-align: center;
 }
 
 #carousel-img {
-  width: 300px;
+  width: 400px;
 }
 
 .btns button {
   margin-top: 1rem;
   padding: 0.25rem;
+}
+
+.show-time {
+  margin-top: 1rem;
 }
