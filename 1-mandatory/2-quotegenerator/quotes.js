@@ -1,3 +1,8 @@
+// const movieNum = document.querySelector("#moviesNumber");
+// const numElement = document.createElement("p");
+// numElement.innerText = `${movies.length}`;
+// movieNum.appendChild(numElement);
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
