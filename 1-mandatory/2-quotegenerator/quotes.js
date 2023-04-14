@@ -1,3 +1,16 @@
+const quote = document.getElementById("quote");
+const author = document.getElementById("author");
+const newQuote = document.getElementById("new-quote");
+function getQuote() {
+  const arrayElement = quotes[Math.floor(Math.random() * quotes.length)];
+  quote.innerHTML = `<i class="fa-solid fa-quote-left"></i> ${arrayElement["quote"]}`;
+  author.innerText = `${arrayElement["author"]}`;
+}
+newQuote.addEventListener("click", () => {
+  getQuote();
+});
+
+window.onload = getQuote;
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

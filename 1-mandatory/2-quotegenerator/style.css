@@ -1,1 +1,39 @@
 /** Write your CSS in here **/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: orange;
+}
+
+#container {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: white;
+  color: orange;
+  text-align: center;
+  height: 30vh;
+  width: 50vw;
+  margin: 10em auto;
+  padding: 2em 3em;
+}
+#quote {
+  display: block;
+
+  font-size: 1.5em;
+}
+
+#new-quote {
+  display: block;
+  background-color: orange;
+  color: white;
+  border: 1px solid orange;
+  padding: 0.5em;
+}
+.fa-quote-left {
+  color: orange;
+  font-size: 1.5em;
+}
