@@ -1,1 +1,58 @@
 /** Write your CSS in here **/
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#green {
+    background-color: #3FBF3F;
+    width: auto;
+}
+
+#blue {
+    background-color: #2580F8;
+}
+
+#quotesList {
+    background-color: #C025F8;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.color {
+    padding: 100px;
+    display: flexbox;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+p {
+    color: #E4F80B;
+}
+
+#quote {
+    font-size: 36px;
+}
+
+#author {
+    font-size: 16px;
+}
+
+button {
+    background-color: black;
+    color: #3FBF3F;
+    padding: 5px;
+    margin-top: 20px;
+    width: 10rem;
+    align-self: flex-end;
+}

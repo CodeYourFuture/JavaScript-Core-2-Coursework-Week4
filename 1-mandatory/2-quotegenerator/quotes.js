@@ -1,28 +1,3 @@
-// DO NOT EDIT BELOW HERE
-
-// A function which will return one item, at
-// random, from the given array.
-//
-// Parameters
-// ----------
-// choices: an array of items to pick from.
-//
-// Returns
-// -------
-// One item of the given array.
-//
-// Examples of use
-// ---------------
-// pickFromArray([1,2,3,4])     //maybe returns 2
-// pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
-// You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
-
-// A list of quotes you can use in your app.
-// DO NOT modify this array, otherwise the tests may break!
 const quotes = [
   {
     quote: "Life isn't about getting and having, it's about giving and being.",
@@ -490,3 +465,47 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let quotePlace = document.querySelector("#quote");
+let authorPlace = document.querySelector("#author");
+
+// quotePlace.innerText = quotes.length;
+
+function generateQuote() {
+  let randomNumber = Math.floor(Math.random() * quotes.length);
+  quotePlace.innerText = `"${quotes[randomNumber].quote}"`;
+  authorPlace.innerText = `"${quotes[randomNumber].author}"`;
+}
+
+generateQuote();
+
+document.querySelector("button").addEventListener("click", function (event) {
+  event.defaultPrevented;
+  generateQuote();
+})
+
+// DO NOT EDIT BELOW HERE
+
+// A function which will return one item, at
+// random, from the given array.
+//
+// Parameters
+// ----------
+// choices: an array of items to pick from.
+//
+// Returns
+// -------
+// One item of the given array.
+//
+// Examples of use
+// ---------------
+// pickFromArray([1,2,3,4])     //maybe returns 2
+// pickFromArray(coloursArray)  //maybe returns "#F38630"
+//
+// You DO NOT need to understand how this function works.
+function pickFromArray(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
+// A list of quotes you can use in your app.
+// DO NOT modify this array, otherwise the tests may break!
