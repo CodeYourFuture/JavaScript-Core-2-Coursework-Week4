@@ -1,7 +1,12 @@
-// const movieNum = document.querySelector("#moviesNumber");
-// const numElement = document.createElement("p");
-// numElement.innerText = `${movies.length}`;
-// movieNum.appendChild(numElement);
+function quoteGenerator(quotes) {
+  const quoteContainer = document.querySelector(".container");
+  const quoteElement = document.createElement("p");
+  quoteElement.innerText = "HELLO IRIANNI"; ///// how to access the object from the array
+  quoteContainer.appendChild(quoteElement);
+}
+
+quoteGenerator();
+//pickFromArray();
 
 // DO NOT EDIT BELOW HERE
 
