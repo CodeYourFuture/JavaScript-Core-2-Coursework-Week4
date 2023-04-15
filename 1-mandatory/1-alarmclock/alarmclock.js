@@ -1,4 +1,33 @@
-function setAlarm() {}
+
+function setAlarm() {
+  let inputTime = document.querySelector("#alarmSet").value;
+  let titleInput = document.querySelector("#timeRemaining");
+  let titleTime = calMinutesAndSeconds (inputTime)
+  titleInput.textContent = titleTime;
+  
+  let counter = inputTime
+  let timeCountdown = setInterval(function () {
+    counter--
+    titleTime = calMinutesAndSeconds(counter);
+    titleInput.textContent = titleTime;
+ 
+    if (counter === 0) {
+      playAlarm();
+    }
+  },1000)
+  
+}
+
+function pauseAlarm() {
+  clearInterval(timeCountdown);
+}
+
+function calMinutesAndSeconds (number) {
+  let computeMinutes = Math.floor(number / 60);
+  let seconds = number % 60;
+  let titleTime = `Time Remaining: ${computeMinutes}:${seconds}`;
+  return titleTime
+}
 
 // DO NOT EDIT BELOW HERE
 
@@ -10,7 +39,7 @@ function setup() {
   });
 
   document.getElementById("stop").addEventListener("click", () => {
-    pauseAlarm();
+    pauseAlarm();``
   });
 }
 
