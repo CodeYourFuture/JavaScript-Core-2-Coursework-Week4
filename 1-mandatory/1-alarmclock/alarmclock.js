@@ -6,12 +6,11 @@ function setAlarm() {
   let secondCounter = inputValue.value - Math.floor(inputValue.value / 60) * 60;
   counter();
   function counter() {
-    if (minuteCounter == secondCounter) {
+    if (minuteCounter == 0 && secondCounter == 0) {
       timeRemaining.innerText = `Time Remaining: 0${minuteCounter}:0${secondCounter}`;
 
       clearInterval(repeatCounter);
       playAlarm();
-      console.log(repeatCounter);
     } else if (minuteCounter == 0 && secondCounter > 0) {
       if (secondCounter < 10) {
         timeRemaining.innerText = `Time Remaining: 0${minuteCounter}:0${secondCounter}`;
