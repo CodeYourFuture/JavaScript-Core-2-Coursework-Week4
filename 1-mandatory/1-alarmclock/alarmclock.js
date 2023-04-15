@@ -1,26 +1,26 @@
+var intervalId = -1;
+
 function setAlarm() {
-  document.getElementById("set").addEventListener("click", function (event) {
-    let inputValue = document.getElementById("alarmSet").value;
+  let inputValue = document.getElementById("alarmSet").value;
 
-    const timeElement = document.querySelector("#timeRemaining");
-    timeElement.innerText = `Time Remaining 00:${inputValue}`;
+  const timeElement = document.querySelector("#timeRemaining");
+  timeElement.innerText = `Time Remaining 00:${inputValue}`;
 
-    function updateTimeRemaining() {
-      inputValue--;
-    }
+  function updateTimeRemaining() {
+    inputValue--;
+  }
 
-    function countDownTimer() {
-      if (inputValue >= 0) {
-        timeElement.innerText = `Time Remaining 00:${inputValue}`;
-        updateTimeRemaining();
-      } else playAlarm();
-    }
-    setInterval(countDownTimer, 1000);
-  });
+  function countDownTimer() {
+    if (inputValue >= 0) {
+      timeElement.innerText = `Time Remaining 00:${inputValue}`;
+      updateTimeRemaining();
+    } else playAlarm();
+  }
+  intervalId = setInterval(countDownTimer, 1000);
 }
 
 document.getElementById("stop").addEventListener("click", function () {
-  clearTimeout();
+  clearInterval(intervalId);
 });
 
 // DO NOT EDIT BELOW HERE
