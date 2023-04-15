@@ -3,33 +3,30 @@
 // 3. Work out how to update the `Time Remaining` title every second
 // 4. When the remaining time left is 0, play the alarm sound
 
-////////// HELP!!! Countdown not starting immediately ////////////
+var intervalId = -1;
 
 function setAlarm() {
-  document.getElementById("set").addEventListener("click", function (event) {
-    let inputValue = document.getElementById("alarmSet").value;
+  let inputValue = document.getElementById("alarmSet").value;
 
-    const timeElement = document.querySelector("#timeRemaining");
-    timeElement.innerText = `Time Remaining 00:${inputValue}`;
+  const timeElement = document.querySelector("#timeRemaining");
+  timeElement.innerText = `Time Remaining 00:${inputValue}`;
 
-    function updateTimeRemaining() {
-      inputValue--;
-    }
+  function updateTimeRemaining() {
+    inputValue--;
+  }
 
-    function countDownTimer() {
-      if (inputValue >= 0) {
-        timeElement.innerText = `Time Remaining 00:${inputValue}`;
-        updateTimeRemaining();
-      } else playAlarm();
-    }
-    setInterval(countDownTimer, 1000); // will change on its own every 1 seconds
+  function countDownTimer() {
+    if (inputValue >= 0) {
+      timeElement.innerText = `Time Remaining 00:${inputValue}`;
+      updateTimeRemaining();
+    } else playAlarm();
+  }
+  intervalId = setInterval(countDownTimer, 1000);
+
+  document.getElementById("stop").addEventListener("click", function () {
+    clearInterval(intervalId);
   });
 }
-
-document.getElementById("stop").addEventListener("click", function () {
-  clearTimeout();
-  //pauseAlarm(); /// Alarm stopping for a bit and restarting
-});
 
 // DO NOT EDIT BELOW HERE
 
