@@ -17,6 +17,17 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+const body = document.querySelector("body");
+const divElement = document.createElement("div");
+divElement.classList = "form";
+const quoteElement = document.createElement("h1");
+const authorElement = document.createElement("p");
+const buttonElement = document.createElement("button");
+divElement.appendChild(quoteElement);
+divElement.appendChild(authorElement);
+divElement.appendChild(buttonElement);
+body.appendChild(divElement);
+buttonElement.innerText = "New Quote";
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
@@ -490,3 +501,11 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function generateQuote() {
+  const newQuote = pickFromArray(quotes);
+  quoteElement.innerText = newQuote.quote;
+  authorElement.innerText = newQuote.author;
+}
+generateQuote();
+buttonElement.addEventListener("click", generateQuote);

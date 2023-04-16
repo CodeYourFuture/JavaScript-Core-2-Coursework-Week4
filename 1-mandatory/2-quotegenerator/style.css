@@ -1,1 +1,18 @@
 /** Write your CSS in here **/
+.form {
+    margin: 1rem;
+    border: 0.1rem black solid;
+    background-color: yellow;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+.form h1{
+    font-size: 2rem;
+}
+.form p{
+    text-align: right;
+}
+.form button{
+    background-color: red;
+}
