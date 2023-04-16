@@ -1,1 +1,13 @@
 /** Write your CSS in here **/
+#imgContainer {
+   width: 500px;
+   height: 500px;
+}
+
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
