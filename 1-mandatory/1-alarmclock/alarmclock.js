@@ -1,4 +1,6 @@
 
+let timeCountdown;
+
 function setAlarm() {
   let inputTime = document.querySelector("#alarmSet").value;
   let titleInput = document.querySelector("#timeRemaining");
@@ -6,13 +8,14 @@ function setAlarm() {
   titleInput.textContent = titleTime;
   
   let counter = inputTime
-  let timeCountdown = setInterval(function () {
+  timeCountdown = setInterval(function () {
     counter--
     titleTime = calMinutesAndSeconds(counter);
     titleInput.textContent = titleTime;
  
     if (counter === 0) {
       playAlarm();
+      clearInterval(timeCountdown)
     }
   },1000)
   
@@ -20,13 +23,19 @@ function setAlarm() {
 
 function pauseAlarm() {
   clearInterval(timeCountdown);
+  titleTime = calMinutesAndSeconds(0)
 }
 
 function calMinutesAndSeconds (number) {
-  let computeMinutes = Math.floor(number / 60);
-  let seconds = number % 60;
-  let titleTime = `Time Remaining: ${computeMinutes}:${seconds}`;
-  return titleTime
+  if (number === 0) {
+    let titleTime = `Time Remaining: 00:00`
+  } else {
+     let computeMinutes = Math.floor(number / 60);
+     let seconds = number % 60;
+     titleTime = `Time Remaining: ${computeMinutes}:${seconds}`;
+  }
+  return titleTime;
+ 
 }
 
 // DO NOT EDIT BELOW HERE
