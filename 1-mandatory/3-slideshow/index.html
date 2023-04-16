@@ -12,13 +12,21 @@
   </head>
   <body>
     <!-- Write your HTML in here -->
-    <h1>Image Carousel</h1>
-    <img src="" alt="" />
-    <button id="auto-back">Auto Back</button>
-    <button id="Back">Back</button>
-    <button id="stop">Stop</button>
-    <button id="forward">Forward</button>
-    <button id="auto-forward">Auto Forward</button>
+    <div id="container">
+      <h1>Image Carousel</h1>
+      <img
+        id="carousel-img"
+        src="./assets/cute-cat-a.png"
+        alt="sunflower photo"
+      />
+      <div id="btn-container">
+        <button id="auto-backward">Auto Back</button>
+        <button id="backward-btn">Back</button>
+        <button id="stop">Stop</button>
+        <button id="forward-btn">Forward</button>
+        <button id="auto-forward">Auto Forward</button>
+      </div>
+    </div>
     <script src="slideshow.js"></script>
   </body>
 </html>
