@@ -4,23 +4,30 @@
 function setAlarm() {
   let inputTime = document.querySelector("#alarmSet")
   let timeLine = document.querySelector("#timeRemaining")
-  let givenTime = inputTime.value
+  let givenTime = inputTime.value 
   
-  let myInterval = setInterval(function(){    
-      if (givenTime < 10 && givenTime >= 0){
-        timeLine.innerText = `Time Remaining: 00:0${givenTime}`
-      } else if(givenTime >=60){
-        var equalMinutes = Math.floor(givenTime/60);
-        var rest = givenTime % 60;
-        console.log(equalMinutes)
-        timeLine.innerText = `Time Remaining: ${equalMinutes.toString().padStart(2, "0")}:${rest.toString().padStart(2, "0")}`
-      } else if (givenTime > 10 && givenTime < 60) {
-        timeLine.innerText = `Time Remaining: 00:${givenTime}`
-      } else if (givenTime < 0) {
+
+      var equalMinutes = Math.floor(givenTime/60);
+      var rest = givenTime % 60;
+      console.log(equalMinutes)
+      timeLine.innerText = `Time Remaining: ${equalMinutes.toString().padStart(2, "0")}:${rest.toString().padStart(2, "0")}`
+   
+      givenTime = givenTime - 1
+  
+  let myInterval = setInterval(function(){ 
+      if (givenTime == 0) {
         clearInterval(myInterval);
         timeLine.innerText = `Time Remaining: 00:00`
         audio.play()
-      }
+      }else if (givenTime < 10 && givenTime >= 0){
+        timeLine.innerText = `Time Remaining: 00:0${givenTime}`
+      } else if(givenTime >=60){
+        equalMinutes = Math.floor(givenTime/60);
+        rest = givenTime % 60;
+        timeLine.innerText = `Time Remaining: ${equalMinutes.toString().padStart(2, "0")}:${rest.toString().padStart(2, "0")}`
+      } else if (givenTime >= 10 && givenTime < 60) {
+        timeLine.innerText = `Time Remaining: 00:${givenTime}`
+      } 
       givenTime --    
   }, 1000);
 }
