@@ -1,11 +1,12 @@
 function quoteGenerator(quotes) {
   const quoteContainer = document.querySelector(".container");
   const quoteElement = document.createElement("p");
-  quoteElement.innerText = "HELLO IRIANNI"; ///// how to access the object from the array
+
+  let quoteQuote = pickFromArray(quotes.quote);
+  quoteElement.innerText = quoteQuote;
   quoteContainer.appendChild(quoteElement);
 }
-
-quoteGenerator();
+quoteGenerator(quotes);
 //pickFromArray();
 
 // DO NOT EDIT BELOW HERE
