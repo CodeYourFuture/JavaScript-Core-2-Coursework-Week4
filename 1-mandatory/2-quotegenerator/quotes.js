@@ -1,3 +1,24 @@
+// Get DOM elements
+// Get DOM elements
+const quoteElement = document.getElementById('quote');
+const authorElement = document.getElementById('author');
+const newQuoteButton = document.getElementById('new-quote');
+
+// Add event listener to new quote button
+newQuoteButton.addEventListener('click', generateNewQuote);
+window.addEventListener("load", generateNewQuote);
+// Generate new quote
+function generateNewQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+
+  const randomQuote = quotes[randomIndex].quote;
+  const randomAuthor = quotes[randomIndex].author;
+  
+  quoteElement.innerText = `"${randomQuote}"`;
+  authorElement.innerText = `-${randomAuthor}`;
+}
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

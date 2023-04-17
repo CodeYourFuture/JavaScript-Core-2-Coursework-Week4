@@ -1,1 +1,53 @@
-/** Write your CSS in here **/
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(223, 156, 31);
+}
+
+/* Quote container styles */
+.quote-container {
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote and author styles */
+.quote-wrapper {
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgb(236, 174, 60);
+}
+
+.quote {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.author {
+  font-size: 18px;
+}
+
+/* New quote button styles */
+.new-quote-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: rgb(204, 160, 78);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.new-quote-button:hover {
+  background-color: #ff9933;
+}
