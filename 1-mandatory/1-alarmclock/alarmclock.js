@@ -10,23 +10,29 @@ function setAlarm() {
   if (alermSetInput.value === "") {
     alert("Please enter the proper input");
   } else {
-    // turn string value to number
-    let totalSeconds = Number(alermSetInput.value);
+    // Turn string value to number
+    let totalSeconds = alermSetInput.value;
+    // convert sec to 00:00 form
     let timer = convertSecondsToMinutesAndSeconds(totalSeconds);
     // Show timer in time remaining
-    timeRemaining.textContent = `- ${timer}`;
+    timeRemaining.textContent = timer;
     document.body.style.backgroundColor = "green";
 
     // Set interval for timer
     intervalID = setInterval(() => {
+      // Decrease time by 1 sec
       timer = decrementByOneSec(timer);
       if (timer === "00:00") {
-        timeRemaining.textContent = timer;
+        // timeRemaining.textContent = timer;
         document.body.style.backgroundColor = "red";
         // Deactive interval
         clearInterval(intervalID);
         // Active alarm
         playAlarm();
+        // stop alarm after 100 s
+        setTimeout(() => {
+          stopAlerm();
+        }, 100000);
         intervalColor = setInterval(() => {
           if (document.body.style.backgroundColor === "red") {
             document.body.style.backgroundColor = "white";
@@ -68,16 +74,17 @@ function decrementByOneSec(time) {
   time = `${minutes.toString().padStart(2, "0")}:${seconds
     .toString()
     .padStart(2, "0")}`;
-  timeRemaining.textContent = `- ${time}`;
+  timeRemaining.textContent = time;
   return time;
 }
 
+// Stop alerm and reset input value
 function stopAlerm() {
   clearInterval(intervalID);
   clearInterval(intervalColor);
   document.body.style.backgroundColor = "white";
   alermSetInput.value = "";
-  timeRemaining.textContent = "00:00";
+  timeRemaining.innerText = "00:00";
 }
 
 // DO NOT EDIT BELOW HERE

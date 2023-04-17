@@ -43,7 +43,7 @@ function eventlisteners() {
 //functions
 function getImageOnLoad() {
   image.src = images[0].src;
-  ids = images[0].imgID;
+  // ids = images[0].imgID;
 }
 
 // get next pic
