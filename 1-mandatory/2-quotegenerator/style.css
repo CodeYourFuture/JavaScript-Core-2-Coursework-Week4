@@ -1,1 +1,65 @@
 /** Write your CSS in here **/
+body{
+    background-color: rgb(255, 160, 43);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+#main-screen {
+    background-color: white;
+    width: 50%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-end;
+    padding: 2rem;
+
+}
+
+#quote-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    width: 100%;
+
+}
+
+.single-quote {
+    color: rgb(255, 160, 43);
+    font-size: 1.6rem;
+}
+
+.quote-autor{
+    color: rgb(255, 160, 43);
+    font-size: 1rem;
+}
+
+#quote-icon{
+    width: 4rem;
+    margin-bottom: 1rem;
+
+}
+
+#generate-button{
+    border: none;
+    color: white;
+    height: 2rem;
+    width: 8rem;
+    background-color: rgb(255, 160, 43);
+    align-items: left
+}
+#generate-button:hover{
+    border: none;
+    background-color: rgb(187, 109, 13);
+}
+
+#generate-button:focus {
+    border: none;
+    outline: none;
+    background-color:rgb(255, 160, 43);
+}

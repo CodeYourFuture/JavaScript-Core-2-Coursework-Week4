@@ -17,13 +17,37 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+// function pickFromArray(choices) {
+
 function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+let quateButton = document.querySelector("#generate-button")
+let mainLine = document.querySelector("#quote-line")
+let autorArea = document.querySelector("#autor")
+let singleQuote = document.createElement("p")
+let quoteAutor = document.createElement("p")
+
+ quateButton.addEventListener("click", function(ivent){
+  ivent.preventDefault()
+    let singleRandomChhoise = choices[Math.floor(Math.random() * choices.length)]
+    singleQuote.innerText = ""
+    quoteAutor.innerText = ""
+    singleQuote.innerText = singleRandomChhoise.quote
+    quoteAutor.innerText = `- ${singleRandomChhoise.author}`
+    singleQuote.classList.add("single-quote")
+    quoteAutor.classList.add("quote-autor")
+   
+    mainLine.appendChild(singleQuote)
+    autorArea.appendChild(quoteAutor) 
+ })
+ 
 }
+
+
+
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
-const quotes = [
+let quotes = [
   {
     quote: "Life isn't about getting and having, it's about giving and being.",
     author: "Kevin Kruse",
@@ -490,3 +514,8 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+pickFromArray(quotes)
+
+
+
