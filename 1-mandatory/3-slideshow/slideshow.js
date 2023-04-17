@@ -68,18 +68,20 @@ forwardBtn.addEventListener("click", moveForward);
 
 let backInterval;
 let forwardInterval; 
-
+const UI = document.querySelector("#userInterval");
 
 autoBwBtn.addEventListener("click", function () {
   autoBwBtn.disabled = true;
   autoFrwBtn.disabled = true;
-  backInterval = setInterval(moveBack, 2000) });
+  let seconds = UI.value * 1000;
+  backInterval = setInterval(moveBack, seconds) });
 
 
 autoFrwBtn.addEventListener("click", function () {
   autoBwBtn.disabled = true;
   autoFrwBtn.disabled = true;
-  forwardInterval = setInterval(moveForward, 2000)});
+  let seconds = UI.value * 1000;
+  forwardInterval = setInterval(moveForward, seconds)});
 
 document.querySelector("#stop").addEventListener("click", function () {
   autoBwBtn.disabled = false;

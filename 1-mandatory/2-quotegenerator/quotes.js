@@ -484,6 +484,19 @@ document.querySelector("button").addEventListener("click", function (event) {
   generateQuote();
 })
 
+const checkbox = document.querySelector("input");
+let autoQuote;
+checkbox.addEventListener("click", function () {
+
+  if(checkbox.checked === true){
+    autoQuote = setInterval(generateQuote, 5000);
+  } else {
+    clearInterval(autoQuote);
+  }
+})
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
