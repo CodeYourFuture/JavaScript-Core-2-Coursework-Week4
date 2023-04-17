@@ -1,4 +1,4 @@
-/* ======= TESTS - DO NOT MODIFY ===== 
+/* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.
 */
 
@@ -59,7 +59,7 @@ describe("Quote generator", () => {
       "Strive not to be a success, but rather to be of value."
     );
     expect(authorP).toHaveTextContent("Albert Einstein");
-    expect(newQuoteBtn).toHaveTextContent("New quote");
+    expect(newQuoteBtn).toHaveTextContent("Next quote");
 
     userEvent.click(newQuoteBtn);
 
