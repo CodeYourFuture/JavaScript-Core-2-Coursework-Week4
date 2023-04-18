@@ -56,3 +56,36 @@ backButton.addEventListener("click", clickBackPhoto)
 
 clickForNextPhoto()
 
+let autoforwardButton = document.querySelector("#auto-forward")
+let autoBackButton = document.querySelector("#auto-back")
+let stopButton = document.querySelector("#stop-button")
+
+
+
+let photoClickInterval
+
+
+function autoSlide(){
+photoClickInterval = setInterval(function(){
+    clickForNextPhoto()
+}, 2000)   
+}
+
+function autoSlideBack(){
+photoClickInterval = setInterval(function(){
+    clickBackPhoto()
+}, 2000)   
+}
+
+
+autoforwardButton.addEventListener("click", autoSlide)
+autoBackButton.addEventListener("click", autoSlideBack)
+
+stopButton.addEventListener("click", function(){
+    clearInterval(photoClickInterval);
+})
+
+
+
+
+
