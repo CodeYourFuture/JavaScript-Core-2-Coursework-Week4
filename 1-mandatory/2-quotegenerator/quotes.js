@@ -2,7 +2,10 @@
 
 // A function which will return one item, at
 // random, from the given array.
-//
+
+
+
+//randomChoose(Quotes);
 // Parameters
 // ----------
 // choices: an array of items to pick from.
@@ -16,6 +19,10 @@
 // pickFromArray([1,2,3,4])     //maybe returns 2
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
+
+
+
+
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
@@ -490,3 +497,21 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+const greyDiv = document.getElementById("grey");
+const btn = document.getElementById("btn");
+
+function randomChoose(quotes) {
+  const p1 = document.getElementById("quote");
+  const numRandom = Math.floor(Math.random() * quotes.length);
+  let qouteRandom = quotes[numRandom];
+  p1.innerText = `-- ${qouteRandom.quote} --`;
+  greyDiv.appendChild(p1);
+  const p2 = document.getElementById("author");
+  p2.innerText = qouteRandom.author;
+  greyDiv.appendChild(p2);
+}
+btn.addEventListener("click", function () {
+  randomChoose(quotes);
+});
