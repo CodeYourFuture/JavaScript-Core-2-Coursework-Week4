@@ -5,24 +5,36 @@
     justify-content: center;
     align-items: center;
   width: 40rem;
-  height: 20rem;
+  height: 25rem;
   background-color: #F3A83B;
 }
 
 .card {
   width: 30rem;
-  height: 10rem;
+  height: 13rem;
   background-color: white;
+  padding: 2rem;
 }
 
-#next-quote-btn {
+#new-quote {
     width: 6rem;
     margin-left: auto;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     background-color: #F3A83B;
     border: transparent;
     color: white;
 }
 
+#quote {
+  color: #F3A83B;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:medium;
+  font-weight: 600;
+}
 
-
+#author {
+  color: #F3A83B;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  margin-left: auto;
+}

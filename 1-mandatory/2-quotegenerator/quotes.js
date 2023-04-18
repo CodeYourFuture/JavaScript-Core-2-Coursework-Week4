@@ -510,14 +510,13 @@ const quoteAuthor = document.querySelector("#author");
 
 function getRandomQuotes(quoteList) {
   const randomNumber = Math.floor(Math.random() * quotes.length);
-  quoteText.textContent = quotes[randomNumber].quote;
-  quoteAuthor.textContent = quotes[randomNumber].author;
-
+  quoteText.textContent = "\""+ quotes[randomNumber].quote;
+  quoteAuthor.textContent = "-" + quotes[randomNumber].author;
 }
 
 getRandomQuotes();
 
-const nextQuoteButton = document.querySelector("#next-quote-btn");
+const nextQuoteButton = document.querySelector("#new-quote");
 
 nextQuoteButton.addEventListener("click", function(event){
   event.preventDefault();
