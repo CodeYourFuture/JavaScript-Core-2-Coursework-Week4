@@ -36,9 +36,10 @@ afterEach(() => {
 describe("Level 1 challenge", () => {
   test("renders the first image with control buttons", () => {
     const images = [
-      "./assets/cute-cat-a.png",
-      "./assets/cute-cat-b.jpg",
-      "./assets/cute-cat-c.jpg",
+     "https://images.freeimages.com/images/large-previews/874/glass-house-1174072.jpg",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/young-woman-admiring-beauty-of-an-almond-tree-free-photo.jpg?w=2210&quality=70",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-with-summer-hat-looking-at-dark-golden-sunset-free-photo.jpg?w=2210&quality=70",     
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-in-white-summer-hat-going-for-a-swim-in-the-sea-free-photo.jpg?w=2210&quality=70",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const forwardBtn = page.window.document.querySelector("#forward-btn");
@@ -50,9 +51,10 @@ describe("Level 1 challenge", () => {
   });
   test("can move the image forwards once", () => {
     const images = [
-      "./assets/cute-cat-a.png",
-      "./assets/cute-cat-b.jpg",
-      "./assets/cute-cat-c.jpg",
+      "https://images.freeimages.com/images/large-previews/874/glass-house-1174072.jpg",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/young-woman-admiring-beauty-of-an-almond-tree-free-photo.jpg?w=2210&quality=70",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-with-summer-hat-looking-at-dark-golden-sunset-free-photo.jpg?w=2210&quality=70",     
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-in-white-summer-hat-going-for-a-swim-in-the-sea-free-photo.jpg?w=2210&quality=70",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const forwardBtn = page.window.document.querySelector("#forward-btn");
@@ -66,9 +68,10 @@ describe("Level 1 challenge", () => {
 
   test("can move the image forwards multiple times", () => {
     const images = [
-      "./assets/cute-cat-a.png",
-      "./assets/cute-cat-b.jpg",
-      "./assets/cute-cat-c.jpg",
+      "https://images.freeimages.com/images/large-previews/874/glass-house-1174072.jpg",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/young-woman-admiring-beauty-of-an-almond-tree-free-photo.jpg?w=2210&quality=70",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-with-summer-hat-looking-at-dark-golden-sunset-free-photo.jpg?w=2210&quality=70",     
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-in-white-summer-hat-going-for-a-swim-in-the-sea-free-photo.jpg?w=2210&quality=70",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const forwardBtn = page.window.document.querySelector("#forward-btn");
@@ -81,9 +84,10 @@ describe("Level 1 challenge", () => {
 
   test("can move the image backwards to the end", () => {
     const images = [
-      "./assets/cute-cat-a.png",
-      "./assets/cute-cat-b.jpg",
-      "./assets/cute-cat-c.jpg",
+      "https://images.freeimages.com/images/large-previews/874/glass-house-1174072.jpg",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/young-woman-admiring-beauty-of-an-almond-tree-free-photo.jpg?w=2210&quality=70",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-with-summer-hat-looking-at-dark-golden-sunset-free-photo.jpg?w=2210&quality=70",     
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-in-white-summer-hat-going-for-a-swim-in-the-sea-free-photo.jpg?w=2210&quality=70",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const backwardBtn = page.window.document.querySelector("#backward-btn");
@@ -97,9 +101,10 @@ describe("Level 1 challenge", () => {
 
   test("can move the image backwards multiple times", () => {
     const images = [
-      "./assets/cute-cat-a.png",
-      "./assets/cute-cat-b.jpg",
-      "./assets/cute-cat-c.jpg",
+     "https://images.freeimages.com/images/large-previews/874/glass-house-1174072.jpg",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/young-woman-admiring-beauty-of-an-almond-tree-free-photo.jpg?w=2210&quality=70",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-with-summer-hat-looking-at-dark-golden-sunset-free-photo.jpg?w=2210&quality=70",     
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-in-white-summer-hat-going-for-a-swim-in-the-sea-free-photo.jpg?w=2210&quality=70",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const backwardBtn = page.window.document.querySelector("#backward-btn");
@@ -113,9 +118,10 @@ describe("Level 1 challenge", () => {
 
   test("moving forwards will eventually wrap around to the start", () => {
     const images = [
-      "./assets/cute-cat-a.png",
-      "./assets/cute-cat-b.jpg",
-      "./assets/cute-cat-c.jpg",
+      "https://images.freeimages.com/images/large-previews/874/glass-house-1174072.jpg",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/young-woman-admiring-beauty-of-an-almond-tree-free-photo.jpg?w=2210&quality=70",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-with-summer-hat-looking-at-dark-golden-sunset-free-photo.jpg?w=2210&quality=70",     
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-in-white-summer-hat-going-for-a-swim-in-the-sea-free-photo.jpg?w=2210&quality=70",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const forwardBtn = page.window.document.querySelector("#forward-btn");
@@ -139,9 +145,10 @@ describe("Level 2 challenge", () => {
   });
   test("can start moving images forward automatically", () => {
     const images = [
-      "./assets/cute-cat-a.png",
-      "./assets/cute-cat-b.jpg",
-      "./assets/cute-cat-c.jpg",
+      "https://images.freeimages.com/images/large-previews/874/glass-house-1174072.jpg",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/young-woman-admiring-beauty-of-an-almond-tree-free-photo.jpg?w=2210&quality=70",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-with-summer-hat-looking-at-dark-golden-sunset-free-photo.jpg?w=2210&quality=70",     
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-in-white-summer-hat-going-for-a-swim-in-the-sea-free-photo.jpg?w=2210&quality=70",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const autoForwardBtn = page.window.document.querySelector("#auto-forward");
@@ -166,9 +173,10 @@ describe("Level 2 challenge", () => {
   });
   test("can start moving images backward automatically", () => {
     const images = [
-      "./assets/cute-cat-a.png",
-      "./assets/cute-cat-b.jpg",
-      "./assets/cute-cat-c.jpg",
+      "https://images.freeimages.com/images/large-previews/874/glass-house-1174072.jpg",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/young-woman-admiring-beauty-of-an-almond-tree-free-photo.jpg?w=2210&quality=70",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-with-summer-hat-looking-at-dark-golden-sunset-free-photo.jpg?w=2210&quality=70",     
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-in-white-summer-hat-going-for-a-swim-in-the-sea-free-photo.jpg?w=2210&quality=70",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const autoForwardBtn = page.window.document.querySelector("#auto-forward");
@@ -193,9 +201,10 @@ describe("Level 2 challenge", () => {
   });
   test("can stop the automatic timer", () => {
     const images = [
-      "./assets/cute-cat-a.png",
-      "./assets/cute-cat-b.jpg",
-      "./assets/cute-cat-c.jpg",
+      "https://images.freeimages.com/images/large-previews/874/glass-house-1174072.jpg",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/young-woman-admiring-beauty-of-an-almond-tree-free-photo.jpg?w=2210&quality=70",
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-with-summer-hat-looking-at-dark-golden-sunset-free-photo.jpg?w=2210&quality=70",     
+      "https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-in-white-summer-hat-going-for-a-swim-in-the-sea-free-photo.jpg?w=2210&quality=70",
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const autoForwardBtn = page.window.document.querySelector("#auto-forward");
