@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
   <head>
     <title>Quote Generator</title>
@@ -14,9 +14,28 @@
 
        <!-- Write your HTML in here -->
 
-     
-   
+        <section class="container">
+      <section class="row justify-content-center">
+        <div class="col-md-6 text-center"> 
+                  <h1 class="mb-4">Quote Generator</h1>
+          <div id="quote-box" class="p-4 border rounded">
+            <p id="quote" class="mb-4"></p>
+            <p id="author"></p>
+            <button id="new-quote" class="btn btn-primary mt-4">New quote</button>
+          </div>
+        </div>
+      </section>
+    </section>
       
     <script src="quotes.js"></script>
   </body>
 </html>
+
+<!-- In the body I start with a class container to wrap the whole function and below I use a row-justify -->
+<!-- class="row justify-content-center" is often used to create responsive layouts. -->
+<!--  class="col-md-6 text-center" is used to create a centered column that spans 50% of the width of its parent container on medium-sized screens.  -->
+<!--  To increase readability class="mb-4" is used to add a margin to the bottom of the h1 element to separate it visually from the other content on the page.  -->
+<!-- Then I have p id for qoute AND author -->
+<!-- Then I have the button id -->
+<!-- And last inside the body is the script source -->
+
