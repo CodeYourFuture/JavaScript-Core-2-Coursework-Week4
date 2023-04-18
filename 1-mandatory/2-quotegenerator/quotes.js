@@ -512,3 +512,5 @@ document.addEventListener("DOMContentLoaded", generateRandomQuote);
 
 const generateQuoteButton = document.getElementById("new-quote");
 generateQuoteButton.addEventListener("click", generateRandomQuote);
+
+
