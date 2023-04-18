@@ -22,8 +22,6 @@ if (totalSeconds === 0) {
 
 }
 
-
-
 function displayRemaining(totalSeconds){
 let minutes = Math.floor(totalSeconds / 60);
 let seconds = totalSeconds % 60;

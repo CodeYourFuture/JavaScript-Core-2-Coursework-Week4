@@ -17,9 +17,35 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
+// style
+document.getElementById("main-div").setAttribute("style", 
+"background-color: #f49807; height: 400px; display: flex; flex-direction: column; justify-content: center;"
+);
+
+document.getElementById("inside-div").setAttribute("style","background-color: #fff; height: 250px; margin-right: 60px; margin-left: 60px; display: flex; align-items: center; padding: 50px;  color:#f49807;"
+  );
+document.getElementById("inner-div").setAttribute("style","margin-left: 60px; display: flex; align-items: center; padding: 50px;  color:#f49807;"
+);
+document
+  .getElementById("writer")
+  .setAttribute("style"," margin-left: 60px; display: flex; align-items: center; padding: 50px;  color:#f49807;"
+  );
+
+document.getElementById("btn").setAttribute("style","margin-left: 1025px;     margin-top: -80px;; height: 40px; width: 120px; background-color: #f49807;      color: #fff; border: 0"
+);
+
+//function
+
 function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+let newQuote = Math.floor(Math.random() * ( quotes.length))
+  document.getElementById("inner-div").innerHTML = quotes[newQuote].quote;
+  document.getElementById("writer").innerHTML = quotes[newQuote].author;
 }
+
+btn.addEventListener("click", function(){
+  pickFromArray()
+})
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
