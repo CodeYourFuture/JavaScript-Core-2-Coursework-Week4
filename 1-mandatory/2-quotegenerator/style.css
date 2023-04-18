@@ -1,1 +1,28 @@
 /** Write your CSS in here **/
+
+.quotes-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  width: 40rem;
+  height: 20rem;
+  background-color: #F3A83B;
+}
+
+.card {
+  width: 30rem;
+  height: 10rem;
+  background-color: white;
+}
+
+#next-quote-btn {
+    width: 6rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    background-color: #F3A83B;
+    border: transparent;
+    color: white;
+}
+
+
+
