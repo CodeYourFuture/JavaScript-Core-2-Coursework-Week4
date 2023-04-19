@@ -1,1 +1,25 @@
 /** Write your CSS in here **/
+
+body{
+    background-color: #c9ada7;
+    color: #4a4e69;
+}
+
+button{
+    background-color: #4a4e69;
+    color: #f2e9e4;
+    margin-left: 10px;
+}
+h2{
+    margin-left: 120px;
+    margin-top: 20px;
+}
+img{
+    margin-left: 10px;
+    height: 400px;
+    width: 650px;
+}
+p {
+    margin-left: 200px;
+    font-size: 27px;
+}
