@@ -1,7 +1,7 @@
 function setAlarm() {
-  const input = document.getElementById("alarmSet");//input id
+  const input = document.getElementById("alarmSet"); //input id
   let time = input.value;
-  const title = document.getElementById("timeRemaining");//header id
+  const title = document.getElementById("timeRemaining"); //header id
   title.innerText = `Time Remaining: ${timer(time)}`; //second move for tittle.innerText fixed, passes test 1 and 2
   console.log(title.innerText);
 
@@ -16,18 +16,16 @@ function setAlarm() {
 
     if (time === 0) {
       clearInterval(timeLoop);
+/*       setInterval(function () {
+        document.body.style.backgroundColor =
+          "#" + Math.floor(Math.random() * 16777215).toString(16);
+      }, 100); */
       console.log("time is up");
       playAlarm();
     }
     time--;
   };
   const timeLoop = setInterval(titleTimer, 1000);
-/*   if (time === 0) {
-    clearInterval(timeLoop);
-    time = 0;
-    title.innerText = `Time Remaining: ${timer(time)}`;
-    console.log("time is up");
-  } */
 }
 
 function addZeroBefore(n) {
@@ -47,8 +45,6 @@ function timer(n) {
   }
   return res;
 }
-//console.log(timer(34))
-//setTimeout(((i1,i2,i3) => {console.log(`${i1} and ${i2} and ${i3}`)}), 3000, "A", "B", "C")
 
 // DO NOT EDIT BELOW HERE
 
