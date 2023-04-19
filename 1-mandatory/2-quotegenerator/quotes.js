@@ -1,3 +1,16 @@
+let bodyEle = document.querySelector("body");
+let divEle = document.createElement("div");
+let headingEle = document.createElement("h1");
+let pEle = document.createElement("p");
+let buttonEle = document.createElement("button");
+divEle.appendChild(headingEle)
+divEle.appendChild(pEle)
+buttonEle.innerText = 'New quote';
+divEle.appendChild(buttonEle);
+bodyEle.appendChild(divEle)
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +503,14 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+
+function generateNewQuotes (){
+const newQuote = pickFromArray(quotes)
+headingEle.innerText=newQuote["quote"]
+let newAuthor = pickFromArray(quotes)
+pEle.innerText = newAuthor["author"]
+
+};
+buttonEle.addEventListener("click", generateNewQuotes)
