@@ -15,12 +15,12 @@
 // ---------------
 // pickFromArray([1,2,3,4])     //maybe returns 2
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
-// You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
 
+// You DO NOT need to understand how this function works.
+
+let quoteElement = document.querySelector(".quote");
+let authorElement = document.querySelector(".author");
+let buttonElement = document.querySelector(".button");
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
 const quotes = [
@@ -490,3 +490,15 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function pickFromArray(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+function generateQuote() {
+  const randomQuote = pickFromArray(quotes);
+  quoteElement.textContent = randomQuote.quote;
+  authorElement.textContent = randomQuote.author;
+}
+
+generateQuote();
+buttonElement.addEventListener("click", generateQuote);

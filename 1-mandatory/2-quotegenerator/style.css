@@ -1,1 +1,42 @@
 /** Write your CSS in here **/
+body {
+    background-color: #e88f09;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #fffffff6;
+    border: 0px;
+    padding: 10px;
+    margin: 50px;
+}
+
+.quote-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #e88f09;
+}
+
+.quote {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e88f09;
+}
+
+.author {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 1px;
+    border: none;
+    color: white;
+    background-color: #e88f09;
+  
+}
