@@ -12,12 +12,22 @@
   </head>
   <body>
     <!-- Write your HTML in here -->
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitches">
+      <label class="custom-control-label" for="customSwitches">Toggle this switch element to generate quote
+        automaticaly</label>
+    </div>
+    <br>
     <div id="main-screen">
-      <div id="quote-line">
-        <img src="https://cdn0.iconfinder.com/data/icons/spreadsheet-shape-currency-clear-formatting/49/slice409-512.png" id="quote-icon"> 
+      <img src="https://cdn0.iconfinder.com/data/icons/spreadsheet-shape-currency-clear-formatting/49/slice409-512.png"
+        id="quote-icon">
+      <div id="quote-container">
+        <p id="quote"></p>
       </div>
-      <div id="autor"></div>
-      <button id="generate-button">New quote</button>
+      <div id="author-container">
+        <p id="author"></p>
+      </div>
+      <button id="new-quote">New quote</button>
     </div>
     <script src="quotes.js"></script>
   </body>

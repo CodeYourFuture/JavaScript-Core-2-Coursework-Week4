@@ -35,18 +35,6 @@ stopButton.addEventListener("click", stopAlarm)
 
 setAlarmButton.addEventListener("click", setAlarm)
 
-
-
-
- // if (rest < 10 && equalMinutes < 10){
-      //   timeLine.innerText = `Time Remaining: 0${equalMinutes}:0${rest}`
-      // } else if(rest >= 10 && equalMinutes < 10){
-      //   timeLine.innerText = `Time Remaining: 0${equalMinutes}:${rest}`
-      // } else if(rest < 10 && equalMinutes >= 10){
-      //   timeLine.innerText = `Time Remaining: ${equalMinutes}:0${rest}`
-      // } else{
-      //   timeLine.innerText = `Time Remaining: ${equalMinutes}:${rest}`
-      // } 
 // DO NOT EDIT BELOW HERE
 
 var audio = new Audio("alarmsound.mp3");

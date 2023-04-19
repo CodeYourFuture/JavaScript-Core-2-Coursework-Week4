@@ -2,10 +2,19 @@
 body{
     background-color: rgb(255, 160, 43);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 10%;
 }
+
+.custom-control{
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+    color: rgb(106, 40, 0);
+}
+
+
 
 #main-screen {
     background-color: white;
@@ -19,7 +28,7 @@ body{
 
 }
 
-#quote-line{
+#quote{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -31,10 +40,10 @@ body{
 
 .single-quote {
     color: rgb(255, 160, 43);
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
-.quote-autor{
+.quote-author{
     color: rgb(255, 160, 43);
     font-size: 1rem;
 }
@@ -45,7 +54,7 @@ body{
 
 }
 
-#generate-button{
+#new-quote{
     border: none;
     color: white;
     height: 2rem;
@@ -53,12 +62,12 @@ body{
     background-color: rgb(255, 160, 43);
     align-items: left
 }
-#generate-button:hover{
+#new-quote:hover{
     border: none;
     background-color: rgb(187, 109, 13);
 }
 
-#generate-button:focus {
+#new-quote:focus {
     border: none;
     outline: none;
     background-color:rgb(255, 160, 43);

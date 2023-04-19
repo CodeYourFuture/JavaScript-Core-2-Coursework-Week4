@@ -18,29 +18,45 @@
 //
 // You DO NOT need to understand how this function works.
 // function pickFromArray(choices) {
+let newQuoteBtn = document.querySelector("#new-quote")
 
 function pickFromArray(choices) {
-let quateButton = document.querySelector("#generate-button")
-let mainLine = document.querySelector("#quote-line")
-let autorArea = document.querySelector("#autor")
-let singleQuote = document.createElement("p")
-let quoteAutor = document.createElement("p")
+    let quoteP = document.querySelector("#quote")
+    let authorP = document.querySelector("#author")
+    let authorContainer = document.querySelector("#author-container")
+    let quoteContainer = document.querySelector("#quote-container")
+    quoteP.innerText = ""
+    authorP.innerText = ""
 
- quateButton.addEventListener("click", function(ivent){
-  ivent.preventDefault()
     let singleRandomChhoise = choices[Math.floor(Math.random() * choices.length)]
-    singleQuote.innerText = ""
-    quoteAutor.innerText = ""
-    singleQuote.innerText = singleRandomChhoise.quote
-    quoteAutor.innerText = `- ${singleRandomChhoise.author}`
-    singleQuote.classList.add("single-quote")
-    quoteAutor.classList.add("quote-autor")
-   
-    mainLine.appendChild(singleQuote)
-    autorArea.appendChild(quoteAutor) 
- })
- 
+    
+    quoteP.textContent = singleRandomChhoise.quote
+    authorP.textContent = `- ${singleRandomChhoise.author}`
+    quoteP.classList.add("single-quote")
+    authorP.classList.add("quote-author") 
+    quoteContainer.appendChild(quoteP)
+    authorContainer.appendChild(authorP)   
+  
 }
+
+newQuoteBtn.addEventListener("click", function(ivent){
+  ivent.preventDefault()
+  pickFromArray(quotes)
+})
+
+
+  let checkbox = document.querySelector("#customSwitches");
+  let randomQuotesAuto
+  checkbox.addEventListener("change", function(){
+    if (checkbox.checked === true){
+    randomQuotesAuto = setInterval(function(){
+      pickFromArray(quotes)
+    }, 1000)
+  } else {
+    clearInterval(randomQuotesAuto)
+  }
+  })
+
 
 
 
