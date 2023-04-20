@@ -1,1 +1,33 @@
-/** Write your CSS in here **/
+
+.container-fluid{
+    height: 100vh;
+    background-color: orange;
+}
+
+.content {
+    width: 80%;
+    max-width: 900px;
+    background-color: white;
+    color: orange;
+    padding: 30px;
+    margin: 80px 20px;
+}
+
+.blockquote-footer{
+    color: orange;
+}
+
+.btn{
+    color: white;
+    padding: 12px 24px;
+    background-color: orange;
+    outline: none;
+    border: none;
+}
+
+.quotesIcon{
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: -10px;
+}

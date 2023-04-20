@@ -1,1 +1,19 @@
-/** Write your CSS in here **/
+.img-container {
+    width: 530px;
+    height: 410px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.img-container img{
+    width: 530px;
+    height: 410px;
+    max-width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.action-btns{
+    margin-top: 20px;
+}

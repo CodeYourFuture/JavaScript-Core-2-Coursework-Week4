@@ -490,3 +490,27 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const quoteElem = document.getElementById('quote');
+const authorElem = document.getElementById('author');
+const quoteBtnElem = document.getElementById('new-quote');
+const autoPlayElem = document.getElementById('autoPlay');
+let intervalId = null;
+
+let selectQuote = () => quotes[Math.floor(Math.random() * quotes.length)];
+const updateQouteContent = ({ quote, author }) => {
+  quoteElem.innerText = quote;
+  authorElem.innerText = author;
+}
+updateQouteContent(selectQuote());
+
+quoteBtnElem.addEventListener("click", () => {
+  updateQouteContent(selectQuote());
+})
+autoPlayElem.addEventListener("change", (ev) => {
+  if(ev.target.checked){
+    intervalId = setInterval(()=>updateQouteContent(selectQuote()), 6000);
+  } else {
+    clearInterval(intervalId);
+  }
+})

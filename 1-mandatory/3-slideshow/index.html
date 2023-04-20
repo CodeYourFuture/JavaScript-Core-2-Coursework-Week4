@@ -11,7 +11,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div class="container">
+      <h1 class="md-0 h2">Image Carousel. Level 2 Demo</h1>
+      <div class="img-container">
+        <img id="carousel-img" src="./assets/cute-cat-a.png" alt="Responsive image">
+      </div>
+      <p>You will see next image of cat in <span id="counter">x</span> ms</p>
+      <div id="btn-group" class="action-btns">
+        <button id="auto-backward" class="btn btn-secondary" type="button">Auto Back</button>
+        <button id="backward-btn" class="btn btn-secondary" type="button">Back</button>
+        <button id="stop" class="btn btn-secondary" type="button">Stop</button>
+        <button id="forward-btn" class="btn btn-secondary" type="button">Forward</button>
+        <button id="auto-forward" class="btn btn-secondary" type="button">Auto Forward</button>
+      </div>
+    </div>
     <script src="slideshow.js"></script>
   </body>
 </html>
