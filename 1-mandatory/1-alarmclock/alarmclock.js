@@ -6,6 +6,7 @@ function setAlarm() {
   let set = document.querySelector("#set");
 
   set.addEventListener("click", function () {
+    clearInterval(startCount);
     if (setAlarmInput.value === "") {
       alert("Please enter value");
     }

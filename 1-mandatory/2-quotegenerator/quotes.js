@@ -27,7 +27,7 @@ divElement.appendChild(quoteElement);
 divElement.appendChild(authorElement);
 divElement.appendChild(buttonElement);
 body.appendChild(divElement);
-buttonElement.innerText = "New Quote";
+buttonElement.innerText = "New quote";
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }

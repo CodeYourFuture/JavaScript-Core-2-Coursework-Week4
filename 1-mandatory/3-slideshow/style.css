@@ -1,1 +1,15 @@
 /** Write your CSS in here **/
+body{
+    text-align: center; 
+}
+h2{
+    text-align: center;
+}
+#img{
+    width: 30rem;
+    height: auto;
+}
+#photoIndex {
+    font-size: 2rem;
+    font-weight: 600;
+}
