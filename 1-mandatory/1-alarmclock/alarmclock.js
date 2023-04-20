@@ -2,6 +2,7 @@ function displayRemainingTime(totalSeconds) {
   // 1. we get the html element for the time remaining part
   // 2. we want to figure out what this new string would be eg calucuate if it is 100
   // 3. use the value in step 2 and put it in the html element in step 1
+  
     let timeRemainingString = document.getElementById("timeRemaining");
     let minutes = Math.floor(totalSeconds / 60); // "Time Remaining: 00:00";
     let seconds = totalSeconds % 60;

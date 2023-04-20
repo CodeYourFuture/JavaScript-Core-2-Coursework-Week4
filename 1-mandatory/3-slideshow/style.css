@@ -1,1 +1,29 @@
 /** Write your CSS in here **/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: rgb(201, 155, 245);
+    display: flex;
+    justify-content: center;
+}
+
+#image-holder {
+    height: 60px;
+    width: 60px;
+}
+
+#carousel-img {
+    object-fit: cover;
+    width: 25em;
+    height: 25em;
+}
+
+/* trying to make the buttons to be located uniformly */
+.btns {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
