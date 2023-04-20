@@ -28,7 +28,7 @@ const images = [
 ];
 
 const image = document.querySelector("#carousel-img");
-const autoForwardBtn = document.querySelector("#auto-foward");
+const autoForwardBtn = document.querySelector("#auto-forward");
 const forwardBtn = document.querySelector("#forward-btn");
 const stopBtn = document.querySelector("#stop");
 const backwardBtn = document.querySelector("#backward-btn");
