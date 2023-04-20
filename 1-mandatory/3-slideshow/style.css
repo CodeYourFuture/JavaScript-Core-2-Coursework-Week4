@@ -1,1 +1,23 @@
 /** Write your CSS in here **/
+* {
+    background-color: bisque;
+} 
+
+.wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content:space-around;
+    border-radius: 5px;
+} 
+
+#slide {
+    height: 400px;
+    width: 600px;
+}
+
+#btn1, #btn2 {
+    margin-top: 40%;
+    
+}
