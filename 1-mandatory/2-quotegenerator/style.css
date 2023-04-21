@@ -1,1 +1,38 @@
-/** Write your CSS in here **/
+body {
+  background-color: rgb(253, 181, 46);
+  color: rgb(253, 181, 46);
+
+}
+
+#new-quote-btn { 
+  background-color: rgb(253, 181, 46);
+  color: aliceblue;
+  margin-bottom: 1rem;
+  border: none;
+  font-size: larger;
+} 
+
+section {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+h2 {
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+

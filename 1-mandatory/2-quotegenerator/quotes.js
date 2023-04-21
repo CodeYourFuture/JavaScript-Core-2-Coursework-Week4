@@ -1,28 +1,22 @@
-// DO NOT EDIT BELOW HERE
+const quote = document.querySelector("#quote");
+const author = document.querySelector("#author");
+const newQuoteBtn = document.querySelector("#new-quote-btn");
 
-// A function which will return one item, at
-// random, from the given array.
-//
-// Parameters
-// ----------
-// choices: an array of items to pick from.
-//
-// Returns
-// -------
-// One item of the given array.
-//
-// Examples of use
-// ---------------
-// pickFromArray([1,2,3,4])     //maybe returns 2
-// pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
-// You DO NOT need to understand how this function works.
+function newQuoteFunction () {
+  const rundomQuoteObj = pickFromArray(quotes);
+
+  quote.textContent = rundomQuoteObj.quote;
+  author.textContent = rundomQuoteObj.author;
+}
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-// A list of quotes you can use in your app.
-// DO NOT modify this array, otherwise the tests may break!
+newQuoteBtn.addEventListener("click", newQuoteFunction)
+
+
+
 const quotes = [
   {
     quote: "Life isn't about getting and having, it's about giving and being.",
