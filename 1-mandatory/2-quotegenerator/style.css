@@ -1,1 +1,32 @@
 /** Write your CSS in here **/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.quoteElement {
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  padding: 20px;
+}
+
+.quoteElement > p {
+  font: 800 40px Arial;
+  /* -webkit-text-fill-color: transparent; */
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+#new-quote {
+  font: 800 25px Arial;
+  /* background-color: transparent; */
+  width: fit-content;
+  justify-content: flex-end;
+  color: white;
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: black;
+  border: none;
+}

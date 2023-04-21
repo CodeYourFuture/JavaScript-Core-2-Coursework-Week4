@@ -490,3 +490,48 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const coloursArray = [];
+
+for (let i = 0; i < 100; i++) {
+  const color = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+    Math.random() * 256
+  )}, ${Math.floor(Math.random() * 256)})`;
+  coloursArray.push(color);
+}
+
+//* Creating elements
+const div = document.querySelector(".quoteElement");
+const quoteP = document.createElement("p");
+const authorP = document.createElement("p");
+const newQuoteBtn = document.createElement("button");
+
+// * First quote
+quoteP.innerText = "Strive not to be a success, but rather to be of value.";
+authorP.innerText = "Albert Einstein";
+
+// * Adding elements to the DOM
+document.body.appendChild(div);
+div.appendChild(quoteP);
+div.appendChild(authorP);
+div.appendChild(newQuoteBtn);
+
+// * Adding attributes
+quoteP.setAttribute("id", "quote");
+authorP.setAttribute("id", "author");
+newQuoteBtn.setAttribute("id", "new-quote");
+newQuoteBtn.innerText = "New quote";
+
+// * Adding random quote and colour
+newQuoteBtn.addEventListener("click", () => {
+  const { author, quote } = pickFromArray(quotes);
+  quoteP.innerText = quote;
+  authorP.innerText = author;
+  div.style.backgroundColor = pickFromArray(coloursArray);
+  document.body.style.backgroundColor = pickFromArray(coloursArray);
+  div.style.color = pickFromArray(coloursArray);
+
+  // * Button  has the same colour as the body
+  let bodyColour = document.body.style.backgroundColor;
+  newQuoteBtn.style.backgroundColor = bodyColour;
+});
