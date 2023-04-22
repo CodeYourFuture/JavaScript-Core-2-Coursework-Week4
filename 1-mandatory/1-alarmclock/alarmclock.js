@@ -1,12 +1,6 @@
 function setAlarm() {
 let inputSet = document.querySelector("#alarmSet");
 
-// let minutes = Math.floor( inputSet.value / 60);
-// let seconds = inputSet.value % 60;
-
-// let timeRemaining = document.querySelector("#timeRemaining");
-// timeRemaining.textContent = `Time Remaining: ${minutes}:${seconds}`;
-
 displayRemaining(inputSet.value)
 let totalSeconds = inputSet.value;
 
@@ -27,9 +21,12 @@ let minutes = Math.floor(totalSeconds / 60);
 let seconds = totalSeconds % 60;
 
 let timeRemaining = document.querySelector("#timeRemaining");
-timeRemaining.textContent = `Time Remaining:     ${minutes}:${seconds}`;
-} 
+timeRemaining.textContent = `Time Remaining:
+${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 
+} 
+// minutes.padStart(2, "0");
+// seconds.padStart(2, "0");
 
 // DO NOT EDIT BELOW HERE
 
