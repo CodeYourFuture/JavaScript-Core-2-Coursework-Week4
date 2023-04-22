@@ -1,4 +1,24 @@
-function setAlarm() {}
+function formatCounter(counter) {
+    var minutes = Math.floor(counter / 60);
+    var seconds = counter % 60;
+    return minutes + ":" + seconds;   
+}
+
+function setAlarm() {
+  var setValue = document.getElementById("alarmSet").value;
+  var timeremainingEl = document.getElementById("timeRemaining");
+  let counter = setValue;
+  timeremainingEl.innerText = "Time Remaining: " + formatCounter(counter);
+  
+  const countDown = setInterval(function () {
+    counter--;
+    timeremainingEl.innerText = "Time Remaining: " + formatCounter(counter);
+    if (counter === 0) {
+      playAlarm();
+      clearInterval(countDown);
+    }
+  }, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 

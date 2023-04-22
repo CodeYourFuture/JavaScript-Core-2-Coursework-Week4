@@ -1,1 +1,75 @@
 /** Write your CSS in here **/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height:100vh;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    background-image: linear-gradient(to right bottom, rgb(1, 21, 152), #4070f7a8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(119, 2, 148, 0.6);
+    border-radius: 15px;
+    width: 600px;
+    background-color: rgba(103, 195, 244, 0.812);
+    margin: 10px;
+
+}
+.quote
+{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.author 
+{
+
+    margin:10px;
+    text-align: right;
+    font-size: 25px;
+    font-style: italic;
+    font-family: cursive;
+}
+hr {
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: black;
+}
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 9px;
+}
+
+.next
+{
+    font-size:18px;
+    border-radius: 5px;
+    cursor:pointer;
+    padding: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: rgb(244, 244, 245);
+    background-image: linear-gradient(to right bottom, rgb(2, 2, 85), #a29deea8);
+}
+.container:hover
+{
+    box-shadow: 0 10px 10px rgb(36, 7, 182);
+}

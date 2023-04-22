@@ -1,3 +1,21 @@
+const text = document.getElementById("quote");
+const author = document.getElementById("author");
+
+function newQuote(){
+  const randomobj = Math.floor(Math.random() * quotes.length);
+  const displayquote = quotes[randomobj].quote;
+  const displayauthor = quotes[randomobj].author;
+
+  if (displayauthor == null) {
+    author = "Anonymous";
+  }
+
+  text.innerHTML = '" ' + displayquote;
+  author.innerHTML = "- " + displayauthor;
+
+};
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +508,4 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+newQuote();
