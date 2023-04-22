@@ -37,9 +37,18 @@ document.getElementById("btn").setAttribute("style","margin-left: 1025px;     ma
 
 //function
 
-function pickFromArray(choices) {
-let newQuote = Math.floor(Math.random() * ( quotes.length))
+// function pickFromArray() {
+//   let newQuote = Math.floor(Math.random() * ( quotes.length))
+//   document.getElementById("inner-div").innerHTML = quotes[newQuote].quote;
+//   document.getElementById("writer").innerHTML = quotes[newQuote].author;
+// }
+function pickRandomQuote() {
+  let newQuote = Math.floor(Math.random() * quotes.length);
   document.getElementById("inner-div").innerHTML = quotes[newQuote].quote;
+}
+
+function pickRandomAuthor() {
+  let newQuote = Math.floor(Math.random() * quotes.length);
   document.getElementById("writer").innerHTML = quotes[newQuote].author;
 }
 
