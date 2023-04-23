@@ -53,7 +53,8 @@ function pickRandomAuthor() {
 }
 
 btn.addEventListener("click", function(){
-  pickFromArray()
+  pickRandomQuote();
+  pickRandomAuthor();
 })
 
 // A list of quotes you can use in your app.
