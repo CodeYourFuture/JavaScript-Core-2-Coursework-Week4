@@ -53,6 +53,7 @@ function pickRandomAuthor() {
 }
 
 btn.addEventListener("click", function(){
+  // pickFromArray();
   pickRandomQuote();
   pickRandomAuthor();
 })
