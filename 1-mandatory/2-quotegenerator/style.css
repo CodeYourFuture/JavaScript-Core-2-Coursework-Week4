@@ -1,1 +1,33 @@
-/** Write your CSS in here **/
+.quote-box {
+    width: 700px;
+    background-color: #8FBC8F;
+    margin-left: 300px;
+}
+
+
+.quote {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: left;
+        color: #555;
+        margin-top: 15rem;
+        margin-bottom: 1rem;
+        text-shadow: 1px 1px 1px #ddd;
+        letter-spacing: 0.05em;
+        line-height: 1.2;
+}
+
+.author {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    color: #555;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 1px #ddd;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+}
+
+
+
+  
