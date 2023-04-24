@@ -508,7 +508,7 @@ const newQuoteBtn = document.createElement("button");
 
 // * First quote
 quoteP.innerText = "Strive not to be a success, but rather to be of value.";
-authorP.innerText = "Albert Einstein";
+authorP.innerText = "-Albert Einstein-";
 
 // * Adding elements to the DOM
 document.body.appendChild(div);
@@ -526,7 +526,7 @@ newQuoteBtn.innerText = "New quote";
 newQuoteBtn.addEventListener("click", () => {
   const { author, quote } = pickFromArray(quotes);
   quoteP.innerText = quote;
-  authorP.innerText = author;
+  authorP.innerText = `-${author}-`;
   div.style.backgroundColor = pickFromArray(coloursArray);
   document.body.style.backgroundColor = pickFromArray(coloursArray);
   div.style.color = pickFromArray(coloursArray);

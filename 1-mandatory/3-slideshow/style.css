@@ -1,1 +1,51 @@
 /** Write your CSS in here **/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 20px;
+  border-radius: 15px;
+  padding-left: 20px;
+  width: fit-content;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.alt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+}

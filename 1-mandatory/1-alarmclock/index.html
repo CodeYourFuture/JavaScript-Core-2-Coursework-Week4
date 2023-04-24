@@ -13,15 +13,24 @@
   </head>
 
   <body>
+    <div class="top">
+      <h1 id="currentTime">Current time: 00:00:00</h1>
+    </div>
     <div class="centre">
-      <h1 id="timeRemaining">Time Remaining: 00:00</h1>
-      <div>
-        Set Time to:
-        <input id="alarmSet" type="number" />
+      <div class="image">
+        <img src="./markus-spiske-unsplash.jpg" alt="" />
       </div>
-      <div>
-        <button id="set" type="button">Set Alarm</button>
-        <button id="stop" type="button">Stop Alarm</button>
+      <div class="text">
+        <h1 class="wakeUp invisible">WAKE UP</h1>
+        <h1 id="timeRemaining">00:00:00</h1>
+        <div class="setTime">
+          <p>Set Time to:</p>
+          <input id="alarmSet" type="time" value="13:00" />
+        </div>
+        <div class="buttonBlock">
+          <button class="buttons" id="set" type="buttons">Set Alarm</button>
+          <button id="stop" type="button" class="buttons">Stop Alarm</button>
+        </div>
       </div>
     </div>
     <script src="alarmclock.js"></script>

@@ -11,7 +11,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div class="title">
+      <p style="font: 600 30px Arial"><strong>Image Carousel</strong></p>
+    </div>
+    <div class="wrapper">
+      <div class="alt">
+        <p style="font: 600 20px">
+          <strong id="alt_img">A beautiful sea</strong>
+        </p>
+      </div>
+      <img
+        id="img"
+        src="https://images.unsplash.com/photo-1681953447837-34c2c0f0c36f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+        alt="Carousel Image"
+        height="600"
+        width="550"
+      />
+      <p id="counter">Counter: 1</p>
+    </div>
+    <div class="buttons">
+      <button id="autoBack">
+        <i class="fa-solid fa-backward"></i><br />Auto Back
+      </button>
+      <button id="backward-btn">
+        <i class="fa-sharp fa-solid fa-arrow-left"></i><br />Back
+      </button>
+      <button id="stop">
+        <i class="fa-solid fa-stop"></i><br />
+        Stop
+      </button>
+      <button id="forward-btn">
+        <i class="fa-solid fa-arrow-right"></i><br />
+        Forward
+      </button>
+      <button id="autoFwd">
+        <i class="fa-solid fa-forward"></i><br />Auto Forward
+      </button>
+    </div>
+
     <script src="slideshow.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fe2fe709c9.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
