@@ -3,31 +3,31 @@
 // 3. Work out how to update the `Time Remaining` title every second
 // 4. When the remaining time left is 0, play the alarm sound
 
-// function setAlarm() {}
-//var intervalId;
 
-function setAlarm() {
-  let inputValue = document.getElementById("alarmSet").value;
-
-  const timeElement = document.querySelector("#timeRemaining");
-  timeElement.innerText = `Time Remaining 00:${inputValue}`;
-
-  function updateTimeRemaining() {
-    inputValue--;
-  }
-
-  function countDownTimer() {
-    if (inputValue >= 0) {
-      timeElement.innerText = `Time Remaining 00:${inputValue}`;
-      updateTimeRemaining();
-    } else playAlarm();
-  }
-  intervalId = setInterval(countDownTimer, 1000);
-
-  document.getElementById("stop").addEventListener("click", function () {
-    clearInterval(intervalId);
-  });
+    
+  function setAlarm() {
+  let timer = document.querySelector("#alarmSet").value;
+  setTime(timer);
+  
+  let setter= setInterval(function () {
+    if (timer ===0){
+      clearInterval(setter);
+    playAlarm();
+    } else {
+      timer--;
+      setTime(timer);
+    }
+}, 1000);
 }
+
+function setTime (time){
+  const hour = Math.floor(time / 60);
+  const minute = time % 60;
+  let timeLeft = document.querySelector("#timeRemaining");
+  timeLeft.innerText = `Time Remaining: ${String(hour).padStart(2,"0")}:${String(minute).padStart(2,"0")}`;
+}
+
+
 
 // DO NOT EDIT BELOW HERE
 
