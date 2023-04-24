@@ -1,4 +1,8 @@
-function setAlarm() {}
+function setAlarm() {
+  //well get what the user inputs.
+  var userInput = document.getElementById("timeRemaining").value;
+  
+}
 
 // DO NOT EDIT BELOW HERE
 
