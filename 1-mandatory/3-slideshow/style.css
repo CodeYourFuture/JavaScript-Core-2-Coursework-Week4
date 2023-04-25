@@ -1,1 +1,17 @@
-/** Write your CSS in here **/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #image-holder {
+    height: 300px;
+    width: 300px;
+  }
+  
+  #carousel-img {
+    object-fit: cover;
+    width: 600px;
+    height: 600px;
+  }
