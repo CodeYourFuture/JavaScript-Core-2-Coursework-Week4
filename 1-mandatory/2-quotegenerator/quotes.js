@@ -1,3 +1,18 @@
+const newQuoteBtn = document.querySelector("#new-quote");
+newQuoteBtn.innerText = "New quote";
+newQuoteBtn.addEventListener("click", test);
+
+function getQuote() {
+  selectedQuote = pickFromArray(quotes);
+  document.querySelector("#quote").innerText = selectedQuote.quote;
+  document.querySelector("#author").innerText = selectedQuote.author;
+}
+
+window.onload = getQuote;
+
+function test() {
+  getQuote();
+}
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
