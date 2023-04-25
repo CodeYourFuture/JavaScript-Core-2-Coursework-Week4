@@ -1,8 +1,5 @@
 // Write your code here
 
-// 1. define variables
-//2. define e
-
 /* 
 1. define variables
 2. define eventListeners

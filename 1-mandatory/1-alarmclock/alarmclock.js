@@ -3,15 +3,23 @@ function dispalyRemainingTime(totalSeconds) {
   let minutes = Math.floor(totalSeconds / 60);
   let seconds = totalSeconds % 60;
 
-  timeRemaining.textContent = "Time Remaining " + minutes + ":" + seconds;
+  // timeRemaining.textContent = "Time Remaining  " + minutes + ":" + seconds;
+
+  if (minutes < 10) {
+    timeRemaining.textContent =
+      "Time Remaining  " + "0" + minutes + ":" + seconds;
+  } else if (seconds < 10) {
+    timeRemaining.textContent =
+      "Time Remaining  " + minutes + ":" + "0" + seconds;
+  } else {
+    timeRemaining.textContent = "Time Remaining  " + minutes + ":" + seconds;
+  }
 }
 
 function setAlarm() {
   let inputTime = document.getElementById("alarmSet");
-
-  dispalyRemainingTime(inputTime.value);
-
   let totalSeconds = inputTime.value;
+  dispalyRemainingTime(totalSeconds);
 
   let Interval = setInterval(() => {
     totalSeconds -= 1;
