@@ -35,11 +35,11 @@ function decreaseTimeOne(timeIn) {
 }
 
 function startCountdown(countdownInput) {
-  const changeTimeID = setInterval(function () {
+  const alarmCountdownID = setInterval(function () {
     timeNow = decreaseTimeOne(countdownInput);
     renderTime(getTimeString(timeNow));
     if (counter > countdownInput) {
-      clearInterval(changeTimeID);
+      clearInterval(alarmCountdownID);
       playAlarm();
       timer = false;
     }
