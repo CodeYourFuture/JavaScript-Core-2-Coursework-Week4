@@ -19,7 +19,6 @@ function getTimeString(timeInSeconds) {
 function renderTime(convertedTimeString) {
   let displayTime = document.querySelector("#timeRemaining");
   displayTime.innerText = convertedTimeString;
-  // console.log(convertedTimeString);
 }
 let counter = 1;
 
@@ -27,7 +26,7 @@ function setAlarm() {
   var inputTime = document.querySelector("#alarmSet").value;
   counter = 1;
   renderTime(getTimeString(inputTime));
-  test(inputTime);
+  startCountdown(inputTime);
 }
 function decreaseTimeOne(timeIn) {
   var timeOut = timeIn - counter;
@@ -35,30 +34,17 @@ function decreaseTimeOne(timeIn) {
   return timeOut;
 }
 
-function test(variable1) {
+function startCountdown(countdownInput) {
   const changeTimeID = setInterval(function () {
-    timeNow = decreaseTimeOne(variable1);
+    timeNow = decreaseTimeOne(countdownInput);
     renderTime(getTimeString(timeNow));
-    if (counter > variable1) {
+    if (counter > countdownInput) {
       clearInterval(changeTimeID);
-      console.log("snap!");
       playAlarm();
       timer = false;
     }
   }, 1000);
 }
-
-function log() {
-  console.log("Hi");
-}
-
-// let setBtn = document.querySelector("#set");
-// setBtn.addEventListener("click", log);
-
-// function test() {
-//   inputText = document.querySelector("#alarmSet");
-//   alert(inputText.value);
-// }
 
 // DO NOT EDIT BELOW HERE
 
