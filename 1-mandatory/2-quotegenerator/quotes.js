@@ -500,4 +500,4 @@ function getQuotes() {
   quoteTitle.innerText = randomQuote.quote;
   authorName.innerText = randomQuote.author;
 }
-button.addEventListener('click', getQuotes);
+button.addEventListener("click", getQuotes);
