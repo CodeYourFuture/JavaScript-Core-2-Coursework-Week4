@@ -1,1 +1,22 @@
 /** Write your CSS in here **/
+img {
+    width: 50%;
+}
+body {
+    background-color: bisque;
+}
+header {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(9, 162, 244);
+}
+#content {
+    display: block;
+    align-items: center;
+}
+.btn {
+    background-color: rgb(152, 228, 247);
+    color: rgb(16, 18, 119);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

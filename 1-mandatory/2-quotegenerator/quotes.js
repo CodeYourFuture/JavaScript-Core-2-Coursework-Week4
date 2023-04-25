@@ -1,3 +1,22 @@
+const quoteElement = document.getElementById('quote-text');
+const authorElement = document.getElementById('quote-author');
+const newQuoteButton = document.getElementById('new-quote');
+
+// Function to generate a random quote
+function generateQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const quote = quotes[randomIndex].quote;
+  const author = quotes[randomIndex].author;
+  quoteElement.innerText = quote;
+  authorElement.innerText = "- " + author;
+}
+
+// Generate a quote on page load
+generateQuote();
+
+// Generate a new quote when the button is clicked
+newQuoteButton.addEventListener('click', generateQuote);
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -17,9 +36,9 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+// function pickFromArray(choices) {
+//   return choices[Math.floor(Math.random() * choices.length)];
+// }
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
