@@ -46,17 +46,13 @@ function setAlarm() {
 }
 
 // Convert number to a form of 00:00
-let convertSecondsToMinutesAndSeconds = function (totalSeconds) {
+function convertSecondsToMinutesAndSeconds(totalSeconds) {
   let minutes = Math.floor(totalSeconds / 60);
   let seconds = totalSeconds % 60;
-  return (
-    (minutes < 10 ? "0" : "") +
-    minutes +
-    ":" +
-    (seconds < 10 ? "0" : "") +
-    seconds
-  );
-};
+  minutes.toString().padStart(2, "0");
+  seconds.toString().padStart(2, "0");
+  return `${minutes}:${seconds}`;
+}
 
 // Decrease the timer by one second
 function decrementByOneSec(time) {

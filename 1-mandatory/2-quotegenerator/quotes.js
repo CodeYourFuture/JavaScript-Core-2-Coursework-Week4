@@ -492,21 +492,21 @@ const quotes = [
 ];
 
 //variables
-const quoteP = document.querySelector("#quote"),
-  authorP = document.querySelector("#author"),
-  newQuoteBtn = document.querySelector("#new-quote"),
-  autoGenerate = document.querySelector(".checkbox");
+const quoteP = document.querySelector("#quote");
+const  authorP = document.querySelector("#author");
+const  newQuoteBtn = document.querySelector("#new-quote");
+const  autoGenerate = document.querySelector(".checkbox");
 let intervalID;
 
+
 // eventListeners
-eventlisteners();
-function eventlisteners() {
-  // Get a quote on load
-  document.addEventListener("DOMContentLoaded", showQuoteOnLoad);
-  // Get a quote on click
-  newQuoteBtn.addEventListener("click", showQuoteOnClick);
-  autoGenerate.addEventListener("click", showAuto);
-}
+// Get a quote on load
+document.addEventListener("DOMContentLoaded", showQuoteOnLoad);
+// Get a quote on click
+newQuoteBtn.addEventListener("click", showQuoteOnClick);
+// Show quote automatically
+autoGenerate.addEventListener("click", showAuto);
+
 
 //functions
 // show quote on load
