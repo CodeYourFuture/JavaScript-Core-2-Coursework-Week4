@@ -494,6 +494,8 @@ const quotes = [
 let quoteTitle = document.getElementById("quote");
 let authorName = document.getElementById("author");
 let button = document.getElementById("btn");
+let autoButton = document.getElementById("auto");
+
 
 function getQuotes() {
   let randomQuote = pickFromArray(quotes);
@@ -502,3 +504,5 @@ function getQuotes() {
 }
 button.addEventListener("click", getQuotes);
 getQuotes()
+
+autoButton.addEventListener("click", setInterval(getQuotes, 5000));
