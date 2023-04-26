@@ -1,3 +1,18 @@
+let random = document.querySelector("#random");
+let quoteIN = document.querySelector("#quote");
+let author = document.querySelector("#author");
+
+window.onload = function () {
+  quoteIN.innerHTML = pickFromArray(quotes).quote;
+  author.innerHTML = pickFromArray(quotes).author;
+};
+
+random.addEventListener("click", randomOne);
+function randomOne() {
+  quoteIN.innerHTML = pickFromArray(quotes).quote;
+  author.innerHTML = pickFromArray(quotes).author;
+}
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

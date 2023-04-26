@@ -1,1 +1,40 @@
-/** Write your CSS in here **/
+body {
+  background-color: orange;
+  color: black;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background-color: white;
+  margin: 80px 90px;
+}
+
+.content {
+  text-align: end;
+  margin: 20px 50px;
+}
+#random {
+  position: fixed;
+  bottom: 320px;
+  right: 200px;
+  background-color: orange;
+  color: white;
+  border: transparent;
+  padding: 6px 15px;
+}
+
+#quote {
+  font-size: 20px;
+  position: fixed;
+  bottom: 400px;
+  right: 200px;
+}
+
+#author {
+  font-size: 20px;
+  position: fixed;
+  bottom: 360px;
+  right: 200px;
+}

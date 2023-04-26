@@ -9,10 +9,13 @@ function setAlarm() {
     let timeLeft = timeRemaining.innerHTML.split(" ")[2].split(":");
     let minutes = parseInt(timeLeft[0]);
     let seconds = parseInt(timeLeft[1]);
+    set.disabled = true;
 
+    document.querySelector("#alarmSet").value = "";
     if (minutes === 0 && seconds === 0) {
       clearInterval(count);
       playAlarm();
+
       document.body.style.backgroundColor = "red";
     } else if (seconds === 0) {
       minutes -= 1;
@@ -30,10 +33,18 @@ function setAlarm() {
       seconds;
   }, 1000);
 
+  let pause = document.querySelector("#pause");
+  pause.onclick = function () {
+    if (timeRemaining.innerHTML) {
+      clearInterval(count);
+    } else {
+      clearInterval(count);
+    }
+  };
   stop.addEventListener("click", function () {
+    set.disabled = false;
     clearInterval(count);
     alarmSet.valid = "";
-
     pauseAlarm();
     timeRemaining.innerHTML = "Time Remaining: 00:00";
     document.body.style.backgroundColor = "white";
