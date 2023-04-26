@@ -6,12 +6,12 @@ window.onload = function () {
   quoteIN.innerHTML = pickFromArray(quotes).quote;
   author.innerHTML = pickFromArray(quotes).author;
 };
-
 random.addEventListener("click", randomOne);
 function randomOne() {
   quoteIN.innerHTML = pickFromArray(quotes).quote;
   author.innerHTML = pickFromArray(quotes).author;
 }
+
 
 // DO NOT EDIT BELOW HERE
 
@@ -32,6 +32,7 @@ function randomOne() {
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
