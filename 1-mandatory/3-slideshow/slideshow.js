@@ -1,10 +1,3 @@
-// put images on top of the others
-// load image at a time
-// 1.create an array of images
-// 2. load the first image
-//3. we make the image go forward by incrementing the index position
-// 4. we make the image go backward by decreasing the index position
-
 const images = [
   {
     src: "./assets/cute-cat-a.png",
@@ -77,17 +70,16 @@ function autoForward() {
 }
 
 function autoBack() {
-//   console.log("beta");
-  autoForwardBtn.disabled = true; // to stop repeating another iteration forward while it is autobackwarding
-  autoBackBtn.disabled = true; // to stop repeating another iteration backward while it is autobackwarding
+  autoForwardBtn.disabled = true; 
+  autoBackBtn.disabled = true; 
   intervalID = setInterval(() => {
     lastPic();
   }, 1000);
 }
 
 function stopAutoPlay() {
-  autoForwardBtn.disabled = false; // to enable the autoforward button work as soon as we stop the previous iteration
-  autoBackBtn.disabled = false; // to enable the autobackward button work as soon as we stop the previous iteration
+  autoForwardBtn.disabled = false;  
+  autoBackBtn.disabled = false;
   clearInterval(intervalID);
 }
 
