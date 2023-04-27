@@ -1,1 +1,25 @@
-/** Write your CSS in here **/
+#outbox {
+background-color: orange;
+padding: 20px;
+
+}
+#insidebox {
+    background-color: white;
+    padding: 40px;    s
+    
+}
+
+
+
+
+button {
+    background-color: orange;
+    border: 0px;
+    padding: 5px;
+    float: right;
+
+    
+    
+
+
+}

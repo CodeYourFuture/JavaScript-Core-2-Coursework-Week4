@@ -1,8 +1,26 @@
+
+
+
+// const quotesHolder = document.querySelector(".quotes-holder");
+// const quoteText = document.querySelector("#quote");
+// const quoteAuthor = document.querySelector('#author');
+// function getRandomQuotes() {
+//   const randomNumber = Math.floor(Math.random() * quotes.length);
+//         quoteText.textContent = quotes[randomNumber].quote;
+//         quoteAuthor.textContent = quotes[randomNumber].author;
+// }
+// getRandomQuotes();
+// const nextQuoteButton = document.querySelector("#new-quote");
+//       nextQuoteButton.addEventListener("click", function(event){
+//         event.preventDefault();
+//         getRandomQuotes();
+//       });
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
 // random, from the given array.
-//
+
 // Parameters
 // ----------
 // choices: an array of items to pick from.
@@ -15,11 +33,19 @@
 // ---------------
 // pickFromArray([1,2,3,4])     //maybe returns 2
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
-// You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+// //
+// function getRandomQuote() {
+//   const quote = pickFromArray(quotes);
+//   return quote;
+// }
+
+// const quote = getRandomQuote();
+// console.log(('${quote.quote} - ${quote.author}'));
+// // You DO NOT need to understand how this function works.
+// function pickFromArray(choices) {
+//   return choices[Math.floor(Math.random() * choices.length)];
+// }
+
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
@@ -490,3 +516,24 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function pickFromArray(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
+const quotesHolder = document.getElementById("outbox");
+const quotePara = document.getElementById("quote");
+const quoteAuthor = document.getElementById("author");
+
+function getRandomQuote(){
+  const randomNumber = Math.floor(Math.random()* quotes.length);
+  console.log(randomNumber);
+  quotePara.textContent = quotes[randomNumber].quote;
+  quoteAuthor.textContent = quotes[randomNumber].author;
+}
+getRandomQuote();
+
+const button = document.getElementById("new-quote");
+button.addEventListener("click", function(){
+  getRandomQuote();
+});
