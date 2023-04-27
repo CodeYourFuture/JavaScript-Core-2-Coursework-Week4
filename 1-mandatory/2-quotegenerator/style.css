@@ -1,1 +1,64 @@
 /** Write your CSS in here **/
+body {
+  background-color: #d6905e;
+}
+.quote-container {
+  position: relative; /* Set position relative on the container element */
+
+  width: 900px;
+  height: 350px;
+  background-color: #f4f0ec;
+  margin: auto;
+}
+.quote {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #d6905e;
+  margin: 20rem 5rem 1rem 5rem;
+  padding-top: 2rem;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+.author {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+  color: #d6905e;
+  margin-bottom: 1rem;
+  margin-right: 5rem;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+#new-quote {
+  position: absolute;
+  right: 60px;
+  width: 8rem;
+  height: 3rem;
+  background-color: #f59a3e;
+  color: #f4f0ec;
+  border: none;
+  margin-right: 5rem;
+}
+
+#auto {
+  float: right;
+  width: 8rem;
+  height: 3rem;
+  background-color: #f59a3e;
+  color: #f4f0ec;
+  border: none;
+}
+.quote-symbol {
+  color: #d6905e;
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+#btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

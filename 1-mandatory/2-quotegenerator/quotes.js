@@ -1,4 +1,8 @@
+
+
+
 // DO NOT EDIT BELOW HERE
+
 
 // A function which will return one item, at
 // random, from the given array.
@@ -490,3 +494,17 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let quoteTitle = document.getElementById("quote");
+let authorName = document.getElementById("author");
+let button = document.getElementById("new-quote");
+
+function getQuotes() {
+  let randomQuote = pickFromArray(quotes);
+  quoteTitle.innerHTML = `<span class="quote-symbol">&ldquo;</span> ${randomQuote.quote}`;
+  authorName.innerText = randomQuote.author;
+}
+
+button.addEventListener("click", getQuotes);
+
+getQuotes();
