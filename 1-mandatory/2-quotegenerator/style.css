@@ -1,1 +1,44 @@
 /** Write your CSS in here **/
+#pink {
+  height: 500px;
+  width: 850px;
+  background-color: pink;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+#grey {
+  background-color: lightgray;
+  height: 400px;
+  width: 750px;
+  display: flex;
+  border-radius: 5px;
+}
+#btn {
+  border-radius: 10px;
+  color: gray;
+
+  border-style: none;
+  background-color: pink;
+
+  height: 35px;
+  width: 50px;
+  margin-top: 330px;
+  margin-left: 10px;
+}
+#quote {
+  color: palevioletred;
+  font-size: large;
+  margin: auto;
+}
+#author {
+  color: palevioletred;
+  font-size: large;
+  margin-top: 220px;
+  margin-right: 15px;
+}

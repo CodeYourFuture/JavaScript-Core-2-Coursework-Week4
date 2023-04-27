@@ -1,1 +1,9 @@
 /** Write your CSS in here **/
+img{
+    height: 300px;
+    width: 400px;
+}
+#btn{
+    margin-top: 20px;
+
+}
