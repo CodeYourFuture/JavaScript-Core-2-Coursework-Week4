@@ -5,8 +5,8 @@
 2. Load one image at a time.
     step 1: create an arrary of the image sources
     step 2: load the first image source to the image tag (when the website uploads using JS we can have our first image displayed on the page using the first array index)
-    step 3: We can make the index postion go up (increment) by 1 when we click "forward"
-    step 4: We can make the index postion go down by 1 when we click the "backward"
+    step 3: We can make the image go forward by incrementing index postion (go up by 1) when we click "forward"
+    step 4: We can make the image go backward by decreasing the index postion (go down by 1) when we click the "backward"
 */
 
 
@@ -22,9 +22,9 @@ const images = [
   {
     src: "./assets/cute-cat-c.jpg",
   },
-  {
-    src: "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-  },
+  // {
+  //   src: "./assets/cute-cat-d.jpg",
+  // },
 ];
 
 const image = document.querySelector("#carousel-img");
@@ -34,7 +34,7 @@ const stopBtn = document.querySelector("#stop");
 const backwardBtn = document.querySelector("#backward-btn");
 const autoBackBtn = document.querySelector("#auto-backward");
 
-let ids = 0;
+let count = 0;
 
 let intervalID;
 
@@ -60,20 +60,20 @@ function getImageOnload() {
 
 function getNextPic() {
     // console.log("alpha1");
-  ids++;
-  if (ids > images.length - 1) {
-    ids = 0;
+  count++;
+  if (count > images.length - 1) {
+    count = 0;
   }
-  image.src = images[ids].src;
+  image.src = images[count].src;
 }
 
 function getLastPic() {
     // console.log("beta1");
-  ids--;
-  if (ids < 0) {
-    ids = images.length - 1;
+  count--;
+  if (count < 0) {
+    count = images.length - 1;
   }
-  image.src = images[ids].src;
+  image.src = images[count].src;
 }
 
 function showAutoForward() {

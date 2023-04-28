@@ -501,7 +501,7 @@ const quotes = [
 1. Render the first quote from the array
 2. Learn how to pick a random quote from the array using Math.random
 3. Render a random quote from the array when the screen first loads
-4. When you click a button on the screen it should change the quote on the screen
+4. When you click the "next" button on the screen it should change the quote on the screen
 */
 
 const quotesHolder = document.querySelector(".quotes-holder")
@@ -510,7 +510,7 @@ const quoteAuthor = document.querySelector("#author");
 
 function getRandomQuotes(quoteList) {
   const randomNumber = Math.floor(Math.random() * quotes.length);
-  quoteText.textContent = "\""+ quotes[randomNumber].quote;
+  quoteText.textContent = '\"' + quotes[randomNumber].quote + '\"';
   quoteAuthor.textContent = "-" + quotes[randomNumber].author;
 }
 

@@ -1,9 +1,9 @@
 /** Write your CSS in here **/
 
 .quotes-holder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40rem;
   height: 25rem;
   background-color: #F3A83B;
@@ -28,7 +28,7 @@
 #quote {
   color: #F3A83B;
   font-family: 'Times New Roman', Times, serif;
-  font-size:medium;
+  font-size: large;
   font-weight: 600;
 }
 
