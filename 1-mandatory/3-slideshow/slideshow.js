@@ -33,6 +33,18 @@ function BackPhotos() {
   numbers.innerHTML = photos[currentPhoto].number;
 }
 
+AutoForward.addEventListener("click", function AutoPhotosForward() {
+  a = setInterval(ForwardPhotos, 1000);
+});
+
+AutoBack.addEventListener("click", function startAutoBack() {
+  a = setInterval(BackPhotos, 1000);
+});
+
+Stop.addEventListener("click", function StopmovePhotos() {
+  clearInterval(a);
+});
+
 // ////////////////////cat's Photos////////////////////////////////////////
 let photos = [
   {
