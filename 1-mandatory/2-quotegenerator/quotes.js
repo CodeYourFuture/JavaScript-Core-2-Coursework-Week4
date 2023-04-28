@@ -11,8 +11,6 @@ function randomOne() {
   quoteIN.innerHTML = pickFromArray(quotes).quote;
   author.innerHTML = pickFromArray(quotes).author;
 }
-
-
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

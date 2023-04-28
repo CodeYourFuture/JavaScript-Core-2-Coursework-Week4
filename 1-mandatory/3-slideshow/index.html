@@ -11,7 +11,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div class="container">
+      <div class="content">
+        <h1>Image Carousel</h1>
+        <hr />
+        <div class="images">
+          <img
+            src="/1-mandatory/3-slideshow/assets/1.jpg"
+            width="50%"
+            alt="random"
+          />
+          <div id="number">10</div>
+        </div>
+        <div class="buttons">
+          <button id="AutoBack" class="btn btn-outline-primary">
+            Auto Back
+          </button>
+          <button id="Back" class="btn btn-outline-secondary">Back</button>
+          <button id="Stop" class="btn btn-outline-success">Stop</button>
+          <button id="Forward" class="btn btn-outline-danger">Forward</button>
+          <button id="AutoForward" class="btn btn-outline-dark">
+            Auto Forward
+          </button>
+        </div>
+        <hr />
+      </div>
+    </div>
     <script src="slideshow.js"></script>
   </body>
 </html>
