@@ -25,6 +25,9 @@ function forwardAction() {
   mainImg.src = slideshowImages[photoNumber - 1];
 }
 function backAction() {
+  if (photoNumber === 0) {
+    photoNumber = slideshowImages.length + 1;
+  }
   if (photoNumber === 1) {
     photoNumber = slideshowImages.length + 1;
   }
