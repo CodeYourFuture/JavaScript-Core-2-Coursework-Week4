@@ -1,1 +1,17 @@
 /** Write your CSS in here **/
+.container{
+    display: block;
+    width: 500px;
+    height: 400px;
+}
+img{
+    width: 500px;
+    height: 400px;
+}
+.image-container{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,1 +1,30 @@
 /** Write your CSS in here **/
+body {
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+  height: 300px;
+  width: 500px;
+
+  margin-top: 200px;
+
+  background-color: aquamarine;
+}
+button{
+    display: inline;
+    width: 90px;
+    background-color: aliceblue;
+    position: fixed;
+    top: 450px;
+}
+
+p{
+
+    display: flex;
+    align-items: center;
+
+}
