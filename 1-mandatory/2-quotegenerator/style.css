@@ -1,1 +1,28 @@
 /** Write your CSS in here **/
+body {
+    background-color: orange;
+}
+
+#flex {
+    display: flex;
+    flex-direction:column;
+    align-items:end;
+    background-color: white;
+    width: 50rem;
+    margin: 15rem;
+    padding: 2rem;
+}
+#new-quote {
+    border: none;
+    background-color: orange;
+    color: white;
+    padding: 10px;
+}
+#quote {
+font-size: 20px;
+color: orange;
+}
+#author {
+font-size: 15px;
+color: orange;
+}
