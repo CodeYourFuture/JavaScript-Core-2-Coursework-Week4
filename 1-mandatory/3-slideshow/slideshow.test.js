@@ -42,7 +42,7 @@ describe("Level 1 challenge", () => {
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const forwardBtn = page.window.document.querySelector("#forward-btn");
-    const backwardBtn = page.window.document.querySelector("#backward-btn");
+    const backwardBtn = page.window.document.querySelector("#back-btn");
 
     expect(image).toHaveAttribute("src", images[0]);
     expect(forwardBtn).toBeInTheDocument();
@@ -86,7 +86,7 @@ describe("Level 1 challenge", () => {
       "./assets/cute-cat-c.jpg",
     ];
     const image = page.window.document.querySelector("#carousel-img");
-    const backwardBtn = page.window.document.querySelector("#backward-btn");
+    const backwardBtn = page.window.document.querySelector("#back-btn");
 
     expect(image).toHaveAttribute("src", images[0]);
 
@@ -102,7 +102,7 @@ describe("Level 1 challenge", () => {
       "./assets/cute-cat-c.jpg",
     ];
     const image = page.window.document.querySelector("#carousel-img");
-    const backwardBtn = page.window.document.querySelector("#backward-btn");
+    const backwardBtn = page.window.document.querySelector("#back-btn");
     expect(image).toHaveAttribute("src", images[0]);
 
     userEvent.click(backwardBtn);
@@ -145,8 +145,8 @@ describe("Level 2 challenge", () => {
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const autoForwardBtn = page.window.document.querySelector("#auto-forward");
-    const autoBackBtn = page.window.document.querySelector("#auto-backward");
-    const interval = 2000;
+    const autoBackBtn = page.window.document.querySelector("#auto-back");
+    const interval = 1000;
 
     expect(image).toHaveAttribute("src", images[0]);
 
@@ -172,8 +172,8 @@ describe("Level 2 challenge", () => {
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const autoForwardBtn = page.window.document.querySelector("#auto-forward");
-    const autoBackBtn = page.window.document.querySelector("#auto-backward");
-    const interval = 2000;
+    const autoBackBtn = page.window.document.querySelector("#auto-back");
+    const interval = 1000;
 
     expect(image).toHaveAttribute("src", images[0]);
 
@@ -199,9 +199,9 @@ describe("Level 2 challenge", () => {
     ];
     const image = page.window.document.querySelector("#carousel-img");
     const autoForwardBtn = page.window.document.querySelector("#auto-forward");
-    const autoBackBtn = page.window.document.querySelector("#auto-backward");
+    const autoBackBtn = page.window.document.querySelector("#auto-back");
     const stopBtn = page.window.document.querySelector("#stop");
-    const interval = 2000;
+    const interval = 1000;
 
     expect(image).toHaveAttribute("src", images[0]);
 

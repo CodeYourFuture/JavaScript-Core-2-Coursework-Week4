@@ -17,12 +17,54 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+let timerId = null;
+let quoteIndex = 0;
+let autoPlayState = "off";
+
 function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+  const randomIndex = getRandomIndex(choices.length);
+  return choices[randomIndex];
+}
+
+function wrapIndexAround(index, length) {
+  return ((index % length) + length) % length;
+}
+
+function getRandomIndex(length) {
+  const randomIndex = Math.floor(Math.random() * length);
+  return wrapIndexAround(randomIndex, length);
+}
+
+function startAutoPlay(callBack) {
+  const FIVE_SECONDS_IN_MILISECONDS = 5000;
+  if (!timerId) {
+    timerId = setInterval(() => {
+      callBack();
+    }, FIVE_SECONDS_IN_MILISECONDS);
+  }
+}
+
+function stopAutoPlay() {
+  if (timerId) {
+    clearInterval(timerId);
+    timerId = null;
+  }
+}
+
+function updateAutoPlayStatus(status) {
+  document.querySelector("#auto-play-status").innerText = `Auto play ${status}`;
+}
+
+function updateQuote({ quote, author }) {
+  const quoteP = document.querySelector("#quote");
+  const authorP = document.querySelector("#author");
+
+  quoteP.innerText = quote;
+  authorP.innerText = author;
 }
 
 // A list of quotes you can use in your app.
-// DO NOT modify this array, otherwise the tests may break!
+// Feel free to edit them, and to add your own favourites.
 const quotes = [
   {
     quote: "Life isn't about getting and having, it's about giving and being.",
@@ -383,7 +425,7 @@ const quotes = [
   },
   {
     quote:
-      "The battles that count aren't the ones for gold medals. The struggles within yourself-the invisible battles inside all of us-that's where it's at.",
+      "The battles that count aren't the ones for gold medals. The struggles within yourself–the invisible battles inside all of us–that's where it's at.",
     author: "Jesse Owens",
   },
   {
@@ -479,7 +521,7 @@ const quotes = [
   },
   {
     quote: "Nothing is impossible, the word itself says, “I'm possible!”",
-    author: "-Audrey Hepburn",
+    author: "–Audrey Hepburn",
   },
   {
     quote: "The only way to do great work is to love what you do.",
@@ -490,3 +532,30 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function updateQuoteAtRandom() {
+  const randomQuote = pickFromArray(quotes);
+  updateQuote(randomQuote);
+}
+
+const button = document.querySelector("button");
+button.addEventListener("click", (e) => {
+  const randomQuote = pickFromArray(quotes);
+  updateQuote(randomQuote);
+});
+
+const randomQuote = pickFromArray(quotes);
+updateQuote(randomQuote);
+
+const sliderInput = document.querySelector("input");
+sliderInput.addEventListener("click", (e) => {
+  if (autoPlayState === "on") {
+    autoPlayState = "off";
+    stopAutoPlay();
+    updateAutoPlayStatus(autoPlayState);
+  } else if (autoPlayState === "off") {
+    autoPlayState = "on";
+    startAutoPlay(updateQuoteAtRandom);
+    updateAutoPlayStatus(autoPlayState);
+  }
+});

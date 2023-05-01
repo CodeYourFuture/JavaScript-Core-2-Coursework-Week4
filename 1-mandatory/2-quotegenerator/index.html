@@ -2,16 +2,23 @@
 <html>
   <head>
     <title>Quote Generator</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+    <script defer src="quotes.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Write your HTML in here -->
-    <script src="quotes.js"></script>
+
+    <section>
+      <p id="quote"></p>
+      <p id="author"></p>
+      <button id="new-quote">Next quote</button>
+
+      <p>Toggle auto-play</p>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+      <p id="auto-play-status">Auto play off</p>
+    </section>
   </body>
-</html>
+  </html>
