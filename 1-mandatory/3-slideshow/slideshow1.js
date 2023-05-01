@@ -8,9 +8,9 @@ const images = [
   {
     src: "./assets/cute-cat-c.jpg",
   },
-  //   {
-  //     src: "https://images.unsplash.com/photo-1505943310290-3644d9a5dcf6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0JTIwcGljdHVyZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60"
-  //   },
+  {
+    src: "https://images.unsplash.com/photo-1505943310290-3644d9a5dcf6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0JTIwcGljdHVyZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60"
+  },
 ];
 const image = document.getElementById("carousel-img");
 const buttonBackward = document.getElementById("backward-btn");
