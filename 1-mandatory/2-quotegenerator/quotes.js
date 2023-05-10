@@ -16,6 +16,52 @@
 // pickFromArray([1,2,3,4])     //maybe returns 2
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
+
+///
+const quote = document.getElementById("quote");
+const author = document.getElementById("author");
+const newQuote = document.getElementById("new-quote");
+const container = document.getElementById("container");
+const autoplayToggle = document.getElementById("autoplay-toggle");
+
+let autoPlayInterval;
+
+function toggleAutoPlay() {
+  if (autoplayToggle.checked) {
+    // Start auto-play
+    autoPlayInterval = setInterval(getQuote, 60000); // Change the interval to 60000 for 60 seconds
+    document.getElementById("autoplay-status").innerText = "Auto-play: ON";
+  } else {
+    // Stop auto-play
+    clearInterval(autoPlayInterval);
+    document.getElementById("autoplay-status").innerText = "Auto-play: OFF";
+  }
+}
+
+function getQuote() {
+  container.style.backgroundColor = getRandomColor();
+  const arrayElement = pickFromArray(quotes);
+  quote.innerHTML = arrayElement["quote"];
+  author.innerText = arrayElement["author"];
+}
+
+newQuote.addEventListener("click", () => {
+  getQuote();
+});
+
+autoplayToggle.addEventListener("change", toggleAutoPlay);
+window.onload = () => {
+  getQuote();
+};
+
+function getRandomColor() {
+  const colors = ["#FF7F50", "#FFD700", "#32CD32", "#6495ED", "#FF69B4"];
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  return colors[randomIndex];
+}
+
+//
+//
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];

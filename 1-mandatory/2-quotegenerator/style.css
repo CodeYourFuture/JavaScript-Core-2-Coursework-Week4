@@ -1,1 +1,72 @@
 /** Write your CSS in here **/
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  background: #f1cf71;
+  margin: 0;
+}
+
+.container {
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 30ex;
+  margin-left: 18ex;
+  margin-bottom: 30px;
+}
+
+#quote:before {
+  content: "“";
+}
+
+#quote:after {
+  content: "”";
+}
+
+#author {
+  margin-left: 22rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#new-quote {
+  margin-left: 22rem;
+  font-size: 1.1rem;
+  padding: 10px 30px;
+  background-color: #6b73ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#new-quote:hover {
+  background-color: #555;
+}
+
+#autoplay-toggle {
+  font-size: 1rem;
+  color: #333;
+}
