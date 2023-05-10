@@ -33,14 +33,10 @@ body {
   margin-top: 10px;
 }
 
-.prev-btn,
-.next-btn {
+.carousel-btnPrevious,
+.carousel-btnNext,
+.carousel-btnAuto,
+.carousel-btnStop {
   padding: 10px 20px;
   margin: 0 5px;
-}
-
-script {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
