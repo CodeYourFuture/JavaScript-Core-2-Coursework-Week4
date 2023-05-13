@@ -18,9 +18,9 @@
 
 // You DO NOT need to understand how this function works.
 
-let quoteElement = document.querySelector(".quote");
-let authorElement = document.querySelector(".author");
-let buttonElement = document.querySelector(".button");
+let quoteElement = document.getElementById("quote");
+let authorElement = document.getElementById("author");
+let buttonElement = document.getElementById("button");
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
 const quotes = [

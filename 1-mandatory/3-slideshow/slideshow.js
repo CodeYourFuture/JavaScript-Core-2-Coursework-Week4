@@ -20,6 +20,13 @@ const images = [
 // Set the initial image
 let currentIndex = 0;
 image.src = images[currentIndex];
+console.log("hello 123")
+console.log(image)
+console.log("images[currentIndex]");
+console.log(images[currentIndex]);
+console.log(images[currentIndex]);
+console.log(images);
+console.log(image.src)
 
 // Add event listeners to the buttons
 backButton.addEventListener('click', () => {

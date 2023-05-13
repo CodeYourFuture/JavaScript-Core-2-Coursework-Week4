@@ -1,7 +1,11 @@
 function displayRemainingTime(totalSeconds){
   let timeRemainingTitle = document.getElementById("timeRemaining");
-  let timeRemainingInMinutes = Math.floor(totalSeconds / 60);
-  let timeRemainingInSeconds = totalSeconds % 60;
+  let timeRemainingInMinutes = String(Math.floor(totalSeconds / 60)).padStart(
+    2,
+    "0"
+  );
+
+  let timeRemainingInSeconds = String(totalSeconds % 60).padStart(2, "0");
 
   timeRemainingTitle.textContent =
     "Time Remaining: " + timeRemainingInMinutes + ":" + timeRemainingInSeconds;
