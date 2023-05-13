@@ -490,3 +490,37 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let arrayOfNumbers = [];
+for (let i = 0; i < quotes.length; i++) {
+  arrayOfNumbers.push(i);
+}
+let randomNumber = pickFromArray(arrayOfNumbers);
+
+let hEl = document.createElement("h5");
+let pEl = document.createElement("p");
+let btnEl = document.createElement("button");
+let containerEl = document.getElementById("container");
+
+hEl.textContent = quotes[randomNumber].quote;
+containerEl.appendChild(hEl);
+
+pEl.textContent = `By: ${quotes[randomNumber].author} `;
+containerEl.appendChild(pEl);
+
+btnEl.textContent = "Next quote";
+containerEl.appendChild(btnEl);
+
+btnEl.addEventListener("click", function () {
+  randomNumber = pickFromArray(arrayOfNumbers);
+  hEl.textContent = quotes[randomNumber].quote;
+  pEl.textContent = `By: ${quotes[randomNumber].author} `;
+});
+
+//styling
+let mainEl = document.getElementById("main");
+mainEl.style.backgroundColor = "orange";
+// mainEl.style.margin="5rem";
+// containerEl.style.backgroundColor = "white";
+containerEl.style.padding = "5rem";
+containerEl.style.color = "white";
