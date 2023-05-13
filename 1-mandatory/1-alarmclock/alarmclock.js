@@ -1,33 +1,30 @@
 function setAlarm() {
-  //here to store the input from user in a variable
-  let inputEl = document.getElementById("alarmSet");
-  let timeFromUser = inputEl.value;
-  let h1El = document.getElementById("timeRemaining");
-  // h1El.innerHTML = `Time Remaining: ${timeFromUser}`;
+  let timeInputEl = document.getElementById("alarmSet");
+  let timeRemainingEl = document.getElementById("timeRemaining");
+  let minutes = 0;
+  let seconds = timeInputEl.value;
+  let remainingTime = 0;
 
-  //how to format the time entered from user to look like 00:00
-  // then how to start decreasing one by one
-  //maybe for loops lets try
-  // 9
-  // setInterval(function () {
-  //   for (let seconds = timeFromUser; seconds >= 0; seconds--) {
-  //     h1El.innerHTML = `Time Remaining: ${seconds}`;
-  //   }
-  // }, 1000);
-
-  //I should go back to CYF videos and lessons before
-  // i knew that I'll need to watch it one by one lols
-
-  setInterval(function () {
-    while (timeFromUser >= 0) {
-      h1El.innerHTML = `Time Remaining: ${timeFromUser}`;
+  //I'll try it with seconds
+  let alarm = setInterval(function () {
+    if (seconds === 0) {
+      clearInterval(alarm);
+      playAlarm();
+    }
+    if (seconds >= 0) {
+      if (seconds >= 0 && seconds < 10) {
+        timeRemainingEl.textContent = `Time Remaining: 00:0${seconds}`;
+      } else if (seconds >= 10 && seconds < 60) {
+        timeRemainingEl.textContent = `Time Remaining: 00:${seconds}`;
+      }
+      seconds--;
     }
   }, 1000);
 }
 
 // DO NOT EDIT BELOW HERE
 
-var audio = new Audio("alarmsound.mp3");
+let audio = new Audio("alarmsound.mp3");
 
 function setup() {
   document.getElementById("set").addEventListener("click", () => {
