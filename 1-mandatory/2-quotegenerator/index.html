@@ -9,9 +9,28 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <title>Quote gen</title>
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <!-- Write your HTML in here --->
+    <div class="container">
+      <h1>
+        <i class="fa fa-quote-left"></i>
+        <span id="quote" class="quote"></span>
+        <i class="fa fa-quote-right"></i>
+      </h1>
+
+      <p id="author" class="author"></p>
+      <p id="autoPlayStatus"></p>
+      <div class="quote-toggle">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <hr>
+      <button class="next" id="newQuoteBtn" onclick="newQuote">New Quote</button>
+    </div>
     <script src="quotes.js"></script>
   </body>
-</html>
+</html> 

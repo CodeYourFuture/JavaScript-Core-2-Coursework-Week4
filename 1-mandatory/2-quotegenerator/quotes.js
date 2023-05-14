@@ -17,9 +17,11 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
@@ -490,3 +492,92 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+  const quoteP = document.getElementById("quote");
+  const authorP = document.getElementById("author");
+  const newQuoteBtn = document.getElementById("newQuoteBtn");
+  newQuoteBtn.addEventListener("click", () => {
+  });
+
+  function generateNewQuote() {
+    return quotes[Math.floor(Math.random() * quotes.length)];
+  }
+ 
+  function displayQuote() {
+    const randomQuote = generateNewQuote();
+    quoteP.innerText = `"${randomQuote.quote}`;
+    authorP.innerText = `-${randomQuote.author}`;
+  }
+  displayQuote();
+
+
+// function pickFromArray(choices) {
+//   return choices[Math.floor(Math.random() * choices.length)];
+// }
+
+const quoteToggle = document.getElementById("quote-toggle");
+const quoteDisplay = document.getElementById("quote-display");
+const authorDisplay = document.getElementById("author-display");
+
+
+quoteToggle.addEventListener("change", function () {
+  if (quoteToggle.checked) {
+    const randomQuote = pickFromArray(quotes);
+    quoteDisplay.textContent = randomQuote.quote;
+    authorDisplay.textContent = randomQuote.author;
+  } else {
+    quoteDisplay.textContent = "";
+    authorDisplay.textContent = "";
+  }
+});
+
+
+let intervalId;
+
+quoteToggle.addEventListener("change", function () {
+if (quoteToggle.checked) {
+  intervalId = setInterval(updateQuote, 60000); // 60 seconds (or 5000 for testing)
+} else {
+  clearInterval(intervalId);
+  quoteDisplay.textContent = "";
+  authorDisplay.textContent = "";
+}
+});
+
+function updateQuote() {
+const randomQuote = pickFromArray(quotes);
+quoteDisplay.textContent = randomQuote.quote;
+authorDisplay.textContent = randomQuote.author;
+}
+
+
+  
+
+
+
+  
+
+
+  // let intervalId;
+
+  // quoteToggle.addEventListener("change", function () {
+  //   if (quoteToggle.checked) {
+  //     intervalId = setInterval(updateQuote, 60000); // 60 seconds (or 5000 for testing)
+  //     autoPlayStatus.textContent = "auto-play: ON";
+  //   } else {
+  //     clearInterval(intervalId);
+  //     quoteDisplay.textContent = "";
+  //     authorDisplay.textContent = "";
+  //     autoPlayStatus.textContent = "";
+  //   }
+  // });
+  
+  // function updateQuote() {
+  //   const randomQuote = pickFromArray(quotes);
+  //   quoteDisplay.textContent = randomQuote.quote;
+  //   authorDisplay.textContent = randomQuote.author;
+  // }
+   
+
+  
