@@ -8,8 +8,20 @@
 
 #alarmSet {
   margin: 20px;
-}
+  background-color:mistyrose;
 
+}
+#set {
+  background-color: aquamarine;
+}
+#stop {
+  background-color: red;
+  color: aliceblue;
+}
 h1 {
   text-align: center;
+}
+body{
+  background-color: salmon;
+  color: rgb(25, 80, 80);
 }
