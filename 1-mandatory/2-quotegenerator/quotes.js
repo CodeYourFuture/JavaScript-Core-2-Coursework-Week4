@@ -1,3 +1,19 @@
+const pElementQuote = document.querySelector(".pQuote");
+const pElementAuthor = document.querySelector(".pAuthor");
+const buttonQuote = document.querySelector(".btn");
+
+function pickFromArray() {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
+function displayQuote() {
+  pElementQuote.innerText;
+  pElementAuthor.innerText;
+}
+
+buttonQuote.addEventListener("click", pickFromArray);
+buttonQuote.addEventListener("click", displayQuote);
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -17,9 +33,6 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!

@@ -1,1 +1,59 @@
 /** Write your CSS in here **/
+body{
+    margin: 0;
+    padding: 0;
+    background: url(/support-g151570d5e_1920.jpg)no-repeat center center/ cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    
+}
+.container{
+    width: 50%;
+    
+}
+.header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
+    color: #c1121f;
+    background-color:#f6ae2d;
+    border: 1px solid #003049;
+    padding: 3px;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 10px 0 10px 0;
+}
+
+
+.quote-container{
+    width: 100%;
+    border-radius: 0 15px 0 15px;
+    padding: 2em 1em;
+    margin-top: 2em;
+    box-shadow: 0 0 10px;
+} 
+
+
+.pQuote{
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    color: #fff;
+    line-height: 1.5;
+}
+.pAuthor{
+    font-family: 'Satisfy', cursive;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.btn{
+    margin-top: 1em;
+    color: #003049;
+    background-color: #fff;
+    font-size: 1.3rem;
+    padding: 8px 20px;
+
+}
