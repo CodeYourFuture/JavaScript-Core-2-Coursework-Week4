@@ -17,9 +17,41 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+function setup(quotes) {
+  const changeButton = document.createElement("button");
+  changeButton.textContent = "Change Quote";
+  changeButton.addEventListener("click", changeQuote);
+  
+  document.body.appendChild(changeButton);
+
+  displayRandomQuote(quotes);
 }
+
+function pickFromArray(quotes) {
+  return quotes[Math.floor(Math.random() * quotes.length)];
+}
+
+function displayRandomQuote() {
+  const quoteContainer = document.getElementById("quoteContainer");
+  const quoteText = document.createElement("p");
+  const quoteAuthor = document.createElement("p");
+  
+  const randomQuote = pickFromArray(quotes);
+  quoteText.textContent = randomQuote.quote;
+  quoteAuthor.textContent = `- ${randomQuote.author}`;
+  
+  quoteContainer.innerHTML = ""; // Clear previous content
+  quoteContainer.appendChild(quoteText);
+  quoteContainer.appendChild(quoteAuthor);
+}
+
+function changeQuote() {
+  displayRandomQuote();
+}
+window.onload  = function() {
+  setup(quotes);
+};
+
 
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!

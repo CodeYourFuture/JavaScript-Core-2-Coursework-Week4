@@ -1,1 +1,24 @@
 /** Write your CSS in here **/
+/* CSS Styles for Quotes */
+#quoteContainer {
+    text-align: center;
+    margin-top: 20vh;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  #quoteContainer p {
+    margin: 0;
+    
+  }
+  button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  

@@ -1,1 +1,6 @@
 /** Write your CSS in here **/
+#whole-page img {
+    width: 500px;
+    height: 500px;
+  }
+  
