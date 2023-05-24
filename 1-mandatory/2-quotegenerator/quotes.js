@@ -1,3 +1,19 @@
+function newQuotes() {
+  var quoteText = document.querySelector(".blockquote__text");
+  var button = document.querySelector(".btn");
+  var author = document.querySelector(".author");
+
+  button.addEventListener("click", function(){
+    randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    quoteText.innerHTML = randomQuote.quote;
+    author.innerHTML = "- " + randomQuote.author;
+  })
+}
+newQuotes();
+
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at

@@ -1,1 +1,47 @@
 /** Write your CSS in here **/
+
+body{
+    background-color: orange;
+}
+
+.blockquote {
+
+    max-width: auto;
+    margin: 300px 100px;
+    padding: 35px;
+    background: rgb(229, 241, 249);
+    border: 1px solid rgb(46, 69, 79);
+    color: rgb(38, 42, 43);
+    box-sizing: border-box;
+    border-left-width: 10px;
+    
+}
+
+.blockquote__text {
+    font-size: 3em;
+    color: orange;
+}
+
+.author {
+    font-weight: bold;
+    text-align: end;
+    font-size: 2em;
+    color: orange;
+}
+
+.blockquote__text::before{
+    content: "\201c";
+    font-size: 2em;
+}
+
+
+.btn {
+    color: orange;
+    font-weight: bold;
+    font-size: 2em;
+    background-color: orangered;
+}
+
+.button {
+    text-align: end;
+}

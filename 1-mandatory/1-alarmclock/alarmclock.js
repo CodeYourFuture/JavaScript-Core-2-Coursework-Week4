@@ -5,7 +5,7 @@ function setAlarm() {
   var alarmTime = parseInt(setAlarmInput.value);
   var secondsRemaining = alarmTime;
 
-  var interval = setInterval( function() {
+  var interval = setInterval (function() {
     secondsRemaining--;
     
     var minutes = Math.floor(secondsRemaining / 60);
