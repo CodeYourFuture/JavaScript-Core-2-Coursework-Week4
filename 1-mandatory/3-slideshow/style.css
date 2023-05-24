@@ -1,1 +1,16 @@
 /** Write your CSS in here **/
+
+
+.image_container {
+    display: flex;
+}
+
+.image_container img {
+    width: 150px;
+    height: auto;
+}
+
+#button {
+    width: auto;
+    padding: 10px;
+}
