@@ -1,1 +1,32 @@
 /** Write your CSS in here **/
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    margin: 0;
+  
+    background-color: black;
+  }
+  
+  #container {
+    border: 1px solid grey;
+    padding: 90px;
+    background-color: cadetblue;
+  }
+  
+  #newQuote{
+  background-color: darkslategray;
+  position: absolute;
+  left: 72%;
+  }
+  
+  
+  
+  
+  
+  /*  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */

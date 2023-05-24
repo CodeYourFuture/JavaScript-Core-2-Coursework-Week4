@@ -1,1 +1,11 @@
 /** Write your CSS in here **/
+#container{
+    margin: 70px;
+    padding: 10px;
+    border-bottom: 2px solid grey;
+}
+
+#carousel-img{
+    padding: 50px;
+    height: 600px;
+}
