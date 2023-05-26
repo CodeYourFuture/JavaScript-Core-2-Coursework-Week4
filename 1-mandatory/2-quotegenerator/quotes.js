@@ -490,3 +490,27 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+// pseudo code
+// 1.Display the first quote from the Array
+// 2. Learn how to pick a random quote from the array using Math.random
+// 3. Display a random quote from the array when the screen first loads
+// 4. when u click a button on the screen it should change the quote on the screen.
+
+
+const quotesHolder = document.querySelector(".quotes-holder");
+const quoteText = document.querySelector("#quote");
+const quoteAuthor = document.querySelector('#author');
+
+function getRandomQuotes() {
+  const randomNumber = Math.floor(Math.random() * quotes.length);
+        quoteText.textContent = quotes[randomNumber].quote;
+        quoteAuthor.textContent = quotes[randomNumber].author;  
+}
+
+getRandomQuotes();
+
+const nextQuoteButton = document.querySelector("#new-quote");
+      nextQuoteButton.addEventListener("click", function(event){
+        event.preventDefault();
+        getRandomQuotes();
+      });

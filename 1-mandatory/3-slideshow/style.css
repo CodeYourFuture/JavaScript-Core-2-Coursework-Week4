@@ -1,1 +1,6 @@
 /** Write your CSS in here **/
+#image {
+
+    height: 500px;
+    display: flex;
+}

@@ -1,1 +1,31 @@
 /** Write your CSS in here **/
+
+.quotes-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: 22rem;
+    background-color: orange;
+}
+.card {
+    height: 10rem;
+    width: 28rem;
+    background-color: white;
+    padding: 1rem;
+
+}
+#quote {
+    color: orange;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+
+}
+#author {
+    color: orange;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+}
+#new-quote {
+    
+}
