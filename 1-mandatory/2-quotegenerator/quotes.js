@@ -21,6 +21,15 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+function generateQuote() {
+  var quote = pickFromArray(quotes);
+  document.getElementById("quote-text").textContent = quote.quote;
+  document.getElementById("quote-author").textContent = "- " + quote.author;
+}
+document.getElementById("new-quote-btn").addEventListener("click", generateQuote);
+
+generateQuote();
+
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
 const quotes = [

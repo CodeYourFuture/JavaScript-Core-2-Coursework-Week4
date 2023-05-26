@@ -1,1 +1,43 @@
-/** Write your CSS in here **/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #quote {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #quote-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #quote-author {
+    font-size: 18px;
+    font-style: italic;
+  }
+  
+  #new-quote-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
