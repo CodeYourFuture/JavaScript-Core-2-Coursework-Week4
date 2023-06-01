@@ -1,1 +1,29 @@
 /** Write your CSS in here **/
+body{
+    background-color: orange;
+}
+.wrapper{
+    background-color: white;
+    margin: 150px;
+    color: orange;
+    padding: 100px;
+    text-align: right;
+}
+.quotes{
+    text-align: right;
+    color: orange;
+}
+.quotedby{
+    text-align: right;
+    color: orange;
+}
+.btn{
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    margin-right: -50px;
+    padding: 10px;
+    width: 100px;
+    float: right;
+}

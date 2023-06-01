@@ -17,8 +17,12 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+
+//document.addEventListener("load", pickFromArray);
+//const buttonon = document.querySelector(".btn");
+//buttonon.addEventListener("click", pickFromArray);
+function pickFromArray(quotes) {
+  return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 // A list of quotes you can use in your app.
@@ -490,3 +494,20 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+const quotesofsomeone = document.querySelector(".quotes");
+const quotedbysomeone = document.querySelector(".quotedby");
+quotesofsomeone.innerHTML = pickFromArray(quotes).quote;
+quotedbysomeone.innerHTML = pickFromArray(quotes).author;
+
+document.querySelector(".btn").addEventListener("click", pickFromArray_button);
+function pickFromArray_button() {
+  const quotesofsomeone = document.querySelector(".quotes");
+  const quotedbysomeone = document.querySelector(".quotedby");
+  quotesofsomeone.innerHTML = `${<i class="fas fa-quote-left"></i>}` + pickFromArray(quotes).quote;
+  quotedbysomeone.innerHTML = `${'-'}`+ pickFromArray(quotes).author;
+}
+// function pickFromArray(quotes){
+// const quotesofsomeone2 = document.querySelector(".quotes");
+// const quotedbysomeone2 = document.querySelector(".quotedby");
+// quotesofsomeone2.innerHTML = pickFromArray(quotes).quote;
+// quotedbysomeone2.innerHTML = pickFromArray(quotes).author;}
