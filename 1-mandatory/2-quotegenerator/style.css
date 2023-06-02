@@ -1,1 +1,22 @@
 /** Write your CSS in here **/
+html {
+    background-color: darkblue;
+}
+.box { 
+    background-position:center;
+    border: 30px;
+    padding: 30%;
+    content: normal;
+    background-color: lightskyblue;
+}
+#quotesId{
+    text-align: left;
+}
+#authorId{
+    text-align: left;
+}
+#The-button {
+    position: fixed;
+    font-size: 20px;
+    border-color: white;
+}

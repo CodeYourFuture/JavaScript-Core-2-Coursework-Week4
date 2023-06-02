@@ -1,29 +1,12 @@
 // ******************
-let theTime;
-function setAlarm() {
- theTime = document.getElementById("alarmSet").value;
 
-  let timeRem = document.getElementById("timeRemaining");
+let theQuote = document.getElementById("quotesId");
+let theAuthor = document.getElementById("authorId");
+let TheButton =document.getElementById("The-Button");
 
-function liveTime() {
-  theTime = theTime - 1;
-  
-}
+function changeQuote(){
 
-  function timer() {
-    if(theTime >= 0){
-      timeRem.innerText=`Time Remaining 00:${theTime}`;
-      liveTime();
-    }else playAlarm();
-  }
-  timer();
-  countdown = setInterval(timer, 1000);
-
-    
-  document.getElementById("stop").addEventListener("click", function () {
-    clearInterval(countdown);
-    pauseAlarm();
-  });
+document.getElementById("The-button").addEventListener("click", changeQuote);
 
 }
 
@@ -47,8 +30,8 @@ function liveTime() {
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
+function pickFromArray(quotes) {
+  return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 // A list of quotes you can use in your app.
